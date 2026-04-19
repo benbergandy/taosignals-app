@@ -1,0 +1,533 @@
+{
+  "training": {
+    "Flow Momentum": {
+      "WEAK": {
+        "observations": 675,
+        "win_rate": 42.2,
+        "avg_outcome": 27.56,
+        "margin_of_error": 9.51
+      },
+      "TURNING": {
+        "observations": 369,
+        "win_rate": 31.7,
+        "avg_outcome": 29.95,
+        "margin_of_error": 15.31
+      },
+      "STRONG": {
+        "observations": 21013,
+        "win_rate": 40.9,
+        "avg_outcome": 8.13,
+        "margin_of_error": 0.85
+      },
+      "SLOWING": {
+        "observations": 4972,
+        "win_rate": 40.6,
+        "avg_outcome": 7.59,
+        "margin_of_error": 1.71
+      }
+    },
+    "Emission Velocity (original)": {
+      "SLOWING": {
+        "observations": 7065,
+        "win_rate": 38.5,
+        "avg_outcome": 5.49,
+        "margin_of_error": 1.44
+      },
+      "DECLINING": {
+        "observations": 6688,
+        "win_rate": 38.1,
+        "avg_outcome": 5.8,
+        "margin_of_error": 1.43
+      },
+      "ACCELERATING": {
+        "observations": 8937,
+        "win_rate": 43.6,
+        "avg_outcome": 12.26,
+        "margin_of_error": 1.46
+      },
+      "GROWING": {
+        "observations": 4339,
+        "win_rate": 42.6,
+        "avg_outcome": 11.75,
+        "margin_of_error": 2.34
+      }
+    },
+    "Alpha Price Momentum": {
+      "UNKNOWN": {
+        "observations": 1243,
+        "win_rate": 28.9,
+        "avg_outcome": 17.1,
+        "margin_of_error": 7.52
+      },
+      "COLLAPSING": {
+        "observations": 7682,
+        "win_rate": 38.0,
+        "avg_outcome": 11.58,
+        "margin_of_error": 1.87
+      },
+      "SURGING": {
+        "observations": 4817,
+        "win_rate": 49.5,
+        "avg_outcome": 16.68,
+        "margin_of_error": 1.93
+      },
+      "FALLING": {
+        "observations": 9233,
+        "win_rate": 37.0,
+        "avg_outcome": 1.78,
+        "margin_of_error": 0.72
+      },
+      "RISING": {
+        "observations": 4054,
+        "win_rate": 47.9,
+        "avg_outcome": 7.71,
+        "margin_of_error": 1.6
+      }
+    },
+    "GitHub Activity": {
+      "QUIET": {
+        "observations": 3464,
+        "win_rate": 38.1,
+        "avg_outcome": 6.83,
+        "margin_of_error": 2.21
+      },
+      "INACTIVE": {
+        "observations": 20506,
+        "win_rate": 41.9,
+        "avg_outcome": 9.46,
+        "margin_of_error": 0.93
+      },
+      "ACTIVE": {
+        "observations": 3059,
+        "win_rate": 36.3,
+        "avg_outcome": 6.74,
+        "margin_of_error": 2.26
+      }
+    },
+    "Recycled 24h Momentum": {
+      "DECLINING": {
+        "observations": 2476,
+        "win_rate": 37.5,
+        "avg_outcome": 16.25,
+        "margin_of_error": 4.11
+      },
+      "SURGING": {
+        "observations": 8101,
+        "win_rate": 42.9,
+        "avg_outcome": 10.16,
+        "margin_of_error": 1.43
+      },
+      "COLLAPSING": {
+        "observations": 14805,
+        "win_rate": 40.0,
+        "avg_outcome": 7.28,
+        "margin_of_error": 0.98
+      },
+      "GROWING": {
+        "observations": 1647,
+        "win_rate": 41.8,
+        "avg_outcome": 4.8,
+        "margin_of_error": 2.54
+      }
+    },
+    "Emission EMA Crossover (NEW)": {
+      "BELOW": {
+        "observations": 14981,
+        "win_rate": 39.5,
+        "avg_outcome": 5.62,
+        "margin_of_error": 0.91
+      },
+      "BULLISH_CROSS": {
+        "observations": 535,
+        "win_rate": 52.9,
+        "avg_outcome": 56.33,
+        "margin_of_error": 13.04
+      },
+      "ABOVE": {
+        "observations": 11057,
+        "win_rate": 42.0,
+        "avg_outcome": 10.79,
+        "margin_of_error": 1.33
+      },
+      "BEARISH_CROSS": {
+        "observations": 456,
+        "win_rate": 39.5,
+        "avg_outcome": 10.09,
+        "margin_of_error": 7.23
+      }
+    },
+    "Emission vs Network Avg (NEW)": {
+      "DOMINANT": {
+        "observations": 2675,
+        "win_rate": 32.9,
+        "avg_outcome": -2.97,
+        "margin_of_error": 1.24
+      },
+      "ABOVE_AVG": {
+        "observations": 2944,
+        "win_rate": 30.1,
+        "avg_outcome": -4.82,
+        "margin_of_error": 1.58
+      },
+      "SLIGHT_ABOVE": {
+        "observations": 2465,
+        "win_rate": 32.3,
+        "avg_outcome": -3.66,
+        "margin_of_error": 1.44
+      },
+      "BELOW_AVG": {
+        "observations": 3831,
+        "win_rate": 32.9,
+        "avg_outcome": 0.13,
+        "margin_of_error": 1.56
+      },
+      "WEAK": {
+        "observations": 15114,
+        "win_rate": 47.6,
+        "avg_outcome": 17.79,
+        "margin_of_error": 1.28
+      }
+    },
+    "Emission Momentum/Accel (NEW)": {
+      "SLOWING": {
+        "observations": 10871,
+        "win_rate": 37.9,
+        "avg_outcome": 4.3,
+        "margin_of_error": 1.06
+      },
+      "DECELERATING": {
+        "observations": 3700,
+        "win_rate": 38.6,
+        "avg_outcome": 9.74,
+        "margin_of_error": 2.38
+      },
+      "GROWING": {
+        "observations": 6428,
+        "win_rate": 43.0,
+        "avg_outcome": 14.43,
+        "margin_of_error": 2.04
+      },
+      "ACCELERATING": {
+        "observations": 6030,
+        "win_rate": 44.9,
+        "avg_outcome": 10.4,
+        "margin_of_error": 1.52
+      }
+    },
+    "Recycled/Emission Ratio (NEW)": {
+      "HIGH_STRESS": {
+        "observations": 19018,
+        "win_rate": 41.2,
+        "avg_outcome": 10.18,
+        "margin_of_error": 1.02
+      },
+      "ELEVATED": {
+        "observations": 2264,
+        "win_rate": 45.9,
+        "avg_outcome": 8.94,
+        "margin_of_error": 2.34
+      },
+      "NORMAL": {
+        "observations": 2371,
+        "win_rate": 44.1,
+        "avg_outcome": 7.37,
+        "margin_of_error": 2.0
+      },
+      "NO_ACTIVITY": {
+        "observations": 61,
+        "win_rate": 31.1,
+        "avg_outcome": 34.15,
+        "margin_of_error": 47.16
+      },
+      "LOW_STRESS": {
+        "observations": 3315,
+        "win_rate": 32.4,
+        "avg_outcome": 1.46,
+        "margin_of_error": 1.65
+      }
+    },
+    "Demark Exhaustion (NEW)": {
+      "NEUTRAL": {
+        "observations": 14432,
+        "win_rate": 43.9,
+        "avg_outcome": 13.89,
+        "margin_of_error": 1.27
+      },
+      "DECLINING": {
+        "observations": 3353,
+        "win_rate": 39.8,
+        "avg_outcome": 3.89,
+        "margin_of_error": 1.98
+      },
+      "EXTENDED": {
+        "observations": 2331,
+        "win_rate": 38.2,
+        "avg_outcome": 0.63,
+        "margin_of_error": 1.76
+      },
+      "EXHAUSTED": {
+        "observations": 6913,
+        "win_rate": 35.5,
+        "avg_outcome": 3.36,
+        "margin_of_error": 1.19
+      }
+    }
+  },
+  "validation": {
+    "Flow Momentum": {
+      "SLOWING": {
+        "observations": 4891,
+        "win_rate": 51.1,
+        "avg_outcome": 6.3,
+        "margin_of_error": 2.24
+      },
+      "STRONG": {
+        "observations": 7009,
+        "win_rate": 49.8,
+        "avg_outcome": 2.1,
+        "margin_of_error": 1.88
+      },
+      "WEAK": {
+        "observations": 1836,
+        "win_rate": 50.9,
+        "avg_outcome": 4.32,
+        "margin_of_error": 3.85
+      }
+    },
+    "Emission Velocity (original)": {
+      "SLOWING": {
+        "observations": 1318,
+        "win_rate": 52.8,
+        "avg_outcome": 1.03,
+        "margin_of_error": 3.39
+      },
+      "DECLINING": {
+        "observations": 3798,
+        "win_rate": 54.3,
+        "avg_outcome": 19.71,
+        "margin_of_error": 3.55
+      },
+      "ACCELERATING": {
+        "observations": 6919,
+        "win_rate": 48.0,
+        "avg_outcome": -1.54,
+        "margin_of_error": 1.57
+      },
+      "GROWING": {
+        "observations": 1701,
+        "win_rate": 49.5,
+        "avg_outcome": -7.1,
+        "margin_of_error": 2.55
+      }
+    },
+    "Alpha Price Momentum": {
+      "FALLING": {
+        "observations": 4821,
+        "win_rate": 47.9,
+        "avg_outcome": 2.7,
+        "margin_of_error": 2.29
+      },
+      "RISING": {
+        "observations": 4916,
+        "win_rate": 53.3,
+        "avg_outcome": -0.84,
+        "margin_of_error": 1.74
+      },
+      "SURGING": {
+        "observations": 2701,
+        "win_rate": 46.9,
+        "avg_outcome": -3.06,
+        "margin_of_error": 2.36
+      },
+      "COLLAPSING": {
+        "observations": 1298,
+        "win_rate": 55.8,
+        "avg_outcome": 40.74,
+        "margin_of_error": 7.73
+      }
+    },
+    "GitHub Activity": {
+      "INACTIVE": {
+        "observations": 11118,
+        "win_rate": 50.9,
+        "avg_outcome": 5.02,
+        "margin_of_error": 1.53
+      },
+      "QUIET": {
+        "observations": 1321,
+        "win_rate": 49.4,
+        "avg_outcome": 0.61,
+        "margin_of_error": 4.11
+      },
+      "ACTIVE": {
+        "observations": 1297,
+        "win_rate": 46.8,
+        "avg_outcome": -2.43,
+        "margin_of_error": 3.89
+      }
+    },
+    "Recycled 24h Momentum": {
+      "COLLAPSING": {
+        "observations": 7901,
+        "win_rate": 52.3,
+        "avg_outcome": 6.25,
+        "margin_of_error": 1.81
+      },
+      "SURGING": {
+        "observations": 4422,
+        "win_rate": 44.5,
+        "avg_outcome": -4.81,
+        "margin_of_error": 2.18
+      },
+      "GROWING": {
+        "observations": 544,
+        "win_rate": 46.3,
+        "avg_outcome": -2.62,
+        "margin_of_error": 5.9
+      },
+      "DECLINING": {
+        "observations": 869,
+        "win_rate": 65.8,
+        "avg_outcome": 30.88,
+        "margin_of_error": 6.64
+      }
+    },
+    "Emission EMA Crossover (NEW)": {
+      "BELOW": {
+        "observations": 7260,
+        "win_rate": 53.2,
+        "avg_outcome": 12.58,
+        "margin_of_error": 2.26
+      },
+      "BULLISH_CROSS": {
+        "observations": 365,
+        "win_rate": 49.9,
+        "avg_outcome": -3.13,
+        "margin_of_error": 6.82
+      },
+      "ABOVE": {
+        "observations": 5802,
+        "win_rate": 46.9,
+        "avg_outcome": -6.39,
+        "margin_of_error": 1.3
+      },
+      "BEARISH_CROSS": {
+        "observations": 309,
+        "win_rate": 51.5,
+        "avg_outcome": 1.24,
+        "margin_of_error": 8.43
+      }
+    },
+    "Emission vs Network Avg (NEW)": {
+      "SLIGHT_ABOVE": {
+        "observations": 1370,
+        "win_rate": 37.7,
+        "avg_outcome": -15.89,
+        "margin_of_error": 2.73
+      },
+      "ABOVE_AVG": {
+        "observations": 1239,
+        "win_rate": 36.8,
+        "avg_outcome": -19.68,
+        "margin_of_error": 2.48
+      },
+      "BELOW_AVG": {
+        "observations": 4838,
+        "win_rate": 45.2,
+        "avg_outcome": -7.8,
+        "margin_of_error": 1.3
+      },
+      "WEAK": {
+        "observations": 5326,
+        "win_rate": 62.2,
+        "avg_outcome": 28.0,
+        "margin_of_error": 3.01
+      },
+      "DOMINANT": {
+        "observations": 963,
+        "win_rate": 46.4,
+        "avg_outcome": -12.2,
+        "margin_of_error": 2.35
+      }
+    },
+    "Emission Momentum/Accel (NEW)": {
+      "SLOWING": {
+        "observations": 3177,
+        "win_rate": 51.1,
+        "avg_outcome": 0.05,
+        "margin_of_error": 2.23
+      },
+      "DECELERATING": {
+        "observations": 3087,
+        "win_rate": 53.1,
+        "avg_outcome": 19.85,
+        "margin_of_error": 4.12
+      },
+      "GROWING": {
+        "observations": 3892,
+        "win_rate": 48.8,
+        "avg_outcome": -7.93,
+        "margin_of_error": 1.5
+      },
+      "ACCELERATING": {
+        "observations": 3580,
+        "win_rate": 49.2,
+        "avg_outcome": 6.41,
+        "margin_of_error": 2.69
+      }
+    },
+    "Recycled/Emission Ratio (NEW)": {
+      "HIGH_STRESS": {
+        "observations": 5098,
+        "win_rate": 52.6,
+        "avg_outcome": 10.67,
+        "margin_of_error": 2.65
+      },
+      "ELEVATED": {
+        "observations": 963,
+        "win_rate": 53.8,
+        "avg_outcome": 2.72,
+        "margin_of_error": 3.57
+      },
+      "NORMAL": {
+        "observations": 2032,
+        "win_rate": 50.9,
+        "avg_outcome": 2.21,
+        "margin_of_error": 2.97
+      },
+      "LOW_STRESS": {
+        "observations": 5643,
+        "win_rate": 47.6,
+        "avg_outcome": -1.42,
+        "margin_of_error": 1.88
+      }
+    },
+    "Demark Exhaustion (NEW)": {
+      "EXHAUSTED": {
+        "observations": 1649,
+        "win_rate": 50.0,
+        "avg_outcome": 19.22,
+        "margin_of_error": 5.62
+      },
+      "NEUTRAL": {
+        "observations": 9595,
+        "win_rate": 50.4,
+        "avg_outcome": 1.28,
+        "margin_of_error": 1.45
+      },
+      "DECLINING": {
+        "observations": 1605,
+        "win_rate": 49.7,
+        "avg_outcome": 2.21,
+        "margin_of_error": 3.88
+      },
+      "EXTENDED": {
+        "observations": 887,
+        "win_rate": 52.0,
+        "avg_outcome": 6.73,
+        "margin_of_error": 5.55
+      }
+    }
+  },
+  "total_observations": 47128
+}

@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-04-03 15:44 UTC",
+  "date": "2026-04-03",
+  "status": "OBSERVATION_ONLY \u2014 no weights affected",
+  "activation": "April 23 \u2014 post signal_performance validation",
+  "n_active": 69,
+  "metrics": {
+    "return_dispersion": 0.350414,
+    "return_autocorr": -0.043072,
+    "dispersion_z": null,
+    "autocorr_z": null
+  },
+  "regime": {
+    "score": null,
+    "label": "INSUFFICIENT_DATA",
+    "note": "Label thresholds derived from data distribution at April 23. Until then all readings stored as RECORDING."
+  },
+  "history_n": 5
+}
