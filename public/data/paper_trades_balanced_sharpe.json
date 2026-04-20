@@ -532,5 +532,223 @@
     "slippage_pct": 0.396,
     "entry_price": 0.0062172,
     "sortino": 2.4152
+  },
+  {
+    "date": "2026-04-18",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.3,
+    "tao_received": 20.09,
+    "slippage_pct": 0.9752,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-18",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.3,
+    "tao_received": 20.09,
+    "slippage_pct": 0.9752,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-18",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 20.3,
+    "slippage_pct": 0.975,
+    "entry_price": 0.05134007,
+    "sortino": 3.2114
+  },
+  {
+    "date": "2026-04-18",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 49.0,
+    "slippage_pct": 0.337,
+    "entry_price": 0.00829211,
+    "sortino": 0.4733
+  },
+  {
+    "date": "2026-04-18",
+    "type": "ENTRY",
+    "netuid": 88,
+    "name": "Investing",
+    "tao": 3.9,
+    "slippage_pct": 0.06,
+    "entry_price": 0.00370928,
+    "sortino": 0.0202
+  },
+  {
+    "date": "2026-04-18",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 13.1,
+    "new_total": 63.0
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.3,
+    "tao_received": 20.1,
+    "slippage_pct": 0.949,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 49.0,
+    "tao_received": 48.81,
+    "slippage_pct": 0.3312,
+    "reason": "governance flags=3 (top1=28% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.3,
+    "tao_received": 20.1,
+    "slippage_pct": 0.949,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 49.0,
+    "tao_received": 48.81,
+    "slippage_pct": 0.3312,
+    "reason": "governance flags=3 (top1=28% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "EXIT",
+    "netuid": 108,
+    "name": "TalkHead",
+    "tao": 6.2,
+    "tao_received": 6.17,
+    "slippage_pct": 0.38,
+    "reason": "score 43.8 below exit threshold 45.7"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "EXIT",
+    "netuid": 88,
+    "name": "Investing",
+    "tao": 3.9,
+    "tao_received": 3.9,
+    "slippage_pct": 0.06,
+    "reason": "score 44.9 below exit threshold 45.7"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 20.8,
+    "slippage_pct": 0.972,
+    "entry_price": 0.04617737,
+    "sortino": 2.8375
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.8,
+    "tao_received": 20.59,
+    "slippage_pct": 0.9722,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.8,
+    "tao_received": 20.59,
+    "slippage_pct": 0.9722,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 20.8,
+    "slippage_pct": 0.972,
+    "entry_price": 0.04617737,
+    "sortino": 2.8375
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 59.7,
+    "slippage_pct": 0.054,
+    "entry_price": 0.05266516,
+    "sortino": 1.2443
+  },
+  {
+    "date": "2026-04-20",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.8,
+    "tao_received": 20.62,
+    "slippage_pct": 0.8294,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-20",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.8,
+    "tao_received": 20.62,
+    "slippage_pct": 0.8294,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-20",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 21.4,
+    "slippage_pct": 0.853,
+    "entry_price": 0.05052728,
+    "sortino": 2.8402
+  },
+  {
+    "date": "2026-04-20",
+    "type": "ENTRY",
+    "netuid": 73,
+    "name": "MetaHash",
+    "tao": 46.6,
+    "slippage_pct": 0.559,
+    "entry_price": 0.00456632,
+    "sortino": 0.3514
+  },
+  {
+    "date": "2026-04-20",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 41.2,
+    "slippage_pct": 0.274,
+    "entry_price": 0.00883185,
+    "sortino": 0.3269
   }
 ]

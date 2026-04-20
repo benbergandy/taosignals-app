@@ -3,13 +3,13 @@
   "total_tao": 1000,
   "positions": {
     "28": {
-      "tao": 11.3,
+      "tao": 28.7,
       "entry_date": "2026-04-09",
       "entry_price": 0.00902725,
       "name": "oracle",
       "alpha_tokens_at_entry": 4885.2087,
-      "accumulated_emission_tokens": 17.8721,
-      "accumulated_emission_tao": 0.175159,
+      "accumulated_emission_tokens": 21.2677,
+      "accumulated_emission_tao": 0.214378,
       "cost_basis_tao": 44.1
     },
     "66": {
@@ -18,15 +18,25 @@
       "entry_price": 0.01640471,
       "name": "ninja",
       "alpha_tokens_at_entry": 2925.9889,
-      "accumulated_emission_tokens": 3.1675,
-      "accumulated_emission_tao": 0.051603,
+      "accumulated_emission_tokens": 9.7172,
+      "accumulated_emission_tao": 0.150885,
       "cost_basis_tao": 48.0
+    },
+    "51": {
+      "tao": 32.3,
+      "entry_date": "2026-04-19",
+      "entry_price": 0.05266516,
+      "name": "lium.io",
+      "alpha_tokens_at_entry": 613.3087,
+      "accumulated_emission_tokens": 0.4142,
+      "accumulated_emission_tao": 0.021855,
+      "cost_basis_tao": 32.3
     }
   },
-  "root_stake": 942.6385,
-  "cash_value": 1003.98,
-  "accumulated_root_yield": 1.894874,
-  "benchmark_eq_weight": 978.33,
+  "root_stake": 893.461,
+  "cash_value": 1008.05,
+  "accumulated_root_yield": 2.4174,
+  "benchmark_eq_weight": 985.49,
   "benchmark_eq_prices": {
     "1": 0.01260903,
     "3": 0.07180776,
@@ -108,8 +118,8 @@
     "126": 0.00916816,
     "128": 0.00394646
   },
-  "benchmark_eq_emissions": 27.394714,
-  "benchmark_mcw_emissions": 3.252244,
+  "benchmark_eq_emissions": 32.711386,
+  "benchmark_mcw_emissions": 3.899171,
   "benchmark_mcw_prices": {
     "1": {
       "price": 0.01260903,
@@ -428,7 +438,7 @@
       "weight": 0.003680874029691303
     }
   },
-  "benchmark_mcw": 859.09,
-  "benchmark_root_value": 1002.3392,
-  "benchmark_root": 1002.34
+  "benchmark_mcw": 864.8,
+  "benchmark_root_value": 1002.9177,
+  "benchmark_root": 1002.92
 }

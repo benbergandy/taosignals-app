@@ -1,0 +1,4455 @@
+{
+  "generated_at": "2026-04-20 12:03 UTC",
+  "date": "2026-04-20",
+  "model": "bayesian_naive_bayes",
+  "base_rate": 0.0489,
+  "expected_blowup_loss": -0.424,
+  "n_subnets": 127,
+  "subnets": {
+    "1": {
+      "netuid": 1,
+      "name": "Apex",
+      "blowup_probability": 0.022,
+      "ev_multiplier": 0.9687,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.449,
+      "signals": {
+        "concentration": {
+          "value": 37.0,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.408,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.983,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.65,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -6.47,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "2": {
+      "netuid": 2,
+      "name": "DSperse",
+      "blowup_probability": 0.0197,
+      "ev_multiplier": 0.9719,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.403,
+      "signals": {
+        "concentration": {
+          "value": 46.8,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.091,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.965,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.61,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 8.85,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "3": {
+      "netuid": 3,
+      "name": "deprecated",
+      "blowup_probability": 0.1238,
+      "ev_multiplier": 0.8237,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.532,
+      "signals": {
+        "concentration": {
+          "value": 82.1,
+          "label": "extreme",
+          "lr": 0.97
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.976,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 8.86,
+          "label": "high",
+          "lr": 1.69
+        },
+        "pool_trend": {
+          "value": -41.19,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "4": {
+      "netuid": 4,
+      "name": "Targon",
+      "blowup_probability": 0.0141,
+      "ev_multiplier": 0.9799,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.289,
+      "signals": {
+        "concentration": {
+          "value": 83.4,
+          "label": "extreme",
+          "lr": 0.97
+        },
+        "entropy": {
+          "value": 1.395,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.234,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 3.74,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -3.47,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "5": {
+      "netuid": 5,
+      "name": "Hone",
+      "blowup_probability": 0.0516,
+      "ev_multiplier": 0.9265,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.056,
+      "signals": {
+        "concentration": {
+          "value": 27.5,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.22,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 3.59,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 20.97,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "6": {
+      "netuid": 6,
+      "name": "Numinous",
+      "blowup_probability": 0.031,
+      "ev_multiplier": 0.9559,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.634,
+      "signals": {
+        "concentration": {
+          "value": 46.0,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 3.018,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.954,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.11,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -5.75,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "7": {
+      "netuid": 7,
+      "name": "Allways",
+      "blowup_probability": 0.0948,
+      "ev_multiplier": 0.865,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.938,
+      "signals": {
+        "concentration": {
+          "value": 27.6,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.417,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 6.15,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 4.6,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "8": {
+      "netuid": 8,
+      "name": "Vanta",
+      "blowup_probability": 0.0072,
+      "ev_multiplier": 0.9897,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.148,
+      "signals": {
+        "concentration": {
+          "value": 27.2,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.635,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.222,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 1.41,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 7.03,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "9": {
+      "netuid": 9,
+      "name": "iota",
+      "blowup_probability": 0.0167,
+      "ev_multiplier": 0.9762,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.342,
+      "signals": {
+        "concentration": {
+          "value": 32.8,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.99,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.82,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -0.73,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "10": {
+      "netuid": 10,
+      "name": "Swap",
+      "blowup_probability": 0.031,
+      "ev_multiplier": 0.9559,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.634,
+      "signals": {
+        "concentration": {
+          "value": 32.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 3.389,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.903,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.66,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -9.6,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "11": {
+      "netuid": 11,
+      "name": "TrajectoryRL",
+      "blowup_probability": 0.0133,
+      "ev_multiplier": 0.9811,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.271,
+      "signals": {
+        "concentration": {
+          "value": 49.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.693,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.222,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 3.58,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -3.19,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "12": {
+      "netuid": 12,
+      "name": "Compute Horde",
+      "blowup_probability": 0.0092,
+      "ev_multiplier": 0.9869,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.188,
+      "signals": {
+        "concentration": {
+          "value": 40.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.287,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.993,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 0.74,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -0.85,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "13": {
+      "netuid": 13,
+      "name": "Data Universe",
+      "blowup_probability": 0.0055,
+      "ev_multiplier": 0.9922,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.112,
+      "signals": {
+        "concentration": {
+          "value": 46.5,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.412,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.99,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.13,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -2.48,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "14": {
+      "netuid": 14,
+      "name": "TAOHash",
+      "blowup_probability": 0.0067,
+      "ev_multiplier": 0.9905,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.136,
+      "signals": {
+        "concentration": {
+          "value": 28.6,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.521,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.981,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 0.94,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 0.63,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "15": {
+      "netuid": 15,
+      "name": "ORO",
+      "blowup_probability": 0.0169,
+      "ev_multiplier": 0.976,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.345,
+      "signals": {
+        "concentration": {
+          "value": 28.5,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.562,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.085,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 7.48,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 62.09,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "16": {
+      "netuid": 16,
+      "name": "BitAds",
+      "blowup_probability": 0.007,
+      "ev_multiplier": 0.9901,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.143,
+      "signals": {
+        "concentration": {
+          "value": 28.0,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.023,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.978,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 0.93,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -3.46,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "17": {
+      "netuid": 17,
+      "name": "404\u2014GEN",
+      "blowup_probability": 0.0308,
+      "ev_multiplier": 0.9562,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.629,
+      "signals": {
+        "concentration": {
+          "value": 24.2,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.249,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 3.76,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -1.12,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "18": {
+      "netuid": 18,
+      "name": "Zeus",
+      "blowup_probability": 0.0099,
+      "ev_multiplier": 0.9859,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.202,
+      "signals": {
+        "concentration": {
+          "value": 20.5,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.764,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.983,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.85,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -5.18,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "19": {
+      "netuid": 19,
+      "name": "blockmachine",
+      "blowup_probability": 0.0167,
+      "ev_multiplier": 0.9762,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.342,
+      "signals": {
+        "concentration": {
+          "value": 35.2,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.972,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.09,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -3.55,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "20": {
+      "netuid": 20,
+      "name": "GroundLayer",
+      "blowup_probability": 0.0269,
+      "ev_multiplier": 0.9616,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.551,
+      "signals": {
+        "concentration": {
+          "value": 33.5,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.907,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.94,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 1.12,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "21": {
+      "netuid": 21,
+      "name": "AdTAO",
+      "blowup_probability": 0.1193,
+      "ev_multiplier": 0.8301,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.439,
+      "signals": {
+        "concentration": {
+          "value": 26.1,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.642,
+          "label": "moderate",
+          "lr": 1.25
+        },
+        "volatility": {
+          "value": 3.17,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -8.11,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "22": {
+      "netuid": 22,
+      "name": "Desearch",
+      "blowup_probability": 0.0275,
+      "ev_multiplier": 0.9608,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.562,
+      "signals": {
+        "concentration": {
+          "value": 38.6,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.564,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.912,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.54,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -2.66,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "23": {
+      "netuid": 23,
+      "name": "Trishool",
+      "blowup_probability": 0.0221,
+      "ev_multiplier": 0.9685,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.452,
+      "signals": {
+        "concentration": {
+          "value": 29.7,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.639,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.869,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.51,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -5.07,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "24": {
+      "netuid": 24,
+      "name": "Quasar",
+      "blowup_probability": 0.0233,
+      "ev_multiplier": 0.9668,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.476,
+      "signals": {
+        "concentration": {
+          "value": 20.7,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 5.384,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.178,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 8.03,
+          "label": "high",
+          "lr": 1.69
+        },
+        "pool_trend": {
+          "value": 21.24,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "25": {
+      "netuid": 25,
+      "name": "Mainframe",
+      "blowup_probability": 0.0093,
+      "ev_multiplier": 0.9868,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.19,
+      "signals": {
+        "concentration": {
+          "value": 22.7,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 2.566,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.903,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.03,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -0.7,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "26": {
+      "netuid": 26,
+      "name": "Kinitro",
+      "blowup_probability": 0.1573,
+      "ev_multiplier": 0.776,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 3.217,
+      "signals": {
+        "concentration": {
+          "value": 39.5,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.714,
+          "label": "moderate",
+          "lr": 1.25
+        },
+        "volatility": {
+          "value": 3.13,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -10.82,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "27": {
+      "netuid": 27,
+      "name": "Nodexo",
+      "blowup_probability": 0.0322,
+      "ev_multiplier": 0.9542,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.658,
+      "signals": {
+        "concentration": {
+          "value": 14.8,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 1.431,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.319,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.21,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 14.97,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "28": {
+      "netuid": 28,
+      "name": "gm",
+      "blowup_probability": 0.13,
+      "ev_multiplier": 0.8149,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.659,
+      "signals": {
+        "concentration": {
+          "value": 33.6,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.476,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.04,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 19.6,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "29": {
+      "netuid": 29,
+      "name": "Coldint",
+      "blowup_probability": 0.0138,
+      "ev_multiplier": 0.9803,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.282,
+      "signals": {
+        "concentration": {
+          "value": 28.4,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.87,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.498,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 0.31,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 0.89,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "30": {
+      "netuid": 30,
+      "name": "Pending",
+      "blowup_probability": 0.0122,
+      "ev_multiplier": 0.9826,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.25,
+      "signals": {
+        "concentration": {
+          "value": 30.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.898,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.946,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.08,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -4.98,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "31": {
+      "netuid": 31,
+      "name": "Halftime",
+      "blowup_probability": 0.044,
+      "ev_multiplier": 0.9374,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.899,
+      "signals": {
+        "concentration": {
+          "value": 24.4,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.441,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 2.65,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 25.0,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "32": {
+      "netuid": 32,
+      "name": "ItsAI",
+      "blowup_probability": 0.0369,
+      "ev_multiplier": 0.9475,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.754,
+      "signals": {
+        "concentration": {
+          "value": 33.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 3.882,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.643,
+          "label": "moderate",
+          "lr": 1.25
+        },
+        "volatility": {
+          "value": 3.85,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 1.36,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "33": {
+      "netuid": 33,
+      "name": "ReadyAI",
+      "blowup_probability": 0.0099,
+      "ev_multiplier": 0.9859,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.202,
+      "signals": {
+        "concentration": {
+          "value": 19.5,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.82,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.957,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.31,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -7.38,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "34": {
+      "netuid": 34,
+      "name": "BitMind",
+      "blowup_probability": 0.0198,
+      "ev_multiplier": 0.9718,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.405,
+      "signals": {
+        "concentration": {
+          "value": 31.5,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 2.342,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.974,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.33,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 0.93,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "35": {
+      "netuid": 35,
+      "name": "OxMarkets",
+      "blowup_probability": 0.0361,
+      "ev_multiplier": 0.9486,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.738,
+      "signals": {
+        "concentration": {
+          "value": 31.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.923,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.694,
+          "label": "moderate",
+          "lr": 1.25
+        },
+        "volatility": {
+          "value": 4.12,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 14.1,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "36": {
+      "netuid": 36,
+      "name": "automata",
+      "blowup_probability": 0.1225,
+      "ev_multiplier": 0.8256,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.505,
+      "signals": {
+        "concentration": {
+          "value": 26.9,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.323,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 35.27,
+          "label": "extreme",
+          "lr": 1.68
+        },
+        "pool_trend": {
+          "value": 0,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "37": {
+      "netuid": 37,
+      "name": "Aurelius",
+      "blowup_probability": 0.0127,
+      "ev_multiplier": 0.982,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.259,
+      "signals": {
+        "concentration": {
+          "value": 29.0,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.979,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.31,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -0.12,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "38": {
+      "netuid": 38,
+      "name": "colosseum",
+      "blowup_probability": 0.0986,
+      "ev_multiplier": 0.8596,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.016,
+      "signals": {
+        "concentration": {
+          "value": 29.2,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.388,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 4.17,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 58.88,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "39": {
+      "netuid": 39,
+      "name": "deprecated",
+      "blowup_probability": 0.0485,
+      "ev_multiplier": 0.9309,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.993,
+      "signals": {
+        "concentration": {
+          "value": 27.5,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.225,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.95,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 9.52,
+          "label": "high",
+          "lr": 1.69
+        },
+        "pool_trend": {
+          "value": -47.43,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "40": {
+      "netuid": 40,
+      "name": "Chunking",
+      "blowup_probability": 0.0167,
+      "ev_multiplier": 0.9762,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.342,
+      "signals": {
+        "concentration": {
+          "value": 48.1,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.986,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.97,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -0.13,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "41": {
+      "netuid": 41,
+      "name": "Almanac",
+      "blowup_probability": 0.0055,
+      "ev_multiplier": 0.9922,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.112,
+      "signals": {
+        "concentration": {
+          "value": 38.0,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.24,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.996,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.88,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -2.65,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "42": {
+      "netuid": 42,
+      "name": "Unknown",
+      "blowup_probability": 0.0167,
+      "ev_multiplier": 0.9762,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.342,
+      "signals": {
+        "concentration": {
+          "value": 40.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.817,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.17,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -1.9,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "43": {
+      "netuid": 43,
+      "name": "Graphite",
+      "blowup_probability": 0.0134,
+      "ev_multiplier": 0.981,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.273,
+      "signals": {
+        "concentration": {
+          "value": 61.1,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 4.963,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.993,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 0.51,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 0.85,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "44": {
+      "netuid": 44,
+      "name": "Score",
+      "blowup_probability": 0.0223,
+      "ev_multiplier": 0.9682,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.456,
+      "signals": {
+        "concentration": {
+          "value": 49.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.946,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.247,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 2.88,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 13.79,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "45": {
+      "netuid": 45,
+      "name": "Talisman AI",
+      "blowup_probability": 0.0113,
+      "ev_multiplier": 0.984,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.23,
+      "signals": {
+        "concentration": {
+          "value": 24.1,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.032,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.979,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.86,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 0.56,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "46": {
+      "netuid": 46,
+      "name": "RESI",
+      "blowup_probability": 0.13,
+      "ev_multiplier": 0.8149,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.659,
+      "signals": {
+        "concentration": {
+          "value": 37.8,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.47,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 4.04,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 19.86,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "47": {
+      "netuid": 47,
+      "name": "EvolAI",
+      "blowup_probability": 0.0716,
+      "ev_multiplier": 0.898,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.465,
+      "signals": {
+        "concentration": {
+          "value": 45.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.087,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.398,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.65,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 34.0,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "48": {
+      "netuid": 48,
+      "name": "Quantum Compute",
+      "blowup_probability": 0.0049,
+      "ev_multiplier": 0.993,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.1,
+      "signals": {
+        "concentration": {
+          "value": 27.8,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 1.426,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.99,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.85,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -2.47,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "49": {
+      "netuid": 49,
+      "name": "Nepher Robotics",
+      "blowup_probability": 0.0427,
+      "ev_multiplier": 0.9392,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.873,
+      "signals": {
+        "concentration": {
+          "value": 32.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.056,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.451,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 4.67,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -4.28,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "50": {
+      "netuid": 50,
+      "name": "Synth",
+      "blowup_probability": 0.0275,
+      "ev_multiplier": 0.9608,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.562,
+      "signals": {
+        "concentration": {
+          "value": 35.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 2.949,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.782,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.68,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -2.22,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "51": {
+      "netuid": 51,
+      "name": "lium.io",
+      "blowup_probability": 0.0215,
+      "ev_multiplier": 0.9694,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.439,
+      "signals": {
+        "concentration": {
+          "value": 41.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 2.592,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.242,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 2.18,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 8.4,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "52": {
+      "netuid": 52,
+      "name": "Dojo",
+      "blowup_probability": 0.0204,
+      "ev_multiplier": 0.9709,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.418,
+      "signals": {
+        "concentration": {
+          "value": 18.5,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.988,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 0.61,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 1.54,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "53": {
+      "netuid": 53,
+      "name": "EfficientFrontier",
+      "blowup_probability": 0.0458,
+      "ev_multiplier": 0.9348,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.936,
+      "signals": {
+        "concentration": {
+          "value": 23.7,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.996,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.67,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 2.43,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "54": {
+      "netuid": 54,
+      "name": "Yanez MIID",
+      "blowup_probability": 0.0408,
+      "ev_multiplier": 0.9419,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.835,
+      "signals": {
+        "concentration": {
+          "value": 49.8,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.981,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.478,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.99,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 6.31,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "55": {
+      "netuid": 55,
+      "name": "NIOME",
+      "blowup_probability": 0.0059,
+      "ev_multiplier": 0.9916,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.121,
+      "signals": {
+        "concentration": {
+          "value": 30.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.017,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.22,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 2.94,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -1.21,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "56": {
+      "netuid": 56,
+      "name": "Gradients",
+      "blowup_probability": 0.0221,
+      "ev_multiplier": 0.9685,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.452,
+      "signals": {
+        "concentration": {
+          "value": 29.9,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 1.129,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.883,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.72,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -7.69,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "57": {
+      "netuid": 57,
+      "name": "Sparket.AI",
+      "blowup_probability": 0.0058,
+      "ev_multiplier": 0.9917,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.118,
+      "signals": {
+        "concentration": {
+          "value": 33.0,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 4.645,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.931,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 0.88,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -2.28,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "58": {
+      "netuid": 58,
+      "name": "Handshake",
+      "blowup_probability": 0.0284,
+      "ev_multiplier": 0.9596,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.58,
+      "signals": {
+        "concentration": {
+          "value": 29.8,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.984,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 5.33,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -3.31,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "59": {
+      "netuid": 59,
+      "name": "Babelbit",
+      "blowup_probability": 0.0275,
+      "ev_multiplier": 0.9608,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.562,
+      "signals": {
+        "concentration": {
+          "value": 35.5,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.574,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.88,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.42,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -4.61,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "60": {
+      "netuid": 60,
+      "name": "Bitsec.ai",
+      "blowup_probability": 0.1063,
+      "ev_multiplier": 0.8486,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.174,
+      "signals": {
+        "concentration": {
+          "value": 31.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.684,
+          "label": "moderate",
+          "lr": 1.25
+        },
+        "volatility": {
+          "value": 3.92,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 2.79,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "61": {
+      "netuid": 61,
+      "name": "RedTeam",
+      "blowup_probability": 0.0293,
+      "ev_multiplier": 0.9583,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.599,
+      "signals": {
+        "concentration": {
+          "value": 33.5,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 2.912,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.997,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.68,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -6.4,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "62": {
+      "netuid": 62,
+      "name": "Ridges",
+      "blowup_probability": 0.0374,
+      "ev_multiplier": 0.9467,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.766,
+      "signals": {
+        "concentration": {
+          "value": 32.0,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.925,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.04,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -3.2,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "63": {
+      "netuid": 63,
+      "name": "Enigma",
+      "blowup_probability": 0.0284,
+      "ev_multiplier": 0.9596,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.58,
+      "signals": {
+        "concentration": {
+          "value": 26.7,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.924,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 5.14,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -4.53,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "64": {
+      "netuid": 64,
+      "name": "Chutes",
+      "blowup_probability": 0.0175,
+      "ev_multiplier": 0.975,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.358,
+      "signals": {
+        "concentration": {
+          "value": 54.1,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 2.192,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.966,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.75,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -2.42,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "65": {
+      "netuid": 65,
+      "name": "TAO Private Network",
+      "blowup_probability": 0.013,
+      "ev_multiplier": 0.9815,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.266,
+      "signals": {
+        "concentration": {
+          "value": 37.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.764,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.976,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.81,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -9.07,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "66": {
+      "netuid": 66,
+      "name": "ninja",
+      "blowup_probability": 0.0944,
+      "ev_multiplier": 0.8656,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.93,
+      "signals": {
+        "concentration": {
+          "value": 70.4,
+          "label": "extreme",
+          "lr": 0.97
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.213,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 10.7,
+          "label": "high",
+          "lr": 1.69
+        },
+        "pool_trend": {
+          "value": 34.21,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "67": {
+      "netuid": 67,
+      "name": "Harnyx",
+      "blowup_probability": 0.0702,
+      "ev_multiplier": 0.9,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.435,
+      "signals": {
+        "concentration": {
+          "value": 27.9,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.056,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.431,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 89.94,
+          "label": "extreme",
+          "lr": 1.68
+        },
+        "pool_trend": {
+          "value": 451.61,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "68": {
+      "netuid": 68,
+      "name": "NOVA",
+      "blowup_probability": 0.0417,
+      "ev_multiplier": 0.9406,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.852,
+      "signals": {
+        "concentration": {
+          "value": 63.2,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 0.668,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.869,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.5,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -6.57,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "69": {
+      "netuid": 69,
+      "name": "ain",
+      "blowup_probability": 0.0302,
+      "ev_multiplier": 0.957,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.618,
+      "signals": {
+        "concentration": {
+          "value": 24.5,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.956,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.6,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -7.39,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "70": {
+      "netuid": 70,
+      "name": "NexisGen",
+      "blowup_probability": 0.0784,
+      "ev_multiplier": 0.8884,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.603,
+      "signals": {
+        "concentration": {
+          "value": 54.5,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 1.385,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.492,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 118.09,
+          "label": "extreme",
+          "lr": 1.68
+        },
+        "pool_trend": {
+          "value": 196.61,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "71": {
+      "netuid": 71,
+      "name": "Leadpoet",
+      "blowup_probability": 0.013,
+      "ev_multiplier": 0.9815,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.266,
+      "signals": {
+        "concentration": {
+          "value": 40.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 3.111,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.962,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.76,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -1.74,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "72": {
+      "netuid": 72,
+      "name": "StreetVision by NATIX",
+      "blowup_probability": 0.0058,
+      "ev_multiplier": 0.9917,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.118,
+      "signals": {
+        "concentration": {
+          "value": 34.1,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 5.505,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.96,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.68,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -1.57,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "73": {
+      "netuid": 73,
+      "name": "MetaHash",
+      "blowup_probability": 0.0175,
+      "ev_multiplier": 0.975,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.358,
+      "signals": {
+        "concentration": {
+          "value": 50.7,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 1.777,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.943,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.06,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -0.72,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "74": {
+      "netuid": 74,
+      "name": "Gittensor",
+      "blowup_probability": 0.0444,
+      "ev_multiplier": 0.9368,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.907,
+      "signals": {
+        "concentration": {
+          "value": 30.1,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.782,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.854,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.84,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 3.29,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "75": {
+      "netuid": 75,
+      "name": "Hippius",
+      "blowup_probability": 0.0131,
+      "ev_multiplier": 0.9813,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.269,
+      "signals": {
+        "concentration": {
+          "value": 56.7,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 0.095,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.829,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.99,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -0.44,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "76": {
+      "netuid": 76,
+      "name": "Byzantium",
+      "blowup_probability": 0.0451,
+      "ev_multiplier": 0.9358,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.922,
+      "signals": {
+        "concentration": {
+          "value": 47.1,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 3.749,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.43,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 5.41,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 57.97,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "77": {
+      "netuid": 77,
+      "name": "Liquidity",
+      "blowup_probability": 0.0198,
+      "ev_multiplier": 0.9718,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.405,
+      "signals": {
+        "concentration": {
+          "value": 37.6,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 2.295,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.997,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 0.54,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 0.83,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "78": {
+      "netuid": 78,
+      "name": "waw",
+      "blowup_probability": 0.3416,
+      "ev_multiplier": 0.5136,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 6.985,
+      "signals": {
+        "concentration": {
+          "value": 51.0,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.333,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 291.05,
+          "label": "extreme",
+          "lr": 1.68
+        },
+        "pool_trend": {
+          "value": -99.71,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "79": {
+      "netuid": 79,
+      "name": "MVTRX",
+      "blowup_probability": 0.0452,
+      "ev_multiplier": 0.9356,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.925,
+      "signals": {
+        "concentration": {
+          "value": 84.3,
+          "label": "extreme",
+          "lr": 0.97
+        },
+        "entropy": {
+          "value": 1.414,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.409,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 5.03,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 30.1,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "80": {
+      "netuid": 80,
+      "name": "dogelayer",
+      "blowup_probability": 0.0955,
+      "ev_multiplier": 0.864,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.953,
+      "signals": {
+        "concentration": {
+          "value": 32.0,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.673,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.485,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.49,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 15.38,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "81": {
+      "netuid": 81,
+      "name": "deprecated",
+      "blowup_probability": 0.1162,
+      "ev_multiplier": 0.8346,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.376,
+      "signals": {
+        "concentration": {
+          "value": 31.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.936,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 10.06,
+          "label": "high",
+          "lr": 1.69
+        },
+        "pool_trend": {
+          "value": -44.71,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "82": {
+      "netuid": 82,
+      "name": "Hermes",
+      "blowup_probability": 0.0894,
+      "ev_multiplier": 0.8728,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.827,
+      "signals": {
+        "concentration": {
+          "value": 48.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.991,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.92,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -19.65,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "83": {
+      "netuid": 83,
+      "name": "CliqueAI",
+      "blowup_probability": 0.0342,
+      "ev_multiplier": 0.9513,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.699,
+      "signals": {
+        "concentration": {
+          "value": 29.5,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 3.077,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.423,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 4.57,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 17.84,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "84": {
+      "netuid": 84,
+      "name": "ChipForge (Tatsu)",
+      "blowup_probability": 0.022,
+      "ev_multiplier": 0.9687,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.449,
+      "signals": {
+        "concentration": {
+          "value": 45.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.325,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.977,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.77,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -6.83,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "85": {
+      "netuid": 85,
+      "name": "Vidaio",
+      "blowup_probability": 0.013,
+      "ev_multiplier": 0.9814,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.266,
+      "signals": {
+        "concentration": {
+          "value": 90.7,
+          "label": "extreme",
+          "lr": 0.97
+        },
+        "entropy": {
+          "value": 1.463,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.878,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 5.09,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -3.84,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "86": {
+      "netuid": 86,
+      "name": "\u2692",
+      "blowup_probability": 0.0269,
+      "ev_multiplier": 0.9616,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.551,
+      "signals": {
+        "concentration": {
+          "value": 39.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.852,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.57,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 2.51,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "87": {
+      "netuid": 87,
+      "name": "Luminar Network",
+      "blowup_probability": 0.058,
+      "ev_multiplier": 0.9174,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.186,
+      "signals": {
+        "concentration": {
+          "value": 47.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.495,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 2.61,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 22.45,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "88": {
+      "netuid": 88,
+      "name": "Investing",
+      "blowup_probability": 0.031,
+      "ev_multiplier": 0.9559,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.634,
+      "signals": {
+        "concentration": {
+          "value": 47.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 4.058,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.962,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 6.81,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -13.6,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "89": {
+      "netuid": 89,
+      "name": "InfiniteHash",
+      "blowup_probability": 0.0055,
+      "ev_multiplier": 0.9922,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.112,
+      "signals": {
+        "concentration": {
+          "value": 41.8,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.531,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.997,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.23,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -3.32,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "90": {
+      "netuid": 90,
+      "name": "ogham",
+      "blowup_probability": 0.0948,
+      "ev_multiplier": 0.865,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.938,
+      "signals": {
+        "concentration": {
+          "value": 28.3,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.444,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.51,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 8.61,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "91": {
+      "netuid": 91,
+      "name": "Bitstarter #1",
+      "blowup_probability": 0.13,
+      "ev_multiplier": 0.8149,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.659,
+      "signals": {
+        "concentration": {
+          "value": 42.5,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.469,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.6,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 140.24,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "92": {
+      "netuid": 92,
+      "name": "TensorClaw",
+      "blowup_probability": 0.0955,
+      "ev_multiplier": 0.864,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.953,
+      "signals": {
+        "concentration": {
+          "value": 35.6,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 2.996,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.478,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.13,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 10.04,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "93": {
+      "netuid": 93,
+      "name": "Bitcast",
+      "blowup_probability": 0.0492,
+      "ev_multiplier": 0.9299,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.007,
+      "signals": {
+        "concentration": {
+          "value": 34.8,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.376,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.944,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.38,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -5.99,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "94": {
+      "netuid": 94,
+      "name": "Bitsota",
+      "blowup_probability": 0.0333,
+      "ev_multiplier": 0.9526,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.68,
+      "signals": {
+        "concentration": {
+          "value": 49.0,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.325,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.987,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.33,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 0.46,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "95": {
+      "netuid": 95,
+      "name": "nion",
+      "blowup_probability": 0.0516,
+      "ev_multiplier": 0.9265,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.056,
+      "signals": {
+        "concentration": {
+          "value": 27.9,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.229,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 3.18,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 19.01,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "97": {
+      "netuid": 97,
+      "name": "distil",
+      "blowup_probability": 0.0938,
+      "ev_multiplier": 0.8664,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.918,
+      "signals": {
+        "concentration": {
+          "value": 100.0,
+          "label": "extreme",
+          "lr": 0.97
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.149,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 16.07,
+          "label": "extreme",
+          "lr": 1.68
+        },
+        "pool_trend": {
+          "value": 324.94,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "98": {
+      "netuid": 98,
+      "name": "ForeverMoney",
+      "blowup_probability": 0.0127,
+      "ev_multiplier": 0.982,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.259,
+      "signals": {
+        "concentration": {
+          "value": 27.6,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.979,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.17,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -3.45,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "99": {
+      "netuid": 99,
+      "name": "Leoma",
+      "blowup_probability": 0.13,
+      "ev_multiplier": 0.8149,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.659,
+      "signals": {
+        "concentration": {
+          "value": 44.2,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.479,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.59,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 34.32,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "100": {
+      "netuid": 100,
+      "name": "Pla\u03c4form",
+      "blowup_probability": 0.125,
+      "ev_multiplier": 0.822,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.556,
+      "signals": {
+        "concentration": {
+          "value": 43.6,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.319,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.98,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 4.1,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "101": {
+      "netuid": 101,
+      "name": "eni",
+      "blowup_probability": 0.0269,
+      "ev_multiplier": 0.9616,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.551,
+      "signals": {
+        "concentration": {
+          "value": 32.0,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.93,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.25,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 0.86,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "102": {
+      "netuid": 102,
+      "name": "ConnitoAI",
+      "blowup_probability": 0.0527,
+      "ev_multiplier": 0.9249,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.079,
+      "signals": {
+        "concentration": {
+          "value": 38.5,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.693,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.469,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 22.69,
+          "label": "extreme",
+          "lr": 1.68
+        },
+        "pool_trend": {
+          "value": 0,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "103": {
+      "netuid": 103,
+      "name": "Djinn",
+      "blowup_probability": 0.0813,
+      "ev_multiplier": 0.8842,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.663,
+      "signals": {
+        "concentration": {
+          "value": 50.5,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 1.592,
+          "label": "medium",
+          "lr": 1.08
+        },
+        "organic_support": {
+          "value": 0.488,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 6.08,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -3.99,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "104": {
+      "netuid": 104,
+      "name": "for sale (burn to uid1)",
+      "blowup_probability": 0.0233,
+      "ev_multiplier": 0.9668,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.477,
+      "signals": {
+        "concentration": {
+          "value": 28.8,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.215,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.485,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 1.1,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 5.73,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "105": {
+      "netuid": 105,
+      "name": "Beam",
+      "blowup_probability": 0.0838,
+      "ev_multiplier": 0.8807,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.713,
+      "signals": {
+        "concentration": {
+          "value": 63.9,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 3.532,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.33,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 9.62,
+          "label": "high",
+          "lr": 1.69
+        },
+        "pool_trend": {
+          "value": 14.19,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "106": {
+      "netuid": 106,
+      "name": "VoidAI",
+      "blowup_probability": 0.0385,
+      "ev_multiplier": 0.9452,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.787,
+      "signals": {
+        "concentration": {
+          "value": 58.4,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.896,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.97,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 1.11,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "107": {
+      "netuid": 107,
+      "name": "Minos",
+      "blowup_probability": 0.0681,
+      "ev_multiplier": 0.903,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.393,
+      "signals": {
+        "concentration": {
+          "value": 30.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.249,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 4.73,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 65.08,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "108": {
+      "netuid": 108,
+      "name": "TalkHead",
+      "blowup_probability": 0.0986,
+      "ev_multiplier": 0.8596,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.016,
+      "signals": {
+        "concentration": {
+          "value": 28.9,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.484,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.17,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 11.88,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "109": {
+      "netuid": 109,
+      "name": "Academia",
+      "blowup_probability": 0.13,
+      "ev_multiplier": 0.8149,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.659,
+      "signals": {
+        "concentration": {
+          "value": 42.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.49,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 4.42,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 25.76,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "110": {
+      "netuid": 110,
+      "name": "Rich Kids of TAO",
+      "blowup_probability": 0.0516,
+      "ev_multiplier": 0.9265,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.056,
+      "signals": {
+        "concentration": {
+          "value": 29.8,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.224,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 3.18,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 36.2,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "111": {
+      "netuid": 111,
+      "name": "oneoneone",
+      "blowup_probability": 0.0443,
+      "ev_multiplier": 0.9369,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.906,
+      "signals": {
+        "concentration": {
+          "value": 58.6,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 4.625,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.912,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.37,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -6.81,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "112": {
+      "netuid": 112,
+      "name": "minotaur",
+      "blowup_probability": 0.0894,
+      "ev_multiplier": 0.8728,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.827,
+      "signals": {
+        "concentration": {
+          "value": 36.3,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.976,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.68,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -12.01,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "113": {
+      "netuid": 113,
+      "name": "TensorUSD",
+      "blowup_probability": 0.13,
+      "ev_multiplier": 0.8149,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 2.659,
+      "signals": {
+        "concentration": {
+          "value": 46.7,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.477,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 3.08,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 20.37,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "114": {
+      "netuid": 114,
+      "name": "SOMA",
+      "blowup_probability": 0.0425,
+      "ev_multiplier": 0.9396,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.868,
+      "signals": {
+        "concentration": {
+          "value": 39.6,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.101,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.436,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 6.0,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 45.53,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "115": {
+      "netuid": 115,
+      "name": "HashiChain",
+      "blowup_probability": 0.0127,
+      "ev_multiplier": 0.982,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.259,
+      "signals": {
+        "concentration": {
+          "value": 28.1,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.989,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.31,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -2.51,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "116": {
+      "netuid": 116,
+      "name": "TaoLend",
+      "blowup_probability": 0.0088,
+      "ev_multiplier": 0.9875,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.18,
+      "signals": {
+        "concentration": {
+          "value": 34.2,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.409,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.983,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.19,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 2.6,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "117": {
+      "netuid": 117,
+      "name": "BrainPlay",
+      "blowup_probability": 0.0092,
+      "ev_multiplier": 0.9869,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.188,
+      "signals": {
+        "concentration": {
+          "value": 42.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0.35,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.939,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.52,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -3.04,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "118": {
+      "netuid": 118,
+      "name": "HODL",
+      "blowup_probability": 0.0055,
+      "ev_multiplier": 0.9922,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.112,
+      "signals": {
+        "concentration": {
+          "value": 35.4,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 1.478,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.952,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 2.8,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -2.36,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "119": {
+      "netuid": 119,
+      "name": "Satori",
+      "blowup_probability": 0.0127,
+      "ev_multiplier": 0.982,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.259,
+      "signals": {
+        "concentration": {
+          "value": 30.0,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.988,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.15,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -4.34,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "120": {
+      "netuid": 120,
+      "name": "Affine",
+      "blowup_probability": 0.0417,
+      "ev_multiplier": 0.9406,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.853,
+      "signals": {
+        "concentration": {
+          "value": 55.4,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.229,
+          "label": "none",
+          "lr": 0.77
+        },
+        "volatility": {
+          "value": 2.0,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 3.3,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "121": {
+      "netuid": 121,
+      "name": "sundae_bar",
+      "blowup_probability": 0.0476,
+      "ev_multiplier": 0.9322,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.974,
+      "signals": {
+        "concentration": {
+          "value": 27.1,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.975,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.52,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": 12.65,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "122": {
+      "netuid": 122,
+      "name": "Bitrecs",
+      "blowup_probability": 0.0894,
+      "ev_multiplier": 0.8728,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.827,
+      "signals": {
+        "concentration": {
+          "value": 36.9,
+          "label": "moderate",
+          "lr": 0.91
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.874,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.96,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -12.26,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "123": {
+      "netuid": 123,
+      "name": "MANTIS",
+      "blowup_probability": 0.0186,
+      "ev_multiplier": 0.9736,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.379,
+      "signals": {
+        "concentration": {
+          "value": 61.4,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 3.676,
+          "label": "high",
+          "lr": 0.51
+        },
+        "organic_support": {
+          "value": 0.914,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.24,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -1.64,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "124": {
+      "netuid": 124,
+      "name": "Swarm",
+      "blowup_probability": 0.0156,
+      "ev_multiplier": 0.9777,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.32,
+      "signals": {
+        "concentration": {
+          "value": 28.2,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.199,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.996,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 3.37,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -3.49,
+          "label": "slight_drain",
+          "lr": 0.62
+        }
+      }
+    },
+    "125": {
+      "netuid": 125,
+      "name": "8 Ball",
+      "blowup_probability": 0.0423,
+      "ev_multiplier": 0.9398,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.865,
+      "signals": {
+        "concentration": {
+          "value": 26.2,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.373,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 1.86,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": 3.84,
+          "label": "growing",
+          "lr": 1.0
+        }
+      }
+    },
+    "126": {
+      "netuid": 126,
+      "name": "Poker44",
+      "blowup_probability": 0.0706,
+      "ev_multiplier": 0.8994,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.444,
+      "signals": {
+        "concentration": {
+          "value": 27.0,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 0.275,
+          "label": "very_low",
+          "lr": 0.81
+        },
+        "organic_support": {
+          "value": 0.469,
+          "label": "low",
+          "lr": 1.47
+        },
+        "volatility": {
+          "value": 9.03,
+          "label": "high",
+          "lr": 1.69
+        },
+        "pool_trend": {
+          "value": 52.91,
+          "label": "surging",
+          "lr": 1.04
+        }
+      }
+    },
+    "127": {
+      "netuid": 127,
+      "name": "Astrid",
+      "blowup_probability": 0.0221,
+      "ev_multiplier": 0.9685,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 0.452,
+      "signals": {
+        "concentration": {
+          "value": 28.8,
+          "label": "low",
+          "lr": 0.69
+        },
+        "entropy": {
+          "value": 1.109,
+          "label": "low",
+          "lr": 0.48
+        },
+        "organic_support": {
+          "value": 0.96,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 4.29,
+          "label": "moderate",
+          "lr": 1.3
+        },
+        "pool_trend": {
+          "value": -6.29,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    },
+    "128": {
+      "netuid": 128,
+      "name": "ByteLeap",
+      "blowup_probability": 0.057,
+      "ev_multiplier": 0.9189,
+      "expected_blowup_loss": -0.424,
+      "combined_lr": 1.165,
+      "signals": {
+        "concentration": {
+          "value": 50,
+          "label": "high",
+          "lr": 1.3
+        },
+        "entropy": {
+          "value": 0,
+          "label": "zero",
+          "lr": 1.47
+        },
+        "organic_support": {
+          "value": 0.98,
+          "label": "strong",
+          "lr": 0.71
+        },
+        "volatility": {
+          "value": 1.91,
+          "label": "low",
+          "lr": 0.58
+        },
+        "pool_trend": {
+          "value": -6.07,
+          "label": "draining",
+          "lr": 1.48
+        }
+      }
+    }
+  }
+}

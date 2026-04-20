@@ -76,5 +76,23 @@
     "tao_removed": 32.8,
     "new_total": 11.3,
     "slippage_pct": 0.245
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 32.3,
+    "slippage_pct": 0.029,
+    "entry_price": 0.05266516,
+    "sortino": 1.2443
+  },
+  {
+    "date": "2026-04-19",
+    "type": "INCREASE",
+    "netuid": 28,
+    "name": "gm",
+    "tao_added": 17.4,
+    "new_total": 28.7
   }
 ]

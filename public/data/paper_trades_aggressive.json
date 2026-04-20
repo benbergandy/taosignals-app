@@ -924,5 +924,434 @@
     "slippage_pct": 0.15,
     "entry_price": 0.00829211,
     "sortino": 0.4733
+  },
+  {
+    "date": "2026-04-18",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.3,
+    "tao_received": 20.09,
+    "slippage_pct": 0.9752,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-18",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 21.8,
+    "tao_received": 21.76,
+    "slippage_pct": 0.1504,
+    "reason": "governance flags=3 (top1=28% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-18",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.3,
+    "tao_received": 20.09,
+    "slippage_pct": 0.9752,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-18",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 21.8,
+    "tao_received": 21.76,
+    "slippage_pct": 0.1504,
+    "reason": "governance flags=3 (top1=28% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-18",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 20.3,
+    "slippage_pct": 0.975,
+    "entry_price": 0.05134007,
+    "sortino": 3.2114
+  },
+  {
+    "date": "2026-04-18",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 21.8,
+    "slippage_pct": 0.15,
+    "entry_price": 0.00829211,
+    "sortino": 0.4733
+  },
+  {
+    "date": "2026-04-18",
+    "type": "ENTRY",
+    "netuid": 128,
+    "name": "ByteLeap",
+    "tao": 20.5,
+    "slippage_pct": 0.503,
+    "entry_price": 0.00338962,
+    "sortino": 0.4467
+  },
+  {
+    "date": "2026-04-18",
+    "type": "INCREASE",
+    "netuid": 28,
+    "name": "gm",
+    "tao_added": 11.1,
+    "new_total": 52.7
+  },
+  {
+    "date": "2026-04-18",
+    "type": "INCREASE",
+    "netuid": 27,
+    "name": "Nodexo",
+    "tao_added": 7.4,
+    "new_total": 31.9
+  },
+  {
+    "date": "2026-04-18",
+    "type": "INCREASE",
+    "netuid": 116,
+    "name": "TaoLend",
+    "tao_added": 7.8,
+    "new_total": 22.1
+  },
+  {
+    "date": "2026-04-18",
+    "type": "INCREASE",
+    "netuid": 104,
+    "name": "for sale (burn to uid1)",
+    "tao_added": 6.5,
+    "new_total": 17.2
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.3,
+    "tao_received": 20.1,
+    "slippage_pct": 0.949,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 21.8,
+    "tao_received": 21.76,
+    "slippage_pct": 0.1476,
+    "reason": "governance flags=3 (top1=28% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.3,
+    "tao_received": 20.1,
+    "slippage_pct": 0.949,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 21.8,
+    "tao_received": 21.76,
+    "slippage_pct": 0.1476,
+    "reason": "governance flags=3 (top1=28% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "EXIT",
+    "netuid": 104,
+    "name": "for sale (burn to uid1)",
+    "tao": 17.2,
+    "tao_received": 17.14,
+    "slippage_pct": 0.291,
+    "reason": "score 42.5 below exit threshold 46.4"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "EXIT",
+    "netuid": 29,
+    "name": "Coldint",
+    "tao": 8.5,
+    "tao_received": 8.49,
+    "slippage_pct": 0.046,
+    "reason": "score 41.3 below exit threshold 46.4"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "EXIT",
+    "netuid": 47,
+    "name": "EvolAI",
+    "tao": 5.1,
+    "tao_received": 5.06,
+    "slippage_pct": 0.691,
+    "reason": "score 43.4 below exit threshold 46.4"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 20.8,
+    "slippage_pct": 0.972,
+    "entry_price": 0.04617737,
+    "sortino": 2.8375
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 78.9,
+    "slippage_pct": 0.071,
+    "entry_price": 0.05266516,
+    "sortino": 1.2443
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 31.2,
+    "slippage_pct": 0.211,
+    "entry_price": 0.00848493,
+    "sortino": 0.4924
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.8,
+    "tao_received": 20.59,
+    "slippage_pct": 0.9722,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 31.2,
+    "tao_received": 31.12,
+    "slippage_pct": 0.2111,
+    "reason": "governance flags=3 (top1=28% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.8,
+    "tao_received": 20.59,
+    "slippage_pct": 0.9722,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 31.2,
+    "tao_received": 31.12,
+    "slippage_pct": 0.2111,
+    "reason": "governance flags=3 (top1=28% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 20.8,
+    "slippage_pct": 0.972,
+    "entry_price": 0.04617737,
+    "sortino": 2.8375
+  },
+  {
+    "date": "2026-04-19",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 31.2,
+    "slippage_pct": 0.211,
+    "entry_price": 0.00848493,
+    "sortino": 0.4924
+  },
+  {
+    "date": "2026-04-19",
+    "type": "INCREASE",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao_added": 31.1,
+    "new_total": 91.2
+  },
+  {
+    "date": "2026-04-19",
+    "type": "INCREASE",
+    "netuid": 28,
+    "name": "gm",
+    "tao_added": 17.4,
+    "new_total": 70.1
+  },
+  {
+    "date": "2026-04-19",
+    "type": "INCREASE",
+    "netuid": 27,
+    "name": "Nodexo",
+    "tao_added": 11.0,
+    "new_total": 42.9
+  },
+  {
+    "date": "2026-04-19",
+    "type": "INCREASE",
+    "netuid": 1,
+    "name": "Apex",
+    "tao_added": 12.5,
+    "new_total": 40.3
+  },
+  {
+    "date": "2026-04-19",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 13.8,
+    "new_total": 39.6
+  },
+  {
+    "date": "2026-04-19",
+    "type": "INCREASE",
+    "netuid": 95,
+    "name": "nion",
+    "tao_added": 13.9,
+    "new_total": 37.1
+  },
+  {
+    "date": "2026-04-20",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.8,
+    "tao_received": 20.62,
+    "slippage_pct": 0.8294,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-20",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 31.2,
+    "tao_received": 31.12,
+    "slippage_pct": 0.2074,
+    "reason": "governance flags=3 (top1=27% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-20",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 20.8,
+    "tao_received": 20.62,
+    "slippage_pct": 0.8294,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-20",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 31.2,
+    "tao_received": 31.12,
+    "slippage_pct": 0.2074,
+    "reason": "governance flags=3 (top1=27% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-20",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 21.4,
+    "slippage_pct": 0.853,
+    "entry_price": 0.05052728,
+    "sortino": 2.8402
+  },
+  {
+    "date": "2026-04-20",
+    "type": "ENTRY",
+    "netuid": 47,
+    "name": "EvolAI",
+    "tao": 7.4,
+    "slippage_pct": 1.004,
+    "entry_price": 0.00447955,
+    "sortino": 0.4672
+  },
+  {
+    "date": "2026-04-20",
+    "type": "ENTRY",
+    "netuid": 113,
+    "name": "TensorUSD",
+    "tao": 17.1,
+    "slippage_pct": 0.983,
+    "entry_price": 0.00487229,
+    "sortino": 0.4177
+  },
+  {
+    "date": "2026-04-20",
+    "type": "DECREASE",
+    "netuid": 66,
+    "name": "ninja",
+    "tao_removed": 29.3,
+    "new_total": 115.8,
+    "slippage_pct": 0.211
+  },
+  {
+    "date": "2026-04-20",
+    "type": "INCREASE",
+    "netuid": 107,
+    "name": "Minos",
+    "tao_added": 5.1,
+    "new_total": 15.5
+  },
+  {
+    "date": "2026-04-20",
+    "type": "INCREASE",
+    "netuid": 116,
+    "name": "TaoLend",
+    "tao_added": 9.0,
+    "new_total": 31.1
+  },
+  {
+    "date": "2026-04-20",
+    "type": "INCREASE",
+    "netuid": 105,
+    "name": "Beam",
+    "tao_added": 20.4,
+    "new_total": 30.8
+  },
+  {
+    "date": "2026-04-20",
+    "type": "INCREASE",
+    "netuid": 128,
+    "name": "ByteLeap",
+    "tao_added": 7.6,
+    "new_total": 28.1
+  },
+  {
+    "date": "2026-04-20",
+    "type": "INCREASE",
+    "netuid": 83,
+    "name": "CliqueAI",
+    "tao_added": 9.5,
+    "new_total": 26.0
   }
 ]

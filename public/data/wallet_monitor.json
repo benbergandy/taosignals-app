@@ -649,6 +649,136 @@
       "total_value": 0.830615,
       "total_pnl_tao": -0.169385,
       "total_pnl_pct": -16.94
+    },
+    {
+      "date": "2026-04-19",
+      "balance": 0.485842,
+      "positions": {
+        "3": {
+          "name": "Templar",
+          "tokens": 1.40535,
+          "price": 0.02455286,
+          "tao_value": 0.034505,
+          "cost_basis": 0.1,
+          "pnl_tao": -0.065495,
+          "pnl_pct": -65.49,
+          "emission": "\u200e0.000000000\u03b3\u200e",
+          "hotkey": "5HdTZQ6UXD7MWcRsMeEx..."
+        },
+        "15": {
+          "name": "ORO",
+          "tokens": 5.522925,
+          "price": 0.01432058,
+          "tao_value": 0.079091,
+          "cost_basis": 0.1,
+          "pnl_tao": -0.020909,
+          "pnl_pct": -20.91,
+          "emission": "\u200e9.253743482\u03bf\u200e",
+          "hotkey": "5E2LP6EnZ54m3wS8s1yP..."
+        },
+        "24": {
+          "name": "Quasar",
+          "tokens": 7.749038,
+          "price": 0.01668469,
+          "tao_value": 0.12929,
+          "cost_basis": 0.1,
+          "pnl_tao": 0.02929,
+          "pnl_pct": 29.29,
+          "emission": "\u200e0.053049961\u03c9\u200e",
+          "hotkey": "5HbScNssaEfioJHXjcXd..."
+        },
+        "81": {
+          "name": "Grail",
+          "tokens": 3.796808,
+          "price": 0.00882485,
+          "tao_value": 0.033506,
+          "cost_basis": 0.1,
+          "pnl_tao": -0.066494,
+          "pnl_pct": -66.49,
+          "emission": "\u200e0.000000000\u16a0\u200e",
+          "hotkey": "5F9uEDDovurwEJihzZSp..."
+        },
+        "105": {
+          "name": "Beam",
+          "tokens": 7.460525,
+          "price": 0.01207358,
+          "tao_value": 0.090075,
+          "cost_basis": 0.1,
+          "pnl_tao": -0.009925,
+          "pnl_pct": -9.92,
+          "emission": "\u200e0.978158349\u0533\u200e",
+          "hotkey": "5GUHsu6g6Kwq7dX9rM7v..."
+        }
+      },
+      "total_staked_value": 0.366469,
+      "total_value": 0.85231,
+      "total_pnl_tao": -0.14769,
+      "total_pnl_pct": -14.77
+    },
+    {
+      "date": "2026-04-20",
+      "balance": 0.485842,
+      "positions": {
+        "3": {
+          "name": "Templar",
+          "tokens": 1.40535,
+          "price": 0.02423116,
+          "tao_value": 0.034053,
+          "cost_basis": 0.1,
+          "pnl_tao": -0.065947,
+          "pnl_pct": -65.95,
+          "emission": "\u200e0.000000000\u03b3\u200e",
+          "hotkey": "5HdTZQ6UXD7MWcRsMeEx..."
+        },
+        "15": {
+          "name": "ORO",
+          "tokens": 5.54377,
+          "price": 0.01565521,
+          "tao_value": 0.086789,
+          "cost_basis": 0.1,
+          "pnl_tao": -0.013211,
+          "pnl_pct": -13.21,
+          "emission": "\u200e9.201505936\u03bf\u200e",
+          "hotkey": "5E2LP6EnZ54m3wS8s1yP..."
+        },
+        "24": {
+          "name": "Quasar",
+          "tokens": 7.754408,
+          "price": 0.0172266,
+          "tao_value": 0.133582,
+          "cost_basis": 0.1,
+          "pnl_tao": 0.033582,
+          "pnl_pct": 33.58,
+          "emission": "\u200e0.055829785\u03c9\u200e",
+          "hotkey": "5HbScNssaEfioJHXjcXd..."
+        },
+        "81": {
+          "name": "Grail",
+          "tokens": 3.796808,
+          "price": 0.0084315,
+          "tao_value": 0.032013,
+          "cost_basis": 0.1,
+          "pnl_tao": -0.067987,
+          "pnl_pct": -67.99,
+          "emission": "\u200e0.000000000\u16a0\u200e",
+          "hotkey": "5F9uEDDovurwEJihzZSp..."
+        },
+        "105": {
+          "name": "Beam",
+          "tokens": 7.474983,
+          "price": 0.01211885,
+          "tao_value": 0.090588,
+          "cost_basis": 0.1,
+          "pnl_tao": -0.009412,
+          "pnl_pct": -9.41,
+          "emission": "\u200e1.331232130\u0533\u200e",
+          "hotkey": "5GUHsu6g6Kwq7dX9rM7v..."
+        }
+      },
+      "total_staked_value": 0.377025,
+      "total_value": 0.862867,
+      "total_pnl_tao": -0.137133,
+      "total_pnl_pct": -13.71
     }
   ],
   "initial_date": "2026-04-07"
