@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  /* No static export — full SSR on Vercel */
 };
 
 export default nextConfig;
