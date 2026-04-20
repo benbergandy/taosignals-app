@@ -1,12 +1,15 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
+import SubnetLogo from "@/components/SubnetLogo";
 
 interface Subnet {
   netuid: number;
   name: string;
   tao_in?: number;
+  alpha_in?: number;
+  alpha_out?: number;
   alpha_price_tao?: number;
   moving_price?: number;
   price_vs_ema?: number;
@@ -24,8 +27,24 @@ interface ChainData {
   generated_at?: string;
 }
 
-type SortField = "tao_in" | "alpha_price_tao" | "price_vs_ema" | "ema_tao_inflow" | "emission_share_pct" | "miners" | "netuid" | "subnet_volume";
+type SortField = "tao_in" | "alpha_price_tao" | "price_vs_ema" | "ema_tao_inflow" | "emission_share_pct" | "miners" | "netuid" | "subnet_volume" | "market_cap";
 type FilterMode = "all" | "deep" | "inflow" | "active";
+type DisplayUnit = "tao" | "usd";
+
+function marketCapTao(s: Subnet): number {
+  const price = s.moving_price ?? s.alpha_price_tao ?? 0;
+  const supply = (s.alpha_in ?? 0) + (s.alpha_out ?? 0);
+  if (price <= 0 || supply <= 0) return (s.tao_in ?? 0) * 2;
+  return supply * price;
+}
+
+function fmtCompact(v: number): string {
+  if (!isFinite(v) || v <= 0) return "—";
+  if (v >= 1_000_000_000) return (v / 1_000_000_000).toFixed(2) + "B";
+  if (v >= 1_000_000) return (v / 1_000_000).toFixed(2) + "M";
+  if (v >= 1_000) return (v / 1_000).toFixed(1) + "K";
+  return v.toFixed(0);
+}
 
 function liquidityTier(taoIn: number): { label: string; color: string } {
   if (taoIn >= 50000) return { label: "DEEP", color: "text-green border-green bg-green/10" };
@@ -57,6 +76,7 @@ const COLUMNS: { label: string; field: SortField | null }[] = [
   { label: "SN", field: "netuid" },
   { label: "Name", field: null },
   { label: "Price", field: "alpha_price_tao" },
+  { label: "Market Cap", field: "market_cap" },
   { label: "Price vs EMA", field: "price_vs_ema" },
   { label: "Emission %", field: "emission_share_pct" },
   { label: "TAO Staked", field: "tao_in" },
@@ -81,6 +101,21 @@ export default function SubnetsPage() {
   const [sortDir, setSortDir] = useState<-1 | 1>(-1);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<FilterMode>("all");
+  const [displayUnit, setDisplayUnit] = useState<DisplayUnit>("usd");
+  const [taoUsd, setTaoUsd] = useState<number | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    // CoinGecko has open CORS — works in dev and prod without API server dependency
+    fetch("https://api.coingecko.com/api/v3/simple/price?ids=bittensor&vs_currencies=usd")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        const p = d?.bittensor?.usd;
+        if (!cancelled && typeof p === "number" && p > 0) setTaoUsd(p);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
 
   const loadData = useCallback(() => {
     setLoading(true);
@@ -129,11 +164,25 @@ export default function SubnetsPage() {
     }
   });
 
-  const sorted = [...filtered].sort((a, b) => {
-    const av = (a[sortField] as number) || 0;
-    const bv = (b[sortField] as number) || 0;
-    return sortDir === -1 ? bv - av : av - bv;
-  });
+  const sorted = useMemo(() => {
+    const getVal = (s: Subnet): number => {
+      if (sortField === "market_cap") return marketCapTao(s);
+      return (s[sortField] as number) || 0;
+    };
+    return [...filtered].sort((a, b) => sortDir === -1 ? getVal(b) - getVal(a) : getVal(a) - getVal(b));
+  }, [filtered, sortField, sortDir]);
+
+  const usdMode = displayUnit === "usd" && taoUsd != null && taoUsd > 0;
+  const usdMult = usdMode ? (taoUsd as number) : 1;
+  const taoSym = "τ";
+  const fmtPrice = (priceTao: number): string => {
+    if (usdMode) {
+      const usd = priceTao * usdMult;
+      return "$" + (usd >= 1 ? usd.toFixed(4) : usd.toFixed(6));
+    }
+    return priceTao.toFixed(6);
+  };
+  const fmtTaoVal = (vTao: number): string => usdMode ? "$" + fmtCompact(vTao * usdMult) : fmtComma(vTao);
 
   return (
     <div>
@@ -219,12 +268,25 @@ export default function SubnetsPage() {
               </button>
             ))}
           </div>
-          <button
-            onClick={loadData}
-            className="font-mono text-[10px] tracking-[0.08em] uppercase px-3 py-1.5 border border-border2 text-muted cursor-pointer hover:border-cyan hover:text-cyan transition-all"
-          >
-            ↻ Refresh
-          </button>
+          <div className="flex items-center gap-2">
+            <div className="flex" title={taoUsd == null ? "USD price unavailable" : `1 TAO = $${taoUsd.toFixed(2)}`}>
+              <button
+                className={`font-mono text-[10px] uppercase px-3 py-1.5 border border-border2 transition-all ${displayUnit === "tao" ? "text-cyan bg-cyan/[0.08]" : "text-muted bg-transparent hover:text-text"}`}
+                onClick={() => setDisplayUnit("tao")}
+              >TAO</button>
+              <button
+                disabled={taoUsd == null}
+                className={`font-mono text-[10px] uppercase px-3 py-1.5 border border-border2 border-l-0 transition-all ${displayUnit === "usd" ? "text-cyan bg-cyan/[0.08]" : "text-muted bg-transparent hover:text-text"} ${taoUsd == null ? "opacity-40 cursor-not-allowed" : ""}`}
+                onClick={() => taoUsd != null && setDisplayUnit("usd")}
+              >USD</button>
+            </div>
+            <button
+              onClick={loadData}
+              className="font-mono text-[10px] tracking-[0.08em] uppercase px-3 py-1.5 border border-border2 text-muted cursor-pointer hover:border-cyan hover:text-cyan transition-all"
+            >
+              ↻ Refresh
+            </button>
+          </div>
         </div>
 
         {/* Table */}
@@ -263,18 +325,24 @@ export default function SubnetsPage() {
                 ) : (
                   sorted.map((s, i) => {
                     const tier = liquidityTier(s.tao_in || 0);
+                    const priceTao = s.alpha_price_tao || s.moving_price || 0;
+                    const mcapTao = marketCapTao(s);
                     return (
                       <tr key={s.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
                         <td className="font-mono text-[11px] text-muted px-3 py-2.5">{i + 1}</td>
                         <td className="font-mono text-[10px] text-muted px-3 py-2.5">{s.netuid}</td>
-                        <td className="font-semibold text-[13px] px-3 py-2.5 min-w-[140px]">
-                          <Link href={`/subnet/${s.netuid}`} className="text-inherit no-underline border-b border-border2 hover:border-cyan">
-                            {s.name}
+                        <td className="font-semibold text-[13px] px-3 py-2.5 min-w-[160px]">
+                          <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
+                            <SubnetLogo netuid={s.netuid} size={18} />
+                            <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
                           </Link>
                         </td>
                         <td className="font-mono text-[11px] px-3 py-2.5">
-                          {(s.alpha_price_tao || s.moving_price || 0).toFixed(6)}{" "}
-                          <span className="text-muted text-[9px]">τ</span>
+                          {fmtPrice(priceTao)}
+                          {!usdMode && <span className="text-muted text-[9px]"> {taoSym}</span>}
+                        </td>
+                        <td className="font-mono text-[11px] text-purple px-3 py-2.5">
+                          {fmtTaoVal(mcapTao)}{!usdMode && mcapTao > 0 && <span className="text-muted text-[9px]"> {taoSym}</span>}
                         </td>
                         <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.price_vs_ema || 1) <= 1.0 ? "text-green" : "text-red"}`}>
                           {(s.price_vs_ema || 0).toFixed(3)}
@@ -283,10 +351,10 @@ export default function SubnetsPage() {
                           {(s.emission_share_pct || 0).toFixed(3)}%
                         </td>
                         <td className="font-mono text-[11px] text-cyan px-3 py-2.5">
-                          {fmtComma(s.tao_in || 0)}
+                          {fmtTaoVal(s.tao_in || 0)}{!usdMode && <span className="text-muted text-[9px]"> {taoSym}</span>}
                         </td>
                         <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.ema_tao_inflow || 0) >= 0 ? "text-green" : "text-red"}`}>
-                          {fmtInflow(s.ema_tao_inflow || 0)} τ
+                          {fmtInflow(s.ema_tao_inflow || 0)} {taoSym}
                         </td>
                         <td className="font-mono text-[11px] px-3 py-2.5">
                           {fmtVolume(s.subnet_volume || 0)}

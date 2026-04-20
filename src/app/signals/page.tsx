@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
+import SubnetLogo from "@/components/SubnetLogo";
 
 /* ── Types ─────────────────────────────────────────────────── */
 interface SubnetScore {
@@ -316,7 +317,10 @@ export default function SignalsPage() {
       <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
       <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
       <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[140px]">
-        <Link href={`/subnet/${s.netuid}`} className="text-inherit no-underline border-b border-border2 hover:border-cyan">{s.name}</Link>
+        <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
+          <SubnetLogo netuid={s.netuid} size={18} />
+          <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
+        </Link>
       </td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
@@ -339,7 +343,10 @@ export default function SignalsPage() {
       <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
       <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
       <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[140px]">
-        <Link href={`/subnet/${s.netuid}`} className="text-inherit no-underline border-b border-border2 hover:border-cyan">{s.name}</Link>
+        <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
+          <SubnetLogo netuid={s.netuid} size={18} />
+          <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
+        </Link>
       </td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
       <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.emission_vs_network)}</td>
@@ -357,7 +364,10 @@ export default function SignalsPage() {
       <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
       <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
       <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[140px]">
-        <Link href={`/subnet/${s.netuid}`} className="text-inherit no-underline border-b border-border2 hover:border-cyan">{s.name}</Link>
+        <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
+          <SubnetLogo netuid={s.netuid} size={18} />
+          <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
+        </Link>
       </td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
       <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.avg_dividends)}</td>
@@ -376,7 +386,10 @@ export default function SignalsPage() {
       <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
       <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
       <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[140px]">
-        <Link href={`/subnet/${s.netuid}`} className="text-inherit no-underline border-b border-border2 hover:border-cyan">{s.name}</Link>
+        <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
+          <SubnetLogo netuid={s.netuid} size={18} />
+          <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
+        </Link>
       </td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
       <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.weight_concentration_trend)}</td>
