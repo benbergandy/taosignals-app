@@ -3,13 +3,13 @@
   "total_tao": 1000,
   "positions": {
     "86": {
-      "tao": 8.8,
+      "tao": 17.4,
       "entry_date": "2026-04-09",
       "entry_price": 0.00431907,
       "name": "\u2692",
       "alpha_tokens_at_entry": 4005.4919,
-      "accumulated_emission_tokens": 45.7008,
-      "accumulated_emission_tao": 0.185914,
+      "accumulated_emission_tokens": 49.5704,
+      "accumulated_emission_tao": 0.201032,
       "cost_basis_tao": 17.3
     },
     "92": {
@@ -18,8 +18,8 @@
       "entry_price": 0.00423013,
       "name": "TensorClaw",
       "alpha_tokens_at_entry": 3025.9117,
-      "accumulated_emission_tokens": 59.9598,
-      "accumulated_emission_tao": 0.240397,
+      "accumulated_emission_tokens": 64.6574,
+      "accumulated_emission_tao": 0.258259,
       "cost_basis_tao": 12.8
     },
     "49": {
@@ -28,8 +28,8 @@
       "entry_price": 0.00548646,
       "name": "Nepher Robotics",
       "alpha_tokens_at_entry": 1676.8554,
-      "accumulated_emission_tokens": 28.5655,
-      "accumulated_emission_tao": 0.160986,
+      "accumulated_emission_tokens": 31.5261,
+      "accumulated_emission_tao": 0.177208,
       "cost_basis_tao": 9.2
     },
     "116": {
@@ -38,15 +38,35 @@
       "entry_price": 0.00361347,
       "name": "TaoLend",
       "alpha_tokens_at_entry": 9021.799,
-      "accumulated_emission_tokens": 29.4256,
-      "accumulated_emission_tao": 0.107731,
+      "accumulated_emission_tokens": 32.9716,
+      "accumulated_emission_tao": 0.120813,
       "cost_basis_tao": 32.6
+    },
+    "73": {
+      "tao": 83.7,
+      "entry_date": "2026-04-21",
+      "entry_price": 0.00458091,
+      "name": "MetaHash",
+      "alpha_tokens_at_entry": 18271.4788,
+      "accumulated_emission_tokens": 1.521,
+      "accumulated_emission_tao": 0.006968,
+      "cost_basis_tao": 83.7
+    },
+    "43": {
+      "tao": 102.0,
+      "entry_date": "2026-04-21",
+      "entry_price": 0.00620311,
+      "name": "Graphite",
+      "alpha_tokens_at_entry": 16443.3647,
+      "accumulated_emission_tokens": 1.2137,
+      "accumulated_emission_tao": 0.007529,
+      "cost_basis_tao": 102.0
     }
   },
-  "root_stake": 927.1384,
-  "cash_value": 999.95,
-  "accumulated_root_yield": 2.025258,
-  "benchmark_eq_weight": 984.9,
+  "root_stake": 732.9436,
+  "cash_value": 999.55,
+  "accumulated_root_yield": 2.130444,
+  "benchmark_eq_weight": 990.69,
   "benchmark_eq_prices": {
     "1": 0.01176801,
     "2": 0.00787769,
@@ -133,8 +153,8 @@
     "127": 0.00598287,
     "128": 0.00371591
   },
-  "benchmark_eq_emissions": 27.946872,
-  "benchmark_mcw_emissions": 2.908788,
+  "benchmark_eq_emissions": 29.351485,
+  "benchmark_mcw_emissions": 3.070685,
   "benchmark_mcw_prices": {
     "1": {
       "price": 0.01176801,
@@ -473,7 +493,7 @@
       "weight": 0.00329041332881925
     }
   },
-  "benchmark_mcw": 905.98,
-  "benchmark_root_value": 1002.2087,
-  "benchmark_root": 1002.21
+  "benchmark_mcw": 904.4,
+  "benchmark_root_value": 1002.3525,
+  "benchmark_root": 1002.35
 }

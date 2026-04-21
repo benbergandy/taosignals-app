@@ -160,5 +160,33 @@
     "name": "TensorClaw",
     "tao_added": 7.0,
     "new_total": 13.5
+  },
+  {
+    "date": "2026-04-21",
+    "type": "ENTRY",
+    "netuid": 73,
+    "name": "MetaHash",
+    "tao": 83.7,
+    "slippage_pct": 1.0,
+    "entry_price": 0.00458091,
+    "sortino": 0.3793
+  },
+  {
+    "date": "2026-04-21",
+    "type": "ENTRY",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao": 102.0,
+    "slippage_pct": 0.668,
+    "entry_price": 0.00620311,
+    "sortino": 1.6624
+  },
+  {
+    "date": "2026-04-21",
+    "type": "INCREASE",
+    "netuid": 86,
+    "name": "\u2692",
+    "tao_added": 8.6,
+    "new_total": 17.4
   }
 ]

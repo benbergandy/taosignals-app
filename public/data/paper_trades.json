@@ -1174,5 +1174,91 @@
     "name": "gm",
     "tao_added": 13.4,
     "new_total": 43.2
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 21.4,
+    "tao_received": 21.21,
+    "slippage_pct": 0.8401,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 11.7,
+    "tao_received": 11.68,
+    "slippage_pct": 0.0794,
+    "reason": "governance flags=3 (top1=27% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 21.4,
+    "tao_received": 21.21,
+    "slippage_pct": 0.8401,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 11.7,
+    "tao_received": 11.68,
+    "slippage_pct": 0.0794,
+    "reason": "governance flags=3 (top1=27% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "EXIT",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 3.3,
+    "tao_received": 3.3,
+    "slippage_pct": 0.016,
+    "reason": "no longer scored"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 25.1,
+    "slippage_pct": 0.984,
+    "entry_price": 0.04942422,
+    "sortino": 2.3713
+  },
+  {
+    "date": "2026-04-21",
+    "type": "ENTRY",
+    "netuid": 108,
+    "name": "TalkHead",
+    "tao": 6.4,
+    "slippage_pct": 0.382,
+    "entry_price": 0.00424199,
+    "sortino": 0.1478
+  },
+  {
+    "date": "2026-04-21",
+    "type": "INCREASE",
+    "netuid": 95,
+    "name": "nion",
+    "tao_added": 31.2,
+    "new_total": 46.8
+  },
+  {
+    "date": "2026-04-21",
+    "type": "INCREASE",
+    "netuid": 107,
+    "name": "Minos",
+    "tao_added": 5.2,
+    "new_total": 15.6
   }
 ]

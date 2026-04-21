@@ -750,5 +750,55 @@
     "slippage_pct": 0.274,
     "entry_price": 0.00883185,
     "sortino": 0.3269
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 21.4,
+    "tao_received": 21.21,
+    "slippage_pct": 0.8401,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 41.2,
+    "tao_received": 41.06,
+    "slippage_pct": 0.2791,
+    "reason": "governance flags=3 (top1=27% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 21.4,
+    "tao_received": 21.21,
+    "slippage_pct": 0.8401,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao_removed": 41.2,
+    "tao_received": 41.06,
+    "slippage_pct": 0.2791,
+    "reason": "governance flags=3 (top1=27% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "EXIT",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 45.4,
+    "tao_received": 45.28,
+    "slippage_pct": 0.222,
+    "reason": "no longer scored"
   }
 ]

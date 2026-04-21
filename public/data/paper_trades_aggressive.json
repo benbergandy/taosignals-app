@@ -1353,5 +1353,105 @@
     "name": "CliqueAI",
     "tao_added": 9.5,
     "new_total": 26.0
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 21.4,
+    "tao_received": 21.21,
+    "slippage_pct": 0.8401,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 21.4,
+    "tao_received": 21.21,
+    "slippage_pct": 0.8401,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "EXIT",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 5.9,
+    "tao_received": 5.9,
+    "slippage_pct": 0.029,
+    "reason": "no longer scored"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "EXIT",
+    "netuid": 114,
+    "name": "SOMA",
+    "tao": 13.1,
+    "tao_received": 12.98,
+    "slippage_pct": 0.857,
+    "reason": "score 46.6 below exit threshold 50.3"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "EXIT",
+    "netuid": 1,
+    "name": "Apex",
+    "tao": 40.3,
+    "tao_received": 40.22,
+    "slippage_pct": 0.137,
+    "reason": "no longer scored"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "EXIT",
+    "netuid": 128,
+    "name": "ByteLeap",
+    "tao": 28.1,
+    "tao_received": 27.89,
+    "slippage_pct": 0.687,
+    "reason": "no longer scored"
+  },
+  {
+    "date": "2026-04-21",
+    "type": "ENTRY",
+    "netuid": 70,
+    "name": "NexisGen",
+    "tao": 3.9,
+    "slippage_pct": 0.956,
+    "entry_price": 0.00605735,
+    "sortino": 3.6119
+  },
+  {
+    "date": "2026-04-21",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 25.1,
+    "slippage_pct": 0.984,
+    "entry_price": 0.04942422,
+    "sortino": 2.3713
+  },
+  {
+    "date": "2026-04-21",
+    "type": "ENTRY",
+    "netuid": 46,
+    "name": "RESI",
+    "tao": 40.7,
+    "slippage_pct": 0.366,
+    "entry_price": 0.0078865,
+    "sortino": 0.8166
+  },
+  {
+    "date": "2026-04-21",
+    "type": "ENTRY",
+    "netuid": 104,
+    "name": "for sale (burn to uid1)",
+    "tao": 21.7,
+    "slippage_pct": 0.366,
+    "entry_price": 0.00467919,
+    "sortino": 0.4349
   }
 ]
