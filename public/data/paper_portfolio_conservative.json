@@ -8,8 +8,8 @@
       "entry_price": 0.00902725,
       "name": "oracle",
       "alpha_tokens_at_entry": 4885.2087,
-      "accumulated_emission_tokens": 22.2534,
-      "accumulated_emission_tao": 0.225654,
+      "accumulated_emission_tokens": 23.2445,
+      "accumulated_emission_tao": 0.23686,
       "cost_basis_tao": 44.1
     },
     "66": {
@@ -18,8 +18,8 @@
       "entry_price": 0.01640471,
       "name": "ninja",
       "alpha_tokens_at_entry": 2925.9889,
-      "accumulated_emission_tokens": 11.371,
-      "accumulated_emission_tao": 0.174305,
+      "accumulated_emission_tokens": 13.0303,
+      "accumulated_emission_tao": 0.196675,
       "cost_basis_tao": 48.0
     },
     "51": {
@@ -28,8 +28,8 @@
       "entry_price": 0.05266516,
       "name": "lium.io",
       "alpha_tokens_at_entry": 613.3087,
-      "accumulated_emission_tokens": 0.5513,
-      "accumulated_emission_tao": 0.029158,
+      "accumulated_emission_tokens": 0.6873,
+      "accumulated_emission_tao": 0.036516,
       "cost_basis_tao": 32.3
     },
     "95": {
@@ -38,15 +38,15 @@
       "entry_price": 0.02395373,
       "name": "nion",
       "alpha_tokens_at_entry": 1310.8606,
-      "accumulated_emission_tokens": 0.9836,
-      "accumulated_emission_tao": 0.023561,
+      "accumulated_emission_tokens": 1.9497,
+      "accumulated_emission_tao": 0.047138,
       "cost_basis_tao": 31.4
     }
   },
-  "root_stake": 862.1847,
-  "cash_value": 1004.51,
-  "accumulated_root_yield": 2.541126,
-  "benchmark_eq_weight": 992.65,
+  "root_stake": 862.3076,
+  "cash_value": 1003.4,
+  "accumulated_root_yield": 2.664014,
+  "benchmark_eq_weight": 1003.69,
   "benchmark_eq_prices": {
     "1": 0.01260903,
     "3": 0.07180776,
@@ -128,8 +128,8 @@
     "126": 0.00916816,
     "128": 0.00394646
   },
-  "benchmark_eq_emissions": 34.004404,
-  "benchmark_mcw_emissions": 4.055339,
+  "benchmark_eq_emissions": 35.253828,
+  "benchmark_mcw_emissions": 4.214261,
   "benchmark_mcw_prices": {
     "1": {
       "price": 0.01260903,
@@ -448,7 +448,7 @@
       "weight": 0.003680874029691303
     }
   },
-  "benchmark_mcw": 861.65,
-  "benchmark_root_value": 1003.0616,
-  "benchmark_root": 1003.06
+  "benchmark_mcw": 868.11,
+  "benchmark_root_value": 1003.2046,
+  "benchmark_root": 1003.2
 }

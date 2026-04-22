@@ -1260,5 +1260,83 @@
     "name": "Minos",
     "tao_added": 5.2,
     "new_total": 15.6
+  },
+  {
+    "date": "2026-04-22",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 25.1,
+    "tao_received": 24.85,
+    "slippage_pct": 0.9493,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-22",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 25.1,
+    "tao_received": 24.85,
+    "slippage_pct": 0.9493,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-22",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 25.5,
+    "slippage_pct": 0.964,
+    "entry_price": 0.04802553,
+    "sortino": 2.2327
+  },
+  {
+    "date": "2026-04-22",
+    "type": "INCREASE",
+    "netuid": 15,
+    "name": "ORO",
+    "tao_added": 11.7,
+    "new_total": 28.2
+  },
+  {
+    "date": "2026-04-22",
+    "type": "INCREASE",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao_added": 10.2,
+    "new_total": 59.8
+  },
+  {
+    "date": "2026-04-22",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 9.7,
+    "new_total": 54.4
+  },
+  {
+    "date": "2026-04-22",
+    "type": "INCREASE",
+    "netuid": 38,
+    "name": "colosseum",
+    "tao_added": 5.7,
+    "new_total": 16.2
+  },
+  {
+    "date": "2026-04-22",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 6.4,
+    "new_total": 21.0
+  },
+  {
+    "date": "2026-04-22",
+    "type": "INCREASE",
+    "netuid": 104,
+    "name": "for sale (burn to uid1)",
+    "tao_added": 14.2,
+    "new_total": 20.2
   }
 ]
