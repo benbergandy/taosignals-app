@@ -627,20 +627,19 @@ export default function SignalsPage() {
                 </div>
                 <div className="text-xs text-muted leading-[1.7]">
                   TAO Signal uses a <strong className="text-text">PCA-derived five-factor model</strong> built on on-chain
-                  Bittensor data and metagraph validator signals. 10 weighted signals across
-                  5 factors, updated daily. No third-party APIs.
+                  Bittensor data and metagraph validator signals, updated daily. No third-party APIs.
                 </div>
                 <div className="mt-3">
                   {[
-                    { label: "Stability", value: "42.2%", color: "text-green" },
-                    { label: "Yield", value: "23.6%", color: "text-yellow" },
-                    { label: "Consensus", value: "15.8%", color: "text-purple" },
-                    { label: "Flow", value: "13.1%", color: "text-cyan" },
-                    { label: "Conviction", value: "5.3%", color: "text-orange" },
+                    { label: "Stability", color: "text-green" },
+                    { label: "Yield", color: "text-yellow" },
+                    { label: "Consensus", color: "text-purple" },
+                    { label: "Flow", color: "text-cyan" },
+                    { label: "Conviction", color: "text-orange" },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center justify-between py-1.5 border-b border-border/50 last:border-b-0">
                       <span className="text-xs text-text">{item.label}</span>
-                      <span className={`font-mono text-[11px] ${item.color}`}>{item.value}</span>
+                      <span className={`w-2.5 h-2.5 rounded-full ${item.color.replace("text-", "bg-")}`} />
                     </div>
                   ))}
                 </div>

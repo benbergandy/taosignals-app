@@ -788,11 +788,11 @@ export default function SubnetDetailPage() {
         <div className="grid grid-cols-3 gap-px bg-border border border-border min-w-[420px]">
           {[
             { label: "Combined", value: score?.combined_score, color: "text-cyan", sub: "overall signal" },
-            { label: "Stability", value: score?.stability_score, color: "text-green", sub: "42.2% weight" },
-            { label: "Yield", value: score?.yield_score, color: "text-yellow", sub: "23.6% weight" },
-            { label: "Consensus", value: score?.consensus_score, color: "text-purple", sub: "15.8% weight" },
-            { label: "Flow", value: score?.flow_score, color: "text-cyan", sub: "13.1% weight" },
-            { label: "Conviction", value: score?.conviction_score, color: "text-orange", sub: "5.3% weight" },
+            { label: "Stability", value: score?.stability_score, color: "text-green", sub: "factor score" },
+            { label: "Yield", value: score?.yield_score, color: "text-yellow", sub: "factor score" },
+            { label: "Consensus", value: score?.consensus_score, color: "text-purple", sub: "factor score" },
+            { label: "Flow", value: score?.flow_score, color: "text-cyan", sub: "factor score" },
+            { label: "Conviction", value: score?.conviction_score, color: "text-orange", sub: "factor score" },
           ].map((card) => (
             <div key={card.label} className="bg-surface px-[18px] py-3.5 text-center">
               <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1.5">
@@ -1008,7 +1008,7 @@ export default function SubnetDetailPage() {
           {/* Stability Signals */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
             <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-green">
-              Stability Signals (42.2%)
+              Stability
             </div>
             <div className="px-3.5 py-2.5">
               <InfoRow label="Em vs Network" value={fmtSig(score?.emission_vs_network)} />
@@ -1021,7 +1021,7 @@ export default function SubnetDetailPage() {
           {/* Yield Signal */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
             <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-yellow">
-              Yield Signal (23.6%)
+              Yield
             </div>
             <div className="px-3.5 py-2.5">
               <InfoRow label="Avg Dividends" value={fmtSig(score?.avg_dividends)} />
@@ -1032,7 +1032,7 @@ export default function SubnetDetailPage() {
           {/* Consensus Signals */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
             <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-purple">
-              Consensus Signals (15.8%)
+              Consensus
             </div>
             <div className="px-3.5 py-2.5">
               <InfoRow label="Wt Conc Trend" value={fmtSig(score?.weight_concentration_trend)} />
@@ -1044,7 +1044,7 @@ export default function SubnetDetailPage() {
           {/* Flow Signals */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
             <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-cyan">
-              Flow Signals (13.1%)
+              Flow
             </div>
             <div className="px-3.5 py-2.5">
               <InfoRow label="Em Velocity" value={fmtSig(score?.emission_velocity)} />
@@ -1056,7 +1056,7 @@ export default function SubnetDetailPage() {
           {/* Conviction Signals */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
             <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-orange">
-              Conviction Signals (5.3%)
+              Conviction
             </div>
             <div className="px-3.5 py-2.5">
               <InfoRow label="Avg Val Trust" value={fmtSig(score?.avg_validator_trust)} />
