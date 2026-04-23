@@ -844,5 +844,55 @@
     "name": "ORO",
     "tao_added": 15.2,
     "new_total": 28.2
+  },
+  {
+    "date": "2026-04-23",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 25.5,
+    "tao_received": 25.25,
+    "slippage_pct": 0.9181,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-23",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 25.5,
+    "tao_received": 25.25,
+    "slippage_pct": 0.9181,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-23",
+    "type": "EXIT",
+    "netuid": 105,
+    "name": "Beam",
+    "tao": 34.5,
+    "tao_received": 34.15,
+    "slippage_pct": 0.952,
+    "reason": "score 44.9 below exit threshold 46.7"
+  },
+  {
+    "date": "2026-04-23",
+    "type": "EXIT",
+    "netuid": 100,
+    "name": "Pla\u03c4form",
+    "tao": 24.8,
+    "tao_received": 24.58,
+    "slippage_pct": 0.831,
+    "reason": "score 40.1 below exit threshold 46.7"
+  },
+  {
+    "date": "2026-04-23",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 26.5,
+    "slippage_pct": 0.954,
+    "entry_price": 0.04628156,
+    "sortino": 2.2471
   }
 ]

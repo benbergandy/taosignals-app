@@ -1338,5 +1338,75 @@
     "name": "for sale (burn to uid1)",
     "tao_added": 14.2,
     "new_total": 20.2
+  },
+  {
+    "date": "2026-04-23",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 25.5,
+    "tao_received": 25.25,
+    "slippage_pct": 0.9181,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-23",
+    "type": "GOVERNANCE_EXIT",
+    "netuid": 97,
+    "name": "distil",
+    "tao_removed": 25.5,
+    "tao_received": 25.25,
+    "slippage_pct": 0.9181,
+    "reason": "governance flags=3 (top1=100% entropy=0.00)"
+  },
+  {
+    "date": "2026-04-23",
+    "type": "EXIT",
+    "netuid": 105,
+    "name": "Beam",
+    "tao": 3.3,
+    "tao_received": 3.3,
+    "slippage_pct": 0.092,
+    "reason": "score 44.9 below exit threshold 46.7"
+  },
+  {
+    "date": "2026-04-23",
+    "type": "EXIT",
+    "netuid": 100,
+    "name": "Pla\u03c4form",
+    "tao": 12.0,
+    "tao_received": 11.95,
+    "slippage_pct": 0.404,
+    "reason": "score 40.1 below exit threshold 46.7"
+  },
+  {
+    "date": "2026-04-23",
+    "type": "ENTRY",
+    "netuid": 97,
+    "name": "distil",
+    "tao": 26.5,
+    "slippage_pct": 0.954,
+    "entry_price": 0.04628156,
+    "sortino": 2.2471
+  },
+  {
+    "date": "2026-04-23",
+    "type": "ENTRY",
+    "netuid": 83,
+    "name": "CliqueAI",
+    "tao": 20.2,
+    "slippage_pct": 0.394,
+    "entry_price": 0.0053498,
+    "sortino": 0.4447
+  },
+  {
+    "date": "2026-04-23",
+    "type": "ENTRY",
+    "netuid": 54,
+    "name": "Yanez MIID",
+    "tao": 12.7,
+    "slippage_pct": 0.123,
+    "entry_price": 0.00747333,
+    "sortino": 0.2807
   }
 ]

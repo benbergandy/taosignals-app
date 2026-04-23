@@ -188,5 +188,24 @@
     "name": "\u2692",
     "tao_added": 8.6,
     "new_total": 17.4
+  },
+  {
+    "date": "2026-04-23",
+    "type": "ENTRY",
+    "netuid": 90,
+    "name": "ogham",
+    "tao": 17.0,
+    "slippage_pct": 0.992,
+    "entry_price": 0.00436261,
+    "sortino": 0.076
+  },
+  {
+    "date": "2026-04-23",
+    "type": "DECREASE",
+    "netuid": 73,
+    "name": "MetaHash",
+    "tao_removed": 50.9,
+    "new_total": 32.8,
+    "slippage_pct": 0.607
   }
 ]
