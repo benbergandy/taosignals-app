@@ -83,6 +83,14 @@ interface ChainData {
   subnets: ChainSubnet[];
 }
 
+interface BotMirrorEntry {
+  timestamp: string;
+  dry_run: boolean;
+  real_total_tao_before: number;
+  real_total_tao_after?: number;
+  paper_total_tao: number;
+}
+
 interface HoldingRow {
   netuid: number;
   name: string;
@@ -233,6 +241,9 @@ export default function PerformancePage() {
 
   const chartRef = useRef<HTMLCanvasElement>(null);
   const chartInstance = useRef<any>(null);
+  const botChartRef = useRef<HTMLCanvasElement>(null);
+  const botChartInstance = useRef<any>(null);
+  const [botLog, setBotLog] = useState<BotMirrorEntry[]>([]);
 
   // ── Derived values ─────────────────────────────────────────
   const latest = dailyLog.length ? dailyLog[dailyLog.length - 1] : null;
@@ -347,12 +358,13 @@ export default function PerformancePage() {
   // ── Data loading ───────────────────────────────────────────
   useEffect(() => {
     async function loadData() {
-      const [portfolioData, dailyData, tradeData, regimeData, chainRes] = await Promise.all([
+      const [portfolioData, dailyData, tradeData, regimeData, chainRes, botData] = await Promise.all([
         safeFetch<Portfolio>("/data/paper_portfolio.json"),
         safeFetch<DailyLogEntry[]>("/data/paper_daily_log.json"),
         safeFetch<Trade[]>("/data/paper_trades.json"),
         safeFetch<RegimeData>("/data/regime_state.json"),
         safeFetch<ChainData>("/data/chain_data.json"),
+        safeFetch<BotMirrorEntry[]>("/data/bot_mirror_log.json"),
       ]);
 
       setPortfolio(portfolioData);
@@ -360,6 +372,7 @@ export default function PerformancePage() {
       setTrades(Array.isArray(tradeData) ? tradeData : []);
       setRegime(regimeData);
       setChainData(chainRes);
+      setBotLog(Array.isArray(botData) ? botData : []);
       setLoading(false);
     }
     loadData();
@@ -494,10 +507,123 @@ export default function PerformancePage() {
     buildChart();
   }, [buildChart]);
 
+  // ── Bot mirror chart (real wallet vs paper, both indexed to 1.00) ──────
+  const buildBotChart = useCallback(() => {
+    if (!chartReady || !botChartRef.current || botLog.length === 0) return;
+    const Chart = window.Chart;
+    if (!Chart) return;
+
+    // Use real_total_tao_after when present (execute runs), fall back to
+    // real_total_tao_before for dry-run snapshots.
+    const points = botLog
+      .map((e) => ({
+        ts: e.timestamp,
+        bot: e.real_total_tao_after ?? e.real_total_tao_before ?? 0,
+        paper: e.paper_total_tao ?? 0,
+      }))
+      .filter((p) => p.bot > 0 && p.paper > 0);
+
+    if (points.length === 0) return;
+
+    const bot0 = points[0].bot;
+    const paper0 = points[0].paper;
+    const labels = points.map((p) => {
+      const d = new Date(p.ts);
+      return `${(d.getMonth() + 1).toString().padStart(2, "0")}/${d.getDate().toString().padStart(2, "0")}`;
+    });
+    const botSeries = points.map((p) => p.bot / bot0);
+    const paperSeries = points.map((p) => p.paper / paper0);
+    const ptRadius = points.length <= 14 ? 3 : 1.5;
+
+    if (botChartInstance.current) botChartInstance.current.destroy();
+
+    botChartInstance.current = new Chart(botChartRef.current.getContext("2d"), {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          {
+            label: "Bot Wallet (real)",
+            data: botSeries,
+            borderColor: "#ffd000",
+            borderWidth: 2.5,
+            pointRadius: ptRadius,
+            pointBackgroundColor: "#ffd000",
+            tension: 0.3,
+            fill: false,
+          },
+          {
+            label: "Paper Portfolio",
+            data: paperSeries,
+            borderColor: "#00d4ff",
+            borderWidth: 2,
+            pointRadius: ptRadius,
+            pointBackgroundColor: "#00d4ff",
+            borderDash: [4, 4],
+            tension: 0.3,
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: {
+            display: true,
+            labels: { color: "#445566", font: { family: "IBM Plex Mono", size: 9 }, boxWidth: 12, padding: 12 },
+          },
+          tooltip: {
+            backgroundColor: "rgba(10,14,18,0.95)",
+            borderColor: "#243040",
+            borderWidth: 1,
+            titleColor: "#445566",
+            bodyColor: "#c8d8e8",
+            titleFont: { family: "IBM Plex Mono", size: 10 },
+            bodyFont: { family: "IBM Plex Mono", size: 11 },
+            padding: 10,
+            callbacks: {
+              label: function (ctx: any) {
+                const pct = (ctx.parsed.y - 1) * 100;
+                const sign = pct >= 0 ? "+" : "";
+                return ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(4)}× (${sign}${pct.toFixed(2)}%)`;
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            grid: { color: "rgba(26,34,48,0.5)", drawTicks: false },
+            ticks: { color: "#445566", font: { family: "IBM Plex Mono", size: 9 }, maxRotation: 0, maxTicksLimit: 8 },
+            border: { color: "#1a2230" },
+          },
+          y: {
+            grid: { color: "rgba(26,34,48,0.5)", drawTicks: false },
+            ticks: {
+              color: "#445566",
+              font: { family: "IBM Plex Mono", size: 9 },
+              callback: function (v: any) {
+                return v.toFixed(3) + "×";
+              },
+            },
+            border: { color: "#1a2230" },
+            title: { display: true, text: "Indexed (1.00 = first run)", color: "#445566", font: { family: "IBM Plex Mono", size: 10 } },
+          },
+        },
+      },
+    });
+  }, [botLog, chartReady]);
+
+  useEffect(() => {
+    buildBotChart();
+  }, [buildBotChart]);
+
   // Cleanup chart on unmount
   useEffect(() => {
     return () => {
       if (chartInstance.current) chartInstance.current.destroy();
+      if (botChartInstance.current) botChartInstance.current.destroy();
     };
   }, []);
 
@@ -681,6 +807,41 @@ export default function PerformancePage() {
               ) : (
                 <div className="font-mono text-[11px] text-muted text-center py-12">
                   No daily data yet &mdash; check back after the first daily run
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* ── BOT WALLET MIRROR CHART ─────────────────────── */}
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-text font-medium whitespace-nowrap">
+              Bot Wallet vs Paper Portfolio
+            </div>
+            <div className="flex-1 h-px bg-border" />
+            <span className="font-mono text-[9px] tracking-[0.1em] px-2 py-0.5 border border-border2 text-muted uppercase whitespace-nowrap">
+              {botLog.length} runs
+            </span>
+          </div>
+
+          <div className="bg-surface border border-border p-5">
+            <div className="flex items-center justify-between mb-4">
+              <div className="font-mono text-[10px] tracking-[0.12em] uppercase text-yellow">
+                Indexed Performance &mdash; both lines start at 1.00
+              </div>
+              <div className="font-mono text-[9px] text-muted">
+                divergence = real execution drift from paper math
+              </div>
+            </div>
+            <div className="h-[260px] relative">
+              {botLog.length >= 2 ? (
+                <canvas ref={botChartRef} />
+              ) : (
+                <div className="font-mono text-[11px] text-muted text-center py-12">
+                  {botLog.length === 1
+                    ? "Only one bot run logged so far — chart will populate after the next daily run"
+                    : "No bot mirror data yet — check back after the first scheduled run"}
                 </div>
               )}
             </div>
