@@ -36,12 +36,7 @@ done
 [ -f ${PIPELINE}/data/tail_risk.json ] && cp ${PIPELINE}/data/tail_risk.json ${SITE}/
 
 # Push to GitHub (triggers Vercel auto-deploy)
-# Pull --rebase first so any frontend commits I pushed from my laptop integrate
-# cleanly with the server's data commits — prevents the diverged-history issue
-# that silently failed pushes for 4 days.
 cd /root/taosignals-app
-git fetch origin main
-git pull --rebase --autostash origin main
 git add .
 git commit -m "daily update ${TODAY}" --allow-empty
 git push

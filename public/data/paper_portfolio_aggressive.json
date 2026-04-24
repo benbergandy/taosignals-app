@@ -8,8 +8,8 @@
       "entry_price": 0.00384612,
       "name": "TensorClaw",
       "alpha_tokens_at_entry": 3692.0325,
-      "accumulated_emission_tokens": 4.7369,
-      "accumulated_emission_tao": 0.018219,
+      "accumulated_emission_tokens": 9.4704,
+      "accumulated_emission_tao": 0.036749,
       "cost_basis_tao": 14.2
     },
     "94": {
@@ -18,8 +18,8 @@
       "entry_price": 0.00362614,
       "name": "Bitsota",
       "alpha_tokens_at_entry": 4191.7852,
-      "accumulated_emission_tokens": 3.9751,
-      "accumulated_emission_tao": 0.014414,
+      "accumulated_emission_tokens": 8.2399,
+      "accumulated_emission_tao": 0.029963,
       "cost_basis_tao": 15.2
     },
     "87": {
@@ -28,8 +28,8 @@
       "entry_price": 0.0039953,
       "name": "Luminar Network",
       "alpha_tokens_at_entry": 2252.6469,
-      "accumulated_emission_tokens": 4.7215,
-      "accumulated_emission_tao": 0.018864,
+      "accumulated_emission_tokens": 9.3109,
+      "accumulated_emission_tao": 0.037741,
       "cost_basis_tao": 9.0
     },
     "43": {
@@ -38,8 +38,8 @@
       "entry_price": 0.00615656,
       "name": "Graphite",
       "alpha_tokens_at_entry": 14050.0539,
-      "accumulated_emission_tokens": 0.5891,
-      "accumulated_emission_tao": 0.003627,
+      "accumulated_emission_tokens": 1.2026,
+      "accumulated_emission_tao": 0.007404,
       "cost_basis_tao": 86.5
     },
     "80": {
@@ -48,8 +48,8 @@
       "entry_price": 0.00388752,
       "name": "dogelayer",
       "alpha_tokens_at_entry": 2443.7173,
-      "accumulated_emission_tokens": 4.7269,
-      "accumulated_emission_tao": 0.018376,
+      "accumulated_emission_tokens": 9.3669,
+      "accumulated_emission_tao": 0.036261,
       "cost_basis_tao": 9.5
     },
     "73": {
@@ -58,8 +58,8 @@
       "entry_price": 0.00459967,
       "name": "MetaHash",
       "alpha_tokens_at_entry": 10935.5671,
-      "accumulated_emission_tokens": 1.2049,
-      "accumulated_emission_tao": 0.005542,
+      "accumulated_emission_tokens": 2.5142,
+      "accumulated_emission_tao": 0.011568,
       "cost_basis_tao": 50.3
     },
     "49": {
@@ -68,8 +68,8 @@
       "entry_price": 0.00530584,
       "name": "Nepher Robotics",
       "alpha_tokens_at_entry": 3580.9598,
-      "accumulated_emission_tokens": 3.0481,
-      "accumulated_emission_tao": 0.016173,
+      "accumulated_emission_tokens": 6.1387,
+      "accumulated_emission_tao": 0.032585,
       "cost_basis_tao": 19.0
     },
     "116": {
@@ -78,8 +78,8 @@
       "entry_price": 0.0036473,
       "name": "TaoLend",
       "alpha_tokens_at_entry": 9267.1291,
-      "accumulated_emission_tokens": 3.3672,
-      "accumulated_emission_tao": 0.012281,
+      "accumulated_emission_tokens": 6.8358,
+      "accumulated_emission_tao": 0.024921,
       "cost_basis_tao": 33.8
     },
     "101": {
@@ -88,15 +88,25 @@
       "entry_price": 0.00403559,
       "name": "eni",
       "alpha_tokens_at_entry": 4311.6372,
-      "accumulated_emission_tokens": 2.7147,
-      "accumulated_emission_tao": 0.010955,
+      "accumulated_emission_tokens": 5.407,
+      "accumulated_emission_tao": 0.021849,
       "cost_basis_tao": 17.4
+    },
+    "12": {
+      "tao": 41.7,
+      "entry_date": "2026-04-24",
+      "entry_price": 0.00664902,
+      "name": "Compute Horde",
+      "alpha_tokens_at_entry": 6271.6009,
+      "accumulated_emission_tokens": 0.2478,
+      "accumulated_emission_tao": 0.001648,
+      "cost_basis_tao": 41.7
     }
   },
-  "root_stake": 745.2115,
-  "cash_value": 1000.23,
-  "accumulated_root_yield": 0.111543,
-  "benchmark_eq_weight": 1002.1,
+  "root_stake": 703.615,
+  "cash_value": 1001.05,
+  "accumulated_root_yield": 0.21506,
+  "benchmark_eq_weight": 1007.36,
   "benchmark_eq_prices": {
     "4": 0.05998205,
     "5": 0.01921722,
@@ -165,8 +175,8 @@
     "125": 0.00588285,
     "126": 0.00683966
   },
-  "benchmark_eq_emissions": 2.100331,
-  "benchmark_mcw_emissions": 0.377587,
+  "benchmark_eq_emissions": 4.182786,
+  "benchmark_mcw_emissions": 0.744015,
   "benchmark_mcw_prices": {
     "4": {
       "price": 0.05998205,
@@ -433,7 +443,7 @@
       "weight": 0.00106146259256581
     }
   },
-  "benchmark_mcw": 1000.38,
-  "benchmark_root_value": 1000.1497,
-  "benchmark_root": 1000.15
+  "benchmark_mcw": 999.0,
+  "benchmark_root_value": 1000.2969,
+  "benchmark_root": 1000.3
 }

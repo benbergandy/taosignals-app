@@ -8,8 +8,8 @@
       "entry_price": 0.00384612,
       "name": "TensorClaw",
       "alpha_tokens_at_entry": 3692.0325,
-      "accumulated_emission_tokens": 4.7369,
-      "accumulated_emission_tao": 0.018219,
+      "accumulated_emission_tokens": 9.4704,
+      "accumulated_emission_tao": 0.036749,
       "cost_basis_tao": 14.2
     },
     "94": {
@@ -18,8 +18,8 @@
       "entry_price": 0.00362614,
       "name": "Bitsota",
       "alpha_tokens_at_entry": 4191.7852,
-      "accumulated_emission_tokens": 3.9751,
-      "accumulated_emission_tao": 0.014414,
+      "accumulated_emission_tokens": 8.2399,
+      "accumulated_emission_tao": 0.029963,
       "cost_basis_tao": 15.2
     },
     "43": {
@@ -28,8 +28,8 @@
       "entry_price": 0.00615656,
       "name": "Graphite",
       "alpha_tokens_at_entry": 8608.7036,
-      "accumulated_emission_tokens": 0.3617,
-      "accumulated_emission_tao": 0.002227,
+      "accumulated_emission_tokens": 0.7384,
+      "accumulated_emission_tao": 0.004547,
       "cost_basis_tao": 53.0
     },
     "73": {
@@ -38,8 +38,8 @@
       "entry_price": 0.00459967,
       "name": "MetaHash",
       "alpha_tokens_at_entry": 11000.7892,
-      "accumulated_emission_tokens": 1.212,
-      "accumulated_emission_tao": 0.005575,
+      "accumulated_emission_tokens": 2.5291,
+      "accumulated_emission_tao": 0.011636,
       "cost_basis_tao": 50.6
     },
     "116": {
@@ -48,15 +48,15 @@
       "entry_price": 0.0036473,
       "name": "TaoLend",
       "alpha_tokens_at_entry": 4222.3014,
-      "accumulated_emission_tokens": 1.5426,
-      "accumulated_emission_tao": 0.005626,
+      "accumulated_emission_tokens": 3.1316,
+      "accumulated_emission_tao": 0.011416,
       "cost_basis_tao": 15.4
     }
   },
-  "root_stake": 851.7275,
-  "cash_value": 1000.17,
-  "accumulated_root_yield": 0.127479,
-  "benchmark_eq_weight": 1002.1,
+  "root_stake": 851.8528,
+  "cash_value": 1000.7,
+  "accumulated_root_yield": 0.252796,
+  "benchmark_eq_weight": 1007.36,
   "benchmark_eq_prices": {
     "4": 0.05998205,
     "5": 0.01921722,
@@ -125,8 +125,8 @@
     "125": 0.00588285,
     "126": 0.00683966
   },
-  "benchmark_eq_emissions": 2.100331,
-  "benchmark_mcw_emissions": 0.377587,
+  "benchmark_eq_emissions": 4.182786,
+  "benchmark_mcw_emissions": 0.744015,
   "benchmark_mcw_prices": {
     "4": {
       "price": 0.05998205,
@@ -393,7 +393,7 @@
       "weight": 0.00106146259256581
     }
   },
-  "benchmark_mcw": 1000.38,
-  "benchmark_root_value": 1000.1497,
-  "benchmark_root": 1000.15
+  "benchmark_mcw": 999.0,
+  "benchmark_root_value": 1000.2969,
+  "benchmark_root": 1000.3
 }

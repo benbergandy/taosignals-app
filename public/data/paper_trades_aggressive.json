@@ -88,5 +88,15 @@
     "slippage_pct": 0.569,
     "entry_price": 0.00403559,
     "sortino": 1.2133
+  },
+  {
+    "date": "2026-04-24",
+    "type": "ENTRY",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao": 41.7,
+    "slippage_pct": 0.28,
+    "entry_price": 0.00664902,
+    "sortino": -0.0655
   }
 ]
