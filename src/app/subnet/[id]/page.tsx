@@ -3,8 +3,9 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import SubnetLogo from "@/components/SubnetLogo";
 
-// ── TYPES ────────────────────────────────────────────────────
+// ── TYPES (v2.1 model) ────────────────────────────────────────
 interface ScoreData {
   netuid: number;
   name?: string;
@@ -12,22 +13,22 @@ interface ScoreData {
   stability_score?: number;
   yield_score?: number;
   consensus_score?: number;
-  flow_score?: number;
+  capital_flow_score?: number;     // v2.1: replaces flow_score
   conviction_score?: number;
   flow_signal?: string;
   price_vs_ema_signal?: string;
   vs_network_signal?: string;
-  emission_velocity_signal?: string;
-  emission_stability_signal?: string;
   rank_consistency_signal?: string;
   validator_retention_signal?: string;
   emission_vs_network?: number;
   rank_consistency?: number;
-  emission_stability?: number;
   avg_dividends?: number;
   weight_concentration_trend?: number;
-  weight_conc_delta?: number;
-  emission_velocity?: number;
+  // v2.1 Capital Flow Momentum signals
+  validator_total_stake_velocity_7d?: number;
+  alpha_out_velocity_7d?: number;
+  alpha_out_in_ratio?: number;
+  volume_velocity_7d?: number;
   inflow_momentum?: number;
   avg_validator_trust?: number;
   n_active_delta?: number;
@@ -759,15 +760,17 @@ export default function SubnetDetailPage() {
           <div className="font-mono text-[9px] tracking-[0.2em] uppercase text-muted mb-1.5">
             Subnet Intelligence
           </div>
-          <div className="text-[30px] font-bold tracking-tight text-text leading-none mb-2.5">
-            {name} <span className="text-cyan font-mono text-base ml-2">{symbol}</span>
+          <div className="flex items-center gap-3 mb-2.5">
+            <SubnetLogo netuid={NETUID} size={36} />
+            <div className="text-[30px] font-bold tracking-tight text-text leading-none">
+              {name} <span className="text-cyan font-mono text-base ml-2">{symbol}</span>
+            </div>
           </div>
           <div className="flex items-center gap-2 flex-wrap">
             {[
               score?.flow_signal,
               score?.price_vs_ema_signal,
               score?.vs_network_signal,
-              score?.emission_velocity_signal,
             ]
               .filter(Boolean)
               .map((sig, i) => (
@@ -791,7 +794,7 @@ export default function SubnetDetailPage() {
             { label: "Stability", value: score?.stability_score, color: "text-green", sub: "factor score" },
             { label: "Yield", value: score?.yield_score, color: "text-yellow", sub: "factor score" },
             { label: "Consensus", value: score?.consensus_score, color: "text-purple", sub: "factor score" },
-            { label: "Flow", value: score?.flow_score, color: "text-cyan", sub: "factor score" },
+            { label: "Cap. Flow", value: score?.capital_flow_score, color: "text-cyan", sub: "factor score" },
             { label: "Conviction", value: score?.conviction_score, color: "text-orange", sub: "factor score" },
           ].map((card) => (
             <div key={card.label} className="bg-surface px-[18px] py-3.5 text-center">
@@ -1013,7 +1016,6 @@ export default function SubnetDetailPage() {
             <div className="px-3.5 py-2.5">
               <InfoRow label="Em vs Network" value={fmtSig(score?.emission_vs_network)} />
               <InfoRow label="Rank Consistency" value={fmtSig(score?.rank_consistency)} />
-              <InfoRow label="Em Stability" value={fmtSig(score?.emission_stability)} />
               <InfoRow label="Factor Score" value={score?.stability_score?.toFixed(1) || "---"} />
             </div>
           </div>
@@ -1036,20 +1038,22 @@ export default function SubnetDetailPage() {
             </div>
             <div className="px-3.5 py-2.5">
               <InfoRow label="Wt Conc Trend" value={fmtSig(score?.weight_concentration_trend)} />
-              <InfoRow label="Wt Conc Delta" value={fmtSig(score?.weight_conc_delta)} />
               <InfoRow label="Factor Score" value={score?.consensus_score?.toFixed(1) || "---"} />
             </div>
           </div>
 
-          {/* Flow Signals */}
+          {/* Capital Flow Momentum (v2.1) */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
             <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-cyan">
-              Flow
+              Capital Flow
             </div>
             <div className="px-3.5 py-2.5">
-              <InfoRow label="Em Velocity" value={fmtSig(score?.emission_velocity)} />
+              <InfoRow label="Validator Stake Vel" value={fmtSig(score?.validator_total_stake_velocity_7d)} />
+              <InfoRow label="Alpha Out Velocity" value={fmtSig(score?.alpha_out_velocity_7d)} />
+              <InfoRow label="Alpha Out/In Ratio" value={fmtSig(score?.alpha_out_in_ratio)} />
+              <InfoRow label="Volume Velocity" value={fmtSig(score?.volume_velocity_7d)} />
               <InfoRow label="Inflow Momentum" value={fmtSig(score?.inflow_momentum)} />
-              <InfoRow label="Factor Score" value={score?.flow_score?.toFixed(1) || "---"} />
+              <InfoRow label="Factor Score" value={score?.capital_flow_score?.toFixed(1) || "---"} />
             </div>
           </div>
 

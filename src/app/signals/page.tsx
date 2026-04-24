@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import SubnetLogo from "@/components/SubnetLogo";
 
-/* ── Types ─────────────────────────────────────────────────── */
+/* ── Types (v2.1 model) ────────────────────────────────────── */
 interface SubnetScore {
   netuid: number;
   name: string;
@@ -12,15 +12,17 @@ interface SubnetScore {
   stability_score: number;
   yield_score: number;
   consensus_score: number;
-  flow_score: number;
+  capital_flow_score: number;     // v2.1: replaces flow_score
   conviction_score: number;
   emission_vs_network: number;
   rank_consistency: number;
-  emission_stability: number;
   avg_dividends: number;
   weight_concentration_trend: number;
-  weight_conc_delta: number;
-  emission_velocity: number;
+  // v2.1 Capital Flow Momentum signals (replace emission_velocity)
+  validator_total_stake_velocity_7d: number;
+  alpha_out_velocity_7d: number;
+  alpha_out_in_ratio: number;
+  volume_velocity_7d: number;
   inflow_momentum: number;
   avg_validator_trust: number;
   n_active_delta: number;
@@ -29,7 +31,6 @@ interface SubnetScore {
   tao_in: number;
   price_vs_ema: number;
   alpha_ratio: number;
-  emission_stability_signal?: string;
   price_vs_ema_signal?: string;
   flow_signal?: string;
   vs_network_signal?: string;
@@ -53,7 +54,7 @@ interface CombinedData {
 }
 
 type ViewMode = "combined" | "stability" | "yield" | "consensus";
-type FilterMode = "all" | "strong" | "stability" | "yield" | "consensus" | "stable" | "oversold";
+type FilterMode = "all" | "strong" | "stability" | "yield" | "consensus" | "oversold";
 
 interface SortState {
   field: string;
@@ -262,7 +263,6 @@ export default function SignalsPage() {
       case "stability": scores = scores.filter((s) => s.stability_score >= 65); break;
       case "yield": scores = scores.filter((s) => s.yield_score >= 60); break;
       case "consensus": scores = scores.filter((s) => s.consensus_score >= 65); break;
-      case "stable": scores = scores.filter((s) => ["VERY_STABLE", "STABLE"].includes(s.emission_stability_signal || "")); break;
       case "oversold": scores = scores.filter((s) => ["COLLAPSING", "FALLING", "DEEPLY_OVERSOLD"].includes(s.price_vs_ema_signal || "")); break;
     }
 
@@ -307,7 +307,6 @@ export default function SignalsPage() {
     { key: "stability", label: "High Stability (>65)" },
     { key: "yield", label: "High Yield (>60)" },
     { key: "consensus", label: "High Consensus (>65)" },
-    { key: "stable", label: "Stable Emission" },
     { key: "oversold", label: "Price Below EMA" },
   ];
 
@@ -326,7 +325,7 @@ export default function SignalsPage() {
       <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.flow_score} /></td>
+      <td className="px-3 py-2.5"><ScoreDisplay score={s.capital_flow_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.conviction_score} /></td>
       <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.price_vs_ema || 1) >= 1 ? "text-green" : "text-red"}`}>
         {(s.price_vs_ema || 0).toFixed(3)}
@@ -351,7 +350,6 @@ export default function SignalsPage() {
       <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
       <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.emission_vs_network)}</td>
       <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.rank_consistency)}</td>
-      <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.emission_stability)}</td>
       <td className="font-mono text-[11px] text-cyan px-3 py-2.5">{(s.emission_share_pct || 0).toFixed(2)}%</td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
@@ -393,7 +391,6 @@ export default function SignalsPage() {
       </td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
       <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.weight_concentration_trend)}</td>
-      <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.weight_conc_delta)}</td>
       <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.ema_tao_inflow || 0) >= 0 ? "text-green" : "text-red"}`}>
         {fmtInflow(s.ema_tao_inflow)} {"\u03C4"}
       </td>
@@ -419,7 +416,7 @@ export default function SignalsPage() {
             <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Consensus" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
-            <SortTh label="Flow" field="flow_score" sortState={ss} onSort={handleSort} />
+            <SortTh label="Cap. Flow" field="capital_flow_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Conviction" field="conviction_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Price/EMA" field="price_vs_ema" sortState={ss} onSort={handleSort} />
             <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
@@ -433,7 +430,6 @@ export default function SignalsPage() {
             <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Em vs Network" field="emission_vs_network" sortState={ss} onSort={handleSort} />
             <SortTh label="Rank Consistency" field="rank_consistency" sortState={ss} onSort={handleSort} />
-            <SortTh label="Em Stability" field="emission_stability" sortState={ss} onSort={handleSort} />
             <SortTh label={"\u26D3 Em. Share"} field="emission_share_pct" sortState={ss} onSort={handleSort} variant="chain" />
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
@@ -459,7 +455,6 @@ export default function SignalsPage() {
             {base}
             <SortTh label="Consensus" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
             <SortTh label="Wt Conc Trend" field="weight_concentration_trend" sortState={ss} onSort={handleSort} />
-            <SortTh label="Wt Conc Delta" field="weight_conc_delta" sortState={ss} onSort={handleSort} />
             <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
