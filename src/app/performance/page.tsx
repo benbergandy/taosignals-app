@@ -513,9 +513,15 @@ export default function PerformancePage() {
     const Chart = window.Chart;
     if (!Chart) return;
 
-    // Use real_total_tao_after when present (execute runs), fall back to
-    // real_total_tao_before for dry-run snapshots.
-    const points = botLog
+    // Bot capital is only "live" from the first execute run onward — dry-runs
+    // before inception just snapshot whatever happened to be in the wallet at
+    // the time, which can include pre-funding deposits that aren't returns.
+    // Drop everything before the first non-dry-run entry.
+    const firstExecuteIdx = botLog.findIndex((e) => !e.dry_run);
+    if (firstExecuteIdx < 0) return; // no real runs yet
+    const liveEntries = botLog.slice(firstExecuteIdx);
+
+    const points = liveEntries
       .map((e) => ({
         ts: e.timestamp,
         bot: e.real_total_tao_after ?? e.real_total_tao_before ?? 0,
@@ -821,29 +827,39 @@ export default function PerformancePage() {
             </div>
             <div className="flex-1 h-px bg-border" />
             <span className="font-mono text-[9px] tracking-[0.1em] px-2 py-0.5 border border-border2 text-muted uppercase whitespace-nowrap">
-              {botLog.length} runs
+              {(() => {
+                const firstExec = botLog.findIndex((e) => !e.dry_run);
+                return firstExec < 0 ? 0 : botLog.length - firstExec;
+              })()} live runs
             </span>
           </div>
 
           <div className="bg-surface border border-border p-5">
             <div className="flex items-center justify-between mb-4">
               <div className="font-mono text-[10px] tracking-[0.12em] uppercase text-yellow">
-                Indexed Performance &mdash; both lines start at 1.00
+                Indexed Performance &mdash; both lines start at 1.00 (first execute run)
               </div>
               <div className="font-mono text-[9px] text-muted">
                 divergence = real execution drift from paper math
               </div>
             </div>
             <div className="h-[260px] relative">
-              {botLog.length >= 2 ? (
-                <canvas ref={botChartRef} />
-              ) : (
-                <div className="font-mono text-[11px] text-muted text-center py-12">
-                  {botLog.length === 1
-                    ? "Only one bot run logged so far — chart will populate after the next daily run"
-                    : "No bot mirror data yet — check back after the first scheduled run"}
-                </div>
-              )}
+              {(() => {
+                const liveRuns = botLog.filter((e, i) => {
+                  const firstExec = botLog.findIndex((x) => !x.dry_run);
+                  return firstExec >= 0 && i >= firstExec;
+                }).length;
+                if (liveRuns >= 2) {
+                  return <canvas ref={botChartRef} />;
+                }
+                return (
+                  <div className="font-mono text-[11px] text-muted text-center py-12">
+                    {liveRuns === 1
+                      ? "Bot inception logged — chart will populate after the next daily run"
+                      : "No live bot runs yet — chart starts at the first execute run"}
+                  </div>
+                );
+              })()}
             </div>
           </div>
         </div>
