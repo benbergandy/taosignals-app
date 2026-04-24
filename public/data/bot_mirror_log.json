@@ -1,0 +1,1049 @@
+[
+  {
+    "timestamp": "2026-04-24T02:36:36.367886+00:00",
+    "dry_run": true,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.000904757179,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 873.9308,
+    "paper_n_positions": 5,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 0.904757179,
+    "real_total_tao_before": 0.904757179,
+    "real_n_positions_before": 0,
+    "real_positions_before": {},
+    "scaled_targets": {
+      "92": 0.0128475519418,
+      "94": 0.0137523091208,
+      "43": 0.044333101771,
+      "73": 0.0257855796015,
+      "116": 0.0174618135547
+    },
+    "scaled_target_root_tao": 0.7906951652492131,
+    "trades_planned": [
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.0257855796015,
+        "current_tao": 0,
+        "target_tao": 0.0257855796015,
+        "tao_in": 8316.104082457,
+        "hotkey": null
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.044333101771,
+        "current_tao": 0,
+        "target_tao": 0.044333101771,
+        "tao_in": 15121.141118651,
+        "hotkey": null
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0174618135547,
+        "current_tao": 0,
+        "target_tao": 0.0174618135547,
+        "tao_in": 3347.226430737,
+        "hotkey": null
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.0128475519418,
+        "current_tao": 0,
+        "target_tao": 0.0128475519418,
+        "tao_in": 1398.026675356,
+        "hotkey": null
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.0137523091208,
+        "current_tao": 0,
+        "target_tao": 0.0137523091208,
+        "tao_in": 1508.486170967,
+        "hotkey": null
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.044333101771,
+        "current_tao": 0,
+        "target_tao": 0.044333101771,
+        "tao_in": 15121.141118651,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0002931853584658016
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.0257855796015,
+        "current_tao": 0,
+        "target_tao": 0.0257855796015,
+        "tao_in": 8316.104082457,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.00031006706257207423
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0174618135547,
+        "current_tao": 0,
+        "target_tao": 0.0174618135547,
+        "tao_in": 3347.226430737,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0005216773595005153
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.0137523091208,
+        "current_tao": 0,
+        "target_tao": 0.0137523091208,
+        "tao_in": 1508.486170967,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0009116546118831145
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.0128475519418,
+        "current_tao": 0,
+        "target_tao": 0.0128475519418,
+        "tao_in": 1398.026675356,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0009189691515356384
+      }
+    ],
+    "trades_skipped": [],
+    "trades_executed": []
+  },
+  {
+    "timestamp": "2026-04-24T02:37:53.377363+00:00",
+    "dry_run": true,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.000904757179,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 873.9308,
+    "paper_n_positions": 5,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 0.904757179,
+    "real_total_tao_before": 0.904757179,
+    "real_n_positions_before": 0,
+    "real_positions_before": {},
+    "scaled_targets": {
+      "0": 0.7906951652492131,
+      "92": 0.0128475519418,
+      "94": 0.0137523091208,
+      "43": 0.044333101771,
+      "73": 0.0257855796015,
+      "116": 0.0174618135547
+    },
+    "scaled_target_root_tao": 0.7906951652492131,
+    "trades_planned": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.7906951652492131,
+        "current_tao": 0,
+        "target_tao": 0.7906951652492131,
+        "tao_in": 5282003.044790694,
+        "hotkey": null
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.0257855796015,
+        "current_tao": 0,
+        "target_tao": 0.0257855796015,
+        "tao_in": 8316.110750905,
+        "hotkey": null
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.044333101771,
+        "current_tao": 0,
+        "target_tao": 0.044333101771,
+        "tao_in": 15121.145654804,
+        "hotkey": null
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0174618135547,
+        "current_tao": 0,
+        "target_tao": 0.0174618135547,
+        "tao_in": 3347.235316664,
+        "hotkey": null
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.0128475519418,
+        "current_tao": 0,
+        "target_tao": 0.0128475519418,
+        "tao_in": 1398.03993257,
+        "hotkey": null
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.0137523091208,
+        "current_tao": 0,
+        "target_tao": 0.0137523091208,
+        "tao_in": 1508.496631262,
+        "hotkey": null
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0,
+        "target_tao": 0.7906951652492131,
+        "tao_in": 5282003.044790694,
+        "hotkey": null,
+        "estimated_slippage_pct": 1.4969606041122497e-05,
+        "original_delta_tao": 0.7906951652492131,
+        "capped_per_trade": true
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.044333101771,
+        "current_tao": 0,
+        "target_tao": 0.044333101771,
+        "tao_in": 15121.145654804,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.00029318527051414934
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.0257855796015,
+        "current_tao": 0,
+        "target_tao": 0.0257855796015,
+        "tao_in": 8316.110750905,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.00031006681393906123
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0174618135547,
+        "current_tao": 0,
+        "target_tao": 0.0174618135547,
+        "tao_in": 3347.235316664,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0005216759746075177
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.0137523091208,
+        "current_tao": 0,
+        "target_tao": 0.0137523091208,
+        "tao_in": 1508.496631262,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0009116482902984028
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.0128475519418,
+        "current_tao": 0,
+        "target_tao": 0.0128475519418,
+        "tao_in": 1398.03993257,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0009189604372933189
+      }
+    ],
+    "trades_skipped": [],
+    "trades_executed": []
+  },
+  {
+    "timestamp": "2026-04-24T02:51:29.403080+00:00",
+    "dry_run": true,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.000904757179,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 873.9308,
+    "paper_n_positions": 5,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 0.904757179,
+    "real_total_tao_before": 0.904757179,
+    "real_n_positions_before": 0,
+    "real_positions_before": {},
+    "scaled_targets": {
+      "0": 0.7906951652492131,
+      "92": 0.0128475519418,
+      "94": 0.0137523091208,
+      "43": 0.044333101771,
+      "73": 0.0257855796015,
+      "116": 0.0174618135547
+    },
+    "scaled_target_root_tao": 0.7906951652492131,
+    "trades_planned": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.7906951652492131,
+        "current_tao": 0,
+        "target_tao": 0.7906951652492131,
+        "tao_in": 5282078.117639867,
+        "hotkey": null
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.0257855796015,
+        "current_tao": 0,
+        "target_tao": 0.0257855796015,
+        "tao_in": 8316.171136486,
+        "hotkey": null
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.044333101771,
+        "current_tao": 0,
+        "target_tao": 0.044333101771,
+        "tao_in": 15121.183939914,
+        "hotkey": null
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0174618135547,
+        "current_tao": 0,
+        "target_tao": 0.0174618135547,
+        "tao_in": 3347.316030717,
+        "hotkey": null
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.0128475519418,
+        "current_tao": 0,
+        "target_tao": 0.0128475519418,
+        "tao_in": 1398.159058899,
+        "hotkey": null
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.0137523091208,
+        "current_tao": 0,
+        "target_tao": 0.0137523091208,
+        "tao_in": 1508.590306341,
+        "hotkey": null
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0,
+        "target_tao": 0.7906951652492131,
+        "tao_in": 5282078.117639867,
+        "hotkey": null,
+        "estimated_slippage_pct": 1.496939328190477e-05,
+        "original_delta_tao": 0.7906951652492131,
+        "capped_per_trade": true
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.044333101771,
+        "current_tao": 0,
+        "target_tao": 0.044333101771,
+        "tao_in": 15121.183939914,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.00029318452820471986
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.0257855796015,
+        "current_tao": 0,
+        "target_tao": 0.0257855796015,
+        "tao_in": 8316.171136486,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.00031006456248146785
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0174618135547,
+        "current_tao": 0,
+        "target_tao": 0.0174618135547,
+        "tao_in": 3347.316030717,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0005216633954658346
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.0137523091208,
+        "current_tao": 0,
+        "target_tao": 0.0137523091208,
+        "tao_in": 1508.590306341,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0009115916825190955
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.0128475519418,
+        "current_tao": 0,
+        "target_tao": 0.0128475519418,
+        "tao_in": 1398.159058899,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0009188821404952744
+      }
+    ],
+    "trades_skipped": [],
+    "trades_executed": []
+  },
+  {
+    "timestamp": "2026-04-24T02:54:37.203716+00:00",
+    "dry_run": true,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.000904757179,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 873.9308,
+    "paper_n_positions": 5,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 0.904757179,
+    "real_total_tao_before": 0.904757179,
+    "real_n_positions_before": 0,
+    "real_positions_before": {},
+    "scaled_targets": {
+      "0": 0.7906951652492131,
+      "92": 0.0128475519418,
+      "94": 0.0137523091208,
+      "43": 0.044333101771,
+      "73": 0.0257855796015,
+      "116": 0.0174618135547
+    },
+    "scaled_target_root_tao": 0.7906951652492131,
+    "trades_planned": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.7906951652492131,
+        "current_tao": 0,
+        "target_tao": 0.7906951652492131,
+        "tao_in": 5282078.143267898,
+        "hotkey": null
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.0257855796015,
+        "current_tao": 0,
+        "target_tao": 0.0257855796015,
+        "tao_in": 8316.182443787,
+        "hotkey": null
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.044333101771,
+        "current_tao": 0,
+        "target_tao": 0.044333101771,
+        "tao_in": 15121.190603626,
+        "hotkey": null
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0174618135547,
+        "current_tao": 0,
+        "target_tao": 0.0174618135547,
+        "tao_in": 3347.331222786,
+        "hotkey": null
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.0128475519418,
+        "current_tao": 0,
+        "target_tao": 0.0128475519418,
+        "tao_in": 1398.180982217,
+        "hotkey": null
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.0137523091208,
+        "current_tao": 0,
+        "target_tao": 0.0137523091208,
+        "tao_in": 1508.608685237,
+        "hotkey": null
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0,
+        "target_tao": 0.7906951652492131,
+        "tao_in": 5282078.143267898,
+        "hotkey": null,
+        "estimated_slippage_pct": 1.496939320927502e-05,
+        "original_delta_tao": 0.7906951652492131,
+        "capped_per_trade": true
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.044333101771,
+        "current_tao": 0,
+        "target_tao": 0.044333101771,
+        "tao_in": 15121.190603626,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.00029318439900249087
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.0257855796015,
+        "current_tao": 0,
+        "target_tao": 0.0257855796015,
+        "tao_in": 8316.182443787,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0003100641408959037
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0174618135547,
+        "current_tao": 0,
+        "target_tao": 0.0174618135547,
+        "tao_in": 3347.331222786,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0005216610278767229
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.0137523091208,
+        "current_tao": 0,
+        "target_tao": 0.0137523091208,
+        "tao_in": 1508.608685237,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0009115805769910918
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.0128475519418,
+        "current_tao": 0,
+        "target_tao": 0.0128475519418,
+        "tao_in": 1398.180982217,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0009188677326607225
+      }
+    ],
+    "trades_skipped": [],
+    "trades_executed": []
+  },
+  {
+    "timestamp": "2026-04-24T10:36:08.198490+00:00",
+    "dry_run": true,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.001999957179,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 873.9308,
+    "paper_n_positions": 5,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 1.999957179,
+    "real_total_tao_before": 1.999957179,
+    "real_n_positions_before": 0,
+    "real_positions_before": {},
+    "scaled_targets": {
+      "0": 1.747824177409213,
+      "92": 0.028399391941799995,
+      "94": 0.030399349120799998,
+      "43": 0.097997901771,
+      "73": 0.056998779601499995,
+      "116": 0.0385991735547
+    },
+    "scaled_target_root_tao": 1.747824177409213,
+    "trades_planned": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 1.747824177409213,
+        "current_tao": 0,
+        "target_tao": 1.747824177409213,
+        "tao_in": 5280854.131502286,
+        "hotkey": null
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.056998779601499995,
+        "current_tao": 0,
+        "target_tao": 0.056998779601499995,
+        "tao_in": 8329.034504369,
+        "hotkey": null
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.097997901771,
+        "current_tao": 0,
+        "target_tao": 0.097997901771,
+        "tao_in": 15131.467077752,
+        "hotkey": null
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0385991735547,
+        "current_tao": 0,
+        "target_tao": 0.0385991735547,
+        "tao_in": 3349.757917387,
+        "hotkey": null
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.028399391941799995,
+        "current_tao": 0,
+        "target_tao": 0.028399391941799995,
+        "tao_in": 1435.72427342,
+        "hotkey": null
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.030399349120799998,
+        "current_tao": 0,
+        "target_tao": 0.030399349120799998,
+        "tao_in": 1510.834322721,
+        "hotkey": null
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0,
+        "target_tao": 1.747824177409213,
+        "tao_in": 5280854.131502286,
+        "hotkey": null,
+        "estimated_slippage_pct": 3.309736560415536e-05,
+        "original_delta_tao": 1.747824177409213,
+        "capped_per_trade": true
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.097997901771,
+        "current_tao": 0,
+        "target_tao": 0.097997901771,
+        "tao_in": 15131.467077752,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0006476389010722734
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.056998779601499995,
+        "current_tao": 0,
+        "target_tao": 0.056998779601499995,
+        "tao_in": 8329.034504369,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0006843336944966094
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0385991735547,
+        "current_tao": 0,
+        "target_tao": 0.0385991735547,
+        "tao_in": 3349.757917387,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0011522841272260974
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.030399349120799998,
+        "current_tao": 0,
+        "target_tao": 0.030399349120799998,
+        "tao_in": 1510.834322721,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0020120497008592627
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.028399391941799995,
+        "current_tao": 0,
+        "target_tao": 0.028399391941799995,
+        "tao_in": 1435.72427342,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0019780142137001484
+      }
+    ],
+    "trades_skipped": [],
+    "trades_executed": []
+  },
+  {
+    "timestamp": "2026-04-24T20:57:50.543747+00:00",
+    "dry_run": false,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.001999957179,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 874.0594,
+    "paper_n_positions": 5,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 1.999957179,
+    "real_total_tao_before": 1.999957179,
+    "real_n_positions_before": 0,
+    "real_positions_before": {},
+    "scaled_targets": {
+      "0": 1.7480813719024324,
+      "92": 0.028399391941799995,
+      "94": 0.030399349120799998,
+      "43": 0.097997901771,
+      "73": 0.056998779601499995,
+      "116": 0.0385991735547
+    },
+    "scaled_target_root_tao": 1.7480813719024324,
+    "trades_planned": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 1.7480813719024324,
+        "current_tao": 0,
+        "target_tao": 1.7480813719024324,
+        "tao_in": 5299793.412008743,
+        "hotkey": null
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.056998779601499995,
+        "current_tao": 0,
+        "target_tao": 0.056998779601499995,
+        "tao_in": 8324.415494384,
+        "hotkey": null
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.097997901771,
+        "current_tao": 0,
+        "target_tao": 0.097997901771,
+        "tao_in": 15115.765621342,
+        "hotkey": null
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0385991735547,
+        "current_tao": 0,
+        "target_tao": 0.0385991735547,
+        "tao_in": 3346.553109224,
+        "hotkey": null
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.028399391941799995,
+        "current_tao": 0,
+        "target_tao": 0.028399391941799995,
+        "tao_in": 1432.064264055,
+        "hotkey": null
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.030399349120799998,
+        "current_tao": 0,
+        "target_tao": 0.030399349120799998,
+        "tao_in": 1516.024162119,
+        "hotkey": null
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0,
+        "target_tao": 1.7480813719024324,
+        "tao_in": 5299793.412008743,
+        "hotkey": null,
+        "estimated_slippage_pct": 3.298394219207349e-05,
+        "original_delta_tao": 1.7480813719024324,
+        "capped_per_trade": true
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.097997901771,
+        "current_tao": 0,
+        "target_tao": 0.097997901771,
+        "tao_in": 15115.765621342,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0006483116296857852
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.056998779601499995,
+        "current_tao": 0,
+        "target_tao": 0.056998779601499995,
+        "tao_in": 8324.415494384,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0006847134115502182
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0385991735547,
+        "current_tao": 0,
+        "target_tao": 0.0385991735547,
+        "tao_in": 3346.553109224,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0011533875930500768
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.030399349120799998,
+        "current_tao": 0,
+        "target_tao": 0.030399349120799998,
+        "tao_in": 1516.024162119,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.002005161944261544
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.028399391941799995,
+        "current_tao": 0,
+        "target_tao": 0.028399391941799995,
+        "tao_in": 1432.064264055,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.001983069438638471
+      }
+    ],
+    "trades_skipped": [],
+    "trades_executed": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0,
+        "target_tao": 1.7480813719024324,
+        "tao_in": 5299793.412008743,
+        "hotkey": null,
+        "estimated_slippage_pct": 3.298394219207349e-05,
+        "original_delta_tao": 1.7480813719024324,
+        "capped_per_trade": true,
+        "executed": true,
+        "error": null,
+        "hotkey_used": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u"
+      },
+      {
+        "netuid": 43,
+        "name": "Graphite",
+        "action": "stake",
+        "delta_tao": 0.097997901771,
+        "current_tao": 0,
+        "target_tao": 0.097997901771,
+        "tao_in": 15115.765621342,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0006483116296857852,
+        "executed": true,
+        "error": null,
+        "hotkey_used": "5HjMs5JDrLH3Hknmfm1gDq7nFYAv6M7t9v3EWMctSRXJS9HC"
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.056998779601499995,
+        "current_tao": 0,
+        "target_tao": 0.056998779601499995,
+        "tao_in": 8324.415494384,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0006847134115502182,
+        "executed": true,
+        "error": null,
+        "hotkey_used": "5Dnkprjf9fUrvWq3ZfFP8WrUNSjQws6UoHkbDfR1bQK8pFhW"
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.0385991735547,
+        "current_tao": 0,
+        "target_tao": 0.0385991735547,
+        "tao_in": 3346.553109224,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.0011533875930500768,
+        "executed": true,
+        "error": null,
+        "hotkey_used": "5FFFjWqpNcu2yweMNaYcya5bq6zRuAAWJsudCyN462nLKhtj"
+      },
+      {
+        "netuid": 94,
+        "name": "Bitsota",
+        "action": "stake",
+        "delta_tao": 0.030399349120799998,
+        "current_tao": 0,
+        "target_tao": 0.030399349120799998,
+        "tao_in": 1516.024162119,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.002005161944261544,
+        "executed": true,
+        "error": null,
+        "hotkey_used": "5C7eJLN6Wk1rh9oQoUmX4AZrFm9BWU6tRRserToeJ7fPsn94"
+      },
+      {
+        "netuid": 92,
+        "name": "TensorClaw",
+        "action": "stake",
+        "delta_tao": 0.028399391941799995,
+        "current_tao": 0,
+        "target_tao": 0.028399391941799995,
+        "tao_in": 1432.064264055,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.001983069438638471,
+        "executed": true,
+        "error": null,
+        "hotkey_used": "5CAvneqrSRkCR723u1nVdFQDH2B9mLq1FaA1agZdngVWsn92"
+      }
+    ],
+    "real_balance_tao_after": 1.539521776,
+    "real_total_tao_after": 1.792055861705131,
+    "real_positions_after": {
+      "0": 0.0,
+      "43": 0.09805778661835375,
+      "73": 0.05697004294278291,
+      "92": 0.028339819729345198,
+      "94": 0.030487773525626517,
+      "116": 0.03867866288902263
+    },
+    "drift_pct_per_position": {
+      "0": -100.0,
+      "92": -0.20976580265127265,
+      "94": 0.2908759805189956,
+      "43": 0.06110829545482592,
+      "73": -0.05041627016927581,
+      "116": 0.2059353271125884
+    }
+  }
+]

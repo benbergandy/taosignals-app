@@ -25,6 +25,9 @@ done
 # Wallet monitor
 [ -f ${PIPELINE}/data/wallet_monitor.json ] && cp ${PIPELINE}/data/wallet_monitor.json ${SITE}/
 
+# Bot mirror execution log (per-run snapshots of real wallet vs paper portfolio)
+[ -f ${PIPELINE}/data/bot_mirror_log.json ] && cp ${PIPELINE}/data/bot_mirror_log.json ${SITE}/
+
 # Chain history snapshots (last 30 days for subnet charts)
 mkdir -p ${SITE}/chain_history
 for i in $(seq 0 30); do
@@ -36,12 +39,7 @@ done
 [ -f ${PIPELINE}/data/tail_risk.json ] && cp ${PIPELINE}/data/tail_risk.json ${SITE}/
 
 # Push to GitHub (triggers Vercel auto-deploy)
-# Pull --rebase first so any frontend commits I pushed from my laptop integrate
-# cleanly with the server's data commits — prevents the diverged-history issue
-# that silently failed pushes for 4 days.
 cd /root/taosignals-app
-git fetch origin main
-git pull --rebase --autostash origin main
 git add .
 git commit -m "daily update ${TODAY}" --allow-empty
 git push
