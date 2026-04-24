@@ -77,6 +77,26 @@ function fmtSignal(val: number | null | undefined): string {
   return (val * 100).toFixed(0);
 }
 
+/* Liquidity tier — must match the Subnets page (page.tsx) exactly so the
+   badge looks identical across surfaces. */
+function liquidityTier(taoIn: number): { label: string; color: string } {
+  if (taoIn >= 50000) return { label: "DEEP", color: "text-green border-green bg-green/10" };
+  if (taoIn >= 10000) return { label: "ADEQUATE", color: "text-cyan border-cyan bg-cyan/10" };
+  if (taoIn >= 1000)  return { label: "THIN", color: "text-yellow border-yellow bg-yellow/10" };
+  if (taoIn >= 100)   return { label: "VERY THIN", color: "text-orange border-orange bg-orange/10" };
+  return { label: "ILLIQUID", color: "text-red border-red bg-red/10" };
+}
+
+function LiquidityBadge({ taoIn }: { taoIn: number }) {
+  const tier = liquidityTier(taoIn);
+  return (
+    <span className={`inline-flex items-center gap-1 font-mono text-[9px] tracking-[0.06em] uppercase px-1.5 py-0.5 border ${tier.color}`}>
+      <span className="w-1 h-1 rounded-full bg-current" />
+      {tier.label}
+    </span>
+  );
+}
+
 function fmtInflow(val: number | null | undefined): string {
   if (val === null || val === undefined) return "\u2014";
   const sign = val >= 0 ? "+" : "";
@@ -334,6 +354,7 @@ export default function SignalsPage() {
         {fmtInflow(s.ema_tao_inflow)} {"\u03C4"}
       </td>
       <td className="font-mono text-[11px] text-cyan px-3 py-2.5">{(s.emission_share_pct || 0).toFixed(2)}%</td>
+      <td className="px-3 py-2.5"><LiquidityBadge taoIn={s.tao_in || 0} /></td>
     </tr>
   );
 
@@ -354,6 +375,7 @@ export default function SignalsPage() {
       <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
+      <td className="px-3 py-2.5"><LiquidityBadge taoIn={s.tao_in || 0} /></td>
     </tr>
   );
 
@@ -376,6 +398,7 @@ export default function SignalsPage() {
       <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
+      <td className="px-3 py-2.5"><LiquidityBadge taoIn={s.tao_in || 0} /></td>
     </tr>
   );
 
@@ -397,6 +420,7 @@ export default function SignalsPage() {
       <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
+      <td className="px-3 py-2.5"><LiquidityBadge taoIn={s.tao_in || 0} /></td>
     </tr>
   );
 
@@ -421,6 +445,7 @@ export default function SignalsPage() {
             <SortTh label="Price/EMA" field="price_vs_ema" sortState={ss} onSort={handleSort} />
             <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
             <SortTh label={"\u26D3 Em. Share"} field="emission_share_pct" sortState={ss} onSort={handleSort} variant="chain" />
+            <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
           </tr>
         );
       case "stability":
@@ -434,6 +459,7 @@ export default function SignalsPage() {
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Consensus" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
+            <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
           </tr>
         );
       case "yield":
@@ -447,6 +473,7 @@ export default function SignalsPage() {
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Consensus" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
+            <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
           </tr>
         );
       case "consensus":
@@ -459,6 +486,7 @@ export default function SignalsPage() {
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
+            <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
           </tr>
         );
     }
