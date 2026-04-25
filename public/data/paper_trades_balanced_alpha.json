@@ -225,5 +225,14 @@
     "name": "MetaHash",
     "tao_added": 51.3,
     "new_total": 84.1
+  },
+  {
+    "date": "2026-04-25",
+    "type": "DECREASE",
+    "netuid": 73,
+    "name": "MetaHash",
+    "tao_removed": 51.3,
+    "new_total": 32.8,
+    "slippage_pct": 0.613
   }
 ]

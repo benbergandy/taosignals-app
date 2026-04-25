@@ -98,5 +98,33 @@
     "slippage_pct": 0.28,
     "entry_price": 0.00664902,
     "sortino": -0.0655
+  },
+  {
+    "date": "2026-04-25",
+    "type": "ENTRY",
+    "netuid": 27,
+    "name": "Nodexo",
+    "tao": 11.1,
+    "slippage_pct": 0.136,
+    "entry_price": 0.00430188,
+    "sortino": 0.6541
+  },
+  {
+    "date": "2026-04-25",
+    "type": "DECREASE",
+    "netuid": 73,
+    "name": "MetaHash",
+    "tao_removed": 33.3,
+    "new_total": 17.0,
+    "slippage_pct": 0.399
+  },
+  {
+    "date": "2026-04-25",
+    "type": "DECREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_removed": 27.8,
+    "new_total": 13.9,
+    "slippage_pct": 0.186
   }
 ]

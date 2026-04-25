@@ -48,5 +48,22 @@
     "slippage_pct": 0.458,
     "entry_price": 0.0036473,
     "sortino": 0.5065
+  },
+  {
+    "date": "2026-04-25",
+    "type": "INCREASE",
+    "netuid": 116,
+    "name": "TaoLend",
+    "tao_added": 18.4,
+    "new_total": 33.8
+  },
+  {
+    "date": "2026-04-25",
+    "type": "DECREASE",
+    "netuid": 73,
+    "name": "MetaHash",
+    "tao_removed": 32.3,
+    "new_total": 18.3,
+    "slippage_pct": 0.387
   }
 ]
