@@ -28,6 +28,13 @@ done
 # Bot mirror execution log (per-run snapshots of real wallet vs paper portfolio)
 [ -f ${PIPELINE}/data/bot_mirror_log.json ] && cp ${PIPELINE}/data/bot_mirror_log.json ${SITE}/
 
+# Sleeve outputs + per-profile sleeved portfolios (core/satellite/root architecture)
+[ -f ${PIPELINE}/data/sleeve_outputs.json ] && cp ${PIPELINE}/data/sleeve_outputs.json ${SITE}/
+for profile in conservative balanced aggressive buyhold; do
+  [ -f ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ] && \
+    cp ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ${SITE}/
+done
+
 # Chain history snapshots (last 30 days for subnet charts)
 mkdir -p ${SITE}/chain_history
 for i in $(seq 0 30); do

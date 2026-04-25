@@ -1045,5 +1045,244 @@
       "73": -0.05041627016927581,
       "116": 0.2059353271125884
     }
+  },
+  {
+    "timestamp": "2026-04-25T16:01:16.776399+00:00",
+    "dry_run": false,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.0019916676362775965,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 878.5356,
+    "paper_n_positions": 5,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 1.539521776,
+    "real_total_tao_before": 1.9916676362775967,
+    "real_n_positions_before": 6,
+    "real_positions_before": {
+      "0": 0.2,
+      "43": 0.09802995967497118,
+      "73": 0.056405131285146154,
+      "92": 0.028527095173637728,
+      "94": 0.03056932504812903,
+      "116": 0.038614349095712694
+    },
+    "scaled_targets": {
+      "0": 1.74975092183772,
+      "92": 0.02828168043514187,
+      "94": 0.030273348071419466,
+      "43": 0.09759171417760223,
+      "73": 0.019120009308264924,
+      "116": 0.06731836610618276
+    },
+    "scaled_target_root_tao": 1.74975092183772,
+    "trades_planned": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 1.5497509218377201,
+        "current_tao": 0.2,
+        "target_tao": 1.74975092183772,
+        "tao_in": 0,
+        "hotkey": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u"
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "unstake",
+        "delta_tao": -0.03728512197688123,
+        "delta_alpha": 8.191381096382276,
+        "current_tao": 0.056405131285146154,
+        "target_tao": 0.019120009308264924,
+        "current_alpha": 12.391964989,
+        "tao_in": 8109.926533074,
+        "hotkey": "5Dnkprjf9fUrvWq3ZfFP8WrUNSjQws6UoHkbDfR1bQK8pFhW"
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.028704017010470068,
+        "current_tao": 0.038614349095712694,
+        "target_tao": 0.06731836610618276,
+        "tao_in": 3351.524031725,
+        "hotkey": "5FFFjWqpNcu2yweMNaYcya5bq6zRuAAWJsudCyN462nLKhtj"
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "unstake",
+        "delta_tao": -0.03728512197688123,
+        "delta_alpha": 8.191381096382276,
+        "current_tao": 0.056405131285146154,
+        "target_tao": 0.019120009308264924,
+        "current_alpha": 12.391964989,
+        "tao_in": 8109.926533074,
+        "hotkey": "5Dnkprjf9fUrvWq3ZfFP8WrUNSjQws6UoHkbDfR1bQK8pFhW",
+        "estimated_slippage_pct": 0.00045974461554595605
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.028704017010470068,
+        "current_tao": 0.038614349095712694,
+        "target_tao": 0.06731836610618276,
+        "tao_in": 3351.524031725,
+        "hotkey": "5FFFjWqpNcu2yweMNaYcya5bq6zRuAAWJsudCyN462nLKhtj",
+        "estimated_slippage_pct": 0.0008564393662782452
+      }
+    ],
+    "trades_skipped": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 1.5497509218377201,
+        "current_tao": 0.2,
+        "target_tao": 1.74975092183772,
+        "tao_in": 0,
+        "hotkey": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u",
+        "estimated_slippage_pct": 100.0,
+        "skip_reason": "slippage 100.0% > 5.0%"
+      }
+    ],
+    "trades_executed": [
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "unstake",
+        "delta_tao": -0.03728512197688123,
+        "delta_alpha": 8.191381096382276,
+        "current_tao": 0.056405131285146154,
+        "target_tao": 0.019120009308264924,
+        "current_alpha": 12.391964989,
+        "tao_in": 8109.926533074,
+        "hotkey": "5Dnkprjf9fUrvWq3ZfFP8WrUNSjQws6UoHkbDfR1bQK8pFhW",
+        "estimated_slippage_pct": 0.00045974461554595605,
+        "executed": true,
+        "error": null
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "stake",
+        "delta_tao": 0.028704017010470068,
+        "current_tao": 0.038614349095712694,
+        "target_tao": 0.06731836610618276,
+        "tao_in": 3351.524031725,
+        "hotkey": "5FFFjWqpNcu2yweMNaYcya5bq6zRuAAWJsudCyN462nLKhtj",
+        "estimated_slippage_pct": 0.0008564393662782452,
+        "executed": true,
+        "error": null,
+        "hotkey_used": "5FFFjWqpNcu2yweMNaYcya5bq6zRuAAWJsudCyN462nLKhtj"
+      }
+    ],
+    "real_balance_tao_after": 1.562613752,
+    "real_total_tao_after": 1.9870729763191144,
+    "real_positions_after": {
+      "0": 0.2,
+      "43": 0.09802995967497118,
+      "92": 0.028527095173637728,
+      "94": 0.03056932504812903,
+      "116": 0.06733284442237648
+    },
+    "drift_pct_per_position": {
+      "0": -88.56980170697982,
+      "92": 0.8677516141894928,
+      "94": 0.9776816756815558,
+      "43": 0.4490601492780428,
+      "73": -100.0,
+      "116": 0.021507230539263737
+    }
+  },
+  {
+    "timestamp": "2026-04-25T16:45:32.483749+00:00",
+    "dry_run": true,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.0019871020618034882,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 878.5356,
+    "paper_n_positions": 5,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 1.562613752,
+    "real_total_tao_before": 1.9871020618034883,
+    "real_n_positions_before": 5,
+    "real_positions_before": {
+      "0": 0.2,
+      "43": 0.09803543956224835,
+      "92": 0.02853103966550727,
+      "94": 0.030588750980378453,
+      "116": 0.06733307959535409
+    },
+    "scaled_targets": {
+      "0": 1.7457399021277646,
+      "92": 0.02821684927760953,
+      "94": 0.030203951339413018,
+      "43": 0.09736800102837093,
+      "73": 0.019076179793313486,
+      "116": 0.0671640496889579
+    },
+    "scaled_target_root_tao": 1.7457399021277646,
+    "trades_planned": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 1.5457399021277647,
+        "current_tao": 0.2,
+        "target_tao": 1.7457399021277646,
+        "tao_in": 0,
+        "hotkey": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u"
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.019076179793313486,
+        "current_tao": 0,
+        "target_tao": 0.019076179793313486,
+        "tao_in": 8109.392735066,
+        "hotkey": null
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0.2,
+        "target_tao": 1.7457399021277646,
+        "tao_in": 0,
+        "hotkey": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u",
+        "estimated_slippage_pct": 0.0,
+        "original_delta_tao": 1.5457399021277647,
+        "capped_per_trade": true
+      },
+      {
+        "netuid": 73,
+        "name": "MetaHash",
+        "action": "stake",
+        "delta_tao": 0.019076179793313486,
+        "current_tao": 0,
+        "target_tao": 0.019076179793313486,
+        "tao_in": 8109.392735066,
+        "hotkey": null,
+        "estimated_slippage_pct": 0.00023523506065950973
+      }
+    ],
+    "trades_skipped": [],
+    "trades_executed": []
   }
 ]
