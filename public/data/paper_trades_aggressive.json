@@ -126,5 +126,25 @@
     "tao_removed": 27.8,
     "new_total": 13.9,
     "slippage_pct": 0.186
+  },
+  {
+    "date": "2026-04-26",
+    "type": "EXIT",
+    "netuid": 73,
+    "name": "MetaHash",
+    "tao": 17.0,
+    "tao_received": 16.96,
+    "slippage_pct": 0.21,
+    "reason": "no longer scored"
+  },
+  {
+    "date": "2026-04-26",
+    "type": "EXIT",
+    "netuid": 27,
+    "name": "Nodexo",
+    "tao": 11.1,
+    "tao_received": 11.08,
+    "slippage_pct": 0.13,
+    "reason": "score 43.1 below exit threshold 50.2"
   }
 ]

@@ -65,5 +65,24 @@
     "tao_removed": 32.3,
     "new_total": 18.3,
     "slippage_pct": 0.387
+  },
+  {
+    "date": "2026-04-26",
+    "type": "EXIT",
+    "netuid": 73,
+    "name": "MetaHash",
+    "tao": 18.3,
+    "tao_received": 18.25,
+    "slippage_pct": 0.226,
+    "reason": "no longer scored"
+  },
+  {
+    "date": "2026-04-26",
+    "type": "DECREASE",
+    "netuid": 116,
+    "name": "TaoLend",
+    "tao_removed": 18.4,
+    "new_total": 15.4,
+    "slippage_pct": 0.547
   }
 ]
