@@ -1284,5 +1284,139 @@
     ],
     "trades_skipped": [],
     "trades_executed": []
+  },
+  {
+    "timestamp": "2026-04-26T16:01:15.793614+00:00",
+    "dry_run": false,
+    "paper_profile_suffix": "",
+    "scale_factor": 0.0019877122144239803,
+    "min_position_tao": 0.005,
+    "daily_tao_ceiling": 0.5,
+    "max_trade_tao": 0.2,
+    "max_slippage_pct": 5.0,
+    "paper_total_tao": 1000,
+    "paper_root_tao": 902.7759,
+    "paper_n_positions": 4,
+    "n_paper_positions_dropped_below_floor": 0,
+    "real_balance_tao_before": 1.562613752,
+    "real_total_tao_before": 1.9877122144239805,
+    "real_n_positions_before": 5,
+    "real_positions_before": {
+      "0": 0.2,
+      "43": 0.09845466188978548,
+      "92": 0.02855325739508654,
+      "94": 0.031001895971877313,
+      "116": 0.06708864716723095
+    },
+    "scaled_targets": {
+      "0": 1.7944586833176017,
+      "92": 0.028225513444820518,
+      "94": 0.0302132256592445,
+      "43": 0.09739789850677504,
+      "116": 0.03816407451694042
+    },
+    "scaled_target_root_tao": 1.7944586833176017,
+    "trades_planned": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 1.5944586833176018,
+        "current_tao": 0.2,
+        "target_tao": 1.7944586833176017,
+        "tao_in": 0,
+        "hotkey": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u"
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "unstake",
+        "delta_tao": -0.028924572650290532,
+        "delta_alpha": 8.018702519255482,
+        "current_tao": 0.06708864716723095,
+        "target_tao": 0.03816407451694042,
+        "current_alpha": 18.598854011,
+        "tao_in": 3349.451565404,
+        "hotkey": "5FFFjWqpNcu2yweMNaYcya5bq6zRuAAWJsudCyN462nLKhtj"
+      }
+    ],
+    "trades_approved": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0.2,
+        "target_tao": 1.7944586833176017,
+        "tao_in": 0,
+        "hotkey": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u",
+        "estimated_slippage_pct": 0.0,
+        "original_delta_tao": 1.5944586833176018,
+        "capped_per_trade": true
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "unstake",
+        "delta_tao": -0.028924572650290532,
+        "delta_alpha": 8.018702519255482,
+        "current_tao": 0.06708864716723095,
+        "target_tao": 0.03816407451694042,
+        "current_alpha": 18.598854011,
+        "tao_in": 3349.451565404,
+        "hotkey": "5FFFjWqpNcu2yweMNaYcya5bq6zRuAAWJsudCyN462nLKhtj",
+        "estimated_slippage_pct": 0.0008635539970108072
+      }
+    ],
+    "trades_skipped": [],
+    "trades_executed": [
+      {
+        "netuid": 0,
+        "name": "Root",
+        "action": "stake",
+        "delta_tao": 0.2,
+        "current_tao": 0.2,
+        "target_tao": 1.7944586833176017,
+        "tao_in": 0,
+        "hotkey": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u",
+        "estimated_slippage_pct": 0.0,
+        "original_delta_tao": 1.5944586833176018,
+        "capped_per_trade": true,
+        "executed": true,
+        "error": null,
+        "hotkey_used": "5E2LP6EnZ54m3wS8s1yPvD5c3xo71kQroBw7aUVK32TKeZ5u"
+      },
+      {
+        "netuid": 116,
+        "name": "TaoLend",
+        "action": "unstake",
+        "delta_tao": -0.028924572650290532,
+        "delta_alpha": 8.018702519255482,
+        "current_tao": 0.06708864716723095,
+        "target_tao": 0.03816407451694042,
+        "current_alpha": 18.598854011,
+        "tao_in": 3349.451565404,
+        "hotkey": "5FFFjWqpNcu2yweMNaYcya5bq6zRuAAWJsudCyN462nLKhtj",
+        "estimated_slippage_pct": 0.0008635539970108072,
+        "executed": true,
+        "error": null
+      }
+    ],
+    "real_balance_tao_after": 1.38924501,
+    "real_total_tao_after": 1.9854188997746114,
+    "real_positions_after": {
+      "0": 0.4,
+      "43": 0.09845466188978548,
+      "92": 0.02855325739508654,
+      "94": 0.031001895971877313,
+      "116": 0.03816407451786198
+    },
+    "drift_pct_per_position": {
+      "0": -77.70915520548634,
+      "92": 1.1611620490332044,
+      "94": 2.61034793678675,
+      "43": 1.0849960822685882,
+      "116": 2.4147354545772007e-09
+    }
   }
 ]

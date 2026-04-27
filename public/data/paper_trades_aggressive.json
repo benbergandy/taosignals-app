@@ -146,5 +146,15 @@
     "tao_received": 11.08,
     "slippage_pct": 0.13,
     "reason": "score 43.1 below exit threshold 50.2"
+  },
+  {
+    "date": "2026-04-27",
+    "type": "ENTRY",
+    "netuid": 7,
+    "name": "Allways",
+    "tao": 13.2,
+    "slippage_pct": 0.182,
+    "entry_price": 0.00433535,
+    "sortino": 0.4549
   }
 ]

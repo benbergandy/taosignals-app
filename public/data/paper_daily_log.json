@@ -82,5 +82,26 @@
     "portfolio_usd": 248127.75,
     "pnl_usd": 217.75,
     "regime": "NORMAL"
+  },
+  {
+    "date": "2026-04-27",
+    "profile": "balanced",
+    "optimize": "sortino",
+    "portfolio_value": 1002.49,
+    "pnl_tao": 2.49,
+    "pnl_pct": 0.25,
+    "n_positions": 4,
+    "root_stake": 888.31,
+    "subnet_deployed": 112.2,
+    "n_trades_today": 1,
+    "benchmark_eq_weight": 1020.44,
+    "benchmark_mcw": 1005.96,
+    "benchmark_root": 1000,
+    "alpha_vs_eq": -1.79,
+    "alpha_vs_mcw": -0.35,
+    "tao_usd_price": 249.36,
+    "portfolio_usd": 249980.76,
+    "pnl_usd": 620.76,
+    "regime": "NORMAL"
   }
 ]
