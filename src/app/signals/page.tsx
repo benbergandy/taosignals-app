@@ -53,6 +53,40 @@ interface CombinedData {
   generated_at?: string;
 }
 
+/* ── Types (Core sleeve model) ─────────────────────────────── */
+interface CoreSleevePick {
+  netuid: number;
+  name: string;
+  score: number;            // weighted-sum z-scored core combined score
+  rank: number;             // 1-indexed within scored universe
+  tao_in?: number | null;
+  moving_price?: number | null;
+  emission_share_pct?: number | null;
+}
+
+interface SleeveOutputsData {
+  date?: string;
+  generated_at?: string;
+  filter_universe_size?: number;
+  sleeves?: {
+    core?: {
+      model?: string;
+      universe_filter?: string;
+      scored_universe_size?: number;
+      n_picks_held?: number;
+      exit_rules?: Record<string, unknown>;
+      picks?: CoreSleevePick[];
+      full_score_table?: CoreSleevePick[];
+    };
+    satellite?: {
+      picks?: CoreSleevePick[];
+      full_score_table?: CoreSleevePick[];
+    };
+    root?: Record<string, unknown>;
+  };
+}
+
+type AlphaModel = "satellite" | "core";
 type ViewMode = "combined" | "stability" | "yield" | "consensus";
 type FilterMode = "all" | "strong" | "stability" | "yield" | "consensus" | "oversold";
 
@@ -210,6 +244,7 @@ export default function SignalsPage() {
   const [chainBlock, setChainBlock] = useState<string>("\u2014");
   const [chainEmission, setChainEmission] = useState<string>("\u2014");
 
+  const [currentModel, setCurrentModel] = useState<AlphaModel>("satellite");
   const [currentView, setCurrentView] = useState<ViewMode>("combined");
   const [currentFilter, setCurrentFilter] = useState<FilterMode>("all");
   const [sortStates, setSortStates] = useState<Record<ViewMode, SortState>>({
@@ -218,20 +253,38 @@ export default function SignalsPage() {
     yield: { field: "yield_score", dir: -1 },
     consensus: { field: "consensus_score", dir: -1 },
   });
+  // Core sleeve state — separate from v2.1 satellite scores
+  const [corePicks, setCorePicks] = useState<CoreSleevePick[]>([]);
+  const [coreSortDir, setCoreSortDir] = useState<-1 | 1>(-1);
+  const [coreModelMeta, setCoreModelMeta] = useState<{ scoredUniverse: number; date?: string }>({ scoredUniverse: 0 });
 
   /* ── Data Load ─────────────────────────────────────────── */
   const loadData = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
-      const [combinedRes, chainRes] = await Promise.all([
+      const [combinedRes, chainRes, sleeveRes] = await Promise.all([
         fetch(`/data/combined_scores.json?t=${Date.now()}`),
         fetch(`/data/chain_data.json?t=${Date.now()}`),
+        fetch(`/data/sleeve_outputs.json?t=${Date.now()}`),
       ]);
       if (!combinedRes.ok) throw new Error("Could not load data");
 
       const combined: CombinedData = await combinedRes.json();
       const chain: ChainData | null = chainRes.ok ? await chainRes.json() : null;
+      const sleeve: SleeveOutputsData | null = sleeveRes.ok ? await sleeveRes.json() : null;
+
+      // Load core sleeve picks (full ranked table — not just top 10) so users
+      // can browse the full universe scored by the core model
+      if (sleeve?.sleeves?.core?.full_score_table) {
+        setCorePicks(sleeve.sleeves.core.full_score_table);
+        setCoreModelMeta({
+          scoredUniverse: sleeve.sleeves.core.scored_universe_size || 0,
+          date: sleeve.date,
+        });
+      } else {
+        setCorePicks([]);
+      }
 
       const chainMap: Record<number, ChainData["subnets"] extends (infer U)[] | undefined ? U : never> = {};
       if (chain?.subnets) {
@@ -566,44 +619,82 @@ export default function SignalsPage() {
             </span>
           </div>
 
-          {/* Score Toggle */}
-          <div className="mb-3">
+          {/* Model Toggle (top-level: which alpha model are we showing?) */}
+          <div className="mb-3 flex items-center gap-2.5 flex-wrap">
+            <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted">Model:</span>
             <div className="flex items-center border border-border2 w-fit">
-              {viewButtons.map((vb, idx) => (
+              {([
+                { key: "satellite", label: "Satellite v2.1", activeClass: "text-cyan bg-cyan/[0.08]" },
+                { key: "core", label: "Core (long-hold)", activeClass: "text-yellow bg-yellow/[0.08]" },
+              ] as { key: AlphaModel; label: string; activeClass: string }[]).map((mb, idx) => (
                 <button
-                  key={vb.key}
-                  onClick={() => setCurrentView(vb.key)}
-                  style={{ borderTop: 'none', borderBottom: 'none', borderLeft: 'none', borderRight: idx < viewButtons.length - 1 ? '1px solid var(--color-border2)' : 'none' }}
+                  key={mb.key}
+                  onClick={() => setCurrentModel(mb.key)}
+                  style={{ borderTop: 'none', borderBottom: 'none', borderLeft: 'none', borderRight: idx < 1 ? '1px solid var(--color-border2)' : 'none' }}
                   className={`font-mono text-[10px] tracking-[0.12em] uppercase bg-transparent px-[18px] py-[7px] cursor-pointer transition-all whitespace-nowrap ${
-                    currentView === vb.key
-                      ? vb.activeClass
+                    currentModel === mb.key
+                      ? mb.activeClass
                       : "text-muted hover:text-text hover:bg-surface2"
                   }`}
                 >
-                  {vb.label}
+                  {mb.label}
                 </button>
               ))}
             </div>
+            {currentModel === "core" && (
+              <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-border2 text-muted whitespace-nowrap">
+                {coreModelMeta.scoredUniverse} subnets scored {coreModelMeta.date ? `· ${coreModelMeta.date}` : ""}
+              </span>
+            )}
           </div>
 
-          {/* Filters + Refresh */}
-          <div className="flex items-center justify-between mb-3 flex-wrap gap-2.5">
-            <div className="flex gap-1.5 flex-wrap items-center">
-              <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted">Filter:</span>
-              {filterButtons.map((fb) => (
-                <button
-                  key={fb.key}
-                  onClick={() => setCurrentFilter(fb.key)}
-                  className={`font-mono text-[9px] tracking-[0.08em] uppercase border px-[10px] py-1 cursor-pointer transition-all ${
-                    currentFilter === fb.key
-                      ? "border-cyan text-cyan"
-                      : "border-border2 text-muted hover:border-cyan hover:text-cyan"
-                  } bg-transparent`}
-                >
-                  {fb.label}
-                </button>
-              ))}
+          {/* View Toggle (sub-views WITHIN the satellite model — only shown when satellite is selected) */}
+          {currentModel === "satellite" && (
+            <div className="mb-3">
+              <div className="flex items-center border border-border2 w-fit">
+                {viewButtons.map((vb, idx) => (
+                  <button
+                    key={vb.key}
+                    onClick={() => setCurrentView(vb.key)}
+                    style={{ borderTop: 'none', borderBottom: 'none', borderLeft: 'none', borderRight: idx < viewButtons.length - 1 ? '1px solid var(--color-border2)' : 'none' }}
+                    className={`font-mono text-[10px] tracking-[0.12em] uppercase bg-transparent px-[18px] py-[7px] cursor-pointer transition-all whitespace-nowrap ${
+                      currentView === vb.key
+                        ? vb.activeClass
+                        : "text-muted hover:text-text hover:bg-surface2"
+                    }`}
+                  >
+                    {vb.label}
+                  </button>
+                ))}
+              </div>
             </div>
+          )}
+
+          {/* Filters + Refresh — filters apply to satellite (v2.1) only */}
+          <div className="flex items-center justify-between mb-3 flex-wrap gap-2.5">
+            {currentModel === "satellite" ? (
+              <div className="flex gap-1.5 flex-wrap items-center">
+                <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted">Filter:</span>
+                {filterButtons.map((fb) => (
+                  <button
+                    key={fb.key}
+                    onClick={() => setCurrentFilter(fb.key)}
+                    className={`font-mono text-[9px] tracking-[0.08em] uppercase border px-[10px] py-1 cursor-pointer transition-all ${
+                      currentFilter === fb.key
+                        ? "border-cyan text-cyan"
+                        : "border-border2 text-muted hover:border-cyan hover:text-cyan"
+                    } bg-transparent`}
+                  >
+                    {fb.label}
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="font-mono text-[10px] text-muted">
+                Top 5 ranked = current core sleeve holdings.
+                Universe filter: top 30 pct by tao_in. Equal-weighted z-score sum across 5 signals.
+              </div>
+            )}
             <button
               onClick={loadData}
               className="font-mono text-[10px] tracking-[0.08em] uppercase bg-transparent border border-border2 text-muted px-3 py-[5px] cursor-pointer transition-all hover:border-cyan hover:text-cyan"
@@ -612,12 +703,87 @@ export default function SignalsPage() {
             </button>
           </div>
 
-          {/* Table */}
+          {/* Table — switches between Satellite and Core based on model */}
           <div className="border border-border overflow-x-auto bg-surface">
             {loading ? (
               <div className="font-mono text-xs text-muted text-center py-12">Loading...</div>
             ) : error ? (
               <div className="font-mono text-xs text-red text-center py-12">{"\u26A0"} {error}</div>
+            ) : currentModel === "core" ? (
+              corePicks.length === 0 ? (
+                <div className="font-mono text-xs text-muted text-center py-12">
+                  Core sleeve data not yet available.
+                </div>
+              ) : (
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-surface2 border-b border-border2">
+                      <th className={thBase + " w-8"}>#</th>
+                      <th className={thBase + " w-12"}>SN</th>
+                      <th className={thBase + " min-w-[140px]"}>Name</th>
+                      <th
+                        className={thBase + " cursor-pointer select-none hover:text-text"}
+                        onClick={() => setCoreSortDir((d) => (d * -1) as -1 | 1)}
+                      >
+                        Core Score {coreSortDir === -1 ? "\u2193" : "\u2191"}
+                      </th>
+                      <th className={thBase}>Liquidity</th>
+                      <th className={thBase}>Pool Depth</th>
+                      <th className={thBase}>Emission</th>
+                      <th className={thBase}>Spot Price</th>
+                      <th className={thBase}>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[...corePicks]
+                      .sort((a, b) => coreSortDir === -1 ? b.score - a.score : a.score - b.score)
+                      .map((p, i) => {
+                        const isHeld = p.rank <= 5;  // top 5 = current core sleeve picks
+                        return (
+                          <tr key={p.netuid}
+                              className={`border-b border-border/80 transition-colors ${
+                                isHeld ? "bg-yellow/[0.04] hover:bg-yellow/[0.08]" : "hover:bg-cyan/[0.03]"
+                              }`}>
+                            <td className="font-mono text-[11px] text-muted px-3 py-2.5">{i + 1}</td>
+                            <td className="font-mono text-[10px] text-muted px-3 py-2.5">{p.netuid}</td>
+                            <td className="font-semibold text-[13px] text-text px-3 py-2.5">
+                              <Link href={`/subnet/${p.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
+                                <SubnetLogo netuid={p.netuid} size={18} />
+                                <span className="border-b border-border2 hover:border-cyan">{p.name}</span>
+                              </Link>
+                            </td>
+                            <td className={`font-mono text-[12px] font-semibold px-3 py-2.5 ${
+                              p.score > 0 ? "text-yellow" : "text-muted"
+                            }`}>
+                              {p.score >= 0 ? "+" : ""}{p.score.toFixed(3)}
+                            </td>
+                            <td className="px-3 py-2.5"><LiquidityBadge taoIn={p.tao_in || 0} /></td>
+                            <td className="font-mono text-[11px] text-cyan px-3 py-2.5">
+                              {(p.tao_in || 0).toFixed(0)} {"\u03C4"}
+                            </td>
+                            <td className="font-mono text-[11px] px-3 py-2.5">
+                              {(p.emission_share_pct || 0).toFixed(2)}%
+                            </td>
+                            <td className="font-mono text-[11px] text-muted px-3 py-2.5">
+                              {p.moving_price ? p.moving_price.toFixed(6) : "\u2014"}
+                            </td>
+                            <td className="px-3 py-2.5">
+                              {isHeld ? (
+                                <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-yellow text-yellow whitespace-nowrap">
+                                  HELD
+                                </span>
+                              ) : (
+                                <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-border2 text-muted whitespace-nowrap">
+                                  WATCHING
+                                </span>
+                              )}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                  </tbody>
+                </table>
+              )
             ) : filteredSorted.length === 0 ? (
               <div className="font-mono text-xs text-muted text-center py-12">No subnets match this filter</div>
             ) : (
