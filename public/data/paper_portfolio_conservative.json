@@ -2,10 +2,10 @@
   "start_date": "2026-04-24",
   "total_tao": 1000,
   "positions": {},
-  "root_stake": 1000.7351,
-  "cash_value": 1000.74,
-  "accumulated_root_yield": 0.735082,
-  "benchmark_eq_weight": 1020.44,
+  "root_stake": 1000.8835,
+  "cash_value": 1000.88,
+  "accumulated_root_yield": 0.883452,
+  "benchmark_eq_weight": 1035.08,
   "benchmark_eq_prices": {
     "4": 0.05998205,
     "5": 0.01921722,
@@ -74,8 +74,8 @@
     "125": 0.00588285,
     "126": 0.00683966
   },
-  "benchmark_eq_emissions": 9.904871,
-  "benchmark_mcw_emissions": 1.763054,
+  "benchmark_eq_emissions": 11.647331,
+  "benchmark_mcw_emissions": 2.078766,
   "benchmark_mcw_prices": {
     "4": {
       "price": 0.05998205,
@@ -342,7 +342,7 @@
       "weight": 0.00106146259256581
     }
   },
-  "benchmark_mcw": 1005.96,
-  "benchmark_root_value": 1000.7351,
-  "benchmark_root": 1000.74
+  "benchmark_mcw": 1006.89,
+  "benchmark_root_value": 1000.8835,
+  "benchmark_root": 1000.88
 }

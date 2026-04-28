@@ -100,5 +100,24 @@
     "tao_received": 14.87,
     "slippage_pct": 0.184,
     "reason": "no longer scored"
+  },
+  {
+    "date": "2026-04-28",
+    "type": "ENTRY",
+    "netuid": 101,
+    "name": "eni",
+    "tao": 25.3,
+    "slippage_pct": 0.783,
+    "entry_price": 0.00417667,
+    "sortino": 0.5898
+  },
+  {
+    "date": "2026-04-28",
+    "type": "DECREASE",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao_removed": 25.9,
+    "new_total": 21.6,
+    "slippage_pct": 0.169
   }
 ]

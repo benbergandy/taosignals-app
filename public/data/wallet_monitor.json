@@ -1021,6 +1021,71 @@
       "total_value": 1.588926,
       "total_pnl_tao": 0.588926,
       "total_pnl_pct": 58.89
+    },
+    {
+      "date": "2026-04-28",
+      "balance": 1.157499,
+      "positions": {
+        "0": {
+          "name": "SN0",
+          "tokens": 0.600016,
+          "price": 0.0,
+          "tao_value": 0,
+          "cost_basis": 0,
+          "pnl_tao": 0,
+          "pnl_pct": 0,
+          "emission": "\u03c40.000000000",
+          "hotkey": "5E2LP6EnZ54m3wS8s1yP..."
+        },
+        "43": {
+          "name": "SN43",
+          "tokens": 15.99335,
+          "price": 0.00622782,
+          "tao_value": 0.099604,
+          "cost_basis": 0,
+          "pnl_tao": 0.099604,
+          "pnl_pct": 0,
+          "emission": "\u200e64.263667752\u05e2\u200e",
+          "hotkey": "5HjMs5JDrLH3Hknmfm1g..."
+        },
+        "92": {
+          "name": "SN92",
+          "tokens": 7.313269,
+          "price": 0.00407733,
+          "tao_value": 0.029819,
+          "cost_basis": 0,
+          "pnl_tao": 0.029819,
+          "pnl_pct": 0,
+          "emission": "\u200e0.443943721\u1682\u200e",
+          "hotkey": "5CAvneqrSRkCR723u1nV..."
+        },
+        "94": {
+          "name": "SN94",
+          "tokens": 8.52417,
+          "price": 0.00414714,
+          "tao_value": 0.035351,
+          "cost_basis": 0,
+          "pnl_tao": 0.035351,
+          "pnl_pct": 0,
+          "emission": "\u200e1.024895338\u1684\u200e",
+          "hotkey": "5C7eJLN6Wk1rh9oQoUmX..."
+        },
+        "116": {
+          "name": "SN116",
+          "tokens": 18.708955,
+          "price": 0.00360889,
+          "tao_value": 0.067519,
+          "cost_basis": 0,
+          "pnl_tao": 0.067519,
+          "pnl_pct": 0,
+          "emission": "\u200e33.214131560\u044a\u200e",
+          "hotkey": "5FFFjWqpNcu2yweMNaYc..."
+        }
+      },
+      "total_staked_value": 0.232292,
+      "total_value": 1.389791,
+      "total_pnl_tao": 0.389791,
+      "total_pnl_pct": 38.98
     }
   ],
   "initial_date": "2026-04-07"

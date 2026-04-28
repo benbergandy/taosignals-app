@@ -156,5 +156,32 @@
     "slippage_pct": 0.182,
     "entry_price": 0.00433535,
     "sortino": 0.4549
+  },
+  {
+    "date": "2026-04-28",
+    "type": "ENTRY",
+    "netuid": 126,
+    "name": "Poker44",
+    "tao": 9.4,
+    "slippage_pct": 0.963,
+    "entry_price": 0.00680056,
+    "sortino": 0.4582
+  },
+  {
+    "date": "2026-04-28",
+    "type": "INCREASE",
+    "netuid": 101,
+    "name": "eni",
+    "tao_added": 14.1,
+    "new_total": 31.5
+  },
+  {
+    "date": "2026-04-28",
+    "type": "DECREASE",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao_removed": 54.5,
+    "new_total": 32.0,
+    "slippage_pct": 0.356
   }
 ]

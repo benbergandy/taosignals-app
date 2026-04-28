@@ -92,5 +92,33 @@
     "name": "TaoLend",
     "tao_added": 14.6,
     "new_total": 33.8
+  },
+  {
+    "date": "2026-04-28",
+    "type": "ENTRY",
+    "netuid": 101,
+    "name": "eni",
+    "tao": 19.5,
+    "slippage_pct": 0.604,
+    "entry_price": 0.00417667,
+    "sortino": 0.5898
+  },
+  {
+    "date": "2026-04-28",
+    "type": "DECREASE",
+    "netuid": 116,
+    "name": "TaoLend",
+    "tao_removed": 12.6,
+    "new_total": 21.2,
+    "slippage_pct": 0.372
+  },
+  {
+    "date": "2026-04-28",
+    "type": "DECREASE",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao_removed": 30.9,
+    "new_total": 18.1,
+    "slippage_pct": 0.202
   }
 ]
