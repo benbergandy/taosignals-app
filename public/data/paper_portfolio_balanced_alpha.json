@@ -8,8 +8,8 @@
       "entry_price": 0.00431907,
       "name": "\u2692",
       "alpha_tokens_at_entry": 4005.4919,
-      "accumulated_emission_tokens": 83.9033,
-      "accumulated_emission_tao": 0.338705,
+      "accumulated_emission_tokens": 88.1006,
+      "accumulated_emission_tao": 0.356542,
       "cost_basis_tao": 17.3
     },
     "92": {
@@ -18,9 +18,10 @@
       "entry_price": 0.00423013,
       "name": "TensorClaw",
       "alpha_tokens_at_entry": 3025.9117,
-      "accumulated_emission_tokens": 99.9589,
-      "accumulated_emission_tao": 0.396956,
-      "cost_basis_tao": 12.8
+      "accumulated_emission_tokens": 104.1007,
+      "accumulated_emission_tao": 0.414445,
+      "cost_basis_tao": 12.8,
+      "entry_score": 0
     },
     "49": {
       "tao": 19.0,
@@ -28,8 +29,8 @@
       "entry_price": 0.00548646,
       "name": "Nepher Robotics",
       "alpha_tokens_at_entry": 1676.8554,
-      "accumulated_emission_tokens": 53.5031,
-      "accumulated_emission_tao": 0.293191,
+      "accumulated_emission_tokens": 56.0064,
+      "accumulated_emission_tao": 0.305876,
       "cost_basis_tao": 9.2
     },
     "116": {
@@ -38,8 +39,8 @@
       "entry_price": 0.00361347,
       "name": "TaoLend",
       "alpha_tokens_at_entry": 9021.799,
-      "accumulated_emission_tokens": 57.2979,
-      "accumulated_emission_tao": 0.209174,
+      "accumulated_emission_tokens": 60.5058,
+      "accumulated_emission_tao": 0.220794,
       "cost_basis_tao": 32.6,
       "entry_score": 0
     },
@@ -49,8 +50,8 @@
       "entry_price": 0.00620311,
       "name": "Graphite",
       "alpha_tokens_at_entry": 16443.3647,
-      "accumulated_emission_tokens": 7.6201,
-      "accumulated_emission_tao": 0.047074,
+      "accumulated_emission_tokens": 8.497,
+      "accumulated_emission_tao": 0.05257,
       "cost_basis_tao": 102.0,
       "entry_score": 0
     },
@@ -60,8 +61,8 @@
       "entry_price": 0.00436261,
       "name": "ogham",
       "alpha_tokens_at_entry": 3896.7499,
-      "accumulated_emission_tokens": 32.0812,
-      "accumulated_emission_tao": 0.14144,
+      "accumulated_emission_tokens": 36.5277,
+      "accumulated_emission_tao": 0.161155,
       "cost_basis_tao": 17.0
     },
     "94": {
@@ -70,8 +71,8 @@
       "entry_price": 0.00362614,
       "name": "Bitsota",
       "alpha_tokens_at_entry": 4191.7852,
-      "accumulated_emission_tokens": 25.6102,
-      "accumulated_emission_tao": 0.096648,
+      "accumulated_emission_tokens": 29.8092,
+      "accumulated_emission_tao": 0.11477,
       "cost_basis_tao": 15.2,
       "entry_score": 0
     },
@@ -81,16 +82,27 @@
       "entry_price": 0.00417667,
       "name": "eni",
       "alpha_tokens_at_entry": 7541.8934,
-      "accumulated_emission_tokens": 4.7768,
-      "accumulated_emission_tao": 0.019951,
+      "accumulated_emission_tokens": 9.4159,
+      "accumulated_emission_tao": 0.039778,
       "cost_basis_tao": 31.5,
+      "entry_score": 0
+    },
+    "29": {
+      "tao": 32.8,
+      "entry_date": "2026-04-29",
+      "entry_price": 0.01378216,
+      "name": "Coldint",
+      "alpha_tokens_at_entry": 2379.8882,
+      "accumulated_emission_tokens": 0.1687,
+      "accumulated_emission_tao": 0.002325,
+      "cost_basis_tao": 32.8,
       "entry_score": 0
     }
   },
-  "root_stake": 821.8581,
-  "cash_value": 1002.43,
-  "accumulated_root_yield": 3.016003,
-  "benchmark_eq_weight": 1025.56,
+  "root_stake": 789.1743,
+  "cash_value": 1005.21,
+  "accumulated_root_yield": 3.132155,
+  "benchmark_eq_weight": 1025.2,
   "benchmark_eq_prices": {
     "1": 0.01176801,
     "2": 0.00787769,
@@ -177,8 +189,8 @@
     "127": 0.00598287,
     "128": 0.00371591
   },
-  "benchmark_eq_emissions": 39.472576,
-  "benchmark_mcw_emissions": 4.328584,
+  "benchmark_eq_emissions": 40.584512,
+  "benchmark_mcw_emissions": 4.472303,
   "benchmark_mcw_prices": {
     "1": {
       "price": 0.01176801,
@@ -517,7 +529,7 @@
       "weight": 0.00329041332881925
     }
   },
-  "benchmark_mcw": 905.16,
-  "benchmark_root_value": 1003.5285,
-  "benchmark_root": 1003.53
+  "benchmark_mcw": 903.83,
+  "benchmark_root_value": 1003.6762,
+  "benchmark_root": 1003.68
 }

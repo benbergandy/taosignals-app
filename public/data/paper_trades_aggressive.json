@@ -183,5 +183,25 @@
     "tao_removed": 54.5,
     "new_total": 32.0,
     "slippage_pct": 0.356
+  },
+  {
+    "date": "2026-04-29",
+    "type": "EXIT",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao": 13.9,
+    "tao_received": 13.88,
+    "slippage_pct": 0.092,
+    "reason": "score 44.5 below exit threshold 50.1"
+  },
+  {
+    "date": "2026-04-29",
+    "type": "ENTRY",
+    "netuid": 29,
+    "name": "Coldint",
+    "tao": 53.5,
+    "slippage_pct": 0.289,
+    "entry_price": 0.01378216,
+    "sortino": 0.1096
   }
 ]

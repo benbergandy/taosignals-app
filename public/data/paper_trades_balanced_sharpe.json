@@ -120,5 +120,15 @@
     "tao_removed": 16.2,
     "new_total": 17.6,
     "slippage_pct": 0.477
+  },
+  {
+    "date": "2026-04-29",
+    "type": "ENTRY",
+    "netuid": 29,
+    "name": "Coldint",
+    "tao": 22.4,
+    "slippage_pct": 0.121,
+    "entry_price": 0.01378216,
+    "sortino": 0.1096
   }
 ]
