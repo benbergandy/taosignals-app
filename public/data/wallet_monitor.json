@@ -1206,6 +1206,170 @@
       "total_value": 1.690297,
       "total_pnl_tao": 0.690297,
       "total_pnl_pct": 69.03
+    },
+    {
+      "date": "2026-04-30",
+      "balance": 0.143351,
+      "positions": {
+        "0": {
+          "name": "SN0",
+          "tokens": 0.298672,
+          "price": 0.0,
+          "tao_value": 0,
+          "cost_basis": 0,
+          "pnl_tao": 0,
+          "pnl_pct": 0,
+          "emission": "\u03c40.000000000",
+          "hotkey": "5E2LP6EnZ54m3wS8s1yP..."
+        },
+        "12": {
+          "name": "SN12",
+          "tokens": 16.525173,
+          "price": 0.00680258,
+          "tao_value": 0.112414,
+          "cost_basis": 0,
+          "pnl_tao": 0.112414,
+          "pnl_pct": 0,
+          "emission": "\u200e13.857968651\u03bc\u200e",
+          "hotkey": "5Hjbf5s2Cb4xuYGLKUGV..."
+        },
+        "14": {
+          "name": "SN14",
+          "tokens": 12.202791,
+          "price": 0.00922755,
+          "tao_value": 0.112602,
+          "cost_basis": 0,
+          "pnl_tao": 0.112602,
+          "pnl_pct": 0,
+          "emission": "\u200e3.189096281\u03be\u200e",
+          "hotkey": "5Cf4LPRv6tiyuFsfLRQa..."
+        },
+        "17": {
+          "name": "SN17",
+          "tokens": 7.341197,
+          "price": 0.01524294,
+          "tao_value": 0.111901,
+          "cost_basis": 0,
+          "pnl_tao": 0.111901,
+          "pnl_pct": 0,
+          "emission": "\u200e0.366866425\u03c1\u200e",
+          "hotkey": "5EFcCVkxv19qramQsN2D..."
+        },
+        "24": {
+          "name": "Quasar",
+          "tokens": 10.581252,
+          "price": 0.0158763,
+          "tao_value": 0.167991,
+          "cost_basis": 0.1,
+          "pnl_tao": 0.067991,
+          "pnl_pct": 67.99,
+          "emission": "\u200e49.313039566\u03c9\u200e",
+          "hotkey": "5E2LP6EnZ54m3wS8s1yP..."
+        },
+        "29": {
+          "name": "SN29",
+          "tokens": 19.628051,
+          "price": 0.01374087,
+          "tao_value": 0.269707,
+          "cost_basis": 0,
+          "pnl_tao": 0.269707,
+          "pnl_pct": 0,
+          "emission": "\u200e115.469742414\u05d4\u200e",
+          "hotkey": "5HmmmmhaoDbmt4KcYmAX..."
+        },
+        "43": {
+          "name": "SN43",
+          "tokens": 16.027451,
+          "price": 0.00628754,
+          "tao_value": 0.100773,
+          "cost_basis": 0,
+          "pnl_tao": 0.100773,
+          "pnl_pct": 0,
+          "emission": "\u200e68.086135854\u05e2\u200e",
+          "hotkey": "5HjMs5JDrLH3Hknmfm1g..."
+        },
+        "51": {
+          "name": "SN51",
+          "tokens": 2.752832,
+          "price": 0.06011171,
+          "tao_value": 0.165477,
+          "cost_basis": 0,
+          "pnl_tao": 0.165477,
+          "pnl_pct": 0,
+          "emission": "\u200e2.420769366\u05ea\u200e",
+          "hotkey": "5F7X5UpKSr26KU3jKfpL..."
+        },
+        "66": {
+          "name": "SN66",
+          "tokens": 15.263262,
+          "price": 0.01304062,
+          "tao_value": 0.199042,
+          "cost_basis": 0,
+          "pnl_tao": 0.199042,
+          "pnl_pct": 0,
+          "emission": "\u200e24.514053955\u0636\u200e",
+          "hotkey": "5DRPoRiBSPNvgSvRseha..."
+        },
+        "85": {
+          "name": "SN85",
+          "tokens": 0.986529,
+          "price": 0.0129019,
+          "tao_value": 0.012728,
+          "cost_basis": 0,
+          "pnl_tao": 0.012728,
+          "pnl_pct": 0,
+          "emission": "\u200e8.744467491\u16b1\u200e",
+          "hotkey": "5FR392L6eKrTGwUjQurp..."
+        },
+        "92": {
+          "name": "SN92",
+          "tokens": 7.36371,
+          "price": 0.0044735,
+          "tao_value": 0.032942,
+          "cost_basis": 0,
+          "pnl_tao": 0.032942,
+          "pnl_pct": 0,
+          "emission": "\u200e0.504010884\u1682\u200e",
+          "hotkey": "5CAvneqrSRkCR723u1nV..."
+        },
+        "94": {
+          "name": "SN94",
+          "tokens": 8.571882,
+          "price": 0.00446142,
+          "tao_value": 0.038243,
+          "cost_basis": 0,
+          "pnl_tao": 0.038243,
+          "pnl_pct": 0,
+          "emission": "\u200e1.006404697\u1684\u200e",
+          "hotkey": "5C7eJLN6Wk1rh9oQoUmX..."
+        },
+        "95": {
+          "name": "SN95",
+          "tokens": 5.341169,
+          "price": 0.03104537,
+          "tao_value": 0.165819,
+          "cost_basis": 0,
+          "pnl_tao": 0.165819,
+          "pnl_pct": 0,
+          "emission": "\u200e6.913254039\u1685\u200e",
+          "hotkey": "5CfQSDASnDwnz2GEBom8..."
+        },
+        "116": {
+          "name": "SN116",
+          "tokens": 18.765359,
+          "price": 0.00372023,
+          "tao_value": 0.069811,
+          "cost_basis": 0,
+          "pnl_tao": 0.069811,
+          "pnl_pct": 0,
+          "emission": "\u200e32.911563385\u044a\u200e",
+          "hotkey": "5FFFjWqpNcu2yweMNaYc..."
+        }
+      },
+      "total_staked_value": 1.55945,
+      "total_value": 1.702801,
+      "total_pnl_tao": 0.702801,
+      "total_pnl_pct": 70.28
     }
   ],
   "initial_date": "2026-04-07"

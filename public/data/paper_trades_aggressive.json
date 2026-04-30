@@ -203,5 +203,36 @@
     "slippage_pct": 0.289,
     "entry_price": 0.01378216,
     "sortino": 0.1096
+  },
+  {
+    "date": "2026-04-30",
+    "type": "ENTRY",
+    "netuid": 90,
+    "name": "ogham",
+    "tao": 18.3,
+    "slippage_pct": 0.995,
+    "entry_price": 0.00445732,
+    "sortino": 0.3572
+  },
+  {
+    "date": "2026-04-30",
+    "type": "ENTRY",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao": 12.5,
+    "slippage_pct": 0.083,
+    "entry_price": 0.00680296,
+    "sortino": 0.0927
+  },
+  {
+    "date": "2026-04-30",
+    "type": "INCREASE",
+    "netuid": 29,
+    "name": "Coldint",
+    "tao_added": 103.1,
+    "new_total": 156.6,
+    "alpha_added": 7421.324206,
+    "spot_price": 0.013815,
+    "slippage_pct": 0.554
   }
 ]

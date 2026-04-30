@@ -130,5 +130,26 @@
     "slippage_pct": 0.121,
     "entry_price": 0.01378216,
     "sortino": 0.1096
+  },
+  {
+    "date": "2026-04-30",
+    "type": "ENTRY",
+    "netuid": 90,
+    "name": "ogham",
+    "tao": 18.3,
+    "slippage_pct": 0.995,
+    "entry_price": 0.00445732,
+    "sortino": 0.3572
+  },
+  {
+    "date": "2026-04-30",
+    "type": "INCREASE",
+    "netuid": 29,
+    "name": "Coldint",
+    "tao_added": 53.1,
+    "new_total": 75.5,
+    "alpha_added": 3832.53565,
+    "spot_price": 0.013815,
+    "slippage_pct": 0.286
   }
 ]

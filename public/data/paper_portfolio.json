@@ -8,10 +8,11 @@
       "entry_price": 0.00384612,
       "name": "TensorClaw",
       "alpha_tokens_at_entry": 3692.0325,
-      "accumulated_emission_tokens": 32.0064,
-      "accumulated_emission_tao": 0.127729,
+      "accumulated_emission_tokens": 36.93392,
+      "accumulated_emission_tao": 0.150457,
       "cost_basis_tao": 14.2,
-      "entry_score": 0
+      "entry_score": 0,
+      "alpha_tokens": 3728.96642
     },
     "94": {
       "tao": 15.2,
@@ -19,10 +20,11 @@
       "entry_price": 0.00362614,
       "name": "Bitsota",
       "alpha_tokens_at_entry": 4191.7852,
-      "accumulated_emission_tokens": 29.8092,
-      "accumulated_emission_tao": 0.11477,
+      "accumulated_emission_tokens": 34.854779,
+      "accumulated_emission_tao": 0.137545,
       "cost_basis_tao": 15.2,
-      "entry_score": 0
+      "entry_score": 0,
+      "alpha_tokens": 4226.639979
     },
     "43": {
       "tao": 18.1,
@@ -30,10 +32,11 @@
       "entry_price": 0.00615656,
       "name": "Graphite",
       "alpha_tokens_at_entry": 7958.9901,
-      "accumulated_emission_tokens": 3.0232,
-      "accumulated_emission_tao": 0.018716,
+      "accumulated_emission_tokens": 4.261097,
+      "accumulated_emission_tao": 0.0265,
       "cost_basis_tao": 49.0,
-      "entry_score": 0
+      "entry_score": 0,
+      "alpha_tokens": 7963.251197
     },
     "116": {
       "tao": 21.2,
@@ -41,10 +44,11 @@
       "entry_price": 0.0036473,
       "name": "TaoLend",
       "alpha_tokens_at_entry": 5291.5856,
-      "accumulated_emission_tokens": 15.7012,
-      "accumulated_emission_tao": 0.056892,
+      "accumulated_emission_tokens": 18.450059,
+      "accumulated_emission_tao": 0.067408,
       "cost_basis_tao": 19.3,
-      "entry_score": 0
+      "entry_score": 0,
+      "alpha_tokens": 5310.035659
     },
     "101": {
       "tao": 19.5,
@@ -52,27 +56,41 @@
       "entry_price": 0.00417667,
       "name": "eni",
       "alpha_tokens_at_entry": 4668.7912,
-      "accumulated_emission_tokens": 5.8506,
-      "accumulated_emission_tao": 0.024716,
+      "accumulated_emission_tokens": 8.924097,
+      "accumulated_emission_tao": 0.039211,
       "cost_basis_tao": 19.5,
-      "entry_score": 0
+      "entry_score": 0,
+      "alpha_tokens": 4677.715297
     },
     "29": {
-      "tao": 30.3,
+      "tao": 88.8,
       "entry_date": "2026-04-29",
       "entry_price": 0.01378216,
       "name": "Coldint",
       "alpha_tokens_at_entry": 2198.4943,
-      "accumulated_emission_tokens": 0.1559,
-      "accumulated_emission_tao": 0.002148,
-      "cost_basis_tao": 30.3,
+      "accumulated_emission_tokens": 0.619928,
+      "accumulated_emission_tao": 0.008559,
+      "cost_basis_tao": 88.8,
+      "entry_score": 0,
+      "alpha_tokens": 6420.170587
+    },
+    "90": {
+      "alpha_tokens": 4085.749076,
+      "tao": 18.3,
+      "entry_date": "2026-04-30",
+      "entry_price": 0.0044395129371938,
+      "name": "ogham",
+      "alpha_tokens_at_entry": 4081.06688,
+      "accumulated_emission_tokens": 4.682196,
+      "accumulated_emission_tao": 0.020787,
+      "cost_basis_tao": 18.3,
       "entry_score": 0
     }
   },
-  "root_stake": 882.144,
-  "cash_value": 1005.9,
-  "accumulated_root_yield": 0.914167,
-  "benchmark_eq_weight": 1037.53,
+  "root_stake": 805.4666,
+  "cash_value": 1041.03,
+  "accumulated_root_yield": 1.036791,
+  "benchmark_eq_weight": 1063.79,
   "benchmark_eq_prices": {
     "4": 0.05998205,
     "5": 0.01921722,
@@ -141,8 +159,8 @@
     "125": 0.00588285,
     "126": 0.00683966
   },
-  "benchmark_eq_emissions": 13.34713,
-  "benchmark_mcw_emissions": 2.394681,
+  "benchmark_eq_emissions": 14.995171,
+  "benchmark_mcw_emissions": 2.710514,
   "benchmark_mcw_prices": {
     "4": {
       "price": 0.05998205,
@@ -409,7 +427,7 @@
       "weight": 0.00106146259256581
     }
   },
-  "benchmark_mcw": 1001.9,
-  "benchmark_root_value": 1001.0309,
-  "benchmark_root": 1001.03
+  "benchmark_mcw": 1011.59,
+  "benchmark_root_value": 1001.1833,
+  "benchmark_root": 1001.18
 }
