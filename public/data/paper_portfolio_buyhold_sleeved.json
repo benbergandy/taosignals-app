@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T12:03:17.799880+00:00",
+  "generated_at": "2026-04-30T01:50:24.097768+00:00",
   "date": "2026-04-29",
   "total_tao": 1000.0,
   "root_stake": 200.0,
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 66,
-          "name": "ninja",
+          "netuid": 43,
+          "name": "Graphite",
           "tao": 160.0,
-          "score": 1.0654814527034957,
+          "score": -0.020639263310876465,
           "rank": 1,
-          "moving_price": 0.01307737,
-          "tao_in": 13431.2807,
+          "moving_price": 0.00626755,
+          "tao_in": 15337.7121,
           "source": "core"
         },
         {
-          "netuid": 95,
-          "name": "nion",
+          "netuid": 12,
+          "name": "Compute Horde",
           "tao": 160.0,
-          "score": 0.7284944705601801,
+          "score": -0.18438083259341012,
           "rank": 2,
-          "moving_price": 0.0293591,
-          "tao_in": 17712.172,
+          "moving_price": 0.00687631,
+          "tao_in": 15111.3054,
+          "source": "core"
+        },
+        {
+          "netuid": 85,
+          "name": "Vidaio",
+          "tao": 160.0,
+          "score": -0.2862452859967628,
+          "rank": 3,
+          "moving_price": 0.01327983,
+          "tao_in": 19565.3398,
           "source": "core"
         },
         {
           "netuid": 24,
           "name": "Quasar",
           "tao": 160.0,
-          "score": 0.48756087936228315,
-          "rank": 3,
+          "score": -0.343978633786427,
+          "rank": 4,
           "moving_price": 0.01528015,
           "tao_in": 16196.6727,
           "source": "core"
         },
         {
-          "netuid": 51,
-          "name": "lium.io",
+          "netuid": 14,
+          "name": "TAOHash",
           "tao": 160.0,
-          "score": 0.26873725982055313,
-          "rank": 4,
-          "moving_price": 0.05873259,
-          "tao_in": 120188.9908,
-          "source": "core"
-        },
-        {
-          "netuid": 29,
-          "name": "Coldint",
-          "tao": 160.0,
-          "score": 0.1456229982015238,
+          "score": -0.40210444688513086,
           "rank": 5,
-          "moving_price": 0.01378216,
-          "tao_in": 18485.6255,
+          "moving_price": 0.00919526,
+          "tao_in": 23736.9142,
           "source": "core"
         }
       ]
@@ -158,74 +158,64 @@
     }
   },
   "positions": {
-    "66": {
-      "netuid": 66,
-      "name": "ninja",
+    "43": {
+      "netuid": 43,
+      "name": "Graphite",
       "tao": 160.0,
-      "score": 1.0654814527034957,
+      "score": -0.020639263310876465,
       "rank": 1,
-      "moving_price": 0.01307737,
-      "tao_in": 13431.2807,
+      "moving_price": 0.00626755,
+      "tao_in": 15337.7121,
       "source": "core+satellite"
     },
-    "95": {
-      "netuid": 95,
-      "name": "nion",
+    "12": {
+      "netuid": 12,
+      "name": "Compute Horde",
       "tao": 160.0,
-      "score": 0.7284944705601801,
+      "score": -0.18438083259341012,
       "rank": 2,
-      "moving_price": 0.0293591,
-      "tao_in": 17712.172,
-      "source": "core"
+      "moving_price": 0.00687631,
+      "tao_in": 15111.3054,
+      "source": "core+satellite"
+    },
+    "85": {
+      "netuid": 85,
+      "name": "Vidaio",
+      "tao": 160.0,
+      "score": -0.2862452859967628,
+      "rank": 3,
+      "moving_price": 0.01327983,
+      "tao_in": 19565.3398,
+      "source": "core+satellite"
     },
     "24": {
       "netuid": 24,
       "name": "Quasar",
       "tao": 160.0,
-      "score": 0.48756087936228315,
-      "rank": 3,
+      "score": -0.343978633786427,
+      "rank": 4,
       "moving_price": 0.01528015,
       "tao_in": 16196.6727,
       "source": "core"
     },
-    "51": {
-      "netuid": 51,
-      "name": "lium.io",
-      "tao": 160.0,
-      "score": 0.26873725982055313,
-      "rank": 4,
-      "moving_price": 0.05873259,
-      "tao_in": 120188.9908,
-      "source": "core"
-    },
-    "29": {
-      "netuid": 29,
-      "name": "Coldint",
-      "tao": 160.0,
-      "score": 0.1456229982015238,
-      "rank": 5,
-      "moving_price": 0.01378216,
-      "tao_in": 18485.6255,
-      "source": "core+satellite"
-    },
     "14": {
       "netuid": 14,
       "name": "TAOHash",
-      "tao": 0.0,
-      "score": 0.6002695023260292,
-      "rank": 1,
+      "tao": 160.0,
+      "score": -0.40210444688513086,
+      "rank": 5,
       "moving_price": 0.00919526,
       "tao_in": 23736.9142,
-      "source": "satellite"
+      "source": "core+satellite"
     },
-    "43": {
-      "netuid": 43,
-      "name": "Graphite",
+    "66": {
+      "netuid": 66,
+      "name": "ninja",
       "tao": 0.0,
-      "score": 0.22887612760115253,
-      "rank": 3,
-      "moving_price": 0.00626755,
-      "tao_in": 15337.7121,
+      "score": 0.3372071694077927,
+      "rank": 2,
+      "moving_price": 0.01307737,
+      "tao_in": 13431.2807,
       "source": "satellite"
     },
     "17": {
@@ -238,24 +228,14 @@
       "tao_in": 32226.9868,
       "source": "satellite"
     },
-    "85": {
-      "netuid": 85,
-      "name": "Vidaio",
+    "29": {
+      "netuid": 29,
+      "name": "Coldint",
       "tao": 0.0,
-      "score": 0.14379234804503982,
-      "rank": 5,
-      "moving_price": 0.01327983,
-      "tao_in": 19565.3398,
-      "source": "satellite"
-    },
-    "12": {
-      "netuid": 12,
-      "name": "Compute Horde",
-      "tao": 0.0,
-      "score": 0.11536269725128315,
-      "rank": 6,
-      "moving_price": 0.00687631,
-      "tao_in": 15111.3054,
+      "score": 0.08172181088813173,
+      "rank": 7,
+      "moving_price": 0.01378216,
+      "tao_in": 18485.6255,
       "source": "satellite"
     },
     "53": {
@@ -269,9 +249,11 @@
       "source": "satellite"
     }
   },
-  "n_positions_after_merge": 11,
+  "n_positions_after_merge": 9,
   "consensus_picks": [
-    "66",
-    "29"
+    "43",
+    "12",
+    "85",
+    "14"
   ]
 }
