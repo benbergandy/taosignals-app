@@ -30,7 +30,7 @@ done
 
 # Sleeve outputs + per-profile sleeved portfolios (core/satellite/root architecture)
 [ -f ${PIPELINE}/data/sleeve_outputs.json ] && cp ${PIPELINE}/data/sleeve_outputs.json ${SITE}/
-for profile in conservative balanced aggressive buyhold core_only; do
+for profile in conservative balanced aggressive buyhold core_only balanced_vsat; do
   [ -f ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ] && \
     cp ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ${SITE}/
 done
