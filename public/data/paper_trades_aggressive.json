@@ -234,5 +234,38 @@
     "alpha_added": 7421.324206,
     "spot_price": 0.013815,
     "slippage_pct": 0.554
+  },
+  {
+    "date": "2026-05-01",
+    "type": "DECREASE",
+    "netuid": 29,
+    "name": "Coldint",
+    "tao_removed": 104.9,
+    "new_total": 51.7,
+    "slippage_pct": 0.565,
+    "alpha_removed": 7635.460967,
+    "spot_price": 0.013739
+  },
+  {
+    "date": "2026-05-01",
+    "type": "DECREASE",
+    "netuid": 116,
+    "name": "TaoLend",
+    "tao_removed": 17.6,
+    "new_total": 16.2,
+    "slippage_pct": 0.489,
+    "alpha_removed": 4392.97007,
+    "spot_price": 0.004006
+  },
+  {
+    "date": "2026-05-01",
+    "type": "DECREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_removed": 7.1,
+    "new_total": 5.4,
+    "slippage_pct": 0.047,
+    "alpha_removed": 1056.653889,
+    "spot_price": 0.006719
   }
 ]

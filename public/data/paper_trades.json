@@ -151,5 +151,36 @@
     "alpha_added": 4221.056359,
     "spot_price": 0.013815,
     "slippage_pct": 0.315
+  },
+  {
+    "date": "2026-05-01",
+    "type": "ENTRY",
+    "netuid": 87,
+    "name": "Luminar Network",
+    "tao": 10.4,
+    "slippage_pct": 0.981,
+    "entry_price": 0.00424657,
+    "sortino": 0.5618
+  },
+  {
+    "date": "2026-05-01",
+    "type": "ENTRY",
+    "netuid": 126,
+    "name": "Poker44",
+    "tao": 10.3,
+    "slippage_pct": 0.983,
+    "entry_price": 0.00695041,
+    "sortino": 0.5517
+  },
+  {
+    "date": "2026-05-01",
+    "type": "DECREASE",
+    "netuid": 116,
+    "name": "TaoLend",
+    "tao_removed": 12.0,
+    "new_total": 9.2,
+    "slippage_pct": 0.334,
+    "alpha_removed": 2995.206866,
+    "spot_price": 0.004006
   }
 ]

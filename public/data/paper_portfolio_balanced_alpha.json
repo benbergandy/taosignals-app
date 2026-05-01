@@ -8,10 +8,10 @@
       "entry_price": 0.00431907,
       "name": "\u2692",
       "alpha_tokens_at_entry": 4005.4919,
-      "accumulated_emission_tokens": 92.30661,
-      "accumulated_emission_tao": 0.375138,
+      "accumulated_emission_tokens": 96.48303,
+      "accumulated_emission_tao": 0.39359,
       "cost_basis_tao": 17.3,
-      "alpha_tokens": 4097.79851
+      "alpha_tokens": 4101.97493
     },
     "92": {
       "tao": 13.5,
@@ -19,11 +19,11 @@
       "entry_price": 0.00423013,
       "name": "TensorClaw",
       "alpha_tokens_at_entry": 3025.9117,
-      "accumulated_emission_tokens": 108.249086,
-      "accumulated_emission_tao": 0.43358,
+      "accumulated_emission_tokens": 112.464951,
+      "accumulated_emission_tao": 0.454029,
       "cost_basis_tao": 12.8,
       "entry_score": 0,
-      "alpha_tokens": 3134.160786
+      "alpha_tokens": 3138.376651
     },
     "49": {
       "tao": 19.0,
@@ -31,10 +31,10 @@
       "entry_price": 0.00548646,
       "name": "Nepher Robotics",
       "alpha_tokens_at_entry": 1676.8554,
-      "accumulated_emission_tokens": 57.318173,
-      "accumulated_emission_tao": 0.312813,
+      "accumulated_emission_tokens": 58.332951,
+      "accumulated_emission_tao": 0.317999,
       "cost_basis_tao": 9.2,
-      "alpha_tokens": 1734.173573
+      "alpha_tokens": 1735.188351
     },
     "116": {
       "tao": 32.6,
@@ -42,11 +42,11 @@
       "entry_price": 0.00361347,
       "name": "TaoLend",
       "alpha_tokens_at_entry": 9021.799,
-      "accumulated_emission_tokens": 65.190617,
-      "accumulated_emission_tao": 0.238716,
+      "accumulated_emission_tokens": 69.967421,
+      "accumulated_emission_tao": 0.257854,
       "cost_basis_tao": 32.6,
       "entry_score": 0,
-      "alpha_tokens": 9086.989617
+      "alpha_tokens": 9091.766421
     },
     "43": {
       "tao": 32.8,
@@ -54,11 +54,11 @@
       "entry_price": 0.00620311,
       "name": "Graphite",
       "alpha_tokens_at_entry": 16443.3647,
-      "accumulated_emission_tokens": 11.046023,
-      "accumulated_emission_tao": 0.068598,
+      "accumulated_emission_tokens": 12.743247,
+      "accumulated_emission_tao": 0.079174,
       "cost_basis_tao": 102.0,
       "entry_score": 0,
-      "alpha_tokens": 16454.410723
+      "alpha_tokens": 16456.107947
     },
     "90": {
       "tao": 17.0,
@@ -66,11 +66,11 @@
       "entry_price": 0.00436261,
       "name": "ogham",
       "alpha_tokens_at_entry": 3896.7499,
-      "accumulated_emission_tokens": 41.041948,
-      "accumulated_emission_tao": 0.181196,
+      "accumulated_emission_tokens": 45.529758,
+      "accumulated_emission_tao": 0.201187,
       "cost_basis_tao": 17.0,
       "entry_score": 0,
-      "alpha_tokens": 3937.791848
+      "alpha_tokens": 3942.279658
     },
     "94": {
       "tao": 15.2,
@@ -78,11 +78,11 @@
       "entry_price": 0.00362614,
       "name": "Bitsota",
       "alpha_tokens_at_entry": 4191.7852,
-      "accumulated_emission_tokens": 34.854779,
-      "accumulated_emission_tao": 0.137545,
+      "accumulated_emission_tokens": 39.795961,
+      "accumulated_emission_tao": 0.159264,
       "cost_basis_tao": 15.2,
       "entry_score": 0,
-      "alpha_tokens": 4226.639979
+      "alpha_tokens": 4231.581161
     },
     "101": {
       "tao": 31.5,
@@ -90,11 +90,11 @@
       "entry_price": 0.00417667,
       "name": "eni",
       "alpha_tokens_at_entry": 7541.8934,
-      "accumulated_emission_tokens": 14.361066,
-      "accumulated_emission_tao": 0.0631,
+      "accumulated_emission_tokens": 19.154543,
+      "accumulated_emission_tao": 0.084492,
       "cost_basis_tao": 31.5,
       "entry_score": 0,
-      "alpha_tokens": 7556.254466
+      "alpha_tokens": 7561.047943
     },
     "29": {
       "tao": 102.0,
@@ -102,17 +102,41 @@
       "entry_price": 0.01378216,
       "name": "Coldint",
       "alpha_tokens_at_entry": 2379.8882,
-      "accumulated_emission_tokens": 0.701062,
-      "accumulated_emission_tao": 0.00968,
+      "accumulated_emission_tokens": 1.021801,
+      "accumulated_emission_tao": 0.014086,
       "cost_basis_tao": 102.0,
       "entry_score": 0,
-      "alpha_tokens": 7370.824671
+      "alpha_tokens": 7371.14541
+    },
+    "87": {
+      "alpha_tokens": 2407.817092,
+      "tao": 10.4,
+      "entry_date": "2026-05-01",
+      "entry_price": 0.004285109796745964,
+      "name": "Luminar Network",
+      "alpha_tokens_at_entry": 2403.197967,
+      "accumulated_emission_tokens": 4.619125,
+      "accumulated_emission_tao": 0.019793,
+      "cost_basis_tao": 10.4,
+      "entry_score": 0
+    },
+    "126": {
+      "alpha_tokens": 1490.786485,
+      "tao": 10.3,
+      "entry_date": "2026-05-01",
+      "entry_price": 0.006862502615048203,
+      "name": "Poker44",
+      "alpha_tokens_at_entry": 1486.160961,
+      "accumulated_emission_tokens": 4.625524,
+      "accumulated_emission_tao": 0.031743,
+      "cost_basis_tao": 10.3,
+      "entry_score": 0
     }
   },
-  "root_stake": 720.0839,
-  "cash_value": 1074.08,
-  "accumulated_root_yield": 3.241785,
-  "benchmark_eq_weight": 1046.06,
+  "root_stake": 699.4897,
+  "cash_value": 1072.39,
+  "accumulated_root_yield": 3.347628,
+  "benchmark_eq_weight": 1054.27,
   "benchmark_eq_prices": {
     "1": 0.01176801,
     "2": 0.00787769,
@@ -199,8 +223,8 @@
     "127": 0.00598287,
     "128": 0.00371591
   },
-  "benchmark_eq_emissions": 41.682095,
-  "benchmark_mcw_emissions": 4.622147,
+  "benchmark_eq_emissions": 42.736837,
+  "benchmark_mcw_emissions": 4.765284,
   "benchmark_mcw_prices": {
     "1": {
       "price": 0.01176801,
@@ -539,7 +563,7 @@
       "weight": 0.00329041332881925
     }
   },
-  "benchmark_mcw": 911.38,
-  "benchmark_root_value": 1003.829,
-  "benchmark_root": 1003.83
+  "benchmark_mcw": 913.55,
+  "benchmark_root_value": 1003.9809,
+  "benchmark_root": 1003.98
 }

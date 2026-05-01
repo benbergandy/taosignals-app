@@ -284,5 +284,25 @@
     "alpha_added": 4990.235409,
     "spot_price": 0.013815,
     "slippage_pct": 0.373
+  },
+  {
+    "date": "2026-05-01",
+    "type": "ENTRY",
+    "netuid": 87,
+    "name": "Luminar Network",
+    "tao": 10.4,
+    "slippage_pct": 0.981,
+    "entry_price": 0.00424657,
+    "sortino": 0.5618
+  },
+  {
+    "date": "2026-05-01",
+    "type": "ENTRY",
+    "netuid": 126,
+    "name": "Poker44",
+    "tao": 10.3,
+    "slippage_pct": 0.983,
+    "entry_price": 0.00695041,
+    "sortino": 0.5517
   }
 ]
