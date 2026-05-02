@@ -33,6 +33,11 @@ done
 for profile in conservative balanced aggressive buyhold core_only balanced_vsat; do
   [ -f ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ] && \
     cp ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ${SITE}/
+  # Daily-walk paper logs (V3+VSAT). Apples-to-apples with paper_daily_log.json.
+  [ -f ${PIPELINE}/data/paper_daily_log_${profile}_sleeved.json ] && \
+    cp ${PIPELINE}/data/paper_daily_log_${profile}_sleeved.json ${SITE}/
+  [ -f ${PIPELINE}/data/paper_trades_${profile}_sleeved.json ] && \
+    cp ${PIPELINE}/data/paper_trades_${profile}_sleeved.json ${SITE}/
 done
 
 # Chain history snapshots (last 30 days for subnet charts)
