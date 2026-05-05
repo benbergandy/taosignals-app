@@ -5,51 +5,81 @@ import Script from "next/script";
 import Link from "next/link";
 
 // ── Types ────────────────────────────────────────────────────
+// All shapes match the V3+VSAT sleeved-portfolio paper trader output:
+//   paper_daily_log_balanced_vsat_sleeved.json
+//   paper_portfolio_balanced_vsat_sleeved.held.json
+//   paper_trades_balanced_vsat_sleeved.json
 interface DailyLogEntry {
   date: string;
+  profile?: string;
+  model?: string;
   portfolio_value: number;
   pnl_tao: number;
   pnl_pct: number;
   n_positions: number;
   root_stake: number;
   subnet_deployed: number;
+  n_trades_today?: number;
   benchmark_eq_weight: number;
   benchmark_mcw: number;
-  benchmark_root?: number;
-  tao_usd_price: number;
-  regime: string;
+  benchmark_root: number;
+  alpha_vs_eq?: number;
+  alpha_vs_mcw?: number;
+  // tao_usd_price not emitted by paper_trader_sleeved (TAO/USD comes from /chain_data)
+  tao_usd_price?: number;
+  regime?: string;
 }
 
 interface Position {
-  netuid: number;
-  name: string;
-  tao: number;
-  cost_basis_tao?: number;
-  entry_price?: number;
+  netuid?: number;
+  name?: string;
+  tao?: number;            // mark-to-spot value (display)
+  entry_tao?: number;       // cost basis (entry value at entry date)
   entry_date?: string;
-  alpha_tokens_at_entry?: number;
+  entry_price?: number;     // spot at entry
+  alpha_tokens?: number;    // current alpha holding (grows w/ emissions)
   accumulated_emission_tokens?: number;
   accumulated_emission_tao?: number;
+  // Legacy fallback fields (in case any old held-state schema is read)
+  cost_basis_tao?: number;
+  alpha_tokens_at_entry?: number;
 }
 
 interface Portfolio {
-  root_stake?: number;
-  cash_value?: number;
   start_date?: string;
+  profile?: string;
+  total_tao?: number;
+  root_stake?: number;
+  accumulated_root_yield?: number;
+  cash_value?: number;
   positions?: Record<string, Position> | Position[];
 }
 
 interface Trade {
   date: string;
+  type: string;             // ENTRY | EXIT | INCREASE | DECREASE
   netuid: number;
   name?: string;
-  type: string;
+  // ENTRY fields
   tao?: number;
+  alpha_tokens?: number;
+  entry_price?: number;
+  // EXIT fields (realized P&L)
+  exit_price?: number;
+  entry_date?: string;       // entry date carried into the exit record
+  cost_basis_tao?: number;
+  realized_pnl_tao?: number;
+  realized_pnl_pct?: number;
+  days_held?: number;
+  // INCREASE / DECREASE
   tao_added?: number;
+  alpha_added?: number;
   tao_removed?: number;
+  alpha_removed?: number;
+  spot_price?: number;
+  // Legacy fields kept for back-compat with any cached older trade entries
   tao_received?: number;
   new_total?: number;
-  entry_price?: number;
   slippage_pct?: number;
   sortino?: number;
   reason?: string;
@@ -89,6 +119,13 @@ interface BotMirrorEntry {
   real_total_tao_before: number;
   real_total_tao_after?: number;
   paper_total_tao: number;
+  // 2026-05-02: real-wallet benchmark fields added by client/bot_mirror.py
+  benchmark_inception_date?: string;
+  benchmark_starting_tao?: number;
+  benchmark_hodl_tao?: number;
+  benchmark_root_tao?: number;
+  benchmark_eq_weight_tao?: number;
+  benchmark_mcw_tao?: number;
 }
 
 interface HoldingRow {
@@ -237,6 +274,7 @@ export default function PerformancePage() {
   const [holdSortField, setHoldSortField] = useState("position_tao");
   const [holdSortDir, setHoldSortDir] = useState(-1);
   const [expandedTrades, setExpandedTrades] = useState<Set<number>>(new Set());
+  const [expandedPositions, setExpandedPositions] = useState<Set<number>>(new Set());
   const [chartReady, setChartReady] = useState(false);
 
   const chartRef = useRef<HTMLCanvasElement>(null);
@@ -263,6 +301,38 @@ export default function PerformancePage() {
   const regimeState = latest?.regime ?? regime?.regime ?? null;
   const rc = regimeColor(regimeState);
 
+  // ── Live risk-adjusted performance ─────────────────────────
+  // Annualised Sortino from daily NAV returns. Needs >=3 daily points to be
+  // remotely meaningful; for 1-2 days we just show "—".
+  const annualisedSortino: number | null = (() => {
+    if (dailyLog.length < 3) return null;
+    const navs = dailyLog.map((d) => d.portfolio_value).filter((v) => v > 0);
+    if (navs.length < 3) return null;
+    const rets: number[] = [];
+    for (let i = 1; i < navs.length; i++) {
+      rets.push((navs[i] - navs[i - 1]) / navs[i - 1]);
+    }
+    const mean = rets.reduce((a, b) => a + b, 0) / rets.length;
+    const downside = rets.filter((r) => r < 0);
+    if (downside.length === 0) return mean > 0 ? Infinity : 0;
+    const downVar = downside.reduce((a, b) => a + b * b, 0) / downside.length;
+    const downStd = Math.sqrt(downVar);
+    if (downStd < 1e-12) return null;
+    return (mean / downStd) * Math.sqrt(365);
+  })();
+
+  // Alpha vs each benchmark — pulled directly from the daily log when present,
+  // computed from NAV deltas otherwise.
+  const alphaVsEq = latest?.alpha_vs_eq ?? null;
+  const alphaVsMcw = latest?.alpha_vs_mcw ?? null;
+  const alphaVsRoot: number | null = (() => {
+    if (!latest) return null;
+    const total = latest.portfolio_value;
+    const root = latest.benchmark_root ?? 1000;
+    if (!total || !root) return null;
+    return (total - root) / root * 100;
+  })();
+
   // Price lookup from chain data
   const currentPrices: Record<number, { moving_price: number; symbol: string; name: string }> = {};
   if (chainData?.subnets) {
@@ -276,53 +346,45 @@ export default function PerformancePage() {
   }
 
   // ── Holdings computation ───────────────────────────────────
+  // Reads paper_portfolio_balanced_vsat_sleeved.held.json positions, where each
+  // position carries: alpha_tokens (current, including emission accrual),
+  // entry_tao (cost basis at entry), entry_price, entry_date,
+  // accumulated_emission_tokens, accumulated_emission_tao.
   const holdings: HoldingRow[] = (() => {
     const rawPos = portfolio?.positions;
     if (!rawPos) return [];
 
-    if (Array.isArray(rawPos)) {
-      return rawPos.map((p) => ({
-        netuid: p.netuid,
-        name: p.name || "SN" + p.netuid,
-        symbol: "",
-        tao: p.tao || 0,
-        cost_basis: p.cost_basis_tao || p.tao || 0,
-        entry_price: p.entry_price || 0,
-        current_price: p.entry_price || 0,
-        entry_tokens: 0,
-        emission_tokens: 0,
-        total_tokens: 0,
-        current_value: p.tao || 0,
-        pnl_tao: 0,
-        price_pnl: 0,
-        emission_pnl: 0,
-        pnl_pct: 0,
-        entry_date: p.entry_date || "",
-      }));
-    }
+    const entries: Array<[string, Position]> = Array.isArray(rawPos)
+      ? rawPos.map((p) => [String(p.netuid ?? ""), p])
+      : Object.entries(rawPos);
 
-    return Object.entries(rawPos).map(([uid, p]) => {
+    return entries.map(([uid, p]) => {
+      const netuid = p.netuid ?? parseInt(uid) ?? 0;
+      const priceData = currentPrices[netuid];
       const entryPrice = p.entry_price || 0;
-      const cp = currentPrices[parseInt(uid)]?.moving_price || entryPrice;
-      const costBasis = p.cost_basis_tao || p.tao || 0;
-      const entryTokens = p.alpha_tokens_at_entry || (entryPrice > 0 ? costBasis / entryPrice : 0);
+      const currentPrice = priceData?.moving_price || entryPrice;
+
+      // Total alpha currently held (already includes emission accrual)
+      const totalTokens = p.alpha_tokens || p.alpha_tokens_at_entry || 0;
       const emissionTokens = p.accumulated_emission_tokens || 0;
-      const totalTokens = entryTokens + emissionTokens;
-      const currentValue = totalTokens * cp;
-      const emissionValueTao = p.accumulated_emission_tao || emissionTokens * cp;
+      const entryTokens = Math.max(0, totalTokens - emissionTokens);
+
+      const costBasis = p.entry_tao || p.cost_basis_tao || 0;
+      // mark-to-spot
+      const currentValue = totalTokens * currentPrice;
       const totalPnl = currentValue - costBasis;
-      const pricePnl = entryTokens * (cp - entryPrice);
+      const pricePnl = entryTokens * (currentPrice - entryPrice);
+      const emissionValueTao = emissionTokens * currentPrice;
       const pnlPctVal = costBasis > 0 ? (totalPnl / costBasis) * 100 : 0;
-      const priceData = currentPrices[parseInt(uid)];
 
       return {
-        netuid: parseInt(uid),
-        name: p.name || "SN" + uid,
+        netuid,
+        name: p.name || priceData?.name || "SN" + uid,
         symbol: priceData?.symbol || "",
-        tao: p.tao || 0,
+        tao: p.tao || currentValue,
         cost_basis: costBasis,
         entry_price: entryPrice,
-        current_price: cp,
+        current_price: currentPrice,
         entry_tokens: entryTokens,
         emission_tokens: emissionTokens,
         total_tokens: totalTokens,
@@ -358,10 +420,12 @@ export default function PerformancePage() {
   // ── Data loading ───────────────────────────────────────────
   useEffect(() => {
     async function loadData() {
+      // 2026-05-04: data sources flipped from legacy v2.1 paper portfolio to
+      // the V3+VSAT sleeved profile (balanced_vsat = bot's mirror target).
       const [portfolioData, dailyData, tradeData, regimeData, chainRes, botData] = await Promise.all([
-        safeFetch<Portfolio>("/data/paper_portfolio.json"),
-        safeFetch<DailyLogEntry[]>("/data/paper_daily_log.json"),
-        safeFetch<Trade[]>("/data/paper_trades.json"),
+        safeFetch<Portfolio>("/data/paper_portfolio_balanced_vsat_sleeved.held.json"),
+        safeFetch<DailyLogEntry[]>("/data/paper_daily_log_balanced_vsat_sleeved.json"),
+        safeFetch<Trade[]>("/data/paper_trades_balanced_vsat_sleeved.json"),
         safeFetch<RegimeData>("/data/regime_state.json"),
         safeFetch<ChainData>("/data/chain_data.json"),
         safeFetch<BotMirrorEntry[]>("/data/bot_mirror_log.json"),
@@ -507,70 +571,100 @@ export default function PerformancePage() {
     buildChart();
   }, [buildChart]);
 
-  // ── Bot mirror chart (real wallet vs paper, both indexed to 1.00) ──────
+  // ── Bot mirror chart (real wallet vs benchmarks at the wallet's scale) ──
   const buildBotChart = useCallback(() => {
     if (!chartReady || !botChartRef.current || botLog.length === 0) return;
     const Chart = window.Chart;
     if (!Chart) return;
 
     // Bot capital is only "live" from the first execute run onward — dry-runs
-    // before inception just snapshot whatever happened to be in the wallet at
-    // the time, which can include pre-funding deposits that aren't returns.
-    // Drop everything before the first non-dry-run entry.
+    // before inception can include pre-funding deposits that aren't returns.
     const firstExecuteIdx = botLog.findIndex((e) => !e.dry_run);
-    if (firstExecuteIdx < 0) return; // no real runs yet
+    if (firstExecuteIdx < 0) return;
     const liveEntries = botLog.slice(firstExecuteIdx);
 
+    // Extract real wallet NAV + benchmark NAVs per run.
+    // Pre-2026-05-02 runs lack benchmark fields — those points are dropped
+    // from the benchmark series but the wallet series renders for them.
     const points = liveEntries
       .map((e) => ({
         ts: e.timestamp,
         bot: e.real_total_tao_after ?? e.real_total_tao_before ?? 0,
-        paper: e.paper_total_tao ?? 0,
+        eq:  e.benchmark_eq_weight_tao ?? null,
+        mcw: e.benchmark_mcw_tao ?? null,
+        root: e.benchmark_root_tao ?? null,
       }))
-      .filter((p) => p.bot > 0 && p.paper > 0);
-
+      .filter((p) => p.bot > 0);
     if (points.length === 0) return;
 
     const bot0 = points[0].bot;
-    const paper0 = points[0].paper;
+    // Index everything to 1.00 at the FIRST execute run. For benchmarks, use
+    // their own first-available value so they index cleanly even if added
+    // mid-stream.
+    const eq0 = points.find((p) => p.eq != null && p.eq > 0)?.eq ?? null;
+    const mcw0 = points.find((p) => p.mcw != null && p.mcw > 0)?.mcw ?? null;
+    const root0 = points.find((p) => p.root != null && p.root > 0)?.root ?? null;
+
     const labels = points.map((p) => {
       const d = new Date(p.ts);
       return `${(d.getMonth() + 1).toString().padStart(2, "0")}/${d.getDate().toString().padStart(2, "0")}`;
     });
     const botSeries = points.map((p) => p.bot / bot0);
-    const paperSeries = points.map((p) => p.paper / paper0);
+    const eqSeries = eq0 ? points.map((p) => (p.eq != null ? p.eq / eq0 : null)) : null;
+    const mcwSeries = mcw0 ? points.map((p) => (p.mcw != null ? p.mcw / mcw0 : null)) : null;
+    const rootSeries = root0 ? points.map((p) => (p.root != null ? p.root / root0 : null)) : null;
     const ptRadius = points.length <= 14 ? 3 : 1.5;
 
     if (botChartInstance.current) botChartInstance.current.destroy();
 
+    const datasets: any[] = [
+      {
+        label: "Bot Wallet (real)",
+        data: botSeries,
+        borderColor: "#ffd000",
+        borderWidth: 2.5,
+        pointRadius: ptRadius,
+        pointBackgroundColor: "#ffd000",
+        tension: 0.3,
+        fill: false,
+        spanGaps: true,
+      },
+    ];
+    if (eqSeries) datasets.push({
+      label: "Equal-Weight",
+      data: eqSeries,
+      borderColor: "#00d4ff",
+      borderWidth: 1.5,
+      pointRadius: 0,
+      tension: 0.3,
+      fill: false,
+      spanGaps: true,
+    });
+    if (mcwSeries) datasets.push({
+      label: "Market-Cap Weighted",
+      data: mcwSeries,
+      borderColor: "#9966ff",
+      borderWidth: 1.5,
+      pointRadius: 0,
+      tension: 0.3,
+      fill: false,
+      spanGaps: true,
+    });
+    if (rootSeries) datasets.push({
+      label: "Root Only (HODL)",
+      data: rootSeries,
+      borderColor: "rgba(68,85,102,0.5)",
+      borderWidth: 1,
+      borderDash: [4, 4],
+      pointRadius: 0,
+      tension: 0,
+      fill: false,
+      spanGaps: true,
+    });
+
     botChartInstance.current = new Chart(botChartRef.current.getContext("2d"), {
       type: "line",
-      data: {
-        labels,
-        datasets: [
-          {
-            label: "Bot Wallet (real)",
-            data: botSeries,
-            borderColor: "#ffd000",
-            borderWidth: 2.5,
-            pointRadius: ptRadius,
-            pointBackgroundColor: "#ffd000",
-            tension: 0.3,
-            fill: false,
-          },
-          {
-            label: "Paper Portfolio",
-            data: paperSeries,
-            borderColor: "#00d4ff",
-            borderWidth: 2,
-            pointRadius: ptRadius,
-            pointBackgroundColor: "#00d4ff",
-            borderDash: [4, 4],
-            tension: 0.3,
-            fill: false,
-          },
-        ],
-      },
+      data: { labels, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -642,6 +736,30 @@ export default function PerformancePage() {
       return next;
     });
   }
+
+  function togglePosition(netuid: number) {
+    setExpandedPositions((prev) => {
+      const next = new Set(prev);
+      if (next.has(netuid)) next.delete(netuid);
+      else next.add(netuid);
+      return next;
+    });
+  }
+
+  // Build a per-netuid trade history for the wallet panel drop-downs
+  const tradesByNetuid: Record<number, Trade[]> = (() => {
+    const out: Record<number, Trade[]> = {};
+    for (const t of trades) {
+      const nid = t.netuid;
+      if (!out[nid]) out[nid] = [];
+      out[nid].push(t);
+    }
+    // Newest-first within each subnet
+    for (const nid of Object.keys(out)) {
+      out[Number(nid)].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    }
+    return out;
+  })();
 
   // ── Sort holdings ──────────────────────────────────────────
   function sortHoldings(field: string) {
@@ -749,6 +867,56 @@ export default function PerformancePage() {
             <div className="font-mono text-[10px] text-muted mt-0.5">market conditions</div>
           </div>
         </div>
+
+        {/* Risk-adjusted performance \u2014 Sortino + alpha-vs-benchmarks \u2500\u2500\u2500\u2500\u2500\u2500\u2500 */}
+        <div className="grid grid-cols-4 border-t border-border bg-surface2 max-md:grid-cols-2">
+          <div className="px-5 py-3 border-r border-border">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Sortino (annual.)</div>
+            <div className={`font-mono text-base font-semibold leading-none ${
+              annualisedSortino == null ? "text-muted"
+                : annualisedSortino === Infinity ? "text-green"
+                : annualisedSortino > 1 ? "text-green"
+                : annualisedSortino > 0 ? "text-yellow"
+                : "text-red"
+            }`}>
+              {annualisedSortino == null
+                ? "\u2014"
+                : annualisedSortino === Infinity
+                ? "+\u221e"
+                : (annualisedSortino >= 0 ? "+" : "") + annualisedSortino.toFixed(2)}
+            </div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">
+              {dailyLog.length < 3 ? `need ${3 - dailyLog.length} more days` : `from ${dailyLog.length}d NAV`}
+            </div>
+          </div>
+          <div className="px-5 py-3 border-r border-border">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Alpha vs Eq-Wt</div>
+            <div className={`font-mono text-base font-semibold leading-none ${
+              alphaVsEq == null ? "text-muted" : alphaVsEq >= 0 ? "text-green" : "text-red"
+            }`}>
+              {alphaVsEq == null ? "\u2014" : fmtPct(alphaVsEq)}
+            </div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">vs equal-weight basket</div>
+          </div>
+          <div className="px-5 py-3 border-r border-border">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Alpha vs MCW</div>
+            <div className={`font-mono text-base font-semibold leading-none ${
+              alphaVsMcw == null ? "text-muted" : alphaVsMcw >= 0 ? "text-green" : "text-red"
+            }`}>
+              {alphaVsMcw == null ? "\u2014" : fmtPct(alphaVsMcw)}
+            </div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">vs market-cap weighted</div>
+          </div>
+          <div className="px-5 py-3">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Alpha vs Root</div>
+            <div className={`font-mono text-base font-semibold leading-none ${
+              alphaVsRoot == null ? "text-muted" : alphaVsRoot >= 0 ? "text-green" : "text-red"
+            }`}>
+              {alphaVsRoot == null ? "\u2014" : fmtPct(alphaVsRoot)}
+            </div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">vs all-in SN0</div>
+          </div>
+        </div>
       </div>
 
       {/* ── MAIN CONTENT ─────────────────────────────────── */}
@@ -823,7 +991,7 @@ export default function PerformancePage() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-text font-medium whitespace-nowrap">
-              Bot Wallet vs Paper Portfolio
+              Bot Wallet vs Benchmarks
             </div>
             <div className="flex-1 h-px bg-border" />
             <span className="font-mono text-[9px] tracking-[0.1em] px-2 py-0.5 border border-border2 text-muted uppercase whitespace-nowrap">
@@ -837,10 +1005,10 @@ export default function PerformancePage() {
           <div className="bg-surface border border-border p-5">
             <div className="flex items-center justify-between mb-4">
               <div className="font-mono text-[10px] tracking-[0.12em] uppercase text-yellow">
-                Indexed Performance &mdash; both lines start at 1.00 (first execute run)
+                Real wallet (V3+VSAT) vs equal-weight / market-cap / root benchmarks, all indexed to 1.00 at the first execute run
               </div>
               <div className="font-mono text-[9px] text-muted">
-                divergence = real execution drift from paper math
+                divergence = strategy alpha at this wallet scale, after slippage
               </div>
             </div>
             <div className="h-[260px] relative">
@@ -864,11 +1032,11 @@ export default function PerformancePage() {
           </div>
         </div>
 
-        {/* ── HOLDINGS TABLE ─────────────────────────────── */}
+        {/* ── WALLET — open positions with click-to-expand detail ────── */}
         <div>
           <div className="flex items-center gap-3 mb-4">
             <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-text font-medium whitespace-nowrap">
-              Current Holdings
+              Wallet — Open Positions
             </div>
             <div className="flex-1 h-px bg-border" />
             <span className="font-mono text-[9px] tracking-[0.1em] px-2 py-0.5 border border-border2 text-muted uppercase whitespace-nowrap">
@@ -881,111 +1049,241 @@ export default function PerformancePage() {
               <div className="font-mono text-xs text-muted text-center py-12">No open positions</div>
             </div>
           ) : (
-            <div className="border border-border overflow-x-auto bg-surface">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-surface2 border-b border-border2">
-                    <th className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted px-3 py-2.5 text-left font-normal whitespace-nowrap">
-                      #
-                    </th>
-                    {[
-                      { label: "SN", field: "netuid" },
-                      { label: "Name", field: "name" },
-                      { label: "Cost Basis", field: "position_tao" },
-                      { label: "Tokens", field: "" },
-                      { label: "Value", field: "pct_portfolio" },
-                      { label: "Total P&L", field: "pnl" },
-                      { label: "Emissions", field: "" },
-                      { label: "Entry Date", field: "" },
-                      { label: "Days Held", field: "days_held" },
-                    ].map((col) => (
-                      <th
-                        key={col.label}
-                        onClick={() => col.field && sortHoldings(col.field)}
-                        className={`font-mono text-[9px] tracking-[0.12em] uppercase px-3 py-2.5 text-left font-normal whitespace-nowrap transition-colors duration-150 ${
-                          col.field
-                            ? holdSortField === col.field
-                              ? "text-cyan cursor-pointer select-none"
-                              : "text-muted cursor-pointer select-none hover:text-text"
-                            : "text-muted"
-                        }`}
-                      >
-                        {col.label}
-                        {holdSortField === col.field && (holdSortDir === -1 ? " \u2193" : " \u2191")}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {sortedHoldings.map((p, i) => {
-                    const val = p.current_value || p.tao || 0;
-                    const pnl = p.pnl_tao || 0;
-                    const pnlPctH = p.pnl_pct || 0;
-                    const emPnl = p.emission_pnl || 0;
-                    const daysHeld = p.entry_date ? daysBetween(p.entry_date, today) : 0;
-                    const tokenStr =
-                      p.total_tokens > 0
-                        ? p.total_tokens.toLocaleString(undefined, { maximumFractionDigits: 1 }) +
-                          (p.symbol ? " " + p.symbol : "")
-                        : "\u2014";
+            <div className="bg-surface border border-border">
+              {/* Sortable column header */}
+              <div className="bg-surface2 border-b border-border2 grid grid-cols-[40px_60px_1fr_120px_120px_140px_160px_60px] gap-2 px-3 py-2.5">
+                {[
+                  { label: "", field: "" },
+                  { label: "SN", field: "netuid" },
+                  { label: "Name", field: "name" },
+                  { label: "Tokens", field: "" },
+                  { label: "Cost Basis", field: "position_tao" },
+                  { label: "Value", field: "pct_portfolio" },
+                  { label: "P&L", field: "pnl" },
+                  { label: "Held", field: "days_held" },
+                ].map((col, i) => (
+                  <div
+                    key={i}
+                    onClick={() => col.field && sortHoldings(col.field)}
+                    className={`font-mono text-[9px] tracking-[0.12em] uppercase font-normal whitespace-nowrap transition-colors duration-150 ${
+                      col.field
+                        ? holdSortField === col.field
+                          ? "text-cyan cursor-pointer select-none"
+                          : "text-muted cursor-pointer select-none hover:text-text"
+                        : "text-muted"
+                    } ${i >= 3 ? "text-right" : ""}`}
+                  >
+                    {col.label}
+                    {col.field && holdSortField === col.field && (holdSortDir === -1 ? " ↓" : " ↑")}
+                  </div>
+                ))}
+              </div>
 
-                    return (
-                      <tr
-                        key={p.netuid}
-                        className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors"
-                      >
-                        <td className="font-mono text-[11px] text-muted px-3 py-2.5">{i + 1}</td>
-                        <td className="font-mono text-[11px] text-muted px-3 py-2.5">{p.netuid}</td>
-                        <td className="font-semibold text-[13px] px-3 py-2.5 whitespace-nowrap">
-                          <Link
-                            href={`/subnet/${p.netuid}`}
-                            className="text-inherit no-underline border-b border-border2 hover:border-cyan"
-                          >
-                            {p.name}
-                          </Link>
-                          {p.symbol && (
-                            <span className="text-cyan text-[11px] ml-1">{p.symbol}</span>
+              {/* Position rows + drop-downs */}
+              {sortedHoldings.map((p) => {
+                const val = p.current_value || p.tao || 0;
+                const pnl = p.pnl_tao || 0;
+                const pnlPctH = p.pnl_pct || 0;
+                const emPnl = p.emission_pnl || 0;
+                const daysHeld = p.entry_date ? daysBetween(p.entry_date, today) : 0;
+                const tokenStr =
+                  p.total_tokens > 0
+                    ? p.total_tokens.toLocaleString(undefined, { maximumFractionDigits: 1 }) +
+                      (p.symbol ? " " + p.symbol : "")
+                    : "—";
+                const isOpen = expandedPositions.has(p.netuid);
+                const tradeHistory = tradesByNetuid[p.netuid] || [];
+                const realizedPnl = tradeHistory
+                  .filter((t) => t.realized_pnl_tao != null)
+                  .reduce((s, t) => s + (t.realized_pnl_tao || 0), 0);
+                const priceMove = p.entry_price > 0
+                  ? ((p.current_price - p.entry_price) / p.entry_price) * 100
+                  : 0;
+
+                return (
+                  <div key={p.netuid} className="border-b border-border/80 last:border-b-0">
+                    {/* Row */}
+                    <div
+                      onClick={() => togglePosition(p.netuid)}
+                      className="grid grid-cols-[40px_60px_1fr_120px_120px_140px_160px_60px] gap-2 px-3 py-2.5 cursor-pointer hover:bg-cyan/[0.03] transition-colors items-center"
+                    >
+                      <div className="font-mono text-[10px] text-muted">{isOpen ? "▾" : "▸"}</div>
+                      <div className="font-mono text-[11px] text-muted">{p.netuid}</div>
+                      <div className="font-semibold text-[13px] whitespace-nowrap overflow-hidden text-ellipsis">
+                        <Link
+                          href={`/subnet/${p.netuid}`}
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-inherit no-underline border-b border-border2 hover:border-cyan"
+                        >
+                          {p.name}
+                        </Link>
+                        {p.symbol && <span className="text-cyan text-[11px] ml-1">{p.symbol}</span>}
+                      </div>
+                      <div className="font-mono text-[11px] text-text text-right">{tokenStr}</div>
+                      <div className="font-mono text-[11px] text-text text-right">
+                        {fmtVal(p.cost_basis, showUSD, taoUsdPrice)}
+                      </div>
+                      <div className="font-mono text-[11px] text-cyan text-right">
+                        {fmtVal(val, showUSD, taoUsdPrice)}
+                      </div>
+                      <div className={`font-mono text-[11px] text-right whitespace-nowrap ${pnl >= 0 ? "text-green" : "text-red"}`}>
+                        {(pnl >= 0 ? "+" : "") + fmtVal(pnl, showUSD, taoUsdPrice)}
+                        <span className="text-[10px] ml-1 opacity-80">
+                          ({(pnlPctH >= 0 ? "+" : "") + pnlPctH.toFixed(1)}%)
+                        </span>
+                      </div>
+                      <div className="font-mono text-[11px] text-text text-right">{daysHeld}d</div>
+                    </div>
+
+                    {/* Drop-down — full position detail + per-subnet trade history */}
+                    {isOpen && (
+                      <div className="bg-surface2 border-t border-border/60 px-5 py-4">
+                        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-x-8 gap-y-3">
+                          {/* Left: position math */}
+                          <div>
+                            <div className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted mb-2">
+                              Position
+                            </div>
+                            <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 font-mono text-[11px]">
+                              <div className="text-muted">Entry date</div>
+                              <div className="text-text text-right">{fmtDateFull(p.entry_date)}</div>
+                              <div className="text-muted">Days held</div>
+                              <div className="text-text text-right">{daysHeld}d</div>
+                              <div className="text-muted">Entry price</div>
+                              <div className="text-text text-right">
+                                {p.entry_price > 0 ? p.entry_price.toFixed(8) + " τ/α" : "—"}
+                              </div>
+                              <div className="text-muted">Current price</div>
+                              <div className="text-text text-right">
+                                {p.current_price > 0 ? p.current_price.toFixed(8) + " τ/α" : "—"}
+                              </div>
+                              <div className="text-muted">Price move</div>
+                              <div className={`text-right ${priceMove >= 0 ? "text-green" : "text-red"}`}>
+                                {(priceMove >= 0 ? "+" : "") + priceMove.toFixed(2)}%
+                              </div>
+                              <div className="text-muted">Cost basis</div>
+                              <div className="text-text text-right">{fmtVal(p.cost_basis, showUSD, taoUsdPrice)}</div>
+                              <div className="text-muted">Mark-to-spot value</div>
+                              <div className="text-cyan text-right">{fmtVal(p.current_value, showUSD, taoUsdPrice)}</div>
+                              <div className="text-muted font-medium">Unrealized P&L</div>
+                              <div className={`text-right font-medium ${pnl >= 0 ? "text-green" : "text-red"}`}>
+                                {(pnl >= 0 ? "+" : "") + fmtVal(pnl, showUSD, taoUsdPrice)}
+                                <span className="text-[10px] ml-1 opacity-80">
+                                  ({(pnlPctH >= 0 ? "+" : "") + pnlPctH.toFixed(2)}%)
+                                </span>
+                              </div>
+                              {realizedPnl !== 0 && (
+                                <>
+                                  <div className="text-muted">Realized (trims/exits)</div>
+                                  <div className={`text-right ${realizedPnl >= 0 ? "text-green" : "text-red"}`}>
+                                    {(realizedPnl >= 0 ? "+" : "") + fmtVal(realizedPnl, showUSD, taoUsdPrice)}
+                                  </div>
+                                </>
+                              )}
+                            </div>
+                          </div>
+
+                          {/* Right: alpha tokens + emission */}
+                          <div>
+                            <div className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted mb-2">
+                              Alpha Tokens
+                            </div>
+                            <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 font-mono text-[11px]">
+                              <div className="text-muted">At entry</div>
+                              <div className="text-text text-right">
+                                {p.entry_tokens.toLocaleString(undefined, { maximumFractionDigits: 4 })}
+                              </div>
+                              <div className="text-muted">From emissions</div>
+                              <div className={`text-right ${p.emission_tokens > 0 ? "text-green" : "text-muted"}`}>
+                                {p.emission_tokens > 0 ? "+" : ""}
+                                {p.emission_tokens.toLocaleString(undefined, { maximumFractionDigits: 4 })}
+                              </div>
+                              <div className="text-muted font-medium">Total held</div>
+                              <div className="text-text text-right font-medium">
+                                {p.total_tokens.toLocaleString(undefined, { maximumFractionDigits: 4 })}
+                                {p.symbol ? " " + p.symbol : " α"}
+                              </div>
+                              <div className="text-muted">Emission value (TAO)</div>
+                              <div className={`text-right ${emPnl > 0.001 ? "text-green" : "text-muted"}`}>
+                                {emPnl > 0.001 ? "+" + fmtVal(emPnl, showUSD, taoUsdPrice) : "—"}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Trade history for this subnet */}
+                        <div className="mt-4">
+                          <div className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted mb-2">
+                            Activity for SN{p.netuid} ({tradeHistory.length}{" "}
+                            {tradeHistory.length === 1 ? "trade" : "trades"})
+                          </div>
+                          {tradeHistory.length === 0 ? (
+                            <div className="font-mono text-[11px] text-dim italic">
+                              No trades recorded yet for this position
+                            </div>
+                          ) : (
+                            <div className="border border-border/60 bg-surface">
+                              {tradeHistory.map((t, ti) => {
+                                const amount =
+                                  t.tao_added != null
+                                    ? t.tao_added
+                                    : t.tao_removed != null
+                                    ? -t.tao_removed
+                                    : t.tao || 0;
+                                const realized = t.realized_pnl_tao;
+                                const ttype = (t.type || "").toUpperCase();
+                                const priceShown =
+                                  ttype === "ENTRY"
+                                    ? t.entry_price
+                                    : ttype === "EXIT"
+                                    ? t.exit_price
+                                    : t.spot_price;
+                                return (
+                                  <div
+                                    key={ti}
+                                    className="flex items-center gap-3 px-3 py-1.5 border-b border-border/40 last:border-b-0 flex-wrap"
+                                  >
+                                    <div className="font-mono text-[10px] text-muted min-w-[60px]">
+                                      {fmtDate(t.date)}
+                                    </div>
+                                    <TradeBadge type={t.type} />
+                                    <div className={`font-mono text-[11px] flex-1 ${
+                                      amount >= 0 ? "text-green" : "text-red"
+                                    }`}>
+                                      {amount >= 0 ? "+" : ""}
+                                      {fmtVal(Math.abs(amount), showUSD, taoUsdPrice)}
+                                      {!showUSD && " τ"}
+                                    </div>
+                                    {priceShown != null && (
+                                      <div className="font-mono text-[10px] text-muted">
+                                        @ {priceShown.toFixed(8)}
+                                      </div>
+                                    )}
+                                    {realized != null && (
+                                      <div className={`font-mono text-[10px] font-medium ${
+                                        realized >= 0 ? "text-green" : "text-red"
+                                      }`}>
+                                        realized {realized >= 0 ? "+" : ""}
+                                        {fmtVal(realized, showUSD, taoUsdPrice)}
+                                        {t.realized_pnl_pct != null && (
+                                          <span className="ml-1 opacity-80">
+                                            ({t.realized_pnl_pct >= 0 ? "+" : ""}
+                                            {t.realized_pnl_pct.toFixed(1)}%)
+                                          </span>
+                                        )}
+                                      </div>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
                           )}
-                        </td>
-                        <td className="font-mono text-[11px] text-text px-3 py-2.5 whitespace-nowrap">
-                          {fmtVal(p.cost_basis, showUSD, taoUsdPrice)}
-                        </td>
-                        <td className="font-mono text-[11px] text-text px-3 py-2.5 whitespace-nowrap">
-                          {tokenStr}
-                        </td>
-                        <td className="font-mono text-[11px] text-cyan px-3 py-2.5 whitespace-nowrap">
-                          {fmtVal(val, showUSD, taoUsdPrice)}
-                        </td>
-                        <td
-                          className={`font-mono text-[11px] px-3 py-2.5 whitespace-nowrap ${
-                            pnl >= 0 ? "text-green" : "text-red"
-                          }`}
-                        >
-                          {(pnl >= 0 ? "+" : "") +
-                            fmtVal(pnl, showUSD, taoUsdPrice) +
-                            " (" +
-                            (pnlPctH >= 0 ? "+" : "") +
-                            pnlPctH.toFixed(1) +
-                            "%)"}
-                        </td>
-                        <td
-                          className={`font-mono text-[11px] px-3 py-2.5 whitespace-nowrap ${
-                            emPnl > 0 ? "text-green" : "text-muted"
-                          }`}
-                        >
-                          {emPnl > 0.001 ? "+" + fmtVal(emPnl, showUSD, taoUsdPrice) : "\u2014"}
-                        </td>
-                        <td className="font-mono text-[11px] text-muted px-3 py-2.5 whitespace-nowrap">
-                          {fmtDate(p.entry_date)}
-                        </td>
-                        <td className="font-mono text-[11px] text-text px-3 py-2.5 whitespace-nowrap">
-                          {daysHeld}d
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           )}
         </div>
@@ -1029,8 +1327,18 @@ export default function PerformancePage() {
                           {fmtVal(tao, showUSD, taoUsdPrice)}
                           {!showUSD && " \u03c4"}
                         </div>
-                        <div className="font-mono text-[10px] text-muted min-w-[60px] text-right">
-                          {t.slippage_pct != null ? t.slippage_pct.toFixed(2) + "% slip" : ""}
+                        <div className="font-mono text-[10px] text-right whitespace-nowrap min-w-[120px]">
+                          {t.realized_pnl_tao != null ? (
+                            <span className={t.realized_pnl_tao >= 0 ? "text-green" : "text-red"}>
+                              {t.realized_pnl_tao >= 0 ? "+" : ""}
+                              {fmtVal(t.realized_pnl_tao, showUSD, taoUsdPrice)}
+                              {t.realized_pnl_pct != null && (
+                                <span className="text-[9px] ml-1 opacity-80">
+                                  ({t.realized_pnl_pct >= 0 ? "+" : ""}{t.realized_pnl_pct.toFixed(1)}%)
+                                </span>
+                              )}
+                            </span>
+                          ) : ""}
                         </div>
                         <div className="text-[9px] text-muted ml-auto">{isExpanded ? "\u25B2" : "\u25BC"}</div>
                       </div>
@@ -1042,19 +1350,18 @@ export default function PerformancePage() {
                               <div>
                                 Entry Price:{" "}
                                 <span className="text-text">
-                                  {t.entry_price ? t.entry_price.toFixed(8) + " \u03c4" : "\u2014"}
+                                  {t.entry_price ? t.entry_price.toFixed(8) + " τ" : "—"}
                                 </span>
                               </div>
                               <div>
                                 Position Size: <span className="text-text">{fmtVal(tao, showUSD, taoUsdPrice)}</span>
                               </div>
                               <div>
-                                Slippage: <span className="text-orange">{(t.slippage_pct || 0).toFixed(3)}%</span>
-                              </div>
-                              <div>
-                                Sortino at Entry:{" "}
-                                <span className="text-cyan">
-                                  {t.sortino != null ? t.sortino.toFixed(4) : "\u2014"}
+                                Alpha Tokens:{" "}
+                                <span className="text-text">
+                                  {t.alpha_tokens != null
+                                    ? t.alpha_tokens.toLocaleString(undefined, { maximumFractionDigits: 4 })
+                                    : "—"}
                                 </span>
                               </div>
                             </>
@@ -1062,21 +1369,42 @@ export default function PerformancePage() {
                           {type === "EXIT" && (
                             <>
                               <div>
-                                Amount Exited: <span className="text-text">{fmtVal(t.tao, showUSD, taoUsdPrice)}</span>
+                                Position Closed:{" "}
+                                <span className="text-text">{fmtVal(t.tao || 0, showUSD, taoUsdPrice)}</span>
+                                {t.alpha_tokens != null && (
+                                  <span className="text-muted ml-2">
+                                    ({t.alpha_tokens.toLocaleString(undefined, { maximumFractionDigits: 4 })} α)
+                                  </span>
+                                )}
                               </div>
                               <div>
-                                TAO Received:{" "}
-                                <span className="text-text">{fmtVal(t.tao_received || 0, showUSD, taoUsdPrice)}</span>
+                                Cost Basis:{" "}
+                                <span className="text-text">{fmtVal(t.cost_basis_tao || 0, showUSD, taoUsdPrice)}</span>
                               </div>
                               <div>
-                                Slippage Cost:{" "}
-                                <span className="text-red">
-                                  {fmtVal((tao || 0) - (t.tao_received || 0), showUSD, taoUsdPrice)}
-                                </span>{" "}
-                                ({(t.slippage_pct || 0).toFixed(3)}%)
+                                Realized P&L:{" "}
+                                <span className={(t.realized_pnl_tao || 0) >= 0 ? "text-green font-medium" : "text-red font-medium"}>
+                                  {(t.realized_pnl_tao || 0) >= 0 ? "+" : ""}
+                                  {fmtVal(t.realized_pnl_tao || 0, showUSD, taoUsdPrice)}
+                                  {t.realized_pnl_pct != null && (
+                                    <span className="ml-1 opacity-80">
+                                      ({t.realized_pnl_pct >= 0 ? "+" : ""}{t.realized_pnl_pct.toFixed(2)}%)
+                                    </span>
+                                  )}
+                                </span>
                               </div>
                               <div>
-                                Reason: <span className="text-text">{t.reason || "\u2014"}</span>
+                                Entry → Exit:{" "}
+                                <span className="text-text">
+                                  {t.entry_price ? t.entry_price.toFixed(8) : "—"} →{" "}
+                                  {t.exit_price ? t.exit_price.toFixed(8) : "—"} τ
+                                </span>
+                              </div>
+                              <div>
+                                Days Held: <span className="text-text">{t.days_held != null ? t.days_held + "d" : "—"}</span>
+                                {t.entry_date && (
+                                  <span className="text-muted ml-2">(entered {fmtDate(t.entry_date)})</span>
+                                )}
                               </div>
                             </>
                           )}
@@ -1087,10 +1415,17 @@ export default function PerformancePage() {
                                 <span className="text-green">
                                   +{fmtVal(t.tao_added || 0, showUSD, taoUsdPrice)}
                                 </span>
+                                {t.alpha_added != null && (
+                                  <span className="text-muted ml-2">
+                                    (+{t.alpha_added.toLocaleString(undefined, { maximumFractionDigits: 4 })} α)
+                                  </span>
+                                )}
                               </div>
                               <div>
-                                New Total:{" "}
-                                <span className="text-text">{fmtVal(t.new_total || 0, showUSD, taoUsdPrice)}</span>
+                                Spot Price:{" "}
+                                <span className="text-text">
+                                  {t.spot_price ? t.spot_price.toFixed(8) + " τ" : "—"}
+                                </span>
                               </div>
                             </>
                           )}
@@ -1101,17 +1436,21 @@ export default function PerformancePage() {
                                 <span className="text-red">
                                   -{fmtVal(t.tao_removed || 0, showUSD, taoUsdPrice)}
                                 </span>
+                                {t.alpha_removed != null && (
+                                  <span className="text-muted ml-2">
+                                    (-{t.alpha_removed.toLocaleString(undefined, { maximumFractionDigits: 4 })} α)
+                                  </span>
+                                )}
                               </div>
                               <div>
-                                New Total:{" "}
-                                <span className="text-text">{fmtVal(t.new_total || 0, showUSD, taoUsdPrice)}</span>
-                              </div>
-                              <div>
-                                Slippage: <span className="text-orange">{(t.slippage_pct || 0).toFixed(3)}%</span>
+                                Spot Price:{" "}
+                                <span className="text-text">
+                                  {t.spot_price ? t.spot_price.toFixed(8) + " τ" : "—"}
+                                </span>
                               </div>
                             </>
                           )}
-                          <div className="mt-1 text-dim">Date: {t.date || "\u2014"}</div>
+                          <div className="mt-1 text-dim">Date: {t.date || "—"}</div>
                         </div>
                       )}
                     </div>
