@@ -11,7 +11,7 @@ const NAV_ITEMS = [
   { label: "Subnets", href: "/" },
   { label: "Signals", href: "/signals" },
   { label: "Performance", href: "/performance" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Wallet", href: "/wallet" },
 ];
 
 export default function Navbar() {
@@ -101,14 +101,14 @@ export default function Navbar() {
               {user ? (
                 <>
                   <Link
-                    href="/portfolio"
+                    href="/wallet"
                     onClick={() => setDropdownOpen(false)}
                     className="block font-mono text-[10px] tracking-[0.06em] uppercase text-muted px-3.5 py-2.5 border-b border-border hover:text-text hover:bg-surface transition-all no-underline"
                   >
-                    Portfolio
+                    Wallet
                   </Link>
                   <Link
-                    href="/portfolio"
+                    href="/wallet?tab=settings"
                     onClick={() => setDropdownOpen(false)}
                     className="block font-mono text-[10px] tracking-[0.06em] uppercase text-muted px-3.5 py-2.5 border-b border-border hover:text-text hover:bg-surface transition-all no-underline"
                   >
@@ -124,14 +124,14 @@ export default function Navbar() {
               ) : (
                 <>
                   <Link
-                    href="/portfolio?mode=signin"
+                    href="/wallet?mode=signin"
                     onClick={() => setDropdownOpen(false)}
                     className="block font-mono text-[10px] tracking-[0.06em] uppercase text-muted px-3.5 py-2.5 border-b border-border hover:text-cyan hover:bg-surface transition-all no-underline"
                   >
                     Sign In
                   </Link>
                   <Link
-                    href="/portfolio?mode=signup"
+                    href="/wallet?mode=signup"
                     onClick={() => setDropdownOpen(false)}
                     className="block font-mono text-[10px] tracking-[0.06em] uppercase text-muted px-3.5 py-2.5 hover:text-cyan hover:bg-surface transition-all no-underline"
                   >
