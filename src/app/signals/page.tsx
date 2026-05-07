@@ -171,6 +171,18 @@ function badgeColorClasses(signal: string | undefined): string {
 
 /* ── Score Display Component ───────────────────────────────── */
 function ScoreDisplay({ score, isMomentum = false }: { score: number; isMomentum?: boolean }) {
+  // compute_factors_vsat emits 0.0 as a sentinel for "no data" (legitimate
+  // scores in the new distribution floor at ~5.7, not 0). Show a dash so the
+  // UI doesn't read as "this subnet scored 0" when V3 just doesn't have
+  // enough history yet for that subnet.
+  if (!score || score < 1) {
+    return (
+      <div className="flex items-center gap-[7px]">
+        <div className="w-10 h-[3px] relative overflow-hidden shrink-0" style={{ background: "var(--color-dim)" }} />
+        <span className="font-mono text-xs text-muted min-w-[32px]">—</span>
+      </div>
+    );
+  }
   const pct = Math.min((score / 100) * 100, 100);
   const color = isMomentum ? "var(--color-purple)" : scoreColor(score);
   return (
