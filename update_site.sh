@@ -59,6 +59,12 @@ rm -f ${SITE}/chain_history_failed.txt
 
 # Push to GitHub (triggers Vercel auto-deploy)
 cd /root/taosignals-app
+# Pull-rebase first so frontend changes pushed from local don't cause a
+# non-fast-forward rejection on the cron's daily push. --autostash keeps
+# any in-progress data file edits intact across the rebase.
+# Restored 2026-05-07 — the rebase step was lost during the 2A cleanup
+# rewrite of this script and the daily push has been failing since.
+git pull --rebase --autostash origin main || true
 git add .
 git commit -m "daily update ${TODAY}" --allow-empty
 git push
