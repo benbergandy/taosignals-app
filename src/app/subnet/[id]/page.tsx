@@ -4,6 +4,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import SubnetLogo from "@/components/SubnetLogo";
+import { supabase, API_BASE } from "@/lib/supabase";
 
 // ── TYPES (v2.1 model) ────────────────────────────────────────
 interface ScoreData {
@@ -24,7 +25,7 @@ interface ScoreData {
   rank_consistency?: number;
   avg_dividends?: number;
   weight_concentration_trend?: number;
-  // v2.1 Capital Flow Momentum signals
+  // v2.1 Capital Flow Momentum signals (kept for back-compat with cached data)
   validator_total_stake_velocity_7d?: number;
   alpha_out_velocity_7d?: number;
   alpha_out_in_ratio?: number;
@@ -32,6 +33,19 @@ interface ScoreData {
   inflow_momentum?: number;
   avg_validator_trust?: number;
   n_active_delta?: number;
+  // VSAT factor decomposition + raw signals (compute_factors_vsat.py output)
+  vsat_composite_z?: number;
+  vsat_momentum_z?: number;
+  vsat_flow_z?: number;
+  vsat_yield_z?: number;
+  vsat_recovery_z?: number;
+  v3_score_raw?: number;
+  validator_trust_velocity_7d?: number;
+  avg_dividends_velocity_7d?: number;
+  price_velocity_3d?: number;
+  volume_velocity_3d?: number;
+  tao_in_jump_1d?: number;
+  zero_em_price_hold?: number;
 }
 
 interface LiveSubnet {
@@ -305,6 +319,43 @@ export default function SubnetDetailPage() {
   const [history, setHistory] = useState<HistoryRecord[]>([]);
   const [loading, setLoading] = useState(true);
   const [historyLoading, setHistoryLoading] = useState(true);
+
+  // ── USER POSITION (only set when wallet is connected and user holds this subnet) ──
+  const [userPosition, setUserPosition] = useState<{
+    netuid: number;
+    name: string;
+    tao_value: number;
+    alpha_tokens: number;
+    cost_basis: number;
+    pnl_tao: number;
+    pnl_pct: number;
+    pct_of_portfolio: number;
+    price_tao: number;
+  } | null>(null);
+
+  useEffect(() => {
+    async function loadUserPosition() {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session?.user) return;
+        const { data: profile } = await supabase
+          .from("user_profiles")
+          .select("wallet_address")
+          .eq("id", session.user.id)
+          .single();
+        const addr = profile?.wallet_address;
+        if (!addr) return;
+        const res = await fetch(`${API_BASE}/api/portfolio?address=${encodeURIComponent(addr)}`);
+        const data = await res.json();
+        if (data?.error || !Array.isArray(data?.positions)) return;
+        const found = data.positions.find((p: { netuid: number }) => p.netuid === NETUID);
+        if (found) setUserPosition(found);
+      } catch {
+        // silent — no position panel rendered
+      }
+    }
+    loadUserPosition();
+  }, [NETUID]);
 
   // Chart state
   const [priceRange, setPriceRange] = useState<RangeKey>("6m");
@@ -787,15 +838,70 @@ export default function SubnetDetailPage() {
           </div>
         </div>
 
+        {/* Your Position — only visible when wallet connected + user holds this subnet */}
+        {userPosition && (
+          <div className="border border-cyan/60 bg-cyan/[0.04] p-4 mb-3">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-cyan font-medium">
+                Your Position
+              </span>
+              <div className="flex-1 h-px bg-cyan/20" />
+              <Link
+                href="/wallet"
+                className="font-mono text-[9px] tracking-[0.1em] uppercase text-muted hover:text-cyan no-underline"
+              >
+                → Wallet
+              </Link>
+            </div>
+            <div className="grid grid-cols-4 max-md:grid-cols-2 gap-x-6 gap-y-2 font-mono text-[11px]">
+              <div>
+                <div className="text-muted text-[9px] uppercase tracking-[0.12em] mb-0.5">Mark Value</div>
+                <div className="text-cyan text-base font-semibold leading-none">
+                  {userPosition.tao_value.toFixed(4)} τ
+                </div>
+              </div>
+              <div>
+                <div className="text-muted text-[9px] uppercase tracking-[0.12em] mb-0.5">Cost Basis</div>
+                <div className="text-text leading-none">
+                  {userPosition.cost_basis > 0 ? userPosition.cost_basis.toFixed(4) + " τ" : "—"}
+                </div>
+              </div>
+              <div>
+                <div className="text-muted text-[9px] uppercase tracking-[0.12em] mb-0.5">Unrealized P&L</div>
+                <div className={`leading-none font-semibold ${userPosition.pnl_tao >= 0 ? "text-green" : "text-red"}`}>
+                  {userPosition.cost_basis > 0 ? (
+                    <>
+                      {userPosition.pnl_tao >= 0 ? "+" : ""}
+                      {userPosition.pnl_tao.toFixed(4)} τ
+                      <span className="text-[10px] ml-1 opacity-80">
+                        ({userPosition.pnl_pct >= 0 ? "+" : ""}{userPosition.pnl_pct.toFixed(2)}%)
+                      </span>
+                    </>
+                  ) : <span className="text-muted">—</span>}
+                </div>
+              </div>
+              <div>
+                <div className="text-muted text-[9px] uppercase tracking-[0.12em] mb-0.5">Alpha Held</div>
+                <div className="text-text leading-none">
+                  {userPosition.alpha_tokens.toLocaleString(undefined, { maximumFractionDigits: 2 })} α
+                </div>
+              </div>
+            </div>
+            <div className="mt-2.5 font-mono text-[9px] text-muted">
+              {userPosition.pct_of_portfolio.toFixed(2)}% of your wallet · spot {userPosition.price_tao.toFixed(8)} τ/α
+            </div>
+          </div>
+        )}
+
         {/* Score Cards */}
         <div className="grid grid-cols-3 gap-px bg-border border border-border min-w-[420px]">
           {[
-            { label: "Combined", value: score?.combined_score, color: "text-cyan", sub: "overall signal" },
-            { label: "Stability", value: score?.stability_score, color: "text-green", sub: "factor score" },
-            { label: "Yield", value: score?.yield_score, color: "text-yellow", sub: "factor score" },
-            { label: "Consensus", value: score?.consensus_score, color: "text-purple", sub: "factor score" },
-            { label: "Cap. Flow", value: score?.capital_flow_score, color: "text-cyan", sub: "factor score" },
-            { label: "Conviction", value: score?.conviction_score, color: "text-orange", sub: "factor score" },
+            { label: "Combined", value: score?.combined_score, color: "text-cyan", sub: "VSAT composite" },
+            { label: "Recovery", value: score?.stability_score, color: "text-green", sub: "VSAT factor" },
+            { label: "Yield", value: score?.yield_score, color: "text-yellow", sub: "VSAT factor" },
+            { label: "V3", value: score?.consensus_score, color: "text-purple", sub: "long-hold (60d)" },
+            { label: "Flow", value: score?.capital_flow_score, color: "text-cyan", sub: "VSAT factor" },
+            { label: "Momentum", value: score?.conviction_score, color: "text-orange", sub: "VSAT factor" },
           ].map((card) => (
             <div key={card.label} className="bg-surface px-[18px] py-3.5 text-center">
               <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1.5">
@@ -1008,64 +1114,65 @@ export default function SubnetDetailPage() {
 
         {/* ── SIDEBAR ─────────────────────────────────────────── */}
         <div className="flex flex-col gap-3.5">
-          {/* Stability Signals */}
+          {/* Momentum (VSAT factor 1) — price velocity */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
-            <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-green">
-              Stability
+            <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-orange">
+              Momentum
             </div>
             <div className="px-3.5 py-2.5">
-              <InfoRow label="Em vs Network" value={fmtSig(score?.emission_vs_network)} />
-              <InfoRow label="Rank Consistency" value={fmtSig(score?.rank_consistency)} />
-              <InfoRow label="Factor Score" value={score?.stability_score?.toFixed(1) || "---"} />
+              <InfoRow label="3d Price Velocity" value={fmtSig(score?.price_velocity_3d)} />
+              <InfoRow label="VSAT z-score" value={score?.vsat_momentum_z != null ? score.vsat_momentum_z.toFixed(2) : "---"} />
+              <InfoRow label="Factor Score" value={score?.conviction_score?.toFixed(1) || "---"} />
             </div>
           </div>
 
-          {/* Yield Signal */}
+          {/* Flow (VSAT factor 2) — volume + TAO inflow surges */}
+          <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
+            <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-cyan">
+              Flow
+            </div>
+            <div className="px-3.5 py-2.5">
+              <InfoRow label="3d Volume Velocity" value={fmtSig(score?.volume_velocity_3d)} />
+              <InfoRow label="1d TAO_in Jump" value={fmtSig(score?.tao_in_jump_1d)} />
+              <InfoRow label="VSAT z-score" value={score?.vsat_flow_z != null ? score.vsat_flow_z.toFixed(2) : "---"} />
+              <InfoRow label="Factor Score" value={score?.capital_flow_score?.toFixed(1) || "---"} />
+            </div>
+          </div>
+
+          {/* Yield (VSAT factor 3) — validator economics */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
             <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-yellow">
               Yield
             </div>
             <div className="px-3.5 py-2.5">
-              <InfoRow label="Avg Dividends" value={fmtSig(score?.avg_dividends)} />
+              <InfoRow label="Validator Trust Vel" value={fmtSig(score?.validator_trust_velocity_7d)} />
+              <InfoRow label="Avg Dividends Vel" value={fmtSig(score?.avg_dividends_velocity_7d)} />
+              <InfoRow label="VSAT z-score" value={score?.vsat_yield_z != null ? score.vsat_yield_z.toFixed(2) : "---"} />
               <InfoRow label="Factor Score" value={score?.yield_score?.toFixed(1) || "---"} />
             </div>
           </div>
 
-          {/* Consensus Signals */}
+          {/* Recovery (VSAT factor 4) — oversold + zero-emission price holds */}
+          <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
+            <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-green">
+              Recovery
+            </div>
+            <div className="px-3.5 py-2.5">
+              <InfoRow label="Zero-Em Price Hold" value={fmtSig(score?.zero_em_price_hold)} />
+              <InfoRow label="VSAT z-score" value={score?.vsat_recovery_z != null ? score.vsat_recovery_z.toFixed(2) : "---"} />
+              <InfoRow label="Factor Score" value={score?.stability_score?.toFixed(1) || "---"} />
+            </div>
+          </div>
+
+          {/* V3 — long-horizon (60d) score */}
           <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
             <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-purple">
-              Consensus
+              V3 Long-Hold
             </div>
             <div className="px-3.5 py-2.5">
-              <InfoRow label="Wt Conc Trend" value={fmtSig(score?.weight_concentration_trend)} />
-              <InfoRow label="Factor Score" value={score?.consensus_score?.toFixed(1) || "---"} />
-            </div>
-          </div>
-
-          {/* Capital Flow Momentum (v2.1) */}
-          <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
-            <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-cyan">
-              Capital Flow
-            </div>
-            <div className="px-3.5 py-2.5">
-              <InfoRow label="Validator Stake Vel" value={fmtSig(score?.validator_total_stake_velocity_7d)} />
-              <InfoRow label="Alpha Out Velocity" value={fmtSig(score?.alpha_out_velocity_7d)} />
-              <InfoRow label="Alpha Out/In Ratio" value={fmtSig(score?.alpha_out_in_ratio)} />
-              <InfoRow label="Volume Velocity" value={fmtSig(score?.volume_velocity_7d)} />
-              <InfoRow label="Inflow Momentum" value={fmtSig(score?.inflow_momentum)} />
-              <InfoRow label="Factor Score" value={score?.capital_flow_score?.toFixed(1) || "---"} />
-            </div>
-          </div>
-
-          {/* Conviction Signals */}
-          <div className="bg-surface border border-border animate-[fadeUp_0.4s_ease_both]">
-            <div className="px-3.5 py-[9px] border-b border-border font-mono text-[9px] tracking-[0.15em] uppercase text-orange">
-              Conviction
-            </div>
-            <div className="px-3.5 py-2.5">
-              <InfoRow label="Avg Val Trust" value={fmtSig(score?.avg_validator_trust)} />
-              <InfoRow label="Active Val Delta" value={fmtSig(score?.n_active_delta)} />
-              <InfoRow label="Factor Score" value={score?.conviction_score?.toFixed(1) || "---"} />
+              <InfoRow label="Horizon" value="60-day" />
+              <InfoRow label="V3 raw" value={score?.v3_score_raw != null ? score.v3_score_raw.toFixed(3) : "---"} />
+              <InfoRow label="Percentile" value={score?.consensus_score?.toFixed(1) || "---"} />
             </div>
           </div>
 

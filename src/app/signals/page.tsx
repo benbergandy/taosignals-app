@@ -369,17 +369,17 @@ export default function SignalsPage() {
   /* ── View toggle buttons ───────────────────────────────── */
   const viewButtons: { key: ViewMode; label: string; activeClass: string }[] = [
     { key: "combined", label: "Combined", activeClass: "text-cyan bg-cyan/[0.08]" },
-    { key: "stability", label: "Stability", activeClass: "text-green bg-green/[0.08]" },
+    { key: "stability", label: "Recovery", activeClass: "text-green bg-green/[0.08]" },
     { key: "yield", label: "Yield", activeClass: "text-yellow bg-yellow/[0.08]" },
-    { key: "consensus", label: "Consensus", activeClass: "text-purple bg-purple/[0.08]" },
+    { key: "consensus", label: "V3 Long-Hold", activeClass: "text-purple bg-purple/[0.08]" },
   ];
 
   const filterButtons: { key: FilterMode; label: string }[] = [
     { key: "all", label: "All" },
     { key: "strong", label: "Positive Inflow" },
-    { key: "stability", label: "High Stability (>65)" },
+    { key: "stability", label: "High Recovery (>65)" },
     { key: "yield", label: "High Yield (>60)" },
-    { key: "consensus", label: "High Consensus (>65)" },
+    { key: "consensus", label: "High V3 (>65)" },
     { key: "oversold", label: "Price Below EMA" },
   ];
 
@@ -490,11 +490,11 @@ export default function SignalsPage() {
           <tr className="bg-surface2 border-b border-border2">
             {base}
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
+            <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Consensus" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
-            <SortTh label="Cap. Flow" field="capital_flow_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Conviction" field="conviction_score" sortState={ss} onSort={handleSort} />
+            <SortTh label="V3" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
+            <SortTh label="Flow" field="capital_flow_score" sortState={ss} onSort={handleSort} />
+            <SortTh label="Momentum" field="conviction_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Price/EMA" field="price_vs_ema" sortState={ss} onSort={handleSort} />
             <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
             <SortTh label={"\u26D3 Em. Share"} field="emission_share_pct" sortState={ss} onSort={handleSort} variant="chain" />
@@ -505,13 +505,13 @@ export default function SignalsPage() {
         return (
           <tr className="bg-surface2 border-b border-border2">
             {base}
-            <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
+            <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Em vs Network" field="emission_vs_network" sortState={ss} onSort={handleSort} />
             <SortTh label="Rank Consistency" field="rank_consistency" sortState={ss} onSort={handleSort} />
             <SortTh label={"\u26D3 Em. Share"} field="emission_share_pct" sortState={ss} onSort={handleSort} variant="chain" />
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Consensus" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
+            <SortTh label="V3" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
             <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
           </tr>
         );
@@ -524,8 +524,8 @@ export default function SignalsPage() {
             <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
             <SortTh label={"\u26D3 TAO in Pool"} field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Consensus" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
+            <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
+            <SortTh label="V3" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
             <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
           </tr>
         );
@@ -533,11 +533,11 @@ export default function SignalsPage() {
         return (
           <tr className="bg-surface2 border-b border-border2">
             {base}
-            <SortTh label="Consensus" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
+            <SortTh label="V3" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
             <SortTh label="Wt Conc Trend" field="weight_concentration_trend" sortState={ss} onSort={handleSort} />
             <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
             <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Stability" field="stability_score" sortState={ss} onSort={handleSort} />
+            <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
             <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
           </tr>
@@ -611,7 +611,7 @@ export default function SignalsPage() {
               {"\u26A1"} Subnet Leaderboard
             </div>
             <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-cyan text-cyan whitespace-nowrap">
-              Five-Factor Model v2.0 {"\u00B7"} PCA-derived
+              V3 Core + VSAT {"\u00B7"} PCA composite
             </span>
             <div className="flex-1 h-px bg-border" />
             <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-green text-green whitespace-nowrap">
@@ -619,38 +619,8 @@ export default function SignalsPage() {
             </span>
           </div>
 
-          {/* Model Toggle (top-level: which alpha model are we showing?) */}
-          <div className="mb-3 flex items-center gap-2.5 flex-wrap">
-            <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted">Model:</span>
-            <div className="flex items-center border border-border2 w-fit">
-              {([
-                { key: "satellite", label: "Satellite v2.1", activeClass: "text-cyan bg-cyan/[0.08]" },
-                { key: "core", label: "Core (long-hold)", activeClass: "text-yellow bg-yellow/[0.08]" },
-              ] as { key: AlphaModel; label: string; activeClass: string }[]).map((mb, idx) => (
-                <button
-                  key={mb.key}
-                  onClick={() => setCurrentModel(mb.key)}
-                  style={{ borderTop: 'none', borderBottom: 'none', borderLeft: 'none', borderRight: idx < 1 ? '1px solid var(--color-border2)' : 'none' }}
-                  className={`font-mono text-[10px] tracking-[0.12em] uppercase bg-transparent px-[18px] py-[7px] cursor-pointer transition-all whitespace-nowrap ${
-                    currentModel === mb.key
-                      ? mb.activeClass
-                      : "text-muted hover:text-text hover:bg-surface2"
-                  }`}
-                >
-                  {mb.label}
-                </button>
-              ))}
-            </div>
-            {currentModel === "core" && (
-              <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-border2 text-muted whitespace-nowrap">
-                {coreModelMeta.scoredUniverse} subnets scored {coreModelMeta.date ? `· ${coreModelMeta.date}` : ""}
-              </span>
-            )}
-          </div>
-
-          {/* View Toggle (sub-views WITHIN the satellite model — only shown when satellite is selected) */}
-          {currentModel === "satellite" && (
-            <div className="mb-3">
+          {/* View Toggle (factor focus — Combined shows full breakdown) */}
+          <div className="mb-3">
               <div className="flex items-center border border-border2 w-fit">
                 {viewButtons.map((vb, idx) => (
                   <button
@@ -667,34 +637,26 @@ export default function SignalsPage() {
                   </button>
                 ))}
               </div>
-            </div>
-          )}
+          </div>
 
-          {/* Filters + Refresh — filters apply to satellite (v2.1) only */}
+          {/* Filters + Refresh */}
           <div className="flex items-center justify-between mb-3 flex-wrap gap-2.5">
-            {currentModel === "satellite" ? (
-              <div className="flex gap-1.5 flex-wrap items-center">
-                <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted">Filter:</span>
-                {filterButtons.map((fb) => (
-                  <button
-                    key={fb.key}
-                    onClick={() => setCurrentFilter(fb.key)}
-                    className={`font-mono text-[9px] tracking-[0.08em] uppercase border px-[10px] py-1 cursor-pointer transition-all ${
-                      currentFilter === fb.key
-                        ? "border-cyan text-cyan"
-                        : "border-border2 text-muted hover:border-cyan hover:text-cyan"
-                    } bg-transparent`}
-                  >
-                    {fb.label}
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <div className="font-mono text-[10px] text-muted">
-                Top 5 ranked = current core sleeve holdings.
-                Universe filter: top 30 pct by tao_in. Equal-weighted z-score sum across 5 signals.
-              </div>
-            )}
+            <div className="flex gap-1.5 flex-wrap items-center">
+              <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted">Filter:</span>
+              {filterButtons.map((fb) => (
+                <button
+                  key={fb.key}
+                  onClick={() => setCurrentFilter(fb.key)}
+                  className={`font-mono text-[9px] tracking-[0.08em] uppercase border px-[10px] py-1 cursor-pointer transition-all ${
+                    currentFilter === fb.key
+                      ? "border-cyan text-cyan"
+                      : "border-border2 text-muted hover:border-cyan hover:text-cyan"
+                  } bg-transparent`}
+                >
+                  {fb.label}
+                </button>
+              ))}
+            </div>
             <button
               onClick={loadData}
               className="font-mono text-[10px] tracking-[0.08em] uppercase bg-transparent border border-border2 text-muted px-3 py-[5px] cursor-pointer transition-all hover:border-cyan hover:text-cyan"
@@ -703,87 +665,12 @@ export default function SignalsPage() {
             </button>
           </div>
 
-          {/* Table — switches between Satellite and Core based on model */}
+          {/* Unified Subnet Table — VSAT composite + V3 + 4 VSAT factors */}
           <div className="border border-border overflow-x-auto bg-surface">
             {loading ? (
               <div className="font-mono text-xs text-muted text-center py-12">Loading...</div>
             ) : error ? (
               <div className="font-mono text-xs text-red text-center py-12">{"\u26A0"} {error}</div>
-            ) : currentModel === "core" ? (
-              corePicks.length === 0 ? (
-                <div className="font-mono text-xs text-muted text-center py-12">
-                  Core sleeve data not yet available.
-                </div>
-              ) : (
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="bg-surface2 border-b border-border2">
-                      <th className={thBase + " w-8"}>#</th>
-                      <th className={thBase + " w-12"}>SN</th>
-                      <th className={thBase + " min-w-[140px]"}>Name</th>
-                      <th
-                        className={thBase + " cursor-pointer select-none hover:text-text"}
-                        onClick={() => setCoreSortDir((d) => (d * -1) as -1 | 1)}
-                      >
-                        Core Score {coreSortDir === -1 ? "\u2193" : "\u2191"}
-                      </th>
-                      <th className={thBase}>Liquidity</th>
-                      <th className={thBase}>Pool Depth</th>
-                      <th className={thBase}>Emission</th>
-                      <th className={thBase}>Spot Price</th>
-                      <th className={thBase}>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[...corePicks]
-                      .sort((a, b) => coreSortDir === -1 ? b.score - a.score : a.score - b.score)
-                      .map((p, i) => {
-                        const isHeld = p.rank <= 5;  // top 5 = current core sleeve picks
-                        return (
-                          <tr key={p.netuid}
-                              className={`border-b border-border/80 transition-colors ${
-                                isHeld ? "bg-yellow/[0.04] hover:bg-yellow/[0.08]" : "hover:bg-cyan/[0.03]"
-                              }`}>
-                            <td className="font-mono text-[11px] text-muted px-3 py-2.5">{i + 1}</td>
-                            <td className="font-mono text-[10px] text-muted px-3 py-2.5">{p.netuid}</td>
-                            <td className="font-semibold text-[13px] text-text px-3 py-2.5">
-                              <Link href={`/subnet/${p.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
-                                <SubnetLogo netuid={p.netuid} size={18} />
-                                <span className="border-b border-border2 hover:border-cyan">{p.name}</span>
-                              </Link>
-                            </td>
-                            <td className={`font-mono text-[12px] font-semibold px-3 py-2.5 ${
-                              p.score > 0 ? "text-yellow" : "text-muted"
-                            }`}>
-                              {p.score >= 0 ? "+" : ""}{p.score.toFixed(3)}
-                            </td>
-                            <td className="px-3 py-2.5"><LiquidityBadge taoIn={p.tao_in || 0} /></td>
-                            <td className="font-mono text-[11px] text-cyan px-3 py-2.5">
-                              {(p.tao_in || 0).toFixed(0)} {"\u03C4"}
-                            </td>
-                            <td className="font-mono text-[11px] px-3 py-2.5">
-                              {(p.emission_share_pct || 0).toFixed(2)}%
-                            </td>
-                            <td className="font-mono text-[11px] text-muted px-3 py-2.5">
-                              {p.moving_price ? p.moving_price.toFixed(6) : "\u2014"}
-                            </td>
-                            <td className="px-3 py-2.5">
-                              {isHeld ? (
-                                <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-yellow text-yellow whitespace-nowrap">
-                                  HELD
-                                </span>
-                              ) : (
-                                <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-border2 text-muted whitespace-nowrap">
-                                  WATCHING
-                                </span>
-                              )}
-                            </td>
-                          </tr>
-                        );
-                      })}
-                  </tbody>
-                </table>
-              )
             ) : filteredSorted.length === 0 ? (
               <div className="font-mono text-xs text-muted text-center py-12">No subnets match this filter</div>
             ) : (
@@ -807,59 +694,60 @@ export default function SignalsPage() {
             </span>
           </div>
 
-          <div className="border border-border bg-surface p-6 grid grid-cols-2 gap-8">
-            {/* Left column: Five-Factor Model */}
+          <div className="border border-border bg-surface p-6 grid grid-cols-2 max-md:grid-cols-1 gap-8">
+            {/* Left column: V3 Core + VSAT */}
             <div className="flex flex-col gap-5">
               <div>
                 <div className="font-mono text-[9px] tracking-[0.15em] uppercase mb-2.5 pb-2 border-b border-border text-cyan">
-                  Five-Factor Model v2.0
+                  V3 Core + VSAT Satellite
                 </div>
-                <div className="text-xs text-muted leading-[1.7]">
-                  TAO Signal uses a <strong className="text-text">PCA-derived five-factor model</strong> built on on-chain
-                  Bittensor data and metagraph validator signals, updated daily. No third-party APIs.
+                <div className="text-xs text-muted leading-[1.7] mb-3">
+                  Two PCA-derived models trained on different signal universes for different
+                  horizons. Combined daily into a single per-subnet score.
                 </div>
-                <div className="mt-3">
-                  {[
-                    { label: "Stability", color: "text-green" },
-                    { label: "Yield", color: "text-yellow" },
-                    { label: "Consensus", color: "text-purple" },
-                    { label: "Flow", color: "text-cyan" },
-                    { label: "Conviction", color: "text-orange" },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-center justify-between py-1.5 border-b border-border/50 last:border-b-0">
-                      <span className="text-xs text-text">{item.label}</span>
-                      <span className={`w-2.5 h-2.5 rounded-full ${item.color.replace("text-", "bg-")}`} />
-                    </div>
-                  ))}
+                <div className="text-[11px] leading-[1.7]">
+                  <div className="text-text font-medium mb-1">VSAT (14-day horizon)</div>
+                  <div className="text-muted mb-3">
+                    13 short-horizon signals → 4 factors: <span className="text-text">Momentum</span>,{" "}
+                    <span className="text-text">Flow</span>, <span className="text-text">Yield</span>,{" "}
+                    <span className="text-text">Recovery</span>. The composite is the headline score.
+                  </div>
+                  <div className="text-text font-medium mb-1">V3 (60-day horizon)</div>
+                  <div className="text-muted">
+                    20 long-horizon signals → 6 factors, variance-weighted. Captures structural
+                    health (validator stability, emission share, governance). Shown as the V3 column.
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right column: Validation */}
+            {/* Right column: factor cheat-sheet */}
             <div className="flex flex-col gap-5">
               <div>
                 <div className="font-mono text-[9px] tracking-[0.15em] uppercase mb-2.5 pb-2 border-b border-border text-cyan">
-                  Validation
+                  Factor Cheat-Sheet
                 </div>
                 <div className="mt-1">
                   {[
-                    { label: "Top 10% emission WR", value: "86.7%", color: "text-green" },
-                    { label: "Top 10% price WR", value: "88.7%", color: "text-green" },
-                    { label: "Top 10% avg price return", value: "+24.8%", color: "text-cyan" },
-                    { label: "Methodology", value: "Walk-forward \u00B7 PCA \u00B7 no look-ahead", color: "text-muted" },
-                    { label: "Live track record", value: null, color: "text-cyan", link: true },
+                    { label: "Momentum", desc: "1d/3d price velocity, mean-reversion, vol", color: "text-orange" },
+                    { label: "Flow",     desc: "Volume / TAO inflow surges, alpha-ratio shifts", color: "text-cyan" },
+                    { label: "Yield",    desc: "Validator trust + dividends velocity", color: "text-yellow" },
+                    { label: "Recovery", desc: "Oversold + zero-emission price holds", color: "text-green" },
+                    { label: "V3",       desc: "Long-hold structural health (60d)", color: "text-purple" },
                   ].map((item) => (
-                    <div key={item.label} className="flex items-center justify-between py-1.5 border-b border-border/50 last:border-b-0">
-                      <span className="text-xs text-text">{item.label}</span>
-                      {item.link ? (
-                        <Link href="/performance" className="font-mono text-[11px] text-cyan no-underline hover:underline">
-                          {"\u2192"} Performance
-                        </Link>
-                      ) : (
-                        <span className={`font-mono text-[11px] ${item.color}`}>{item.value}</span>
-                      )}
+                    <div key={item.label} className="flex items-start justify-between gap-3 py-1.5 border-b border-border/50 last:border-b-0">
+                      <div className="flex items-center gap-2 min-w-[80px]">
+                        <span className={`w-2.5 h-2.5 rounded-full ${item.color.replace("text-", "bg-")}`} />
+                        <span className={`text-xs font-medium ${item.color}`}>{item.label}</span>
+                      </div>
+                      <span className="text-[11px] text-muted text-right flex-1">{item.desc}</span>
                     </div>
                   ))}
+                  <div className="mt-3 pt-3 border-t border-border/50">
+                    <Link href="/performance" className="font-mono text-[11px] text-cyan no-underline hover:underline">
+                      {"\u2192"} Live track record on /performance
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
