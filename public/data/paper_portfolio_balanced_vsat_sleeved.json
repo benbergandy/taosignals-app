@@ -1,0 +1,193 @@
+{
+  "generated_at": "2026-05-07T00:51:20.412278+00:00",
+  "date": "2026-05-07",
+  "total_tao": 1000.0,
+  "root_stake": 150.0,
+  "allocation_profile": "balanced_vsat",
+  "allocation": {
+    "root": 0.15,
+    "core": 0.6,
+    "satellite": 0.25
+  },
+  "sleeves": {
+    "root": {
+      "tao": 150.0,
+      "n_positions": 1
+    },
+    "core": {
+      "tao": 600.0,
+      "n_positions": 0,
+      "positions": []
+    },
+    "satellite": {
+      "tao": 250.0,
+      "n_positions": 8,
+      "positions": [
+        {
+          "netuid": 44,
+          "name": "Score",
+          "tao": 31.25,
+          "score": 0.43276878598562146,
+          "rank": 1,
+          "moving_price": 0.0411625,
+          "tao_in": 63766.2201,
+          "source": "satellite"
+        },
+        {
+          "netuid": 68,
+          "name": "NOVA",
+          "tao": 31.25,
+          "score": 0.26311979333881386,
+          "rank": 2,
+          "moving_price": 0.02016538,
+          "tao_in": 39195.6384,
+          "source": "satellite"
+        },
+        {
+          "netuid": 43,
+          "name": "Graphite",
+          "tao": 31.25,
+          "score": 0.20650216609345412,
+          "rank": 3,
+          "moving_price": 0.00623647,
+          "tao_in": 15376.0493,
+          "source": "satellite"
+        },
+        {
+          "netuid": 14,
+          "name": "TAOHash",
+          "tao": 31.25,
+          "score": 0.11102989134315883,
+          "rank": 4,
+          "moving_price": 0.00928143,
+          "tao_in": 24055.4514,
+          "source": "satellite"
+        },
+        {
+          "netuid": 4,
+          "name": "Targon",
+          "tao": 31.25,
+          "score": -0.05546666576424242,
+          "rank": 5,
+          "moving_price": 0.05727479,
+          "tao_in": 134344.1606,
+          "source": "satellite"
+        },
+        {
+          "netuid": 53,
+          "name": "EfficientFrontier",
+          "tao": 31.25,
+          "score": -0.23170711751063772,
+          "rank": 6,
+          "moving_price": 0.0059373,
+          "tao_in": 14812.3504,
+          "source": "satellite"
+        },
+        {
+          "netuid": 95,
+          "name": "nion",
+          "tao": 31.25,
+          "score": -0.23549850055529659,
+          "rank": 7,
+          "moving_price": 0.03427972,
+          "tao_in": 19736.2908,
+          "source": "satellite"
+        },
+        {
+          "netuid": 66,
+          "name": "ninja",
+          "tao": 31.25,
+          "score": -0.26658319996088226,
+          "rank": 8,
+          "moving_price": 0.01470474,
+          "tao_in": 14324.2209,
+          "source": "satellite"
+        }
+      ]
+    }
+  },
+  "positions": {
+    "44": {
+      "netuid": 44,
+      "name": "Score",
+      "tao": 31.25,
+      "score": 0.43276878598562146,
+      "rank": 1,
+      "moving_price": 0.0411625,
+      "tao_in": 63766.2201,
+      "source": "satellite"
+    },
+    "68": {
+      "netuid": 68,
+      "name": "NOVA",
+      "tao": 31.25,
+      "score": 0.26311979333881386,
+      "rank": 2,
+      "moving_price": 0.02016538,
+      "tao_in": 39195.6384,
+      "source": "satellite"
+    },
+    "43": {
+      "netuid": 43,
+      "name": "Graphite",
+      "tao": 31.25,
+      "score": 0.20650216609345412,
+      "rank": 3,
+      "moving_price": 0.00623647,
+      "tao_in": 15376.0493,
+      "source": "satellite"
+    },
+    "14": {
+      "netuid": 14,
+      "name": "TAOHash",
+      "tao": 31.25,
+      "score": 0.11102989134315883,
+      "rank": 4,
+      "moving_price": 0.00928143,
+      "tao_in": 24055.4514,
+      "source": "satellite"
+    },
+    "4": {
+      "netuid": 4,
+      "name": "Targon",
+      "tao": 31.25,
+      "score": -0.05546666576424242,
+      "rank": 5,
+      "moving_price": 0.05727479,
+      "tao_in": 134344.1606,
+      "source": "satellite"
+    },
+    "53": {
+      "netuid": 53,
+      "name": "EfficientFrontier",
+      "tao": 31.25,
+      "score": -0.23170711751063772,
+      "rank": 6,
+      "moving_price": 0.0059373,
+      "tao_in": 14812.3504,
+      "source": "satellite"
+    },
+    "95": {
+      "netuid": 95,
+      "name": "nion",
+      "tao": 31.25,
+      "score": -0.23549850055529659,
+      "rank": 7,
+      "moving_price": 0.03427972,
+      "tao_in": 19736.2908,
+      "source": "satellite"
+    },
+    "66": {
+      "netuid": 66,
+      "name": "ninja",
+      "tao": 31.25,
+      "score": -0.26658319996088226,
+      "rank": 8,
+      "moving_price": 0.01470474,
+      "tao_in": 14324.2209,
+      "source": "satellite"
+    }
+  },
+  "n_positions_after_merge": 8,
+  "consensus_picks": []
+}

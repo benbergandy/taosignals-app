@@ -1,0 +1,254 @@
+[
+  {
+    "date": "2026-05-02",
+    "type": "ENTRY",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao": 170.0,
+    "alpha_tokens": 27304.73583,
+    "entry_price": 0.00622603
+  },
+  {
+    "date": "2026-05-02",
+    "type": "ENTRY",
+    "netuid": 14,
+    "name": "TAOHash",
+    "tao": 170.0,
+    "alpha_tokens": 18520.19931,
+    "entry_price": 0.00917917
+  },
+  {
+    "date": "2026-05-02",
+    "type": "ENTRY",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao": 170.0,
+    "alpha_tokens": 25123.881274,
+    "entry_price": 0.00676647
+  },
+  {
+    "date": "2026-05-02",
+    "type": "ENTRY",
+    "netuid": 29,
+    "name": "Coldint",
+    "tao": 170.0,
+    "alpha_tokens": 12402.036195,
+    "entry_price": 0.01370743
+  },
+  {
+    "date": "2026-05-02",
+    "type": "ENTRY",
+    "netuid": 44,
+    "name": "Score",
+    "tao": 170.0,
+    "alpha_tokens": 4716.803945,
+    "entry_price": 0.03604135
+  },
+  {
+    "date": "2026-05-03",
+    "type": "EXIT",
+    "netuid": 44,
+    "name": "Score",
+    "tao": 165.2041,
+    "alpha_tokens": 4718.018256,
+    "exit_price": 0.03501557,
+    "entry_price": 0.03604135,
+    "entry_date": "2026-05-02",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -4.7959,
+    "realized_pnl_pct": -2.82,
+    "days_held": 1
+  },
+  {
+    "date": "2026-05-03",
+    "type": "DECREASE",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao_removed": 3.2604,
+    "alpha_removed": 513.8999,
+    "spot_price": 0.00634433
+  },
+  {
+    "date": "2026-05-03",
+    "type": "DECREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_removed": 0.7507,
+    "alpha_removed": 110.464419,
+    "spot_price": 0.00679563
+  },
+  {
+    "date": "2026-05-03",
+    "type": "ENTRY",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 170.0,
+    "alpha_tokens": 13136.781343,
+    "entry_price": 0.01294076
+  },
+  {
+    "date": "2026-05-04",
+    "type": "EXIT",
+    "netuid": 29,
+    "name": "Coldint",
+    "tao": 76.303,
+    "alpha_tokens": 12402.513623,
+    "exit_price": 0.00615222,
+    "entry_price": 0.01370743,
+    "entry_date": "2026-05-02",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -93.697,
+    "realized_pnl_pct": -55.12,
+    "days_held": 2
+  },
+  {
+    "date": "2026-05-04",
+    "type": "EXIT",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 171.2043,
+    "alpha_tokens": 13140.668339,
+    "exit_price": 0.01302858,
+    "entry_price": 0.01294076,
+    "entry_date": "2026-05-03",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": 1.2043,
+    "realized_pnl_pct": 0.71,
+    "days_held": 1
+  },
+  {
+    "date": "2026-05-04",
+    "type": "DECREASE",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao_removed": 1.0037,
+    "alpha_removed": 157.300378,
+    "spot_price": 0.00638056
+  },
+  {
+    "date": "2026-05-04",
+    "type": "ENTRY",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao": 170.0,
+    "alpha_tokens": 12067.75465,
+    "entry_price": 0.01408713
+  },
+  {
+    "date": "2026-05-04",
+    "type": "ENTRY",
+    "netuid": 4,
+    "name": "Targon",
+    "tao": 170.0,
+    "alpha_tokens": 3006.768449,
+    "entry_price": 0.05653911
+  },
+  {
+    "date": "2026-05-05",
+    "type": "INCREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_added": 0.8908,
+    "alpha_added": 131.797739,
+    "spot_price": 0.00675886
+  },
+  {
+    "date": "2026-05-05",
+    "type": "INCREASE",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao_added": 0.5557,
+    "alpha_added": 87.396464,
+    "spot_price": 0.00635863
+  },
+  {
+    "date": "2026-05-05",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "TAOHash",
+    "tao_removed": 0.7792,
+    "alpha_removed": 84.502043,
+    "spot_price": 0.00922052
+  },
+  {
+    "date": "2026-05-05",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 12.2295,
+    "alpha_added": 935.429427,
+    "spot_price": 0.01307372
+  },
+  {
+    "date": "2026-05-05",
+    "type": "DECREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_removed": 1.3274,
+    "alpha_removed": 23.2975,
+    "spot_price": 0.05697504
+  },
+  {
+    "date": "2026-05-06",
+    "type": "INCREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_added": 1.8257,
+    "alpha_added": 273.05376,
+    "spot_price": 0.00668609
+  },
+  {
+    "date": "2026-05-06",
+    "type": "INCREASE",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao_added": 3.0947,
+    "alpha_added": 495.767222,
+    "spot_price": 0.00624232
+  },
+  {
+    "date": "2026-05-06",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 12.8985,
+    "alpha_removed": 917.05264,
+    "spot_price": 0.01406517
+  },
+  {
+    "date": "2026-05-06",
+    "type": "INCREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_added": 0.7152,
+    "alpha_added": 12.606948,
+    "spot_price": 0.05673077
+  },
+  {
+    "date": "2026-05-07",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "TAOHash",
+    "tao_removed": 3.7792,
+    "alpha_removed": 401.036001,
+    "spot_price": 0.00942367
+  },
+  {
+    "date": "2026-05-07",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 0.9589,
+    "alpha_removed": 67.798121,
+    "spot_price": 0.01414358
+  },
+  {
+    "date": "2026-05-07",
+    "type": "DECREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_removed": 5.9761,
+    "alpha_removed": 101.785331,
+    "spot_price": 0.05871289
+  }
+]
