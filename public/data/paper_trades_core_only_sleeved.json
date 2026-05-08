@@ -250,5 +250,71 @@
     "tao_removed": 5.9761,
     "alpha_removed": 101.785331,
     "spot_price": 0.05871289
+  },
+  {
+    "date": "2026-05-08",
+    "type": "EXIT",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao": 151.0744,
+    "alpha_tokens": 12019.590516,
+    "exit_price": 0.01256901,
+    "entry_price": 0.01408713,
+    "entry_date": "2026-05-04",
+    "cost_basis_tao": 168.3721,
+    "realized_pnl_tao": -17.2977,
+    "realized_pnl_pct": -10.27,
+    "days_held": 4
+  },
+  {
+    "date": "2026-05-08",
+    "type": "EXIT",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao": 167.8038,
+    "alpha_tokens": 25426.744058,
+    "exit_price": 0.0065995,
+    "entry_price": 0.00676647,
+    "entry_date": "2026-05-02",
+    "cost_basis_tao": 171.9658,
+    "realized_pnl_tao": -4.162,
+    "realized_pnl_pct": -2.42,
+    "days_held": 6
+  },
+  {
+    "date": "2026-05-08",
+    "type": "ENTRY",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 170.0,
+    "alpha_tokens": 8567.494893,
+    "entry_price": 0.01984244
+  },
+  {
+    "date": "2026-05-08",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "TAOHash",
+    "tao_removed": 0.5247,
+    "alpha_removed": 55.51621,
+    "spot_price": 0.00945117
+  },
+  {
+    "date": "2026-05-08",
+    "type": "ENTRY",
+    "netuid": 44,
+    "name": "Score",
+    "tao": 170.0,
+    "alpha_tokens": 4299.138255,
+    "entry_price": 0.03954281
+  },
+  {
+    "date": "2026-05-08",
+    "type": "INCREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_added": 2.9436,
+    "alpha_added": 51.027533,
+    "spot_price": 0.05768621
   }
 ]
