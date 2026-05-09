@@ -556,5 +556,83 @@
     "tao": 12.5,
     "alpha_tokens": 1387.90676,
     "entry_price": 0.00900637
+  },
+  {
+    "date": "2026-05-09",
+    "type": "EXIT",
+    "netuid": 43,
+    "name": "Graphite",
+    "tao": 128.2657,
+    "alpha_tokens": 21229.904546,
+    "exit_price": 0.00604175,
+    "entry_price": 0.00622603,
+    "entry_date": "2026-05-02",
+    "cost_basis_tao": 132.0137,
+    "realized_pnl_tao": -3.748,
+    "realized_pnl_pct": -2.84,
+    "days_held": 7
+  },
+  {
+    "date": "2026-05-09",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 0.846,
+    "alpha_added": 42.921378,
+    "spot_price": 0.01971098
+  },
+  {
+    "date": "2026-05-09",
+    "type": "DECREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_removed": 0.794,
+    "alpha_removed": 13.684163,
+    "spot_price": 0.05802041
+  },
+  {
+    "date": "2026-05-09",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 5.0135,
+    "alpha_removed": 122.200623,
+    "spot_price": 0.0410264
+  },
+  {
+    "date": "2026-05-09",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 120.0973,
+    "alpha_added": 2055.756567,
+    "spot_price": 0.05842
+  },
+  {
+    "date": "2026-05-09",
+    "type": "DECREASE",
+    "netuid": 5,
+    "name": "Hone",
+    "tao_removed": 0.8338,
+    "alpha_removed": 40.154054,
+    "spot_price": 0.02076443
+  },
+  {
+    "date": "2026-05-09",
+    "type": "ENTRY",
+    "netuid": 95,
+    "name": "nion",
+    "tao": 12.5,
+    "alpha_tokens": 353.192546,
+    "entry_price": 0.03539146
+  },
+  {
+    "date": "2026-05-09",
+    "type": "DECREASE",
+    "netuid": 46,
+    "name": "RESI",
+    "tao_removed": 1.5588,
+    "alpha_removed": 153.946204,
+    "spot_price": 0.01012586
   }
 ]
