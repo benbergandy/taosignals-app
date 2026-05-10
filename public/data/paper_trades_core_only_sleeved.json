@@ -367,5 +367,50 @@
     "tao": 170.0,
     "alpha_tokens": 2909.962313,
     "entry_price": 0.05842
+  },
+  {
+    "date": "2026-05-10",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "TAOHash",
+    "tao_removed": 1.3902,
+    "alpha_removed": 145.954685,
+    "spot_price": 0.00952506
+  },
+  {
+    "date": "2026-05-10",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 1.2733,
+    "alpha_removed": 64.133948,
+    "spot_price": 0.0198538
+  },
+  {
+    "date": "2026-05-10",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 8.0721,
+    "alpha_removed": 187.893897,
+    "spot_price": 0.04296098
+  },
+  {
+    "date": "2026-05-10",
+    "type": "INCREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_added": 2.3669,
+    "alpha_added": 41.375582,
+    "spot_price": 0.05720583
+  },
+  {
+    "date": "2026-05-10",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 3.029,
+    "alpha_removed": 50.953019,
+    "spot_price": 0.05944721
   }
 ]
