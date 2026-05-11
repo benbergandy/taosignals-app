@@ -820,5 +820,107 @@
     "tao_added": 2.1414,
     "alpha_added": 65.009237,
     "spot_price": 0.03294053
+  },
+  {
+    "date": "2026-05-11",
+    "type": "EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 30.0021,
+    "alpha_tokens": 3467.798027,
+    "exit_price": 0.00865162,
+    "entry_price": 0.00901148,
+    "entry_date": "2026-05-10",
+    "cost_basis_tao": 31.25,
+    "realized_pnl_tao": -1.2479,
+    "realized_pnl_pct": -3.99,
+    "days_held": 1
+  },
+  {
+    "date": "2026-05-11",
+    "type": "EXIT",
+    "netuid": 4,
+    "name": "Targon",
+    "tao": 145.322,
+    "alpha_tokens": 2643.961394,
+    "exit_price": 0.05496373,
+    "entry_price": 0.05653911,
+    "entry_date": "2026-05-04",
+    "cost_basis_tao": 149.8768,
+    "realized_pnl_tao": -4.5548,
+    "realized_pnl_pct": -3.04,
+    "days_held": 7
+  },
+  {
+    "date": "2026-05-11",
+    "type": "INCREASE",
+    "netuid": 14,
+    "name": "TAOHash",
+    "tao_added": 27.6139,
+    "alpha_added": 2854.581219,
+    "spot_price": 0.00967352
+  },
+  {
+    "date": "2026-05-11",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 28.1866,
+    "alpha_added": 1403.226542,
+    "spot_price": 0.02008697
+  },
+  {
+    "date": "2026-05-11",
+    "type": "INCREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_added": 31.425,
+    "alpha_added": 738.665444,
+    "spot_price": 0.04254297
+  },
+  {
+    "date": "2026-05-11",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 32.9838,
+    "alpha_added": 566.136722,
+    "spot_price": 0.05826119
+  },
+  {
+    "date": "2026-05-11",
+    "type": "ENTRY",
+    "netuid": 46,
+    "name": "RESI",
+    "tao": 31.25,
+    "alpha_tokens": 3018.643817,
+    "entry_price": 0.01035233
+  },
+  {
+    "date": "2026-05-11",
+    "type": "ENTRY",
+    "netuid": 52,
+    "name": "Dojo",
+    "tao": 31.25,
+    "alpha_tokens": 4233.805655,
+    "entry_price": 0.00738107
+  },
+  {
+    "date": "2026-05-11",
+    "type": "INCREASE",
+    "netuid": 5,
+    "name": "Hone",
+    "tao_added": 0.771,
+    "alpha_added": 36.840347,
+    "spot_price": 0.0209282
+  },
+  {
+    "date": "2026-05-11",
+    "type": "INCREASE",
+    "netuid": 95,
+    "name": "nion",
+    "tao_added": 1.4124,
+    "alpha_added": 44.939655,
+    "spot_price": 0.03142796
   }
 ]
