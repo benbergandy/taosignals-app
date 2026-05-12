@@ -345,7 +345,17 @@ export default function SignalsPage() {
   const filteredSorted = useMemo(() => {
     let scores = [...allScores];
 
-    // filter
+    // View filter — each toggle = one model's universe. A subnet appears
+    // only if THAT model scored it (i.e. its score is non-zero). Subnets
+    // scored by both models show in both views; subnets only one model
+    // covers (e.g. V3 doesn't score it) are hidden from that toggle.
+    if (currentView === "satellite") {
+      scores = scores.filter((s) => (s.combined_score || 0) > 0);
+    } else if (currentView === "core") {
+      scores = scores.filter((s) => (s.consensus_score || 0) > 0);
+    }
+
+    // Additional user-selected filter
     switch (currentFilter) {
       case "strong": scores = scores.filter((s) => (s.ema_tao_inflow || 0) > 0); break;
       case "stability": scores = scores.filter((s) => s.stability_score >= 65); break;
