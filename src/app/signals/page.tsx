@@ -34,6 +34,9 @@ interface SubnetScore {
   price_vs_ema_signal?: string;
   flow_signal?: string;
   vs_network_signal?: string;
+  // True if subnet is in top 30% by tao_in. Core tab's eligibility flag —
+  // satellite ignores it (pipeline sizes against pool depth downstream).
+  in_liquid_universe?: boolean;
   [key: string]: unknown;
 }
 
@@ -345,14 +348,18 @@ export default function SignalsPage() {
   const filteredSorted = useMemo(() => {
     let scores = [...allScores];
 
-    // View filter — each toggle = one model's universe. A subnet appears
-    // only if THAT model scored it (i.e. its score is non-zero). Subnets
-    // scored by both models show in both views; subnets only one model
-    // covers (e.g. V3 doesn't score it) are hidden from that toggle.
+    // View filter — each toggle = one model's universe.
+    //   Satellite: every subnet VSAT scored (no liquidity gate — the
+    //     pipeline sizes trades against pool depth downstream, so thin
+    //     pools are fine to surface as candidates).
+    //   Core: every subnet in the liquid universe (top 30% by tao_in),
+    //     regardless of whether V3 produced a score. V3-scored ones rank
+    //     up by their consensus score; un-scored ones show 0 but stay
+    //     visible as eligible long-hold candidates.
     if (currentView === "satellite") {
       scores = scores.filter((s) => (s.combined_score || 0) > 0);
     } else if (currentView === "core") {
-      scores = scores.filter((s) => (s.consensus_score || 0) > 0);
+      scores = scores.filter((s) => s.in_liquid_universe === true);
     }
 
     // Additional user-selected filter
