@@ -87,7 +87,12 @@ interface SleeveOutputsData {
 }
 
 type AlphaModel = "satellite" | "core";
-type ViewMode = "combined" | "stability" | "yield" | "consensus";
+// Two strategic toggles — mirror the sleeve architecture:
+//   satellite = VSAT short-horizon active rotation (composite of Momentum/Flow/Yield/Recovery)
+//   core      = V3 long-horizon hold (single composite)
+// The table itself surfaces every factor as a sortable column; the toggle
+// only changes the default ranking (which sleeve's score sorts the rows).
+type ViewMode = "satellite" | "core";
 type FilterMode = "all" | "strong" | "stability" | "yield" | "consensus" | "oversold";
 
 interface SortState {
@@ -257,13 +262,11 @@ export default function SignalsPage() {
   const [chainEmission, setChainEmission] = useState<string>("\u2014");
 
   const [currentModel, setCurrentModel] = useState<AlphaModel>("satellite");
-  const [currentView, setCurrentView] = useState<ViewMode>("combined");
+  const [currentView, setCurrentView] = useState<ViewMode>("satellite");
   const [currentFilter, setCurrentFilter] = useState<FilterMode>("all");
   const [sortStates, setSortStates] = useState<Record<ViewMode, SortState>>({
-    combined: { field: "combined_score", dir: -1 },
-    stability: { field: "stability_score", dir: -1 },
-    yield: { field: "yield_score", dir: -1 },
-    consensus: { field: "consensus_score", dir: -1 },
+    satellite: { field: "combined_score", dir: -1 },
+    core:      { field: "consensus_score", dir: -1 },
   });
   // Core sleeve state — separate from v2.1 satellite scores
   const [corePicks, setCorePicks] = useState<CoreSleevePick[]>([]);
@@ -378,12 +381,10 @@ export default function SignalsPage() {
 
   const ss = sortStates[currentView];
 
-  /* ── View toggle buttons ───────────────────────────────── */
+  /* ── View toggle buttons (mirror the two sleeves) ────────── */
   const viewButtons: { key: ViewMode; label: string; activeClass: string }[] = [
-    { key: "combined", label: "Combined", activeClass: "text-cyan bg-cyan/[0.08]" },
-    { key: "stability", label: "Recovery", activeClass: "text-green bg-green/[0.08]" },
-    { key: "yield", label: "Yield", activeClass: "text-yellow bg-yellow/[0.08]" },
-    { key: "consensus", label: "V3 Long-Hold", activeClass: "text-purple bg-purple/[0.08]" },
+    { key: "satellite", label: "Satellite (Active)",   activeClass: "text-cyan bg-cyan/[0.08]" },
+    { key: "core",      label: "Core (Long-Term Hold)", activeClass: "text-purple bg-purple/[0.08]" },
   ];
 
   const filterButtons: { key: FilterMode; label: string }[] = [
@@ -391,12 +392,16 @@ export default function SignalsPage() {
     { key: "strong", label: "Positive Inflow" },
     { key: "stability", label: "High Recovery (>65)" },
     { key: "yield", label: "High Yield (>60)" },
-    { key: "consensus", label: "High V3 (>65)" },
+    { key: "consensus", label: "High Core (>65)" },
     { key: "oversold", label: "Price Below EMA" },
   ];
 
   /* ── Table Renderers ───────────────────────────────────── */
-  const renderCombinedRow = (s: SubnetScore, i: number) => (
+  // Single unified row renderer. Toggle changes which score the rows are
+  // ranked by; layout stays constant so users can sort any column.
+  // Order: # | SN | Name | Satellite | Core | Momentum | Flow | Yield |
+  //        Recovery | Price/EMA | EMA Inflow | Em.Share | Liquidity
+  const renderUnifiedRow = (s: SubnetScore, i: number) => (
     <tr key={s.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
       <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
       <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
@@ -407,11 +412,11 @@ export default function SignalsPage() {
         </Link>
       </td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.capital_flow_score} /></td>
       <td className="px-3 py-2.5"><ScoreDisplay score={s.conviction_score} /></td>
+      <td className="px-3 py-2.5"><ScoreDisplay score={s.capital_flow_score} /></td>
+      <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
+      <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
       <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.price_vs_ema || 1) >= 1 ? "text-green" : "text-red"}`}>
         {(s.price_vs_ema || 0).toFixed(3)}
       </td>
@@ -423,148 +428,30 @@ export default function SignalsPage() {
     </tr>
   );
 
-  const renderStabilityRow = (s: SubnetScore, i: number) => (
-    <tr key={s.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
-      <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
-      <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
-      <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[140px]">
-        <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
-          <SubnetLogo netuid={s.netuid} size={18} />
-          <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
-        </Link>
-      </td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
-      <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.emission_vs_network)}</td>
-      <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.rank_consistency)}</td>
-      <td className="font-mono text-[11px] text-cyan px-3 py-2.5">{(s.emission_share_pct || 0).toFixed(2)}%</td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
-      <td className="px-3 py-2.5"><LiquidityBadge taoIn={s.tao_in || 0} /></td>
-    </tr>
-  );
-
-  const renderYieldRow = (s: SubnetScore, i: number) => (
-    <tr key={s.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
-      <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
-      <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
-      <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[140px]">
-        <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
-          <SubnetLogo netuid={s.netuid} size={18} />
-          <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
-        </Link>
-      </td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
-      <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.avg_dividends)}</td>
-      <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.ema_tao_inflow || 0) >= 0 ? "text-green" : "text-red"}`}>
-        {fmtInflow(s.ema_tao_inflow)} {"\u03C4"}
-      </td>
-      <td className="font-mono text-[11px] text-cyan px-3 py-2.5">{(s.tao_in || 0).toFixed(0)} {"\u03C4"}</td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
-      <td className="px-3 py-2.5"><LiquidityBadge taoIn={s.tao_in || 0} /></td>
-    </tr>
-  );
-
-  const renderConsensusRow = (s: SubnetScore, i: number) => (
-    <tr key={s.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
-      <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
-      <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
-      <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[140px]">
-        <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
-          <SubnetLogo netuid={s.netuid} size={18} />
-          <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
-        </Link>
-      </td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
-      <td className="font-mono text-[11px] px-3 py-2.5">{fmtSignal(s.weight_concentration_trend)}</td>
-      <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.ema_tao_inflow || 0) >= 0 ? "text-green" : "text-red"}`}>
-        {fmtInflow(s.ema_tao_inflow)} {"\u03C4"}
-      </td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
-      <td className="px-3 py-2.5"><LiquidityBadge taoIn={s.tao_in || 0} /></td>
-    </tr>
-  );
 
   /* ── Table Headers per View ────────────────────────────── */
-  const renderHeaders = () => {
-    const ns = <th key="ns-hash" className={thBase}>#</th>;
-    const sn = <th key="ns-sn" className={thBase}>SN</th>;
-    const nm = <th key="ns-name" className={thBase}>Name</th>;
-    const base = [ns, sn, nm];
+  // Single unified header \u2014 column order matches renderUnifiedRow above.
+  // Sleeve composites (Satellite, Core) first because they're the things
+  // the strategy actually trades on; sub-factors next; chain stats last.
+  const renderHeaders = () => (
+    <tr className="bg-surface2 border-b border-border2">
+      <th key="ns-hash" className={thBase}>#</th>
+      <th key="ns-sn" className={thBase}>SN</th>
+      <th key="ns-name" className={thBase}>Name</th>
+      <SortTh label="Satellite" field="combined_score" sortState={ss} onSort={handleSort} />
+      <SortTh label="Core" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
+      <SortTh label="Momentum" field="conviction_score" sortState={ss} onSort={handleSort} />
+      <SortTh label="Flow" field="capital_flow_score" sortState={ss} onSort={handleSort} />
+      <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
+      <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
+      <SortTh label="Price/EMA" field="price_vs_ema" sortState={ss} onSort={handleSort} />
+      <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
+      <SortTh label={"\u26D3 Em. Share"} field="emission_share_pct" sortState={ss} onSort={handleSort} variant="chain" />
+      <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
+    </tr>
+  );
 
-    switch (currentView) {
-      case "combined":
-        return (
-          <tr className="bg-surface2 border-b border-border2">
-            {base}
-            <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="V3" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
-            <SortTh label="Flow" field="capital_flow_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Momentum" field="conviction_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Price/EMA" field="price_vs_ema" sortState={ss} onSort={handleSort} />
-            <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
-            <SortTh label={"\u26D3 Em. Share"} field="emission_share_pct" sortState={ss} onSort={handleSort} variant="chain" />
-            <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
-          </tr>
-        );
-      case "stability":
-        return (
-          <tr className="bg-surface2 border-b border-border2">
-            {base}
-            <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Em vs Network" field="emission_vs_network" sortState={ss} onSort={handleSort} />
-            <SortTh label="Rank Consistency" field="rank_consistency" sortState={ss} onSort={handleSort} />
-            <SortTh label={"\u26D3 Em. Share"} field="emission_share_pct" sortState={ss} onSort={handleSort} variant="chain" />
-            <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="V3" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
-            <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
-          </tr>
-        );
-      case "yield":
-        return (
-          <tr className="bg-surface2 border-b border-border2">
-            {base}
-            <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Avg Dividends" field="avg_dividends" sortState={ss} onSort={handleSort} />
-            <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
-            <SortTh label={"\u26D3 TAO in Pool"} field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
-            <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="V3" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
-            <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
-          </tr>
-        );
-      case "consensus":
-        return (
-          <tr className="bg-surface2 border-b border-border2">
-            {base}
-            <SortTh label="V3" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
-            <SortTh label="Wt Conc Trend" field="weight_concentration_trend" sortState={ss} onSort={handleSort} />
-            <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
-            <SortTh label="Combined" field="combined_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
-            <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
-          </tr>
-        );
-    }
-  };
-
-  const renderRow = (s: SubnetScore, i: number) => {
-    switch (currentView) {
-      case "combined": return renderCombinedRow(s, i);
-      case "stability": return renderStabilityRow(s, i);
-      case "yield": return renderYieldRow(s, i);
-      case "consensus": return renderConsensusRow(s, i);
-    }
-  };
+  const renderRow = renderUnifiedRow;
 
   /* ── Render ────────────────────────────────────────────── */
   return (
@@ -582,12 +469,12 @@ export default function SignalsPage() {
           <div className="font-mono text-[10px] text-muted mt-[3px]">net capital inflow</div>
         </div>
         <div className="px-4 py-3 border-r border-border">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Combined</div>
+          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Satellite</div>
           <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-cyan">{stats?.topC?.combined_score?.toFixed(1) ?? "\u2014"}</div>
           <div className="font-mono text-[10px] text-muted mt-[3px]">{stats?.topC ? `SN${stats.topC.netuid} ${stats.topC.name}` : "\u2014"}</div>
         </div>
         <div className="px-4 py-3 border-r border-border">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Stability</div>
+          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Recovery</div>
           <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-green">{stats?.topS?.stability_score?.toFixed(1) ?? "\u2014"}</div>
           <div className="font-mono text-[10px] text-muted mt-[3px]">{stats?.topS ? `SN${stats.topS.netuid} ${stats.topS.name}` : "\u2014"}</div>
         </div>
@@ -597,7 +484,7 @@ export default function SignalsPage() {
           <div className="font-mono text-[10px] text-muted mt-[3px]">{stats?.topY ? `SN${stats.topY.netuid} ${stats.topY.name}` : "\u2014"}</div>
         </div>
         <div className="px-4 py-3 border-r border-border">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Consensus</div>
+          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Core</div>
           <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-purple">{stats?.topCon?.consensus_score?.toFixed(1) ?? "\u2014"}</div>
           <div className="font-mono text-[10px] text-muted mt-[3px]">{stats?.topCon ? `SN${stats.topCon.netuid} ${stats.topCon.name}` : "\u2014"}</div>
         </div>
