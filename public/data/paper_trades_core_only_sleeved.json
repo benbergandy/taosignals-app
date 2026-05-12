@@ -463,5 +463,41 @@
     "tao_added": 45.8537,
     "alpha_added": 787.036744,
     "spot_price": 0.05826119
+  },
+  {
+    "date": "2026-05-12",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 45.3961,
+    "alpha_removed": 3867.554511,
+    "spot_price": 0.01173766
+  },
+  {
+    "date": "2026-05-12",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 30.8931,
+    "alpha_removed": 1343.106995,
+    "spot_price": 0.02300123
+  },
+  {
+    "date": "2026-05-12",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 2.8099,
+    "alpha_removed": 65.207854,
+    "spot_price": 0.04309206
+  },
+  {
+    "date": "2026-05-12",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 0.9045,
+    "alpha_added": 15.595614,
+    "spot_price": 0.05800026
   }
 ]
