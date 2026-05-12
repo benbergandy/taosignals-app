@@ -28,6 +28,10 @@ cp ${PIPELINE}/data/regime_state.json  ${SITE}/
 for profile in conservative balanced aggressive buyhold core_only balanced_vsat; do
   [ -f ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ] && \
     cp ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ${SITE}/
+  # .held.json — running held state with entry_score, source, entry_date per
+  # position. /performance reads this to render current positions panel.
+  [ -f ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.held.json ] && \
+    cp ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.held.json ${SITE}/
   [ -f ${PIPELINE}/data/paper_daily_log_${profile}_sleeved.json ] && \
     cp ${PIPELINE}/data/paper_daily_log_${profile}_sleeved.json ${SITE}/
   [ -f ${PIPELINE}/data/paper_trades_${profile}_sleeved.json ] && \
