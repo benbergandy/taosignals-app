@@ -106,5 +106,104 @@
     "tao": 56.25,
     "alpha_tokens": 8478.254086,
     "entry_price": 0.00663462
+  },
+  {
+    "date": "2026-05-13",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 0.9041,
+    "alpha_removed": 76.348713,
+    "spot_price": 0.01184134
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 3.5358,
+    "alpha_added": 159.397805,
+    "spot_price": 0.02218229
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_added": 4.8475,
+    "alpha_added": 118.258394,
+    "spot_price": 0.04099069
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_added": 0.8159,
+    "alpha_added": 125.09124,
+    "spot_price": 0.0065228
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_added": 0.5442,
+    "alpha_added": 10.00987,
+    "spot_price": 0.05436282
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 2.7655,
+    "alpha_added": 241.673725,
+    "spot_price": 0.01144323
+  },
+  {
+    "date": "2026-05-13",
+    "type": "DECREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_removed": 1.1426,
+    "alpha_removed": 16.946779,
+    "spot_price": 0.06742073
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 4.6117,
+    "alpha_added": 474.573303,
+    "spot_price": 0.00971762
+  },
+  {
+    "date": "2026-05-13",
+    "type": "DECREASE",
+    "netuid": 52,
+    "name": "Dojo",
+    "tao_removed": 2.0521,
+    "alpha_removed": 270.086478,
+    "spot_price": 0.00759775
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao_added": 1.0696,
+    "alpha_added": 80.258463,
+    "spot_price": 0.01332686
+  },
+  {
+    "date": "2026-05-13",
+    "type": "DECREASE",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao_removed": 1.1668,
+    "alpha_removed": 172.289653,
+    "spot_price": 0.00677224
   }
 ]

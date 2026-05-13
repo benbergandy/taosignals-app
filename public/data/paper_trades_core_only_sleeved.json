@@ -34,5 +34,32 @@
     "tao": 212.5,
     "alpha_tokens": 3663.776435,
     "entry_price": 0.05800026
+  },
+  {
+    "date": "2026-05-13",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 1.921,
+    "alpha_removed": 162.225575,
+    "spot_price": 0.01184134
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 7.5137,
+    "alpha_added": 338.7265,
+    "spot_price": 0.02218229
+  },
+  {
+    "date": "2026-05-13",
+    "type": "INCREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_added": 10.301,
+    "alpha_added": 251.301599,
+    "spot_price": 0.04099069
   }
 ]
