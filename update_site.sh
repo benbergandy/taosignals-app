@@ -25,7 +25,7 @@ cp ${PIPELINE}/data/regime_state.json  ${SITE}/
 
 # Sleeve outputs + V3+VSAT per-profile sleeved portfolios + daily logs
 [ -f ${PIPELINE}/data/sleeve_outputs.json ] && cp ${PIPELINE}/data/sleeve_outputs.json ${SITE}/
-for profile in conservative balanced aggressive buyhold core_only balanced_vsat; do
+for profile in conservative balanced aggressive buyhold core_only balanced_vsat balanced_with_deep; do
   [ -f ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ] && \
     cp ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ${SITE}/
   # .held.json — running held state with entry_score, source, entry_date per
