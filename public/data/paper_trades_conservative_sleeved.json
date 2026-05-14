@@ -151,5 +151,59 @@
     "tao_added": 1.0248,
     "alpha_added": 105.460734,
     "spot_price": 0.00971762
+  },
+  {
+    "date": "2026-05-14",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 38.8885,
+    "alpha_removed": 3101.066999,
+    "spot_price": 0.01254037
+  },
+  {
+    "date": "2026-05-14",
+    "type": "ENTRY",
+    "netuid": 46,
+    "name": "RESI",
+    "tao": 120.0,
+    "alpha_tokens": 11617.744021,
+    "entry_price": 0.01032903
+  },
+  {
+    "date": "2026-05-14",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 31.2178,
+    "alpha_removed": 1396.350542,
+    "spot_price": 0.02235667
+  },
+  {
+    "date": "2026-05-14",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 31.5933,
+    "alpha_removed": 762.875607,
+    "spot_price": 0.04141347
+  },
+  {
+    "date": "2026-05-14",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 28.214,
+    "alpha_removed": 492.500349,
+    "spot_price": 0.05728727
+  },
+  {
+    "date": "2026-05-14",
+    "type": "DECREASE",
+    "netuid": 52,
+    "name": "Dojo",
+    "tao_removed": 0.9407,
+    "alpha_removed": 119.3743,
+    "spot_price": 0.00788052
   }
 ]
