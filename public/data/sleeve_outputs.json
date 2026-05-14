@@ -1,6 +1,6 @@
 {
   "date": "2026-05-13",
-  "generated_at": "2026-05-13T12:04:24.745958+00:00",
+  "generated_at": "2026-05-14T01:34:49.261899+00:00",
   "filter_universe_size": 38,
   "sleeves": {
     "satellite": {
@@ -457,6 +457,69 @@
           "tao_in": 121430.023,
           "moving_price": 0.05785427,
           "emission_share_pct": 9.3208
+        }
+      ]
+    },
+    "deep_liquidity": {
+      "model": "buy_and_hold_top_tao_in",
+      "universe_filter": "deepest pools, no further filter",
+      "n_picks_held": 5,
+      "rebalance": "never (immutable inception picks)",
+      "picks": [
+        {
+          "netuid": 64,
+          "name": "Chutes",
+          "score": 0.0,
+          "rank": 1,
+          "tao_in": 197354.067,
+          "moving_price": 0.07228589,
+          "emission_share_pct": 0.0,
+          "inception_tao_in": 197354.067,
+          "tao_in_drift_pct": 0.0
+        },
+        {
+          "netuid": 4,
+          "name": "Targon",
+          "score": 0.0,
+          "rank": 2,
+          "tao_in": 129965.3828,
+          "moving_price": 0.05472789,
+          "emission_share_pct": 0.0,
+          "inception_tao_in": 129965.3828,
+          "tao_in_drift_pct": 0.0
+        },
+        {
+          "netuid": 51,
+          "name": "lium.io",
+          "score": 0.0,
+          "rank": 3,
+          "tao_in": 121430.023,
+          "moving_price": 0.05785427,
+          "emission_share_pct": 9.3208,
+          "inception_tao_in": 121430.023,
+          "tao_in_drift_pct": 0.0
+        },
+        {
+          "netuid": 8,
+          "name": "Vanta",
+          "score": 0.0,
+          "rank": 4,
+          "tao_in": 85359.9499,
+          "moving_price": 0.03354197,
+          "emission_share_pct": 0.0,
+          "inception_tao_in": 85359.9499,
+          "tao_in_drift_pct": 0.0
+        },
+        {
+          "netuid": 120,
+          "name": "Affine",
+          "score": 0.0,
+          "rank": 5,
+          "tao_in": 84561.9962,
+          "moving_price": 0.06742213,
+          "emission_share_pct": 0.0,
+          "inception_tao_in": 84561.9962,
+          "tao_in_drift_pct": 0.0
         }
       ]
     },
