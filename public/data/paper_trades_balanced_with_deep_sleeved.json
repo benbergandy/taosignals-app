@@ -124,5 +124,119 @@
     "tao": 30.0,
     "alpha_tokens": 889.924572,
     "entry_price": 0.03371072
+  },
+  {
+    "date": "2026-05-15",
+    "type": "EXIT",
+    "netuid": 52,
+    "name": "Dojo",
+    "tao": 31.5534,
+    "alpha_tokens": 4113.820328,
+    "exit_price": 0.00767009,
+    "entry_price": 0.00759775,
+    "entry_date": "2026-05-14",
+    "cost_basis_tao": 31.25,
+    "realized_pnl_tao": 0.3034,
+    "realized_pnl_pct": 0.97,
+    "days_held": 1
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 35.2914,
+    "alpha_removed": 2676.662164,
+    "spot_price": 0.01318486
+  },
+  {
+    "date": "2026-05-15",
+    "type": "ENTRY",
+    "netuid": 46,
+    "name": "RESI",
+    "tao": 90.0,
+    "alpha_tokens": 8233.228833,
+    "entry_price": 0.01093131
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 26.1567,
+    "alpha_removed": 1142.344823,
+    "spot_price": 0.02289741
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 29.1704,
+    "alpha_removed": 672.010487,
+    "spot_price": 0.04340758
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 20.078,
+    "alpha_removed": 352.777641,
+    "spot_price": 0.05691406
+  },
+  {
+    "date": "2026-05-15",
+    "type": "INCREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_added": 0.8972,
+    "alpha_added": 16.748383,
+    "spot_price": 0.05356655
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 2.5914,
+    "alpha_removed": 209.117737,
+    "spot_price": 0.01239216
+  },
+  {
+    "date": "2026-05-15",
+    "type": "INCREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_added": 3.15,
+    "alpha_added": 49.254281,
+    "spot_price": 0.0639534
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_removed": 0.8285,
+    "alpha_removed": 83.053603,
+    "spot_price": 0.00997525
+  },
+  {
+    "date": "2026-05-15",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "EfficientFrontier",
+    "tao": 31.25,
+    "alpha_tokens": 5681.634419,
+    "entry_price": 0.00550018
+  },
+  {
+    "date": "2026-05-15",
+    "type": "INCREASE",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao_added": 0.8919,
+    "alpha_added": 27.268793,
+    "spot_price": 0.03270848
   }
 ]

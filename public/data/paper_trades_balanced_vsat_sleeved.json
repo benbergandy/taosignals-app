@@ -277,5 +277,101 @@
     "tao_added": 0.7011,
     "alpha_added": 105.907262,
     "spot_price": 0.0066203
+  },
+  {
+    "date": "2026-05-15",
+    "type": "EXIT",
+    "netuid": 52,
+    "name": "Dojo",
+    "tao": 30.4212,
+    "alpha_tokens": 3966.209283,
+    "exit_price": 0.00767009,
+    "entry_price": 0.00733169,
+    "entry_date": "2026-05-12",
+    "cost_basis_tao": 28.9409,
+    "realized_pnl_tao": 1.4803,
+    "realized_pnl_pct": 5.11,
+    "days_held": 3
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 6.1945,
+    "alpha_removed": 469.822003,
+    "spot_price": 0.01318486
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 46,
+    "name": "RESI",
+    "tao_removed": 7.0438,
+    "alpha_removed": 644.366581,
+    "spot_price": 0.01093131
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 2.9341,
+    "alpha_removed": 128.141163,
+    "spot_price": 0.02289741
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 5.8174,
+    "alpha_removed": 134.017174,
+    "spot_price": 0.04340758
+  },
+  {
+    "date": "2026-05-15",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 0.7682,
+    "alpha_added": 13.497139,
+    "spot_price": 0.05691406
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 2.5914,
+    "alpha_removed": 209.117737,
+    "spot_price": 0.01239216
+  },
+  {
+    "date": "2026-05-15",
+    "type": "INCREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_added": 1.0645,
+    "alpha_added": 16.644986,
+    "spot_price": 0.0639534
+  },
+  {
+    "date": "2026-05-15",
+    "type": "DECREASE",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao_removed": 0.5071,
+    "alpha_removed": 75.374404,
+    "spot_price": 0.00672773
+  },
+  {
+    "date": "2026-05-15",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "EfficientFrontier",
+    "tao": 31.25,
+    "alpha_tokens": 5681.634419,
+    "entry_price": 0.00550018
   }
 ]
