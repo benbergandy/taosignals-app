@@ -400,5 +400,101 @@
     "tao": 93.75,
     "alpha_tokens": 17044.903257,
     "entry_price": 0.00550018
+  },
+  {
+    "date": "2026-05-16",
+    "type": "EXIT",
+    "netuid": 53,
+    "name": "EfficientFrontier",
+    "tao": 92.0402,
+    "alpha_tokens": 17044.903257,
+    "exit_price": 0.00539987,
+    "entry_price": 0.00550018,
+    "entry_date": "2026-05-15",
+    "cost_basis_tao": 93.75,
+    "realized_pnl_tao": -1.7098,
+    "realized_pnl_pct": -1.82,
+    "days_held": 1
+  },
+  {
+    "date": "2026-05-16",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 1.835,
+    "alpha_removed": 133.10064,
+    "spot_price": 0.01378667
+  },
+  {
+    "date": "2026-05-16",
+    "type": "INCREASE",
+    "netuid": 46,
+    "name": "RESI",
+    "tao_added": 1.0386,
+    "alpha_added": 97.577201,
+    "spot_price": 0.01064362
+  },
+  {
+    "date": "2026-05-16",
+    "type": "ENTRY",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao": 40.0,
+    "alpha_tokens": 3220.771745,
+    "entry_price": 0.01241938
+  },
+  {
+    "date": "2026-05-16",
+    "type": "INCREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_added": 0.7727,
+    "alpha_added": 14.545283,
+    "spot_price": 0.05312503
+  },
+  {
+    "date": "2026-05-16",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 6.9818,
+    "alpha_added": 608.741277,
+    "spot_price": 0.01146929
+  },
+  {
+    "date": "2026-05-16",
+    "type": "INCREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_added": 2.1227,
+    "alpha_added": 33.959816,
+    "spot_price": 0.06250538
+  },
+  {
+    "date": "2026-05-16",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 0.509,
+    "alpha_added": 51.305316,
+    "spot_price": 0.00992109
+  },
+  {
+    "date": "2026-05-16",
+    "type": "DECREASE",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao_removed": 1.5454,
+    "alpha_removed": 115.915741,
+    "spot_price": 0.01333176
+  },
+  {
+    "date": "2026-05-16",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 54.2997,
+    "alpha_added": 961.242379,
+    "spot_price": 0.0564891
   }
 ]
