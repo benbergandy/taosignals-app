@@ -325,5 +325,101 @@
     "tao_removed": 57.8633,
     "alpha_removed": 1024.327362,
     "spot_price": 0.0564891
+  },
+  {
+    "date": "2026-05-17",
+    "type": "EXIT",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao": 87.2428,
+    "alpha_tokens": 7250.102337,
+    "exit_price": 0.01203332,
+    "entry_price": 0.01241938,
+    "entry_date": "2026-05-16",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -2.7572,
+    "realized_pnl_pct": -3.06,
+    "days_held": 1
+  },
+  {
+    "date": "2026-05-17",
+    "type": "INCREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_added": 2.786,
+    "alpha_added": 208.580454,
+    "spot_price": 0.01335698
+  },
+  {
+    "date": "2026-05-17",
+    "type": "INCREASE",
+    "netuid": 46,
+    "name": "RESI",
+    "tao_added": 4.2896,
+    "alpha_added": 423.338204,
+    "spot_price": 0.01013275
+  },
+  {
+    "date": "2026-05-17",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 3.2113,
+    "alpha_removed": 136.956152,
+    "spot_price": 0.02344787
+  },
+  {
+    "date": "2026-05-17",
+    "type": "INCREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_added": 1.9831,
+    "alpha_added": 46.744186,
+    "spot_price": 0.04242486
+  },
+  {
+    "date": "2026-05-17",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 90.3981,
+    "alpha_added": 1610.820269,
+    "spot_price": 0.05611931
+  },
+  {
+    "date": "2026-05-17",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 0.6738,
+    "alpha_added": 60.038747,
+    "spot_price": 0.01122201
+  },
+  {
+    "date": "2026-05-17",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 0.7113,
+    "alpha_added": 72.969891,
+    "spot_price": 0.00974819
+  },
+  {
+    "date": "2026-05-17",
+    "type": "DECREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_removed": 0.805,
+    "alpha_removed": 12.711214,
+    "spot_price": 0.06332684
+  },
+  {
+    "date": "2026-05-17",
+    "type": "INCREASE",
+    "netuid": 64,
+    "name": "Chutes",
+    "tao_added": 0.5537,
+    "alpha_added": 7.85678,
+    "spot_price": 0.07047649
   }
 ]
