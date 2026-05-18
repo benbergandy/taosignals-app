@@ -610,5 +610,95 @@
     "tao_added": 1.4461,
     "alpha_added": 110.167683,
     "spot_price": 0.01312612
+  },
+  {
+    "date": "2026-05-18",
+    "type": "INCREASE",
+    "netuid": 46,
+    "name": "RESI",
+    "tao_added": 9.6437,
+    "alpha_added": 943.664592,
+    "spot_price": 0.01021939
+  },
+  {
+    "date": "2026-05-18",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 10.7437,
+    "alpha_added": 466.997247,
+    "spot_price": 0.02300598
+  },
+  {
+    "date": "2026-05-18",
+    "type": "INCREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_added": 12.4653,
+    "alpha_added": 313.192751,
+    "spot_price": 0.03980076
+  },
+  {
+    "date": "2026-05-18",
+    "type": "INCREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_added": 1.9948,
+    "alpha_added": 314.185886,
+    "spot_price": 0.00634913
+  },
+  {
+    "date": "2026-05-18",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 5.4426,
+    "alpha_added": 514.885557,
+    "spot_price": 0.01057052
+  },
+  {
+    "date": "2026-05-18",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 4.339,
+    "alpha_added": 466.710075,
+    "spot_price": 0.00929702
+  },
+  {
+    "date": "2026-05-18",
+    "type": "INCREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_added": 3.0073,
+    "alpha_added": 49.062289,
+    "spot_price": 0.06129545
+  },
+  {
+    "date": "2026-05-18",
+    "type": "INCREASE",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao_added": 1.758,
+    "alpha_added": 136.494061,
+    "spot_price": 0.01287998
+  },
+  {
+    "date": "2026-05-18",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 31.0194,
+    "alpha_removed": 592.524749,
+    "spot_price": 0.05235118
+  },
+  {
+    "date": "2026-05-18",
+    "type": "DECREASE",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao_removed": 0.8018,
+    "alpha_removed": 118.169116,
+    "spot_price": 0.00678527
   }
 ]
