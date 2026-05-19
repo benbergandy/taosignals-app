@@ -700,5 +700,111 @@
     "tao_removed": 0.8018,
     "alpha_removed": 118.169116,
     "spot_price": 0.00678527
+  },
+  {
+    "date": "2026-05-19",
+    "type": "EXIT",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao": 46.1872,
+    "alpha_tokens": 2996.113227,
+    "exit_price": 0.01541571,
+    "entry_price": 0.01173766,
+    "entry_date": "2026-05-12",
+    "cost_basis_tao": 33.8966,
+    "realized_pnl_tao": 12.2906,
+    "realized_pnl_pct": 36.26,
+    "days_held": 7,
+    "reason": "score_drop_1.31>1.0_(core)"
+  },
+  {
+    "date": "2026-05-19",
+    "type": "ENTRY",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao": 50.0,
+    "alpha_tokens": 3243.444005,
+    "entry_price": 0.01541571
+  },
+  {
+    "date": "2026-05-19",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 2.5665,
+    "alpha_removed": 106.140614,
+    "spot_price": 0.02418052
+  },
+  {
+    "date": "2026-05-19",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 3.2512,
+    "alpha_removed": 76.722215,
+    "spot_price": 0.04237578
+  },
+  {
+    "date": "2026-05-19",
+    "type": "DECREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_removed": 0.7273,
+    "alpha_removed": 113.664066,
+    "spot_price": 0.00639839
+  },
+  {
+    "date": "2026-05-19",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 3.7552,
+    "alpha_added": 370.077528,
+    "spot_price": 0.01014711
+  },
+  {
+    "date": "2026-05-19",
+    "type": "DECREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_removed": 1.7834,
+    "alpha_removed": 188.240827,
+    "spot_price": 0.00947387
+  },
+  {
+    "date": "2026-05-19",
+    "type": "INCREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_added": 1.0855,
+    "alpha_added": 17.916075,
+    "spot_price": 0.06058576
+  },
+  {
+    "date": "2026-05-19",
+    "type": "INCREASE",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao_added": 0.5856,
+    "alpha_added": 45.755068,
+    "spot_price": 0.01279952
+  },
+  {
+    "date": "2026-05-19",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 0.6589,
+    "alpha_removed": 12.498838,
+    "spot_price": 0.05271914
+  },
+  {
+    "date": "2026-05-19",
+    "type": "INCREASE",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao_added": 2.0229,
+    "alpha_added": 304.701488,
+    "spot_price": 0.00663886
   }
 ]

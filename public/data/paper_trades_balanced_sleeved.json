@@ -691,5 +691,93 @@
     "tao_removed": 70.8515,
     "alpha_removed": 1353.388891,
     "spot_price": 0.05235118
+  },
+  {
+    "date": "2026-05-19",
+    "type": "EXIT",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao": 92.965,
+    "alpha_tokens": 6030.536216,
+    "exit_price": 0.01541571,
+    "entry_price": 0.01173766,
+    "entry_date": "2026-05-12",
+    "cost_basis_tao": 68.4822,
+    "realized_pnl_tao": 24.4828,
+    "realized_pnl_pct": 35.75,
+    "days_held": 7,
+    "reason": "score_drop_1.31>1.0_(core)"
+  },
+  {
+    "date": "2026-05-19",
+    "type": "INCREASE",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao_added": 0.5326,
+    "alpha_added": 52.41565,
+    "spot_price": 0.01016139
+  },
+  {
+    "date": "2026-05-19",
+    "type": "ENTRY",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao": 100.0,
+    "alpha_tokens": 6486.888009,
+    "entry_price": 0.01541571
+  },
+  {
+    "date": "2026-05-19",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 5.133,
+    "alpha_removed": 212.279851,
+    "spot_price": 0.02418052
+  },
+  {
+    "date": "2026-05-19",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 6.5023,
+    "alpha_removed": 153.443808,
+    "spot_price": 0.04237578
+  },
+  {
+    "date": "2026-05-19",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 2.2531,
+    "alpha_added": 222.046516,
+    "spot_price": 0.01014711
+  },
+  {
+    "date": "2026-05-19",
+    "type": "DECREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_removed": 1.07,
+    "alpha_removed": 112.944496,
+    "spot_price": 0.00947387
+  },
+  {
+    "date": "2026-05-19",
+    "type": "INCREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_added": 0.6513,
+    "alpha_added": 10.749645,
+    "spot_price": 0.06058576
+  },
+  {
+    "date": "2026-05-19",
+    "type": "INCREASE",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao_added": 0.743,
+    "alpha_added": 111.919423,
+    "spot_price": 0.00663886
   }
 ]
