@@ -374,5 +374,50 @@
     "tao_removed": 13.8173,
     "alpha_removed": 326.065133,
     "spot_price": 0.04237578
+  },
+  {
+    "date": "2026-05-20",
+    "type": "ENTRY",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao": 170.0,
+    "alpha_tokens": 14239.19209,
+    "entry_price": 0.01193888
+  },
+  {
+    "date": "2026-05-20",
+    "type": "DECREASE",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao_removed": 36.6125,
+    "alpha_removed": 3707.035619,
+    "spot_price": 0.00987648
+  },
+  {
+    "date": "2026-05-20",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 42.3848,
+    "alpha_removed": 1754.259643,
+    "spot_price": 0.02416109
+  },
+  {
+    "date": "2026-05-20",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 24.1199,
+    "alpha_removed": 1713.157418,
+    "spot_price": 0.01407922
+  },
+  {
+    "date": "2026-05-20",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 42.7849,
+    "alpha_removed": 1008.610383,
+    "spot_price": 0.0424197
   }
 ]
