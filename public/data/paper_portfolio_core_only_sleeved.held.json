@@ -2,68 +2,56 @@
   "start_date": "2026-05-12",
   "profile": "core_only",
   "total_tao": 1000.0,
-  "root_stake": 150.0208,
-  "accumulated_root_yield": 0.190252,
+  "root_stake": 150.0211,
+  "accumulated_root_yield": 0.211338,
   "positions": {
     "68": {
-      "tao": 170.0,
+      "tao": 212.5,
       "name": "NOVA",
       "entry_date": "2026-05-12",
       "entry_price": 0.02300123,
-      "entry_tao": 159.759,
-      "alpha_tokens": 7036.105499,
-      "accumulated_emission_tokens": 17.180127,
-      "accumulated_emission_tao": 0.397194,
+      "entry_tao": 193.1233,
+      "alpha_tokens": 8348.832173,
+      "accumulated_emission_tokens": 19.068408,
+      "accumulated_emission_tao": 0.445256,
       "source": "core",
       "entry_score": -0.14752969200354682
     },
     "44": {
-      "tao": 170.0,
+      "tao": 212.5,
       "name": "Score",
       "entry_date": "2026-05-12",
       "entry_price": 0.04309206,
-      "entry_tao": 169.904,
-      "alpha_tokens": 4007.572016,
-      "accumulated_emission_tokens": 10.864606,
-      "accumulated_emission_tao": 0.457304,
+      "entry_tao": 209.3736,
+      "alpha_tokens": 4923.239025,
+      "accumulated_emission_tokens": 12.092587,
+      "accumulated_emission_tao": 0.510307,
       "source": "core",
       "entry_score": -0.753969201858667
     },
     "46": {
-      "tao": 170.0,
+      "tao": 212.5,
       "name": "RESI",
       "entry_date": "2026-05-14",
       "entry_price": 0.01032903,
-      "entry_tao": 178.0451,
-      "alpha_tokens": 17212.611664,
-      "accumulated_emission_tokens": 37.505083,
-      "accumulated_emission_tao": 0.386575,
+      "entry_tao": 228.6149,
+      "alpha_tokens": 22591.94778,
+      "accumulated_emission_tokens": 40.515146,
+      "accumulated_emission_tao": 0.414888,
       "source": "core",
       "entry_score": -0.019584370191941647
     },
     "14": {
-      "tao": 170.0,
+      "tao": 212.5,
       "name": "Cacheon",
       "entry_date": "2026-05-19",
       "entry_price": 0.01541571,
-      "entry_tao": 188.3801,
-      "alpha_tokens": 12074.533286,
-      "accumulated_emission_tokens": 3.053684,
-      "accumulated_emission_tao": 0.042993,
+      "entry_tao": 229.6421,
+      "alpha_tokens": 14987.375083,
+      "accumulated_emission_tokens": 5.735561,
+      "accumulated_emission_tao": 0.081018,
       "source": "core",
       "entry_score": -0.3633114748632597
-    },
-    "79": {
-      "tao": 170.0,
-      "name": "MVTRX",
-      "entry_date": "2026-05-20",
-      "entry_price": 0.01193888,
-      "entry_tao": 170.0,
-      "alpha_tokens": 14239.19209,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
-      "source": "core",
-      "entry_score": -0.0125625736615127
     }
   },
   "benchmark_eq_prices": {
@@ -126,7 +114,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 16.028016,
+  "benchmark_eq_emissions": 17.563537,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -361,6 +349,6 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 4.392269,
-  "benchmark_root_value": 1001.2684
+  "benchmark_mcw_emissions": 4.8326,
+  "benchmark_root_value": 1001.4091
 }

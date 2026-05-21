@@ -869,5 +869,83 @@
     "tao_removed": 0.742,
     "alpha_removed": 110.310338,
     "spot_price": 0.00672643
+  },
+  {
+    "date": "2026-05-21",
+    "type": "EXIT",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao": 74.0906,
+    "alpha_tokens": 6703.741863,
+    "exit_price": 0.01105212,
+    "entry_price": 0.01193888,
+    "entry_date": "2026-05-20",
+    "cost_basis_tao": 80.0,
+    "realized_pnl_tao": -5.9094,
+    "realized_pnl_pct": -7.39,
+    "days_held": 1
+  },
+  {
+    "date": "2026-05-21",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 15.7008,
+    "alpha_added": 616.863253,
+    "spot_price": 0.02545266
+  },
+  {
+    "date": "2026-05-21",
+    "type": "INCREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_added": 19.4174,
+    "alpha_added": 1369.483241,
+    "spot_price": 0.0141786
+  },
+  {
+    "date": "2026-05-21",
+    "type": "INCREASE",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao_added": 23.7974,
+    "alpha_added": 2530.026465,
+    "spot_price": 0.00940601
+  },
+  {
+    "date": "2026-05-21",
+    "type": "INCREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_added": 18.5739,
+    "alpha_added": 430.323455,
+    "spot_price": 0.04316264
+  },
+  {
+    "date": "2026-05-21",
+    "type": "DECREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_removed": 0.623,
+    "alpha_removed": 11.439355,
+    "spot_price": 0.0544594
+  },
+  {
+    "date": "2026-05-21",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 1.2014,
+    "alpha_removed": 109.446796,
+    "spot_price": 0.01097714
+  },
+  {
+    "date": "2026-05-21",
+    "type": "INCREASE",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao_added": 0.8797,
+    "alpha_added": 69.382728,
+    "spot_price": 0.01267855
   }
 ]
