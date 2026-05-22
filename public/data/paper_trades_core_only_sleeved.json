@@ -470,5 +470,47 @@
     "tao_added": 39.4696,
     "alpha_added": 914.439028,
     "spot_price": 0.04316264
+  },
+  {
+    "date": "2026-05-22",
+    "type": "EXIT",
+    "netuid": 46,
+    "name": "RESI",
+    "tao": 206.6698,
+    "alpha_tokens": 22592.125273,
+    "exit_price": 0.00914787,
+    "entry_price": 0.01032903,
+    "entry_date": "2026-05-14",
+    "cost_basis_tao": 228.6149,
+    "realized_pnl_tao": -21.9451,
+    "realized_pnl_pct": -9.6,
+    "days_held": 8
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_added": 73.4514,
+    "alpha_added": 5246.215273,
+    "spot_price": 0.01400083
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 64.9595,
+    "alpha_added": 2484.196227,
+    "spot_price": 0.02614912
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_added": 61.9751,
+    "alpha_added": 1378.820872,
+    "spot_price": 0.0449479
   }
 ]

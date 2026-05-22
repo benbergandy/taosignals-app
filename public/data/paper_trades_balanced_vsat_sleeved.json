@@ -866,5 +866,116 @@
     "tao_removed": 0.6675,
     "alpha_removed": 60.803776,
     "spot_price": 0.01097714
+  },
+  {
+    "date": "2026-05-22",
+    "type": "EXIT",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 30.7439,
+    "alpha_tokens": 4644.957543,
+    "exit_price": 0.00661877,
+    "entry_price": 0.00663462,
+    "entry_date": "2026-05-12",
+    "cost_basis_tao": 30.7958,
+    "realized_pnl_tao": -0.0519,
+    "realized_pnl_pct": -0.17,
+    "days_held": 10
+  },
+  {
+    "date": "2026-05-22",
+    "type": "EXIT",
+    "netuid": 46,
+    "name": "RESI",
+    "tao": 145.8845,
+    "alpha_tokens": 15947.383136,
+    "exit_price": 0.00914787,
+    "entry_price": 0.01032903,
+    "entry_date": "2026-05-14",
+    "cost_basis_tao": 161.374,
+    "realized_pnl_tao": -15.4895,
+    "realized_pnl_pct": -9.6,
+    "days_held": 8
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_added": 51.848,
+    "alpha_added": 3703.206022,
+    "spot_price": 0.01400083
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 45.8537,
+    "alpha_added": 1753.548033,
+    "spot_price": 0.02614912
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_added": 43.7471,
+    "alpha_added": 973.284289,
+    "spot_price": 0.0449479
+  },
+  {
+    "date": "2026-05-22",
+    "type": "DECREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_removed": 1.2858,
+    "alpha_removed": 22.93065,
+    "spot_price": 0.05607366
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 0.7382,
+    "alpha_added": 68.877857,
+    "spot_price": 0.01071783
+  },
+  {
+    "date": "2026-05-22",
+    "type": "DECREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_removed": 0.5098,
+    "alpha_removed": 8.324759,
+    "spot_price": 0.06124042
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 0.5466,
+    "alpha_added": 61.156186,
+    "spot_price": 0.00893722
+  },
+  {
+    "date": "2026-05-22",
+    "type": "INCREASE",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao_added": 0.9645,
+    "alpha_added": 77.267301,
+    "spot_price": 0.01248246
+  },
+  {
+    "date": "2026-05-22",
+    "type": "ENTRY",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao": 31.25,
+    "alpha_tokens": 2817.607509,
+    "entry_price": 0.01109097
   }
 ]
