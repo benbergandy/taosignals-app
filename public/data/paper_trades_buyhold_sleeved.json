@@ -512,5 +512,41 @@
     "tao_added": 58.3295,
     "alpha_added": 1297.713487,
     "spot_price": 0.0449479
+  },
+  {
+    "date": "2026-05-23",
+    "type": "ENTRY",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao": 200.0,
+    "alpha_tokens": 20377.737691,
+    "entry_price": 0.00981463
+  },
+  {
+    "date": "2026-05-23",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 67.4132,
+    "alpha_removed": 2571.530095,
+    "spot_price": 0.02621523
+  },
+  {
+    "date": "2026-05-23",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 61.4713,
+    "alpha_removed": 4478.757644,
+    "spot_price": 0.01372508
+  },
+  {
+    "date": "2026-05-23",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 68.5375,
+    "alpha_removed": 1514.670803,
+    "spot_price": 0.04524913
   }
 ]

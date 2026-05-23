@@ -887,5 +887,59 @@
     "tao_added": 0.5255,
     "alpha_added": 7.589866,
     "spot_price": 0.06924189
+  },
+  {
+    "date": "2026-05-23",
+    "type": "ENTRY",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao": 112.5,
+    "alpha_tokens": 11462.477451,
+    "entry_price": 0.00981463
+  },
+  {
+    "date": "2026-05-23",
+    "type": "DECREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_removed": 37.9201,
+    "alpha_removed": 1446.489638,
+    "spot_price": 0.02621523
+  },
+  {
+    "date": "2026-05-23",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 34.5777,
+    "alpha_removed": 2519.31006,
+    "spot_price": 0.01372508
+  },
+  {
+    "date": "2026-05-23",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 38.5524,
+    "alpha_removed": 852.004105,
+    "spot_price": 0.04524913
+  },
+  {
+    "date": "2026-05-23",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 1.5025,
+    "alpha_added": 147.269285,
+    "spot_price": 0.01020251
+  },
+  {
+    "date": "2026-05-23",
+    "type": "DECREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_removed": 1.8837,
+    "alpha_removed": 29.840885,
+    "spot_price": 0.0631238
   }
 ]
