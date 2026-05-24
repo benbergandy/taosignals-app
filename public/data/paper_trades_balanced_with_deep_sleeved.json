@@ -941,5 +941,77 @@
     "tao_removed": 1.8837,
     "alpha_removed": 29.840885,
     "spot_price": 0.0631238
+  },
+  {
+    "date": "2026-05-24",
+    "type": "DECREASE",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao_removed": 7.2856,
+    "alpha_removed": 697.413969,
+    "spot_price": 0.01044656
+  },
+  {
+    "date": "2026-05-24",
+    "type": "DECREASE",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao_removed": 3.173,
+    "alpha_removed": 224.894152,
+    "spot_price": 0.01410908
+  },
+  {
+    "date": "2026-05-24",
+    "type": "INCREASE",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao_added": 1.9275,
+    "alpha_added": 74.828912,
+    "spot_price": 0.02575914
+  },
+  {
+    "date": "2026-05-24",
+    "type": "DECREASE",
+    "netuid": 44,
+    "name": "Score",
+    "tao_removed": 2.3565,
+    "alpha_removed": 51.025366,
+    "spot_price": 0.0461824
+  },
+  {
+    "date": "2026-05-24",
+    "type": "INCREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_added": 0.9682,
+    "alpha_added": 154.155747,
+    "spot_price": 0.0062804
+  },
+  {
+    "date": "2026-05-24",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 1.5703,
+    "alpha_removed": 146.549189,
+    "spot_price": 0.01071518
+  },
+  {
+    "date": "2026-05-24",
+    "type": "DECREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_removed": 1.4623,
+    "alpha_removed": 22.626025,
+    "spot_price": 0.06463088
+  },
+  {
+    "date": "2026-05-24",
+    "type": "DECREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_removed": 1.8226,
+    "alpha_removed": 192.692535,
+    "spot_price": 0.00945846
   }
 ]
