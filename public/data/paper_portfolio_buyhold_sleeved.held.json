@@ -2,30 +2,30 @@
   "start_date": "2026-05-12",
   "profile": "buyhold",
   "total_tao": 1000.0,
-  "root_stake": 200.0292,
-  "accumulated_root_yield": 0.368342,
+  "root_stake": 200.0288,
+  "accumulated_root_yield": 0.397167,
   "positions": {
     "68": {
       "tao": 200.0,
       "name": "NOVA",
       "entry_date": "2026-05-12",
       "entry_price": 0.02300123,
-      "entry_tao": 178.915,
-      "alpha_tokens": 7764.233348,
-      "accumulated_emission_tokens": 24.891068,
-      "accumulated_emission_tao": 0.600025,
+      "entry_tao": 186.6977,
+      "alpha_tokens": 8080.721307,
+      "accumulated_emission_tokens": 26.928511,
+      "accumulated_emission_tao": 0.650452,
       "source": "core",
       "entry_score": -0.14752969200354682
     },
     "44": {
-      "tao": 200.0,
+      "tao": 200.3139,
       "name": "Score",
       "entry_date": "2026-05-12",
       "entry_price": 0.04309206,
       "entry_tao": 182.6604,
-      "alpha_tokens": 4330.654375,
-      "accumulated_emission_tokens": 16.068168,
-      "accumulated_emission_tao": 0.693224,
+      "alpha_tokens": 4332.014266,
+      "accumulated_emission_tokens": 17.428059,
+      "accumulated_emission_tao": 0.756106,
       "source": "core",
       "entry_score": -0.753969201858667
     },
@@ -34,10 +34,10 @@
       "name": "Cacheon",
       "entry_date": "2026-05-19",
       "entry_price": 0.01541571,
-      "entry_tao": 218.1523,
-      "alpha_tokens": 14175.267852,
-      "accumulated_emission_tokens": 15.850027,
-      "accumulated_emission_tao": 0.221794,
+      "entry_tao": 223.6809,
+      "alpha_tokens": 14581.416513,
+      "accumulated_emission_tokens": 18.923493,
+      "accumulated_emission_tao": 0.26395,
       "source": "core",
       "entry_score": -0.3633114748632597
     },
@@ -46,10 +46,10 @@
       "name": "Zipcode",
       "entry_date": "2026-05-23",
       "entry_price": 0.00981463,
-      "entry_tao": 187.0484,
-      "alpha_tokens": 19145.061656,
-      "accumulated_emission_tokens": 7.123012,
-      "accumulated_emission_tao": 0.074411,
+      "entry_tao": 165.7734,
+      "alpha_tokens": 17310.650307,
+      "accumulated_emission_tokens": 14.128808,
+      "accumulated_emission_tao": 0.155353,
       "source": "core",
       "entry_score": -0.08089464173687627
     }
@@ -114,7 +114,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 21.588712,
+  "benchmark_eq_emissions": 22.814507,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -349,6 +349,6 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 6.047015,
-  "benchmark_root_value": 1001.8424
+  "benchmark_mcw_emissions": 6.414322,
+  "benchmark_root_value": 1001.9867
 }
