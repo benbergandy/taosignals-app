@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-28T12:04:36.691448+00:00",
-  "date": "2026-05-28",
+  "generated_at": "2026-05-29T12:04:27.065899+00:00",
+  "date": "2026-05-29",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -16,46 +16,56 @@
     },
     "core": {
       "tao": 850.0,
-      "n_positions": 4,
+      "n_positions": 5,
       "positions": [
         {
-          "netuid": 46,
-          "name": "Zipcode",
-          "tao": 212.5,
-          "score": 0.30606589221340125,
+          "netuid": 9,
+          "name": "iota",
+          "tao": 170.0,
+          "score": 0.18771817467483293,
           "rank": 1,
-          "moving_price": 0.01091536,
-          "tao_in": 14149.9052,
+          "moving_price": 0.02930732,
+          "tao_in": 54977.0412,
           "source": "core"
         },
         {
-          "netuid": 14,
-          "name": "Cacheon",
-          "tao": 212.5,
-          "score": -0.8253644683654713,
+          "netuid": 79,
+          "name": "MVTRX",
+          "tao": 170.0,
+          "score": 0.1473267287969075,
           "rank": 2,
-          "moving_price": 0.01319974,
-          "tao_in": 29347.5113,
+          "moving_price": 0.01189965,
+          "tao_in": 12477.3327,
+          "source": "core"
+        },
+        {
+          "netuid": 4,
+          "name": "Targon",
+          "tao": 170.0,
+          "score": -0.6042019810818846,
+          "rank": 3,
+          "moving_price": 0.05619177,
+          "tao_in": 133003.6908,
           "source": "core"
         },
         {
           "netuid": 68,
           "name": "NOVA",
-          "tao": 212.5,
-          "score": -0.8759299392497027,
-          "rank": 3,
-          "moving_price": 0.02386319,
-          "tao_in": 44035.4338,
+          "tao": 170.0,
+          "score": -0.8255847880208254,
+          "rank": 4,
+          "moving_price": 0.02431553,
+          "tao_in": 44710.6125,
           "source": "core"
         },
         {
           "netuid": 44,
           "name": "Score",
-          "tao": 212.5,
-          "score": -1.0628226588049101,
-          "rank": 4,
-          "moving_price": 0.04499323,
-          "tao_in": 68603.7865,
+          "tao": 170.0,
+          "score": -1.065297074011631,
+          "rank": 5,
+          "moving_price": 0.04409652,
+          "tao_in": 68458.232,
           "source": "core"
         }
       ]
@@ -72,47 +82,57 @@
     }
   },
   "positions": {
-    "46": {
-      "netuid": 46,
-      "name": "Zipcode",
-      "tao": 212.5,
-      "score": 0.30606589221340125,
+    "9": {
+      "netuid": 9,
+      "name": "iota",
+      "tao": 170.0,
+      "score": 0.18771817467483293,
       "rank": 1,
-      "moving_price": 0.01091536,
-      "tao_in": 14149.9052,
+      "moving_price": 0.02930732,
+      "tao_in": 54977.0412,
       "source": "core"
     },
-    "14": {
-      "netuid": 14,
-      "name": "Cacheon",
-      "tao": 212.5,
-      "score": -0.8253644683654713,
+    "79": {
+      "netuid": 79,
+      "name": "MVTRX",
+      "tao": 170.0,
+      "score": 0.1473267287969075,
       "rank": 2,
-      "moving_price": 0.01319974,
-      "tao_in": 29347.5113,
+      "moving_price": 0.01189965,
+      "tao_in": 12477.3327,
+      "source": "core"
+    },
+    "4": {
+      "netuid": 4,
+      "name": "Targon",
+      "tao": 170.0,
+      "score": -0.6042019810818846,
+      "rank": 3,
+      "moving_price": 0.05619177,
+      "tao_in": 133003.6908,
       "source": "core"
     },
     "68": {
       "netuid": 68,
       "name": "NOVA",
-      "tao": 212.5,
-      "score": -0.8759299392497027,
-      "rank": 3,
-      "moving_price": 0.02386319,
-      "tao_in": 44035.4338,
+      "tao": 170.0,
+      "score": -0.8255847880208254,
+      "rank": 4,
+      "moving_price": 0.02431553,
+      "tao_in": 44710.6125,
       "source": "core"
     },
     "44": {
       "netuid": 44,
       "name": "Score",
-      "tao": 212.5,
-      "score": -1.0628226588049101,
-      "rank": 4,
-      "moving_price": 0.04499323,
-      "tao_in": 68603.7865,
+      "tao": 170.0,
+      "score": -1.065297074011631,
+      "rank": 5,
+      "moving_price": 0.04409652,
+      "tao_in": 68458.232,
       "source": "core"
     }
   },
-  "n_positions_after_merge": 4,
+  "n_positions_after_merge": 5,
   "consensus_picks": []
 }
