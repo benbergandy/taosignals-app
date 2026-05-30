@@ -785,5 +785,68 @@
     "tao_removed": 40.6848,
     "alpha_removed": 928.046744,
     "spot_price": 0.04383913
+  },
+  {
+    "date": "2026-05-30",
+    "type": "EXIT",
+    "netuid": 44,
+    "name": "Score",
+    "tao": 160.1908,
+    "alpha_tokens": 3877.814015,
+    "exit_price": 0.04130955,
+    "entry_price": 0.04309206,
+    "entry_date": "2026-05-12",
+    "cost_basis_tao": 162.1735,
+    "realized_pnl_tao": -1.9827,
+    "realized_pnl_pct": -1.22,
+    "days_held": 18
+  },
+  {
+    "date": "2026-05-30",
+    "type": "EXIT",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 156.606,
+    "alpha_tokens": 6948.178573,
+    "exit_price": 0.02253915,
+    "entry_price": 0.02300123,
+    "entry_date": "2026-05-12",
+    "cost_basis_tao": 157.9453,
+    "realized_pnl_tao": -1.3393,
+    "realized_pnl_pct": -0.85,
+    "days_held": 18
+  },
+  {
+    "date": "2026-05-30",
+    "type": "EXIT",
+    "netuid": 4,
+    "name": "Targon",
+    "tao": 165.0566,
+    "alpha_tokens": 3032.437893,
+    "exit_price": 0.05443032,
+    "entry_price": 0.05606051,
+    "entry_date": "2026-05-29",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -4.9434,
+    "realized_pnl_pct": -2.91,
+    "days_held": 1
+  },
+  {
+    "date": "2026-05-30",
+    "type": "INCREASE",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao_added": 238.6518,
+    "alpha_added": 18378.195064,
+    "spot_price": 0.01298559
+  },
+  {
+    "date": "2026-05-30",
+    "type": "INCREASE",
+    "netuid": 9,
+    "name": "iota",
+    "tao_added": 254.1653,
+    "alpha_added": 8685.346447,
+    "spot_price": 0.0292637
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-29T12:04:27.064987+00:00",
-  "date": "2026-05-29",
+  "generated_at": "2026-05-30T12:04:17.771179+00:00",
+  "date": "2026-05-30",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -16,56 +16,26 @@
     },
     "core": {
       "tao": 800.0,
-      "n_positions": 5,
+      "n_positions": 2,
       "positions": [
-        {
-          "netuid": 9,
-          "name": "iota",
-          "tao": 160.0,
-          "score": 0.18771817467483293,
-          "rank": 1,
-          "moving_price": 0.02930732,
-          "tao_in": 54977.0412,
-          "source": "core"
-        },
         {
           "netuid": 79,
           "name": "MVTRX",
-          "tao": 160.0,
-          "score": 0.1473267287969075,
+          "tao": 400.0,
+          "score": 0.25671987388834233,
+          "rank": 1,
+          "moving_price": 0.01254968,
+          "tao_in": 13104.8177,
+          "source": "core"
+        },
+        {
+          "netuid": 9,
+          "name": "iota",
+          "tao": 400.0,
+          "score": -0.5933212416168722,
           "rank": 2,
-          "moving_price": 0.01189965,
-          "tao_in": 12477.3327,
-          "source": "core"
-        },
-        {
-          "netuid": 4,
-          "name": "Targon",
-          "tao": 160.0,
-          "score": -0.6042019810818846,
-          "rank": 3,
-          "moving_price": 0.05619177,
-          "tao_in": 133003.6908,
-          "source": "core"
-        },
-        {
-          "netuid": 68,
-          "name": "NOVA",
-          "tao": 160.0,
-          "score": -0.8255847880208254,
-          "rank": 4,
-          "moving_price": 0.02431553,
-          "tao_in": 44710.6125,
-          "source": "core"
-        },
-        {
-          "netuid": 44,
-          "name": "Score",
-          "tao": 160.0,
-          "score": -1.065297074011631,
-          "rank": 5,
-          "moving_price": 0.04409652,
-          "tao_in": 68458.232,
+          "moving_price": 0.02946602,
+          "tao_in": 55210.3407,
           "source": "core"
         }
       ]
@@ -82,57 +52,27 @@
     }
   },
   "positions": {
-    "9": {
-      "netuid": 9,
-      "name": "iota",
-      "tao": 160.0,
-      "score": 0.18771817467483293,
-      "rank": 1,
-      "moving_price": 0.02930732,
-      "tao_in": 54977.0412,
-      "source": "core"
-    },
     "79": {
       "netuid": 79,
       "name": "MVTRX",
-      "tao": 160.0,
-      "score": 0.1473267287969075,
+      "tao": 400.0,
+      "score": 0.25671987388834233,
+      "rank": 1,
+      "moving_price": 0.01254968,
+      "tao_in": 13104.8177,
+      "source": "core"
+    },
+    "9": {
+      "netuid": 9,
+      "name": "iota",
+      "tao": 400.0,
+      "score": -0.5933212416168722,
       "rank": 2,
-      "moving_price": 0.01189965,
-      "tao_in": 12477.3327,
-      "source": "core"
-    },
-    "4": {
-      "netuid": 4,
-      "name": "Targon",
-      "tao": 160.0,
-      "score": -0.6042019810818846,
-      "rank": 3,
-      "moving_price": 0.05619177,
-      "tao_in": 133003.6908,
-      "source": "core"
-    },
-    "68": {
-      "netuid": 68,
-      "name": "NOVA",
-      "tao": 160.0,
-      "score": -0.8255847880208254,
-      "rank": 4,
-      "moving_price": 0.02431553,
-      "tao_in": 44710.6125,
-      "source": "core"
-    },
-    "44": {
-      "netuid": 44,
-      "name": "Score",
-      "tao": 160.0,
-      "score": -1.065297074011631,
-      "rank": 5,
-      "moving_price": 0.04409652,
-      "tao_in": 68458.232,
+      "moving_price": 0.02946602,
+      "tao_in": 55210.3407,
       "source": "core"
     }
   },
-  "n_positions_after_merge": 5,
+  "n_positions_after_merge": 2,
   "consensus_picks": []
 }
