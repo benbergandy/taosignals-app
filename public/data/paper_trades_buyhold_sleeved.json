@@ -848,5 +848,23 @@
     "tao_added": 239.2144,
     "alpha_added": 8174.443464,
     "spot_price": 0.0292637
+  },
+  {
+    "date": "2026-05-31",
+    "type": "DECREASE",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao_removed": 51.9641,
+    "alpha_removed": 3543.287586,
+    "spot_price": 0.01466551
+  },
+  {
+    "date": "2026-05-31",
+    "type": "DECREASE",
+    "netuid": 9,
+    "name": "iota",
+    "tao_removed": 23.4424,
+    "alpha_removed": 756.920591,
+    "spot_price": 0.03097077
   }
 ]

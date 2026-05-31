@@ -2,11 +2,11 @@
   "start_date": "2026-05-24",
   "profile": "balanced",
   "total_tao": 1000.0,
-  "root_stake": 150.0179,
-  "accumulated_root_yield": 0.148271,
+  "root_stake": 150.0184,
+  "accumulated_root_yield": 0.16669,
   "positions": {
     "12": {
-      "tao": 89.8401,
+      "tao": 89.5693,
       "name": "Compute Horde",
       "entry_date": "2026-05-24",
       "entry_price": 0.0062804,
@@ -22,8 +22,8 @@
       "name": "Quasar",
       "entry_date": "2026-05-24",
       "entry_price": 0.01071518,
-      "entry_tao": 89.9874,
-      "alpha_tokens": 8418.125536,
+      "entry_tao": 91.1966,
+      "alpha_tokens": 8532.767784,
       "accumulated_emission_tokens": 0.0,
       "accumulated_emission_tao": 0.0,
       "source": "satellite",
@@ -34,8 +34,8 @@
       "name": "Targon",
       "entry_date": "2026-05-24",
       "entry_price": 0.0565114,
-      "entry_tao": 95.555,
-      "alpha_tokens": 1653.490274,
+      "entry_tao": 96.5459,
+      "alpha_tokens": 1671.896936,
       "accumulated_emission_tokens": 1.212333,
       "accumulated_emission_tao": 0.069332,
       "source": "satellite",
@@ -46,8 +46,8 @@
       "name": "Affine",
       "entry_date": "2026-05-24",
       "entry_price": 0.06463088,
-      "entry_tao": 93.1227,
-      "alpha_tokens": 1442.518006,
+      "entry_tao": 94.5519,
+      "alpha_tokens": 1465.794654,
       "accumulated_emission_tokens": 0.0,
       "accumulated_emission_tao": 0.0,
       "source": "satellite",
@@ -58,8 +58,8 @@
       "name": "Vidaio",
       "entry_date": "2026-05-24",
       "entry_price": 0.00945846,
-      "entry_tao": 95.26,
-      "alpha_tokens": 10202.985267,
+      "entry_tao": 95.8264,
+      "alpha_tokens": 10267.60225,
       "accumulated_emission_tokens": 0.0,
       "accumulated_emission_tao": 0.0,
       "source": "satellite",
@@ -70,10 +70,10 @@
       "name": "iota",
       "entry_date": "2026-05-29",
       "entry_price": 0.02912803,
-      "entry_tao": 199.6072,
-      "alpha_tokens": 6834.406681,
-      "accumulated_emission_tokens": 0.690783,
-      "accumulated_emission_tao": 0.020215,
+      "entry_tao": 187.8858,
+      "alpha_tokens": 6457.700869,
+      "accumulated_emission_tokens": 2.451768,
+      "accumulated_emission_tao": 0.074754,
       "source": "core",
       "entry_score": 0.18771817467483293
     },
@@ -82,10 +82,10 @@
       "name": "MVTRX",
       "entry_date": "2026-05-29",
       "entry_price": 0.01185185,
-      "entry_tao": 192.3064,
-      "alpha_tokens": 15401.683949,
-      "accumulated_emission_tokens": 3.14105,
-      "accumulated_emission_tao": 0.040788,
+      "entry_tao": 166.3226,
+      "alpha_tokens": 13637.437984,
+      "accumulated_emission_tokens": 10.656544,
+      "accumulated_emission_tao": 0.151007,
       "source": "core",
       "entry_score": 0.1473267287969075
     }
@@ -149,7 +149,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 9.215278,
+  "benchmark_eq_emissions": 10.445386,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -380,6 +380,6 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 3.020268,
-  "benchmark_root_value": 1000.9885
+  "benchmark_mcw_emissions": 3.336677,
+  "benchmark_root_value": 1001.1114
 }

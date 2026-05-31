@@ -544,5 +544,50 @@
     "tao_removed": 1.2409,
     "alpha_removed": 140.674437,
     "spot_price": 0.00882095
+  },
+  {
+    "date": "2026-05-31",
+    "type": "DECREASE",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao_removed": 29.2315,
+    "alpha_removed": 1993.214864,
+    "spot_price": 0.01466551
+  },
+  {
+    "date": "2026-05-31",
+    "type": "DECREASE",
+    "netuid": 9,
+    "name": "iota",
+    "tao_removed": 13.1866,
+    "alpha_removed": 425.77423,
+    "spot_price": 0.03097077
+  },
+  {
+    "date": "2026-05-31",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 0.6718,
+    "alpha_added": 63.690138,
+    "spot_price": 0.01054757
+  },
+  {
+    "date": "2026-05-31",
+    "type": "INCREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_added": 0.8808,
+    "alpha_added": 16.361478,
+    "spot_price": 0.05383107
+  },
+  {
+    "date": "2026-05-31",
+    "type": "INCREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_added": 1.2704,
+    "alpha_added": 20.690354,
+    "spot_price": 0.06140014
   }
 ]
