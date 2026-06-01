@@ -2,32 +2,32 @@
   "start_date": "2026-05-12",
   "profile": "buyhold",
   "total_tao": 1000.0,
-  "root_stake": 200.0246,
-  "accumulated_root_yield": 0.561392,
+  "root_stake": 200.0274,
+  "accumulated_root_yield": 0.588761,
   "positions": {
-    "9": {
-      "tao": 400.0,
-      "name": "iota",
-      "entry_date": "2026-05-29",
-      "entry_price": 0.02912803,
-      "entry_tao": 375.772,
-      "alpha_tokens": 12915.401739,
-      "accumulated_emission_tokens": 4.888528,
-      "accumulated_emission_tao": 0.149046,
-      "source": "core",
-      "entry_score": 0.18771817467483293
-    },
     "79": {
       "tao": 400.0,
       "name": "MVTRX",
       "entry_date": "2026-05-29",
       "entry_price": 0.01185185,
-      "entry_tao": 332.6493,
-      "alpha_tokens": 27274.875968,
-      "accumulated_emission_tokens": 21.036292,
-      "accumulated_emission_tao": 0.298024,
+      "entry_tao": 343.9448,
+      "alpha_tokens": 28080.757819,
+      "accumulated_emission_tokens": 33.953321,
+      "accumulated_emission_tao": 0.482022,
       "source": "core",
       "entry_score": 0.1473267287969075
+    },
+    "9": {
+      "tao": 400.0,
+      "name": "iota",
+      "entry_date": "2026-06-01",
+      "entry_price": 0.03126393,
+      "entry_tao": 400.0,
+      "alpha_tokens": 12794.297647,
+      "accumulated_emission_tokens": 0.0,
+      "accumulated_emission_tao": 0.0,
+      "source": "core",
+      "entry_score": -0.8996303168033569
     }
   },
   "benchmark_eq_prices": {
@@ -90,7 +90,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 29.975417,
+  "benchmark_eq_emissions": 31.228843,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -325,6 +325,6 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 8.574877,
-  "benchmark_root_value": 1002.8095
+  "benchmark_mcw_emissions": 8.951639,
+  "benchmark_root_value": 1002.9467
 }

@@ -866,5 +866,39 @@
     "tao_removed": 24.9075,
     "alpha_removed": 804.226408,
     "spot_price": 0.03097077
+  },
+  {
+    "date": "2026-06-01",
+    "type": "EXIT",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 429.1333,
+    "alpha_tokens": 13726.146637,
+    "exit_price": 0.03126393,
+    "entry_price": 0.02912803,
+    "entry_date": "2026-05-29",
+    "cost_basis_tao": 399.2578,
+    "realized_pnl_tao": 29.8755,
+    "realized_pnl_pct": 7.48,
+    "days_held": 3,
+    "reason": "score_drop_1.09>1.0_(core)"
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao_added": 12.0018,
+    "alpha_added": 842.54853,
+    "spot_price": 0.01424463
+  },
+  {
+    "date": "2026-06-01",
+    "type": "ENTRY",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 425.0,
+    "alpha_tokens": 13593.94125,
+    "entry_price": 0.03126393
   }
 ]

@@ -553,5 +553,75 @@
     "tao_added": 0.5664,
     "alpha_added": 64.616983,
     "spot_price": 0.00876543
+  },
+  {
+    "date": "2026-06-01",
+    "type": "EXIT",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 201.9453,
+    "alpha_tokens": 6459.36969,
+    "exit_price": 0.03126393,
+    "entry_price": 0.02912803,
+    "entry_date": "2026-05-29",
+    "cost_basis_tao": 187.8858,
+    "realized_pnl_tao": 14.0595,
+    "realized_pnl_pct": 7.48,
+    "days_held": 3,
+    "reason": "score_drop_1.09>1.0_(core)"
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao_added": 5.6465,
+    "alpha_added": 396.392924,
+    "spot_price": 0.01424463
+  },
+  {
+    "date": "2026-06-01",
+    "type": "ENTRY",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 200.0,
+    "alpha_tokens": 6397.148824,
+    "entry_price": 0.03126393
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_added": 0.9138,
+    "alpha_added": 148.529363,
+    "spot_price": 0.00615239
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 2.4595,
+    "alpha_added": 239.735911,
+    "spot_price": 0.01025933
+  },
+  {
+    "date": "2026-06-01",
+    "type": "DECREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_removed": 0.7055,
+    "alpha_removed": 13.004063,
+    "spot_price": 0.05425305
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 8.7715,
+    "alpha_added": 1108.746112,
+    "spot_price": 0.00791115
   }
 ]

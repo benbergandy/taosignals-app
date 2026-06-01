@@ -589,5 +589,93 @@
     "tao_added": 1.2704,
     "alpha_added": 20.690354,
     "spot_price": 0.06140014
+  },
+  {
+    "date": "2026-06-01",
+    "type": "EXIT",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 227.1884,
+    "alpha_tokens": 7266.790078,
+    "exit_price": 0.03126393,
+    "entry_price": 0.02912803,
+    "entry_date": "2026-05-29",
+    "cost_basis_tao": 211.3715,
+    "realized_pnl_tao": 15.8169,
+    "realized_pnl_pct": 7.48,
+    "days_held": 3,
+    "reason": "score_drop_1.09>1.0_(core)"
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao_added": 6.3525,
+    "alpha_added": 445.954775,
+    "spot_price": 0.01424463
+  },
+  {
+    "date": "2026-06-01",
+    "type": "ENTRY",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 225.0,
+    "alpha_tokens": 7196.792427,
+    "entry_price": 0.03126393
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_added": 0.5077,
+    "alpha_added": 82.516313,
+    "spot_price": 0.00615239
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 1.3664,
+    "alpha_added": 133.186617,
+    "spot_price": 0.01025933
+  },
+  {
+    "date": "2026-06-01",
+    "type": "DECREASE",
+    "netuid": 4,
+    "name": "Targon",
+    "tao_removed": 0.6271,
+    "alpha_removed": 11.559167,
+    "spot_price": 0.05425305
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 5.157,
+    "alpha_added": 651.868386,
+    "spot_price": 0.00791115
+  },
+  {
+    "date": "2026-06-01",
+    "type": "DECREASE",
+    "netuid": 64,
+    "name": "Chutes",
+    "tao_removed": 1.0146,
+    "alpha_removed": 14.036644,
+    "spot_price": 0.07228005
+  },
+  {
+    "date": "2026-06-01",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 0.5139,
+    "alpha_added": 10.085817,
+    "spot_price": 0.05095297
   }
 ]
