@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-01T12:05:21.577028+00:00",
-  "date": "2026-06-01",
+  "generated_at": "2026-06-02T12:05:37.919765+00:00",
+  "date": "2026-06-02",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -22,20 +22,20 @@
           "netuid": 79,
           "name": "MVTRX",
           "tao": 425.0,
-          "score": 0.6481879214338901,
+          "score": 0.27888404070181994,
           "rank": 1,
-          "moving_price": 0.01456894,
-          "tao_in": 13825.8632,
+          "moving_price": 0.01515229,
+          "tao_in": 14559.6169,
           "source": "core"
         },
         {
           "netuid": 9,
           "name": "iota",
           "tao": 425.0,
-          "score": -0.8996303168033569,
+          "score": -0.9572537562849444,
           "rank": 2,
-          "moving_price": 0.0311465,
-          "tao_in": 57288.8466,
+          "moving_price": 0.03067588,
+          "tao_in": 57413.0146,
           "source": "core"
         }
       ]
@@ -56,20 +56,20 @@
       "netuid": 79,
       "name": "MVTRX",
       "tao": 425.0,
-      "score": 0.6481879214338901,
+      "score": 0.27888404070181994,
       "rank": 1,
-      "moving_price": 0.01456894,
-      "tao_in": 13825.8632,
+      "moving_price": 0.01515229,
+      "tao_in": 14559.6169,
       "source": "core"
     },
     "9": {
       "netuid": 9,
       "name": "iota",
       "tao": 425.0,
-      "score": -0.8996303168033569,
+      "score": -0.9572537562849444,
       "rank": 2,
-      "moving_price": 0.0311465,
-      "tao_in": 57288.8466,
+      "moving_price": 0.03067588,
+      "tao_in": 57413.0146,
       "source": "core"
     }
   },

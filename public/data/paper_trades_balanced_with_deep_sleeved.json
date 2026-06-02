@@ -677,5 +677,41 @@
     "tao_added": 0.5139,
     "alpha_added": 10.085817,
     "spot_price": 0.05095297
+  },
+  {
+    "date": "2026-06-02",
+    "type": "DECREASE",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao_removed": 22.8192,
+    "alpha_removed": 1455.173726,
+    "spot_price": 0.01568146
+  },
+  {
+    "date": "2026-06-02",
+    "type": "INCREASE",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao_added": 0.6827,
+    "alpha_added": 112.501627,
+    "spot_price": 0.00606838
+  },
+  {
+    "date": "2026-06-02",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 1.1764,
+    "alpha_removed": 112.034176,
+    "spot_price": 0.01050072
+  },
+  {
+    "date": "2026-06-02",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 0.6812,
+    "alpha_removed": 13.07257,
+    "spot_price": 0.05210997
   }
 ]
