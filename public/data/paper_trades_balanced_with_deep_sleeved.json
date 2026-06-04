@@ -713,5 +713,20 @@
     "tao_removed": 0.6812,
     "alpha_removed": 13.07257,
     "spot_price": 0.05210997
+  },
+  {
+    "date": "2026-06-04",
+    "type": "EXIT",
+    "netuid": 79,
+    "name": "MVTRX",
+    "tao": 199.6066,
+    "alpha_tokens": 14355.343806,
+    "exit_price": 0.01390469,
+    "entry_price": 0.01185185,
+    "entry_date": "2026-05-29",
+    "cost_basis_tao": 170.6465,
+    "realized_pnl_tao": 28.9601,
+    "realized_pnl_pct": 16.97,
+    "days_held": 6
   }
 ]
