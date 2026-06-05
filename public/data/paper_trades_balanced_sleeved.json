@@ -674,5 +674,29 @@
     "realized_pnl_tao": 25.7432,
     "realized_pnl_pct": 16.97,
     "days_held": 6
+  },
+  {
+    "date": "2026-06-05",
+    "type": "EXIT",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao": 76.1017,
+    "alpha_tokens": 8570.842178,
+    "exit_price": 0.00887914,
+    "entry_price": 0.01071518,
+    "entry_date": "2026-05-24",
+    "cost_basis_tao": 91.5385,
+    "realized_pnl_tao": -15.4368,
+    "realized_pnl_pct": -16.86,
+    "days_held": 12
+  },
+  {
+    "date": "2026-06-05",
+    "type": "ENTRY",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 90.0,
+    "alpha_tokens": 7388.17626,
+    "entry_price": 0.01218163
   }
 ]
