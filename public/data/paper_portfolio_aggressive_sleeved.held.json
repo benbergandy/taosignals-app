@@ -2,11 +2,11 @@
   "start_date": "2026-05-24",
   "profile": "aggressive",
   "total_tao": 1000.0,
-  "root_stake": 50.004,
-  "accumulated_root_yield": 0.084549,
+  "root_stake": 50.0041,
+  "accumulated_root_yield": 0.08864,
   "positions": {
     "12": {
-      "tao": 145.2172,
+      "tao": 144.2308,
       "name": "Compute Horde",
       "entry_date": "2026-05-24",
       "entry_price": 0.0062804,
@@ -18,7 +18,7 @@
       "entry_score": 0.6943775741455429
     },
     "4": {
-      "tao": 146.5268,
+      "tao": 147.3254,
       "name": "Targon",
       "entry_date": "2026-05-24",
       "entry_price": 0.0565114,
@@ -30,7 +30,7 @@
       "entry_score": 0.5261066669786165
     },
     "120": {
-      "tao": 145.7015,
+      "tao": 141.704,
       "name": "Affine",
       "entry_date": "2026-05-24",
       "entry_price": 0.06463088,
@@ -42,7 +42,7 @@
       "entry_score": 0.4566012935610345
     },
     "85": {
-      "tao": 140.9822,
+      "tao": 137.7102,
       "name": "Vidaio",
       "entry_date": "2026-05-24",
       "entry_price": 0.00945846,
@@ -54,19 +54,19 @@
       "entry_score": 0.3587817216333842
     },
     "9": {
-      "tao": 126.1151,
+      "tao": 117.0173,
       "name": "iota",
       "entry_date": "2026-06-01",
       "entry_price": 0.03126393,
       "entry_tao": 100.0,
-      "alpha_tokens": 3202.034652,
-      "accumulated_emission_tokens": 3.46024,
-      "accumulated_emission_tao": 0.119667,
+      "alpha_tokens": 3202.923828,
+      "accumulated_emission_tokens": 4.349416,
+      "accumulated_emission_tao": 0.152153,
       "source": "core",
       "entry_score": -0.8996303168033569
     },
     "19": {
-      "tao": 150.0,
+      "tao": 148.5876,
       "name": "blockmachine",
       "entry_date": "2026-06-05",
       "entry_price": 0.01218163,
@@ -137,7 +137,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 15.677267,
+  "benchmark_eq_emissions": 16.427245,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -368,6 +368,6 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 4.809798,
-  "benchmark_root_value": 1001.6914
+  "benchmark_mcw_emissions": 5.005409,
+  "benchmark_root_value": 1001.7733
 }

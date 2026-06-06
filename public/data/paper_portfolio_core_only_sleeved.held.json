@@ -2,18 +2,18 @@
   "start_date": "2026-05-12",
   "profile": "core_only",
   "total_tao": 1000.0,
-  "root_stake": 150.0119,
-  "accumulated_root_yield": 0.507995,
+  "root_stake": 150.0123,
+  "accumulated_root_yield": 0.520267,
   "positions": {
     "9": {
-      "tao": 535.9856,
+      "tao": 497.3196,
       "name": "iota",
       "entry_date": "2026-06-01",
       "entry_price": 0.03126393,
       "entry_tao": 425.0,
-      "alpha_tokens": 13608.560548,
-      "accumulated_emission_tokens": 14.619298,
-      "accumulated_emission_tao": 0.50557,
+      "alpha_tokens": 13612.31668,
+      "accumulated_emission_tokens": 18.37543,
+      "accumulated_emission_tao": 0.642799,
       "source": "core",
       "entry_score": -0.8996303168033569
     }
@@ -78,7 +78,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 35.199954,
+  "benchmark_eq_emissions": 35.935268,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -313,6 +313,6 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 10.086965,
-  "benchmark_root_value": 1003.3907
+  "benchmark_mcw_emissions": 10.279219,
+  "benchmark_root_value": 1003.4728
 }
