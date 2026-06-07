@@ -725,5 +725,53 @@
     "tao": 150.0,
     "alpha_tokens": 12313.6271,
     "entry_price": 0.01218163
+  },
+  {
+    "date": "2026-06-07",
+    "type": "EXIT",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 148.4809,
+    "alpha_tokens": 12313.6271,
+    "exit_price": 0.01205826,
+    "entry_price": 0.01218163,
+    "entry_date": "2026-06-05",
+    "cost_basis_tao": 150.0,
+    "realized_pnl_tao": -1.5191,
+    "realized_pnl_pct": -1.01,
+    "days_held": 2
+  },
+  {
+    "date": "2026-06-07",
+    "type": "EXIT",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 114.3401,
+    "alpha_tokens": 3202.923828,
+    "exit_price": 0.03569865,
+    "entry_price": 0.03126393,
+    "entry_date": "2026-06-01",
+    "cost_basis_tao": 100.0,
+    "realized_pnl_tao": 14.3401,
+    "realized_pnl_pct": 14.34,
+    "days_held": 6
+  },
+  {
+    "date": "2026-06-07",
+    "type": "ENTRY",
+    "netuid": 18,
+    "name": "Zeus",
+    "tao": 200.0,
+    "alpha_tokens": 25164.93037,
+    "entry_price": 0.00794757
+  },
+  {
+    "date": "2026-06-07",
+    "type": "ENTRY",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 150.0,
+    "alpha_tokens": 24607.151719,
+    "entry_price": 0.00609579
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-06T12:05:07.206876+00:00",
-  "date": "2026-06-06",
+  "generated_at": "2026-06-07T12:04:53.864573+00:00",
+  "date": "2026-06-07",
   "total_tao": 1000.0,
   "root_stake": 300.0,
   "allocation_profile": "conservative",
@@ -19,13 +19,13 @@
       "n_positions": 1,
       "positions": [
         {
-          "netuid": 9,
-          "name": "iota",
+          "netuid": 18,
+          "name": "Zeus",
           "tao": 600.0,
-          "score": -0.4765711115214843,
+          "score": 0.10247043918128904,
           "rank": 1,
-          "moving_price": 0.03604389,
-          "tao_in": 62402.257,
+          "moving_price": 0.00766735,
+          "tao_in": 13697.7094,
           "source": "core"
         }
       ]
@@ -38,50 +38,50 @@
           "netuid": 12,
           "name": "Compute Horde",
           "tao": 20.0,
-          "score": 0.6748592019065507,
+          "score": 0.6766588400004236,
           "rank": 1,
-          "moving_price": 0.00585425,
-          "tao_in": 13987.3925,
+          "moving_price": 0.00583386,
+          "tao_in": 13979.418,
+          "source": "satellite"
+        },
+        {
+          "netuid": 41,
+          "name": "Almanac",
+          "tao": 20.0,
+          "score": 0.5991167122517196,
+          "rank": 2,
+          "moving_price": 0.0058239,
+          "tao_in": 13418.1825,
           "source": "satellite"
         },
         {
           "netuid": 4,
           "name": "Targon",
           "tao": 20.0,
-          "score": 0.4893789970052814,
-          "rank": 2,
-          "moving_price": 0.05278686,
-          "tao_in": 129389.9607,
+          "score": 0.49114812104987327,
+          "rank": 3,
+          "moving_price": 0.05299322,
+          "tao_in": 129259.9885,
           "source": "satellite"
         },
         {
           "netuid": 120,
           "name": "Affine",
           "tao": 20.0,
-          "score": 0.42138559516281965,
-          "rank": 3,
-          "moving_price": 0.05793723,
-          "tao_in": 78235.8762,
+          "score": 0.41944172526138096,
+          "rank": 4,
+          "moving_price": 0.05768862,
+          "tao_in": 78314.9547,
           "source": "satellite"
         },
         {
           "netuid": 85,
           "name": "Vidaio",
           "tao": 20.0,
-          "score": 0.38099317298467034,
-          "rank": 4,
-          "moving_price": 0.00735697,
-          "tao_in": 14639.856,
-          "source": "satellite"
-        },
-        {
-          "netuid": 19,
-          "name": "blockmachine",
-          "tao": 20.0,
-          "score": 0.23393562720051145,
+          "score": 0.3885767629850204,
           "rank": 5,
-          "moving_price": 0.01210292,
-          "tao_in": 34791.9005,
+          "moving_price": 0.007788,
+          "tao_in": 15158.6023,
           "source": "satellite"
         }
       ]
@@ -93,64 +93,64 @@
     }
   },
   "positions": {
-    "9": {
-      "netuid": 9,
-      "name": "iota",
+    "18": {
+      "netuid": 18,
+      "name": "Zeus",
       "tao": 600.0,
-      "score": -0.4765711115214843,
+      "score": 0.10247043918128904,
       "rank": 1,
-      "moving_price": 0.03604389,
-      "tao_in": 62402.257,
+      "moving_price": 0.00766735,
+      "tao_in": 13697.7094,
       "source": "core"
     },
     "12": {
       "netuid": 12,
       "name": "Compute Horde",
       "tao": 20.0,
-      "score": 0.6748592019065507,
+      "score": 0.6766588400004236,
       "rank": 1,
-      "moving_price": 0.00585425,
-      "tao_in": 13987.3925,
+      "moving_price": 0.00583386,
+      "tao_in": 13979.418,
+      "source": "satellite"
+    },
+    "41": {
+      "netuid": 41,
+      "name": "Almanac",
+      "tao": 20.0,
+      "score": 0.5991167122517196,
+      "rank": 2,
+      "moving_price": 0.0058239,
+      "tao_in": 13418.1825,
       "source": "satellite"
     },
     "4": {
       "netuid": 4,
       "name": "Targon",
       "tao": 20.0,
-      "score": 0.4893789970052814,
-      "rank": 2,
-      "moving_price": 0.05278686,
-      "tao_in": 129389.9607,
+      "score": 0.49114812104987327,
+      "rank": 3,
+      "moving_price": 0.05299322,
+      "tao_in": 129259.9885,
       "source": "satellite"
     },
     "120": {
       "netuid": 120,
       "name": "Affine",
       "tao": 20.0,
-      "score": 0.42138559516281965,
-      "rank": 3,
-      "moving_price": 0.05793723,
-      "tao_in": 78235.8762,
+      "score": 0.41944172526138096,
+      "rank": 4,
+      "moving_price": 0.05768862,
+      "tao_in": 78314.9547,
       "source": "satellite"
     },
     "85": {
       "netuid": 85,
       "name": "Vidaio",
       "tao": 20.0,
-      "score": 0.38099317298467034,
-      "rank": 4,
-      "moving_price": 0.00735697,
-      "tao_in": 14639.856,
-      "source": "satellite"
-    },
-    "19": {
-      "netuid": 19,
-      "name": "blockmachine",
-      "tao": 20.0,
-      "score": 0.23393562720051145,
+      "score": 0.3885767629850204,
       "rank": 5,
-      "moving_price": 0.01210292,
-      "tao_in": 34791.9005,
+      "moving_price": 0.007788,
+      "tao_in": 15158.6023,
       "source": "satellite"
     }
   },
