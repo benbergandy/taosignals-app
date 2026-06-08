@@ -2,11 +2,11 @@
   "start_date": "2026-05-24",
   "profile": "balanced_vsat",
   "total_tao": 1000.0,
-  "root_stake": 150.0141,
-  "accumulated_root_yield": 0.279984,
+  "root_stake": 150.0129,
+  "accumulated_root_yield": 0.292918,
   "positions": {
     "12": {
-      "tao": 48.0221,
+      "tao": 47.9336,
       "name": "Compute Horde",
       "entry_date": "2026-05-24",
       "entry_price": 0.0062804,
@@ -18,7 +18,7 @@
       "entry_score": 0.6943775741455429
     },
     "4": {
-      "tao": 49.1277,
+      "tao": 48.8373,
       "name": "Targon",
       "entry_date": "2026-05-24",
       "entry_price": 0.0565114,
@@ -30,7 +30,7 @@
       "entry_score": 0.5261066669786165
     },
     "120": {
-      "tao": 47.0786,
+      "tao": 46.6596,
       "name": "Affine",
       "entry_date": "2026-05-24",
       "entry_price": 0.06463088,
@@ -42,7 +42,7 @@
       "entry_score": 0.4566012935610345
     },
     "85": {
-      "tao": 49.5996,
+      "tao": 48.3995,
       "name": "Vidaio",
       "entry_date": "2026-05-24",
       "entry_price": 0.00945846,
@@ -54,19 +54,19 @@
       "entry_score": 0.3587817216333842
     },
     "18": {
-      "tao": 600.0,
+      "tao": 300.0,
       "name": "Zeus",
       "entry_date": "2026-06-07",
       "entry_price": 0.00794757,
-      "entry_tao": 600.0,
-      "alpha_tokens": 75494.79111,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
+      "entry_tao": 250.2599,
+      "alpha_tokens": 34867.228805,
+      "accumulated_emission_tokens": 20.661504,
+      "accumulated_emission_tao": 0.177773,
       "source": "core",
       "entry_score": 0.10247043918128904
     },
     "41": {
-      "tao": 50.0,
+      "tao": 49.1234,
       "name": "Almanac",
       "entry_date": "2026-06-07",
       "entry_price": 0.00609579,
@@ -76,6 +76,18 @@
       "accumulated_emission_tao": 0.0,
       "source": "satellite",
       "entry_score": 0.5991167122517196
+    },
+    "77": {
+      "tao": 300.0,
+      "name": "Liquidity",
+      "entry_date": "2026-06-08",
+      "entry_price": 0.00649125,
+      "entry_tao": 300.0,
+      "alpha_tokens": 46216.053249,
+      "accumulated_emission_tokens": 0.0,
+      "accumulated_emission_tao": 0.0,
+      "source": "core",
+      "entry_score": 0.32446574213143164
     }
   },
   "benchmark_eq_prices": {
@@ -137,7 +149,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 17.193877,
+  "benchmark_eq_emissions": 17.908869,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -368,6 +380,6 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 5.204489,
-  "benchmark_root_value": 1001.8673
+  "benchmark_mcw_emissions": 5.387232,
+  "benchmark_root_value": 1001.9537
 }

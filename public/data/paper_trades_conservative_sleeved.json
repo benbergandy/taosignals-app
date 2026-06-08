@@ -602,5 +602,23 @@
     "tao": 20.0,
     "alpha_tokens": 3280.953563,
     "entry_price": 0.00609579
+  },
+  {
+    "date": "2026-06-08",
+    "type": "ENTRY",
+    "netuid": 77,
+    "name": "Liquidity",
+    "tao": 300.0,
+    "alpha_tokens": 46216.053249,
+    "entry_price": 0.00649125
+  },
+  {
+    "date": "2026-06-08",
+    "type": "DECREASE",
+    "netuid": 18,
+    "name": "Zeus",
+    "tao_removed": 349.7401,
+    "alpha_removed": 40648.223809,
+    "spot_price": 0.00860407
   }
 ]
