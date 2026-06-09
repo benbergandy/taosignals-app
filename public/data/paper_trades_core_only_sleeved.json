@@ -966,5 +966,20 @@
     "tao_removed": 495.4606,
     "alpha_removed": 57584.462639,
     "spot_price": 0.00860407
+  },
+  {
+    "date": "2026-06-09",
+    "type": "EXIT",
+    "netuid": 77,
+    "name": "Liquidity",
+    "tao": 426.9115,
+    "alpha_tokens": 65477.249592,
+    "exit_price": 0.00652,
+    "entry_price": 0.00649125,
+    "entry_date": "2026-06-08",
+    "cost_basis_tao": 425.0,
+    "realized_pnl_tao": 1.9115,
+    "realized_pnl_pct": 0.45,
+    "days_held": 1
   }
 ]

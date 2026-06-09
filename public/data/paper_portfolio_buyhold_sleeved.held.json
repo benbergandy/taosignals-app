@@ -2,32 +2,20 @@
   "start_date": "2026-05-12",
   "profile": "buyhold",
   "total_tao": 1000.0,
-  "root_stake": 200.0172,
-  "accumulated_root_yield": 0.729693,
+  "root_stake": 200.0149,
+  "accumulated_root_yield": 0.744562,
   "positions": {
     "18": {
-      "tao": 400.0,
+      "tao": 423.605,
       "name": "Zeus",
       "entry_date": "2026-06-07",
       "entry_price": 0.00794757,
       "entry_tao": 333.6833,
-      "alpha_tokens": 46489.638407,
-      "accumulated_emission_tokens": 27.154919,
-      "accumulated_emission_tao": 0.233643,
+      "alpha_tokens": 46502.908498,
+      "accumulated_emission_tokens": 40.42501,
+      "accumulated_emission_tao": 0.354523,
       "source": "core",
       "entry_score": 0.10247043918128904
-    },
-    "77": {
-      "tao": 400.0,
-      "name": "Liquidity",
-      "entry_date": "2026-06-08",
-      "entry_price": 0.00649125,
-      "entry_tao": 400.0,
-      "alpha_tokens": 61621.404331,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
-      "source": "core",
-      "entry_score": 0.32446574213143164
     }
   },
   "benchmark_eq_prices": {
@@ -90,7 +78,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 37.604333,
+  "benchmark_eq_emissions": 38.300038,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -325,6 +313,6 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 10.727839,
-  "benchmark_root_value": 1003.6534
+  "benchmark_mcw_emissions": 10.908432,
+  "benchmark_root_value": 1003.728
 }

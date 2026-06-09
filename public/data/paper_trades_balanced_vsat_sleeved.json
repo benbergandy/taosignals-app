@@ -746,5 +746,44 @@
     "tao_removed": 349.7401,
     "alpha_removed": 40648.223809,
     "spot_price": 0.00860407
+  },
+  {
+    "date": "2026-06-09",
+    "type": "EXIT",
+    "netuid": 77,
+    "name": "Liquidity",
+    "tao": 301.3495,
+    "alpha_tokens": 46219.26592,
+    "exit_price": 0.00652,
+    "entry_price": 0.00649125,
+    "entry_date": "2026-06-08",
+    "cost_basis_tao": 300.0,
+    "realized_pnl_tao": 1.3495,
+    "realized_pnl_pct": 0.45,
+    "days_held": 1
+  },
+  {
+    "date": "2026-06-09",
+    "type": "EXIT",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 52.4383,
+    "alpha_tokens": 6320.193535,
+    "exit_price": 0.00829695,
+    "entry_price": 0.00945846,
+    "entry_date": "2026-05-24",
+    "cost_basis_tao": 58.0792,
+    "realized_pnl_tao": -5.6409,
+    "realized_pnl_pct": -9.71,
+    "days_held": 16
+  },
+  {
+    "date": "2026-06-09",
+    "type": "ENTRY",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao": 50.0,
+    "alpha_tokens": 5153.511587,
+    "entry_price": 0.00970212
   }
 ]
