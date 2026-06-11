@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-10T12:05:37.799556+00:00",
-  "date": "2026-06-10",
+  "generated_at": "2026-06-11T12:05:15.746675+00:00",
+  "date": "2026-06-11",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -16,26 +16,16 @@
     },
     "core": {
       "tao": 800.0,
-      "n_positions": 2,
+      "n_positions": 1,
       "positions": [
-        {
-          "netuid": 18,
-          "name": "Zeus",
-          "tao": 400.0,
-          "score": -0.18772146909853676,
-          "rank": 1,
-          "moving_price": 0.00936307,
-          "tao_in": 15204.1628,
-          "source": "core"
-        },
         {
           "netuid": 77,
           "name": "Liquidity",
-          "tao": 400.0,
-          "score": -0.24017626190043367,
-          "rank": 2,
-          "moving_price": 0.00664786,
-          "tao_in": 12813.1663,
+          "tao": 800.0,
+          "score": -0.2452514693453186,
+          "rank": 1,
+          "moving_price": 0.00673373,
+          "tao_in": 12911.7055,
           "source": "core"
         }
       ]
@@ -52,27 +42,17 @@
     }
   },
   "positions": {
-    "18": {
-      "netuid": 18,
-      "name": "Zeus",
-      "tao": 400.0,
-      "score": -0.18772146909853676,
-      "rank": 1,
-      "moving_price": 0.00936307,
-      "tao_in": 15204.1628,
-      "source": "core"
-    },
     "77": {
       "netuid": 77,
       "name": "Liquidity",
-      "tao": 400.0,
-      "score": -0.24017626190043367,
-      "rank": 2,
-      "moving_price": 0.00664786,
-      "tao_in": 12813.1663,
+      "tao": 800.0,
+      "score": -0.2452514693453186,
+      "rank": 1,
+      "moving_price": 0.00673373,
+      "tao_in": 12911.7055,
       "source": "core"
     }
   },
-  "n_positions_after_merge": 2,
+  "n_positions_after_merge": 1,
   "consensus_picks": []
 }

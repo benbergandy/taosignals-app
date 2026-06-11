@@ -990,5 +990,20 @@
     "tao": 400.0,
     "alpha_tokens": 59687.552333,
     "entry_price": 0.00670156
+  },
+  {
+    "date": "2026-06-11",
+    "type": "EXIT",
+    "netuid": 18,
+    "name": "Zeus",
+    "tao": 427.0816,
+    "alpha_tokens": 46525.552905,
+    "exit_price": 0.00917951,
+    "entry_price": 0.00794757,
+    "entry_date": "2026-06-07",
+    "cost_basis_tao": 333.6833,
+    "realized_pnl_tao": 93.3983,
+    "realized_pnl_pct": 27.99,
+    "days_held": 4
   }
 ]
