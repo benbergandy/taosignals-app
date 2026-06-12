@@ -827,5 +827,29 @@
     "realized_pnl_tao": 46.7049,
     "realized_pnl_pct": 27.99,
     "days_held": 4
+  },
+  {
+    "date": "2026-06-12",
+    "type": "EXIT",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 99.8703,
+    "alpha_tokens": 14770.888189,
+    "exit_price": 0.00676129,
+    "entry_price": 0.00609579,
+    "entry_date": "2026-06-07",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 9.8703,
+    "realized_pnl_pct": 10.97,
+    "days_held": 5
+  },
+  {
+    "date": "2026-06-12",
+    "type": "ENTRY",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 90.0,
+    "alpha_tokens": 11200.125543,
+    "entry_price": 0.00803562
   }
 ]
