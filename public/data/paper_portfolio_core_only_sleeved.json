@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-13T12:05:08.319395+00:00",
-  "date": "2026-06-13",
+  "generated_at": "2026-06-14T12:04:47.157891+00:00",
+  "date": "2026-06-14",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -19,13 +19,13 @@
       "n_positions": 1,
       "positions": [
         {
-          "netuid": 77,
-          "name": "Liquidity",
+          "netuid": 41,
+          "name": "Almanac",
           "tao": 850.0,
-          "score": 0.4625938985683583,
+          "score": 0.2781379538329372,
           "rank": 1,
-          "moving_price": 0.00777633,
-          "tao_in": 14222.8569,
+          "moving_price": 0.00743851,
+          "tao_in": 15132.1329,
           "source": "core"
         }
       ]
@@ -42,14 +42,14 @@
     }
   },
   "positions": {
-    "77": {
-      "netuid": 77,
-      "name": "Liquidity",
+    "41": {
+      "netuid": 41,
+      "name": "Almanac",
       "tao": 850.0,
-      "score": 0.4625938985683583,
+      "score": 0.2781379538329372,
       "rank": 1,
-      "moving_price": 0.00777633,
-      "tao_in": 14222.8569,
+      "moving_price": 0.00743851,
+      "tao_in": 15132.1329,
       "source": "core"
     }
   },

@@ -905,5 +905,29 @@
     "tao": 50.0,
     "alpha_tokens": 6222.291968,
     "entry_price": 0.00803562
+  },
+  {
+    "date": "2026-06-14",
+    "type": "EXIT",
+    "netuid": 77,
+    "name": "Liquidity",
+    "tao": 257.9149,
+    "alpha_tokens": 33599.710426,
+    "exit_price": 0.00767611,
+    "entry_price": 0.00670156,
+    "entry_date": "2026-06-10",
+    "cost_basis_tao": 225.0,
+    "realized_pnl_tao": 32.9149,
+    "realized_pnl_pct": 14.63,
+    "days_held": 4
+  },
+  {
+    "date": "2026-06-14",
+    "type": "ENTRY",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 450.0,
+    "alpha_tokens": 59010.305596,
+    "entry_price": 0.00762579
   }
 ]
