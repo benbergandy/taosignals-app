@@ -2,22 +2,9 @@
   "start_date": "2026-05-12",
   "profile": "buyhold",
   "total_tao": 1000.0,
-  "root_stake": 200.0144,
-  "accumulated_root_yield": 0.81849,
-  "positions": {
-    "41": {
-      "tao": 800.0,
-      "name": "Almanac",
-      "entry_date": "2026-06-14",
-      "entry_price": 0.00762579,
-      "entry_tao": 800.0,
-      "alpha_tokens": 104907.209949,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
-      "source": "core",
-      "entry_score": 0.2781379538329372
-    }
-  },
+  "root_stake": 200.0158,
+  "accumulated_root_yield": 0.834246,
+  "positions": {},
   "benchmark_eq_prices": {
     "5": 0.020862743179042985,
     "14": 0.011737664888741704,
@@ -78,7 +65,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 41.186351,
+  "benchmark_eq_emissions": 41.903707,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -313,6 +300,6 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 11.704225,
-  "benchmark_root_value": 1004.0989
+  "benchmark_mcw_emissions": 11.958917,
+  "benchmark_root_value": 1004.178
 }

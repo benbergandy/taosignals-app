@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-14T12:04:47.157362+00:00",
-  "date": "2026-06-14",
+  "generated_at": "2026-06-15T12:05:20.673243+00:00",
+  "date": "2026-06-15",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -16,19 +16,8 @@
     },
     "core": {
       "tao": 800.0,
-      "n_positions": 1,
-      "positions": [
-        {
-          "netuid": 41,
-          "name": "Almanac",
-          "tao": 800.0,
-          "score": 0.2781379538329372,
-          "rank": 1,
-          "moving_price": 0.00743851,
-          "tao_in": 15132.1329,
-          "source": "core"
-        }
-      ]
+      "n_positions": 0,
+      "positions": []
     },
     "satellite": {
       "tao": 0.0,
@@ -41,18 +30,7 @@
       "positions": []
     }
   },
-  "positions": {
-    "41": {
-      "netuid": 41,
-      "name": "Almanac",
-      "tao": 800.0,
-      "score": 0.2781379538329372,
-      "rank": 1,
-      "moving_price": 0.00743851,
-      "tao_in": 15132.1329,
-      "source": "core"
-    }
-  },
-  "n_positions_after_merge": 1,
+  "positions": {},
+  "n_positions_after_merge": 0,
   "consensus_picks": []
 }

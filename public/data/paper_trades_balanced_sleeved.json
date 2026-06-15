@@ -875,5 +875,20 @@
     "tao": 400.0,
     "alpha_tokens": 52453.604975,
     "entry_price": 0.00762579
+  },
+  {
+    "date": "2026-06-15",
+    "type": "EXIT",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 423.3613,
+    "alpha_tokens": 52466.286663,
+    "exit_price": 0.00806921,
+    "entry_price": 0.00762579,
+    "entry_date": "2026-06-14",
+    "cost_basis_tao": 400.0,
+    "realized_pnl_tao": 23.3613,
+    "realized_pnl_pct": 5.84,
+    "days_held": 1
   }
 ]
