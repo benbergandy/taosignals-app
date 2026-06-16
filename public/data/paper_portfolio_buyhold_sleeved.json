@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-15T12:05:20.673243+00:00",
-  "date": "2026-06-15",
+  "generated_at": "2026-06-16T12:04:43.629520+00:00",
+  "date": "2026-06-16",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -16,8 +16,19 @@
     },
     "core": {
       "tao": 800.0,
-      "n_positions": 0,
-      "positions": []
+      "n_positions": 1,
+      "positions": [
+        {
+          "netuid": 77,
+          "name": "Liquidity",
+          "tao": 800.0,
+          "score": -0.27731669608500925,
+          "rank": 1,
+          "moving_price": 0.00784805,
+          "tao_in": 14063.4526,
+          "source": "core"
+        }
+      ]
     },
     "satellite": {
       "tao": 0.0,
@@ -30,7 +41,18 @@
       "positions": []
     }
   },
-  "positions": {},
-  "n_positions_after_merge": 0,
+  "positions": {
+    "77": {
+      "netuid": 77,
+      "name": "Liquidity",
+      "tao": 800.0,
+      "score": -0.27731669608500925,
+      "rank": 1,
+      "moving_price": 0.00784805,
+      "tao_in": 14063.4526,
+      "source": "core"
+    }
+  },
+  "n_positions_after_merge": 1,
   "consensus_picks": []
 }
