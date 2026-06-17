@@ -899,5 +899,23 @@
     "tao": 400.0,
     "alpha_tokens": 50457.228155,
     "entry_price": 0.00792751
+  },
+  {
+    "date": "2026-06-17",
+    "type": "DECREASE",
+    "netuid": 77,
+    "name": "Liquidity",
+    "tao_removed": 247.4693,
+    "alpha_removed": 27912.621102,
+    "spot_price": 0.00886586
+  },
+  {
+    "date": "2026-06-17",
+    "type": "ENTRY",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao": 200.0,
+    "alpha_tokens": 14171.174756,
+    "entry_price": 0.01411316
   }
 ]
