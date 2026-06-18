@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-17T12:05:10.037464+00:00",
-  "date": "2026-06-17",
+  "generated_at": "2026-06-18T12:05:17.414646+00:00",
+  "date": "2026-06-18",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -16,26 +16,16 @@
     },
     "core": {
       "tao": 800.0,
-      "n_positions": 2,
+      "n_positions": 1,
       "positions": [
         {
           "netuid": 77,
           "name": "Liquidity",
-          "tao": 400.0,
-          "score": 0.12842012065007188,
+          "tao": 800.0,
+          "score": 0.8691717765590659,
           "rank": 1,
-          "moving_price": 0.00871215,
-          "tao_in": 14903.8157,
-          "source": "core"
-        },
-        {
-          "netuid": 14,
-          "name": "Cacheon",
-          "tao": 400.0,
-          "score": -1.1537411289636612,
-          "rank": 2,
-          "moving_price": 0.0140561,
-          "tao_in": 30734.4428,
+          "moving_price": 0.01019038,
+          "tao_in": 16461.8901,
           "source": "core"
         }
       ]
@@ -55,24 +45,14 @@
     "77": {
       "netuid": 77,
       "name": "Liquidity",
-      "tao": 400.0,
-      "score": 0.12842012065007188,
+      "tao": 800.0,
+      "score": 0.8691717765590659,
       "rank": 1,
-      "moving_price": 0.00871215,
-      "tao_in": 14903.8157,
-      "source": "core"
-    },
-    "14": {
-      "netuid": 14,
-      "name": "Cacheon",
-      "tao": 400.0,
-      "score": -1.1537411289636612,
-      "rank": 2,
-      "moving_price": 0.0140561,
-      "tao_in": 30734.4428,
+      "moving_price": 0.01019038,
+      "tao_in": 16461.8901,
       "source": "core"
     }
   },
-  "n_positions_after_merge": 2,
+  "n_positions_after_merge": 1,
   "consensus_picks": []
 }

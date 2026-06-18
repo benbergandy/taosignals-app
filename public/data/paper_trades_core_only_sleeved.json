@@ -1071,5 +1071,20 @@
     "tao": 425.0,
     "alpha_tokens": 30113.746356,
     "entry_price": 0.01411316
+  },
+  {
+    "date": "2026-06-18",
+    "type": "EXIT",
+    "netuid": 14,
+    "name": "Cacheon",
+    "tao": 454.1278,
+    "alpha_tokens": 30120.435697,
+    "exit_price": 0.01507706,
+    "entry_price": 0.01411316,
+    "entry_date": "2026-06-17",
+    "cost_basis_tao": 425.0,
+    "realized_pnl_tao": 29.1278,
+    "realized_pnl_pct": 6.85,
+    "days_held": 1
   }
 ]
