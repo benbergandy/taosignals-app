@@ -2,22 +2,9 @@
   "start_date": "2026-05-12",
   "profile": "buyhold",
   "total_tao": 1000.0,
-  "root_stake": 200.0122,
-  "accumulated_root_yield": 0.906188,
-  "positions": {
-    "77": {
-      "tao": 533.1097,
-      "name": "Liquidity",
-      "entry_date": "2026-06-16",
-      "entry_price": 0.00792751,
-      "entry_tao": 305.0683,
-      "alpha_tokens": 45158.547204,
-      "accumulated_emission_tokens": 68.549066,
-      "accumulated_emission_tao": 0.707549,
-      "source": "core",
-      "entry_score": -0.27731669608500925
-    }
-  },
+  "root_stake": 200.0121,
+  "accumulated_root_yield": 0.918265,
+  "positions": {},
   "benchmark_eq_prices": {
     "5": 0.020862743179042985,
     "14": 0.011737664888741704,
@@ -78,7 +65,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 45.205336,
+  "benchmark_eq_emissions": 45.695585,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -313,7 +300,7 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 13.108828,
-  "benchmark_root_value": 1004.5391,
-  "free_cash": 831.0047
+  "benchmark_mcw_emissions": 13.290832,
+  "benchmark_root_value": 1004.5997,
+  "free_cash": 1350.2996
 }

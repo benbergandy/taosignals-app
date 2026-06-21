@@ -3,7 +3,7 @@
   "profile": "balanced",
   "total_tao": 1000.0,
   "root_stake": 150.0091,
-  "accumulated_root_yield": 0.425293,
+  "accumulated_root_yield": 0.434351,
   "positions": {
     "12": {
       "netuid": 12,
@@ -16,7 +16,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 86.1802
+      "tao": 85.9666
     },
     "4": {
       "netuid": 4,
@@ -29,7 +29,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 82.0664
+      "tao": 81.916
     },
     "120": {
       "netuid": 120,
@@ -42,7 +42,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 78.046
+      "tao": 77.8528
     },
     "24": {
       "netuid": 24,
@@ -55,7 +55,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 81.6617
+      "tao": 84.5388
     },
     "85": {
       "netuid": 85,
@@ -68,19 +68,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 77.8697
-    },
-    "77": {
-      "tao": 266.5585,
-      "name": "Liquidity",
-      "entry_date": "2026-06-16",
-      "entry_price": 0.00792751,
-      "entry_tao": 152.5307,
-      "alpha_tokens": 22579.582535,
-      "accumulated_emission_tokens": 34.975482,
-      "accumulated_emission_tao": 0.360732,
-      "source": "core",
-      "entry_score": -0.27731669608500925
+      "tao": 76.0962
     }
   },
   "benchmark_eq_prices": {
@@ -142,7 +130,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 24.227201,
+  "benchmark_eq_emissions": 24.583928,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -373,7 +361,7 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 7.06348,
-  "benchmark_root_value": 1002.838,
-  "free_cash": 372.916
+  "benchmark_mcw_emissions": 7.161531,
+  "benchmark_root_value": 1002.8985,
+  "free_cash": 632.5682
 }

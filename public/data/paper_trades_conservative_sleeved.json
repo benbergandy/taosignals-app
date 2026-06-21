@@ -788,5 +788,20 @@
     "realized_pnl_tao": 20.5611,
     "realized_pnl_pct": 6.85,
     "days_held": 1
+  },
+  {
+    "date": "2026-06-21",
+    "type": "EXIT",
+    "netuid": 77,
+    "name": "Liquidity",
+    "tao": 389.4747,
+    "alpha_tokens": 33879.695766,
+    "exit_price": 0.01149581,
+    "entry_price": 0.00792751,
+    "entry_date": "2026-06-16",
+    "cost_basis_tao": 228.7987,
+    "realized_pnl_tao": 160.676,
+    "realized_pnl_pct": 70.23,
+    "days_held": 5
   }
 ]
