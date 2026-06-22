@@ -3,7 +3,7 @@
   "profile": "aggressive",
   "total_tao": 1000.0,
   "root_stake": 50.003,
-  "accumulated_root_yield": 0.144791,
+  "accumulated_root_yield": 0.147827,
   "positions": {
     "12": {
       "netuid": 12,
@@ -16,7 +16,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 143.2776
+      "tao": 143.2623
     },
     "4": {
       "netuid": 4,
@@ -29,7 +29,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 137.2673
+      "tao": 136.5431
     },
     "120": {
       "netuid": 120,
@@ -42,7 +42,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 130.4486
+      "tao": 131.0837
     },
     "24": {
       "netuid": 24,
@@ -55,7 +55,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 140.898
+      "tao": 138.7563
     },
     "85": {
       "netuid": 85,
@@ -68,7 +68,7 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 126.827
+      "tao": 130.9592
     }
   },
   "benchmark_eq_prices": {
@@ -130,7 +130,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 24.583928,
+  "benchmark_eq_emissions": 24.831028,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -361,7 +361,7 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 7.161531,
-  "benchmark_root_value": 1002.8985,
+  "benchmark_mcw_emissions": 7.260855,
+  "benchmark_root_value": 1002.9594,
   "free_cash": 282.1708
 }
