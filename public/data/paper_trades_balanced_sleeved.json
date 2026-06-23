@@ -947,5 +947,38 @@
     "realized_pnl_tao": 107.1215,
     "realized_pnl_pct": 70.23,
     "days_held": 5
+  },
+  {
+    "date": "2026-06-23",
+    "type": "EXIT",
+    "netuid": 120,
+    "name": "Affine",
+    "tao": 85.7496,
+    "alpha_tokens": 1466.013307,
+    "exit_price": 0.05849171,
+    "entry_price": 0.06463088,
+    "entry_date": "2026-05-24",
+    "cost_basis_tao": 94.5519,
+    "realized_pnl_tao": -8.8023,
+    "realized_pnl_pct": -9.31,
+    "days_held": 30
+  },
+  {
+    "date": "2026-06-23",
+    "type": "ENTRY",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 400.0,
+    "alpha_tokens": 57550.762549,
+    "entry_price": 0.00695039
+  },
+  {
+    "date": "2026-06-23",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 90.0,
+    "alpha_tokens": 15280.087503,
+    "entry_price": 0.00589002
   }
 ]

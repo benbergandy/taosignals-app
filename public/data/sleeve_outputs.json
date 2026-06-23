@@ -1,102 +1,102 @@
 {
-  "date": "2026-06-22",
-  "generated_at": "2026-06-22T12:05:12.822228+00:00",
+  "date": "2026-06-23",
+  "generated_at": "2026-06-23T12:05:49.462509+00:00",
   "filter_universe_size": 38,
   "sleeves": {
     "satellite": {
       "model": "vsat_combined_score",
       "universe_filter": "top 30% by tao_in (output filter only)",
-      "scored_universe_size": 32,
+      "scored_universe_size": 37,
       "n_picks_held": null,
       "picks": [
         {
           "netuid": 12,
           "name": "Compute Horde",
-          "score": 0.7233440503906717,
+          "score": 0.7260885620035402,
           "rank": 1,
-          "tao_in": 13940.3522,
-          "moving_price": 0.00579596,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 4,
-          "name": "Targon",
-          "score": 0.5651439163025419,
-          "rank": 2,
-          "tao_in": 124610.4267,
-          "moving_price": 0.04927749,
+          "tao_in": 13901.6092,
+          "moving_price": 0.00577753,
           "emission_share_pct": 0.0
         },
         {
           "netuid": 24,
           "name": "Quasar",
-          "score": 0.48883232296907103,
-          "rank": 3,
-          "tao_in": 12563.2955,
-          "moving_price": 0.00907523,
+          "score": 0.48785344760440563,
+          "rank": 2,
+          "tao_in": 13214.7889,
+          "moving_price": 0.00927973,
           "emission_share_pct": 0.0
+        },
+        {
+          "netuid": 4,
+          "name": "Targon",
+          "score": 0.4857830295385245,
+          "rank": 3,
+          "tao_in": 128152.0015,
+          "moving_price": 0.05119591,
+          "emission_share_pct": 4.4174
         },
         {
           "netuid": 85,
           "name": "Vidaio",
-          "score": 0.4163855524075162,
+          "score": 0.416880945392227,
           "rank": 4,
-          "tao_in": 14331.4117,
-          "moving_price": 0.00693292,
-          "emission_share_pct": 0.0
+          "tao_in": 14523.9002,
+          "moving_price": 0.00725115,
+          "emission_share_pct": 0.6205
         },
         {
-          "netuid": 120,
-          "name": "Affine",
-          "score": 0.37342355368443164,
+          "netuid": 33,
+          "name": "ReadyAI",
+          "score": 0.40899263758086996,
           "rank": 5,
-          "tao_in": 75250.5004,
-          "moving_price": 0.05332442,
-          "emission_share_pct": 0.0
+          "tao_in": 15889.1175,
+          "moving_price": 0.00599665,
+          "emission_share_pct": 0.2489
         },
         {
           "netuid": 19,
           "name": "blockmachine",
-          "score": 0.3265273045124567,
+          "score": 0.3236583729020515,
           "rank": 6,
-          "tao_in": 33687.1393,
-          "moving_price": 0.01126543,
-          "emission_share_pct": 0.0
+          "tao_in": 33470.6647,
+          "moving_price": 0.01120661,
+          "emission_share_pct": 0.071
         },
         {
-          "netuid": 53,
-          "name": "EfficientFrontier",
-          "score": 0.2127556327696929,
+          "netuid": 120,
+          "name": "Affine",
+          "score": 0.26792843966708735,
           "rank": 7,
-          "tao_in": 13683.1896,
-          "moving_price": 0.00502939,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 51,
-          "name": "lium.io",
-          "score": 0.2007515095184857,
-          "rank": 8,
-          "tao_in": 107889.8851,
-          "moving_price": 0.04543669,
-          "emission_share_pct": 0.0
+          "tao_in": 78812.2125,
+          "moving_price": 0.05685592,
+          "emission_share_pct": 7.1201
         },
         {
           "netuid": 17,
           "name": "404\u2014GEN",
-          "score": 0.19797823586715269,
-          "rank": 9,
-          "tao_in": 25654.8427,
-          "moving_price": 0.00967505,
-          "emission_share_pct": 0.0
+          "score": 0.25995910369387737,
+          "rank": 8,
+          "tao_in": 25639.2609,
+          "moving_price": 0.00962528,
+          "emission_share_pct": 0.8497
         },
         {
           "netuid": 39,
           "name": "deprecated",
-          "score": 0.18972732976594497,
+          "score": 0.2599220794528539,
+          "rank": 9,
+          "tao_in": 16535.7808,
+          "moving_price": 0.0062932,
+          "emission_share_pct": 0.3211
+        },
+        {
+          "netuid": 53,
+          "name": "EfficientFrontier",
+          "score": 0.20445656519963679,
           "rank": 10,
-          "tao_in": 16620.0796,
-          "moving_price": 0.00632731,
+          "tao_in": 13648.2132,
+          "moving_price": 0.00501654,
           "emission_share_pct": 0.0
         }
       ],
@@ -104,289 +104,334 @@
         {
           "netuid": 12,
           "name": "Compute Horde",
-          "score": 0.7233440503906717,
+          "score": 0.7260885620035402,
           "rank": 1,
-          "tao_in": 13940.3522,
-          "moving_price": 0.00579596,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 4,
-          "name": "Targon",
-          "score": 0.5651439163025419,
-          "rank": 2,
-          "tao_in": 124610.4267,
-          "moving_price": 0.04927749,
+          "tao_in": 13901.6092,
+          "moving_price": 0.00577753,
           "emission_share_pct": 0.0
         },
         {
           "netuid": 24,
           "name": "Quasar",
-          "score": 0.48883232296907103,
-          "rank": 3,
-          "tao_in": 12563.2955,
-          "moving_price": 0.00907523,
+          "score": 0.48785344760440563,
+          "rank": 2,
+          "tao_in": 13214.7889,
+          "moving_price": 0.00927973,
           "emission_share_pct": 0.0
+        },
+        {
+          "netuid": 4,
+          "name": "Targon",
+          "score": 0.4857830295385245,
+          "rank": 3,
+          "tao_in": 128152.0015,
+          "moving_price": 0.05119591,
+          "emission_share_pct": 4.4174
         },
         {
           "netuid": 85,
           "name": "Vidaio",
-          "score": 0.4163855524075162,
+          "score": 0.416880945392227,
           "rank": 4,
-          "tao_in": 14331.4117,
-          "moving_price": 0.00693292,
-          "emission_share_pct": 0.0
+          "tao_in": 14523.9002,
+          "moving_price": 0.00725115,
+          "emission_share_pct": 0.6205
         },
         {
-          "netuid": 120,
-          "name": "Affine",
-          "score": 0.37342355368443164,
+          "netuid": 33,
+          "name": "ReadyAI",
+          "score": 0.40899263758086996,
           "rank": 5,
-          "tao_in": 75250.5004,
-          "moving_price": 0.05332442,
-          "emission_share_pct": 0.0
+          "tao_in": 15889.1175,
+          "moving_price": 0.00599665,
+          "emission_share_pct": 0.2489
         },
         {
           "netuid": 19,
           "name": "blockmachine",
-          "score": 0.3265273045124567,
+          "score": 0.3236583729020515,
           "rank": 6,
-          "tao_in": 33687.1393,
-          "moving_price": 0.01126543,
-          "emission_share_pct": 0.0
+          "tao_in": 33470.6647,
+          "moving_price": 0.01120661,
+          "emission_share_pct": 0.071
         },
         {
-          "netuid": 53,
-          "name": "EfficientFrontier",
-          "score": 0.2127556327696929,
+          "netuid": 120,
+          "name": "Affine",
+          "score": 0.26792843966708735,
           "rank": 7,
-          "tao_in": 13683.1896,
-          "moving_price": 0.00502939,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 51,
-          "name": "lium.io",
-          "score": 0.2007515095184857,
-          "rank": 8,
-          "tao_in": 107889.8851,
-          "moving_price": 0.04543669,
-          "emission_share_pct": 0.0
+          "tao_in": 78812.2125,
+          "moving_price": 0.05685592,
+          "emission_share_pct": 7.1201
         },
         {
           "netuid": 17,
           "name": "404\u2014GEN",
-          "score": 0.19797823586715269,
-          "rank": 9,
-          "tao_in": 25654.8427,
-          "moving_price": 0.00967505,
-          "emission_share_pct": 0.0
+          "score": 0.25995910369387737,
+          "rank": 8,
+          "tao_in": 25639.2609,
+          "moving_price": 0.00962528,
+          "emission_share_pct": 0.8497
         },
         {
           "netuid": 39,
           "name": "deprecated",
-          "score": 0.18972732976594497,
+          "score": 0.2599220794528539,
+          "rank": 9,
+          "tao_in": 16535.7808,
+          "moving_price": 0.0062932,
+          "emission_share_pct": 0.3211
+        },
+        {
+          "netuid": 53,
+          "name": "EfficientFrontier",
+          "score": 0.20445656519963679,
           "rank": 10,
-          "tao_in": 16620.0796,
-          "moving_price": 0.00632731,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 52,
-          "name": "Dojo",
-          "score": 0.14334644500806848,
-          "rank": 11,
-          "tao_in": 18750.5507,
-          "moving_price": 0.00692224,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 5,
-          "name": "Hone",
-          "score": 0.1412542908859732,
-          "rank": 12,
-          "tao_in": 36488.4116,
-          "moving_price": 0.01576441,
+          "tao_in": 13648.2132,
+          "moving_price": 0.00501654,
           "emission_share_pct": 0.0
         },
         {
           "netuid": 11,
           "name": "TrajectoryRL",
-          "score": 0.11599531873790658,
+          "score": 0.19011540597266802,
+          "rank": 11,
+          "tao_in": 20633.5927,
+          "moving_price": 0.00898322,
+          "emission_share_pct": 0.7696
+        },
+        {
+          "netuid": 13,
+          "name": "Data Universe",
+          "score": 0.14593911629856188,
+          "rank": 12,
+          "tao_in": 22105.6841,
+          "moving_price": 0.00699439,
+          "emission_share_pct": 0.6046
+        },
+        {
+          "netuid": 64,
+          "name": "Chutes",
+          "score": 0.13587001827877693,
           "rank": 13,
-          "tao_in": 21103.2513,
-          "moving_price": 0.00912539,
+          "tao_in": 200970.207,
+          "moving_price": 0.07141261,
+          "emission_share_pct": 6.3447
+        },
+        {
+          "netuid": 52,
+          "name": "Dojo",
+          "score": 0.13391405085441546,
+          "rank": 14,
+          "tao_in": 18705.4941,
+          "moving_price": 0.00691087,
           "emission_share_pct": 0.0
+        },
+        {
+          "netuid": 5,
+          "name": "Hone",
+          "score": 0.13307248471910305,
+          "rank": 15,
+          "tao_in": 35108.1502,
+          "moving_price": 0.01495829,
+          "emission_share_pct": 0.0
+        },
+        {
+          "netuid": 34,
+          "name": "BitMind",
+          "score": 0.10548570324223436,
+          "rank": 16,
+          "tao_in": 34568.645,
+          "moving_price": 0.01245796,
+          "emission_share_pct": 1.1544
         },
         {
           "netuid": 3,
           "name": "deprecated",
-          "score": 0.020511037954305894,
-          "rank": 14,
-          "tao_in": 66744.8803,
-          "moving_price": 0.02138059,
-          "emission_share_pct": 0.0
+          "score": 0.10367433100644813,
+          "rank": 17,
+          "tao_in": 66848.025,
+          "moving_price": 0.02135757,
+          "emission_share_pct": 1.8693
         },
         {
           "netuid": 8,
           "name": "Vanta",
-          "score": 0.019400056662244106,
-          "rank": 15,
-          "tao_in": 81328.6553,
-          "moving_price": 0.03061317,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 68,
-          "name": "NOVA",
-          "score": -0.03206903382763691,
-          "rank": 16,
-          "tao_in": 42026.7679,
-          "moving_price": 0.02139451,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 1,
-          "name": "Apex",
-          "score": -0.033998443739460274,
-          "rank": 17,
-          "tao_in": 26786.5563,
-          "moving_price": 0.00908209,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 44,
-          "name": "Score",
-          "score": -0.04259508661384502,
+          "score": 0.0880996100443929,
           "rank": 18,
-          "tao_in": 64170.6063,
-          "moving_price": 0.03792725,
-          "emission_share_pct": 0.0
+          "tao_in": 82025.8664,
+          "moving_price": 0.03082511,
+          "emission_share_pct": 0.2652
         },
         {
           "netuid": 56,
           "name": "Gradients",
-          "score": -0.04392087401454575,
+          "score": 0.019857300243750015,
           "rank": 19,
-          "tao_in": 54438.2976,
-          "moving_price": 0.0190554,
-          "emission_share_pct": 0.0
+          "tao_in": 54208.3587,
+          "moving_price": 0.0189538,
+          "emission_share_pct": 1.6532
+        },
+        {
+          "netuid": 68,
+          "name": "NOVA",
+          "score": -0.003805752127533993,
+          "rank": 20,
+          "tao_in": 42559.5619,
+          "moving_price": 0.02225114,
+          "emission_share_pct": 1.9849
+        },
+        {
+          "netuid": 51,
+          "name": "lium.io",
+          "score": -0.009283583218866395,
+          "rank": 21,
+          "tao_in": 117178.7127,
+          "moving_price": 0.05155449,
+          "emission_share_pct": 4.7695
+        },
+        {
+          "netuid": 75,
+          "name": "Hippius",
+          "score": -0.011968375773012768,
+          "rank": 22,
+          "tao_in": 33107.2641,
+          "moving_price": 0.01720751,
+          "emission_share_pct": 0.2156
+        },
+        {
+          "netuid": 63,
+          "name": "Enigma",
+          "score": -0.022616707506045653,
+          "rank": 23,
+          "tao_in": 14468.9405,
+          "moving_price": 0.0080255,
+          "emission_share_pct": 0.7037
+        },
+        {
+          "netuid": 1,
+          "name": "Apex",
+          "score": -0.02397933944705658,
+          "rank": 24,
+          "tao_in": 27083.7666,
+          "moving_price": 0.00935165,
+          "emission_share_pct": 0.2381
+        },
+        {
+          "netuid": 44,
+          "name": "Score",
+          "score": -0.025198759332340483,
+          "rank": 25,
+          "tao_in": 64425.787,
+          "moving_price": 0.03909146,
+          "emission_share_pct": 3.3939
+        },
+        {
+          "netuid": 46,
+          "name": "Zipcode",
+          "score": -0.03786186838003814,
+          "rank": 26,
+          "tao_in": 12429.1037,
+          "moving_price": 0.00792675,
+          "emission_share_pct": 0.7139
+        },
+        {
+          "netuid": 41,
+          "name": "Almanac",
+          "score": -0.08041148462225348,
+          "rank": 27,
+          "tao_in": 14506.066,
+          "moving_price": 0.00689585,
+          "emission_share_pct": 0.6414
         },
         {
           "netuid": 10,
           "name": "Swap",
-          "score": -0.07642206180497212,
-          "rank": 20,
-          "tao_in": 15347.0714,
-          "moving_price": 0.00552819,
+          "score": -0.08904742688528552,
+          "rank": 28,
+          "tao_in": 15885.7767,
+          "moving_price": 0.00581811,
           "emission_share_pct": 0.0
         },
         {
           "netuid": 14,
           "name": "Cacheon",
-          "score": -0.08287600267411957,
-          "rank": 21,
-          "tao_in": 28592.8487,
-          "moving_price": 0.01223128,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 63,
-          "name": "Enigma",
-          "score": -0.08635633286530713,
-          "rank": 22,
-          "tao_in": 14596.7644,
-          "moving_price": 0.0081135,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 41,
-          "name": "Almanac",
-          "score": -0.0948234355863948,
-          "rank": 23,
-          "tao_in": 14380.4648,
-          "moving_price": 0.00697875,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 46,
-          "name": "Zipcode",
-          "score": -0.12899837046225904,
-          "rank": 24,
-          "tao_in": 12697.3573,
-          "moving_price": 0.00839555,
+          "score": -0.08975349348243848,
+          "rank": 29,
+          "tao_in": 26856.5331,
+          "moving_price": 0.0110621,
           "emission_share_pct": 0.0
         },
         {
           "netuid": 81,
           "name": "deprecated",
-          "score": -0.17182159513651843,
-          "rank": 25,
-          "tao_in": 18809.3307,
-          "moving_price": 0.00725581,
-          "emission_share_pct": 0.0
+          "score": -0.1155150147417485,
+          "rank": 30,
+          "tao_in": 18732.2397,
+          "moving_price": 0.00722878,
+          "emission_share_pct": 0.6944
         },
         {
           "netuid": 93,
           "name": "Bitcast",
-          "score": -0.30253709818998603,
-          "rank": 26,
-          "tao_in": 18159.1058,
-          "moving_price": 0.01241309,
-          "emission_share_pct": 0.0
-        },
-        {
-          "netuid": 95,
-          "name": "Actual",
-          "score": -0.317979788040834,
-          "rank": 27,
-          "tao_in": 30530.2944,
-          "moving_price": 0.04991079,
-          "emission_share_pct": 21.1194
+          "score": -0.25403440870765726,
+          "rank": 31,
+          "tao_in": 18063.7803,
+          "moving_price": 0.01215905,
+          "emission_share_pct": 0.776
         },
         {
           "netuid": 18,
           "name": "Zeus",
-          "score": -0.3476138796797753,
-          "rank": 28,
-          "tao_in": 13766.8513,
-          "moving_price": 0.00787849,
+          "score": -0.31688510965339506,
+          "rank": 32,
+          "tao_in": 14205.6811,
+          "moving_price": 0.00819254,
+          "emission_share_pct": 0.7673
+        },
+        {
+          "netuid": 95,
+          "name": "Actual",
+          "score": -0.3320259547710145,
+          "rank": 33,
+          "tao_in": 28749.2736,
+          "moving_price": 0.04743763,
           "emission_share_pct": 0.0
         },
         {
           "netuid": 43,
           "name": "Graphite",
-          "score": -0.34956779238637514,
-          "rank": 29,
-          "tao_in": 14659.1775,
-          "moving_price": 0.00563219,
+          "score": -0.37139874392851974,
+          "rank": 34,
+          "tao_in": 14645.7553,
+          "moving_price": 0.00561969,
           "emission_share_pct": 0.0
         },
         {
           "netuid": 77,
           "name": "Liquidity",
-          "score": -0.4543995998184024,
-          "rank": 30,
-          "tao_in": 17071.0405,
-          "moving_price": 0.01146041,
+          "score": -0.4697514395338916,
+          "rank": 35,
+          "tao_in": 14224.9118,
+          "moving_price": 0.00893148,
           "emission_share_pct": 0.0
         },
         {
           "netuid": 9,
           "name": "iota",
-          "score": -0.4978580420548154,
-          "rank": 31,
-          "tao_in": 60961.1753,
-          "moving_price": 0.03356672,
-          "emission_share_pct": 13.861
+          "score": -0.5039636889911571,
+          "rank": 36,
+          "tao_in": 62513.3874,
+          "moving_price": 0.03642535,
+          "emission_share_pct": 2.393
         },
         {
           "netuid": 28,
           "name": "gm",
-          "score": -0.5537933754096992,
-          "rank": 32,
-          "tao_in": 19423.6733,
-          "moving_price": 0.01776536,
+          "score": -0.5643688294328592,
+          "rank": 37,
+          "tao_in": 18903.2482,
+          "moving_price": 0.01685889,
           "emission_share_pct": 0.0
         }
       ]
@@ -394,15 +439,35 @@
     "core": {
       "model": "core_v3_pca_var_weighted",
       "universe_filter": "top 30% by tao_in",
-      "scored_universe_size": 0,
+      "scored_universe_size": 1,
       "n_picks_held": 5,
       "exit_rules": {
         "rank_threshold": 25,
         "score_drop_sigma": 1.0,
         "liquidity_percentile": 30
       },
-      "picks": [],
-      "full_score_table": []
+      "picks": [
+        {
+          "netuid": 41,
+          "name": "Almanac",
+          "score": -0.5608515260435422,
+          "rank": 1,
+          "tao_in": 14506.066,
+          "moving_price": 0.00689585,
+          "emission_share_pct": 0.6414
+        }
+      ],
+      "full_score_table": [
+        {
+          "netuid": 41,
+          "name": "Almanac",
+          "score": -0.5608515260435422,
+          "rank": 1,
+          "tao_in": 14506.066,
+          "moving_price": 0.00689585,
+          "emission_share_pct": 0.6414
+        }
+      ]
     },
     "deep_liquidity": {
       "model": "buy_and_hold_top_tao_in",
@@ -415,55 +480,55 @@
           "name": "Chutes",
           "score": 0.0,
           "rank": 1,
-          "tao_in": 186526.5848,
-          "moving_price": 0.06429091,
-          "emission_share_pct": 0.0,
+          "tao_in": 200970.207,
+          "moving_price": 0.07141261,
+          "emission_share_pct": 6.3447,
           "inception_tao_in": 197354.067,
-          "tao_in_drift_pct": -5.5
+          "tao_in_drift_pct": 1.8
         },
         {
           "netuid": 4,
           "name": "Targon",
           "score": 0.0,
           "rank": 2,
-          "tao_in": 124610.4267,
-          "moving_price": 0.04927749,
-          "emission_share_pct": 0.0,
+          "tao_in": 128152.0015,
+          "moving_price": 0.05119591,
+          "emission_share_pct": 4.4174,
           "inception_tao_in": 129965.3828,
-          "tao_in_drift_pct": -4.1
+          "tao_in_drift_pct": -1.4
         },
         {
           "netuid": 51,
           "name": "lium.io",
           "score": 0.0,
           "rank": 3,
-          "tao_in": 107889.8851,
-          "moving_price": 0.04543669,
-          "emission_share_pct": 0.0,
+          "tao_in": 117178.7127,
+          "moving_price": 0.05155449,
+          "emission_share_pct": 4.7695,
           "inception_tao_in": 121430.023,
-          "tao_in_drift_pct": -11.2
+          "tao_in_drift_pct": -3.5
         },
         {
           "netuid": 8,
           "name": "Vanta",
           "score": 0.0,
           "rank": 4,
-          "tao_in": 81328.6553,
-          "moving_price": 0.03061317,
-          "emission_share_pct": 0.0,
+          "tao_in": 82025.8664,
+          "moving_price": 0.03082511,
+          "emission_share_pct": 0.2652,
           "inception_tao_in": 85359.9499,
-          "tao_in_drift_pct": -4.7
+          "tao_in_drift_pct": -3.9
         },
         {
           "netuid": 120,
           "name": "Affine",
           "score": 0.0,
           "rank": 5,
-          "tao_in": 75250.5004,
-          "moving_price": 0.05332442,
-          "emission_share_pct": 0.0,
+          "tao_in": 78812.2125,
+          "moving_price": 0.05685592,
+          "emission_share_pct": 7.1201,
           "inception_tao_in": 84561.9962,
-          "tao_in_drift_pct": -11.0
+          "tao_in_drift_pct": -6.8
         }
       ]
     },
