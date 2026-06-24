@@ -962,5 +962,29 @@
     "tao": 50.0,
     "alpha_tokens": 8488.937502,
     "entry_price": 0.00589002
+  },
+  {
+    "date": "2026-06-24",
+    "type": "EXIT",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 647.0355,
+    "alpha_tokens": 86332.410758,
+    "exit_price": 0.0074947,
+    "entry_price": 0.00695039,
+    "entry_date": "2026-06-23",
+    "cost_basis_tao": 600.0,
+    "realized_pnl_tao": 47.0355,
+    "realized_pnl_pct": 7.84,
+    "days_held": 1
+  },
+  {
+    "date": "2026-06-24",
+    "type": "ENTRY",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 600.0,
+    "alpha_tokens": 27096.156977,
+    "entry_price": 0.02214336
   }
 ]

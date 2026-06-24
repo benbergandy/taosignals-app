@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T12:05:49.603237+00:00",
-  "date": "2026-06-23",
+  "generated_at": "2026-06-24T12:05:53.843980+00:00",
+  "date": "2026-06-24",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -19,13 +19,13 @@
       "n_positions": 1,
       "positions": [
         {
-          "netuid": 41,
-          "name": "Almanac",
+          "netuid": 68,
+          "name": "NOVA",
           "tao": 850.0,
-          "score": -0.5608515260435422,
+          "score": -0.6818942773420269,
           "rank": 1,
-          "moving_price": 0.00689585,
-          "tao_in": 14506.066,
+          "moving_price": 0.022147,
+          "tao_in": 42792.4025,
           "source": "core"
         }
       ]
@@ -42,14 +42,14 @@
     }
   },
   "positions": {
-    "41": {
-      "netuid": 41,
-      "name": "Almanac",
+    "68": {
+      "netuid": 68,
+      "name": "NOVA",
       "tao": 850.0,
-      "score": -0.5608515260435422,
+      "score": -0.6818942773420269,
       "rank": 1,
-      "moving_price": 0.00689585,
-      "tao_in": 14506.066,
+      "moving_price": 0.022147,
+      "tao_in": 42792.4025,
       "source": "core"
     }
   },

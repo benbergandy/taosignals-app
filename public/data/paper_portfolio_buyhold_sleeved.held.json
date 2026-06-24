@@ -2,20 +2,20 @@
   "start_date": "2026-05-12",
   "profile": "buyhold",
   "total_tao": 1000.0,
-  "root_stake": 200.0167,
-  "accumulated_root_yield": 0.947136,
+  "root_stake": 200.0176,
+  "accumulated_root_yield": 0.964701,
   "positions": {
-    "41": {
+    "68": {
       "tao": 800.0,
-      "name": "Almanac",
-      "entry_date": "2026-06-23",
-      "entry_price": 0.00695039,
+      "name": "NOVA",
+      "entry_date": "2026-06-24",
+      "entry_price": 0.02214336,
       "entry_tao": 800.0,
-      "alpha_tokens": 115101.525097,
+      "alpha_tokens": 36128.209303,
       "accumulated_emission_tokens": 0.0,
       "accumulated_emission_tao": 0.0,
       "source": "core",
-      "entry_score": -0.5608515260435422
+      "entry_score": -0.6818942773420269
     }
   },
   "benchmark_eq_prices": {
@@ -78,7 +78,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 46.448074,
+  "benchmark_eq_emissions": 46.871663,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -313,7 +313,7 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 13.519129,
-  "benchmark_root_value": 1004.7447,
-  "free_cash": 550.2996
+  "benchmark_mcw_emissions": 13.75233,
+  "benchmark_root_value": 1004.8329,
+  "free_cash": 613.0128
 }
