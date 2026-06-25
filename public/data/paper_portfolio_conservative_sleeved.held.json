@@ -2,8 +2,8 @@
   "start_date": "2026-05-24",
   "profile": "conservative",
   "total_tao": 1000.0,
-  "root_stake": 300.0263,
-  "accumulated_root_yield": 0.938285,
+  "root_stake": 300.0277,
+  "accumulated_root_yield": 0.965985,
   "positions": {
     "12": {
       "netuid": 12,
@@ -16,70 +16,58 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 19.0097
+      "tao": 19.0292
     },
     "4": {
       "netuid": 4,
       "name": "Targon",
-      "alpha_tokens": 367.211708,
+      "alpha_tokens": 367.233084,
       "entry_price": 0.0565114,
       "entry_date": "2026-05-24",
       "entry_tao": 24.2154,
-      "accumulated_emission_tokens": 0.04221,
-      "accumulated_emission_tao": 0.002235,
+      "accumulated_emission_tokens": 0.063586,
+      "accumulated_emission_tao": 0.003398,
       "source": "",
       "entry_score": null,
-      "tao": 19.8048
+      "tao": 19.9816
     },
     "24": {
       "netuid": 24,
       "name": "Quasar",
-      "alpha_tokens": 2061.62612,
+      "alpha_tokens": 2061.855061,
       "entry_price": 0.00970212,
       "entry_date": "2026-06-09",
       "entry_tao": 20.0,
-      "accumulated_emission_tokens": 0.221485,
-      "accumulated_emission_tao": 0.002139,
+      "accumulated_emission_tokens": 0.450426,
+      "accumulated_emission_tao": 0.004508,
       "source": "",
       "entry_score": null,
-      "tao": 19.9077
+      "tao": 21.3379
     },
     "85": {
       "netuid": 85,
       "name": "Vidaio",
-      "alpha_tokens": 2489.133409,
+      "alpha_tokens": 2489.168516,
       "entry_price": 0.00803562,
       "entry_date": "2026-06-12",
       "entry_tao": 20.0,
-      "accumulated_emission_tokens": 0.216622,
-      "accumulated_emission_tao": 0.001551,
+      "accumulated_emission_tokens": 0.251729,
+      "accumulated_emission_tao": 0.001807,
       "source": "",
       "entry_score": null,
-      "tao": 17.3961
+      "tao": 18.1363
     },
     "33": {
-      "tao": 20.0129,
+      "tao": 20.1933,
       "name": "ReadyAI",
       "entry_date": "2026-06-23",
       "entry_price": 0.00589002,
       "entry_tao": 20.0,
-      "alpha_tokens": 3395.655477,
-      "accumulated_emission_tokens": 0.080476,
-      "accumulated_emission_tao": 0.000474,
+      "alpha_tokens": 3395.724335,
+      "accumulated_emission_tokens": 0.149334,
+      "accumulated_emission_tao": 0.000883,
       "source": "satellite",
       "entry_score": 0.40899263758086996
-    },
-    "68": {
-      "tao": 600.0,
-      "name": "NOVA",
-      "entry_date": "2026-06-24",
-      "entry_price": 0.02214336,
-      "entry_tao": 600.0,
-      "alpha_tokens": 27096.156977,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
-      "source": "core",
-      "entry_score": -0.6818942773420269
     }
   },
   "benchmark_eq_prices": {
@@ -141,7 +129,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 25.572516,
+  "benchmark_eq_emissions": 25.838939,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -372,7 +360,7 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 7.501357,
-  "benchmark_root_value": 1003.1314,
-  "free_cash": 430.5284
+  "benchmark_mcw_emissions": 7.609475,
+  "benchmark_root_value": 1003.224,
+  "free_cash": 1026.1573
 }

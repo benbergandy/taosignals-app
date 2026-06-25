@@ -1134,5 +1134,20 @@
     "tao": 800.0,
     "alpha_tokens": 36128.209303,
     "entry_price": 0.02214336
+  },
+  {
+    "date": "2026-06-25",
+    "type": "EXIT",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 794.1716,
+    "alpha_tokens": 36130.941872,
+    "exit_price": 0.02198037,
+    "entry_price": 0.02214336,
+    "entry_date": "2026-06-24",
+    "cost_basis_tao": 800.0,
+    "realized_pnl_tao": -5.8284,
+    "realized_pnl_pct": -0.73,
+    "days_held": 1
   }
 ]

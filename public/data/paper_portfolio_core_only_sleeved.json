@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-24T12:05:53.843980+00:00",
-  "date": "2026-06-24",
+  "generated_at": "2026-06-25T12:05:19.956898+00:00",
+  "date": "2026-06-25",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -16,19 +16,8 @@
     },
     "core": {
       "tao": 850.0,
-      "n_positions": 1,
-      "positions": [
-        {
-          "netuid": 68,
-          "name": "NOVA",
-          "tao": 850.0,
-          "score": -0.6818942773420269,
-          "rank": 1,
-          "moving_price": 0.022147,
-          "tao_in": 42792.4025,
-          "source": "core"
-        }
-      ]
+      "n_positions": 0,
+      "positions": []
     },
     "satellite": {
       "tao": 0.0,
@@ -41,18 +30,7 @@
       "positions": []
     }
   },
-  "positions": {
-    "68": {
-      "netuid": 68,
-      "name": "NOVA",
-      "tao": 850.0,
-      "score": -0.6818942773420269,
-      "rank": 1,
-      "moving_price": 0.022147,
-      "tao_in": 42792.4025,
-      "source": "core"
-    }
-  },
-  "n_positions_after_merge": 1,
+  "positions": {},
+  "n_positions_after_merge": 0,
   "consensus_picks": []
 }

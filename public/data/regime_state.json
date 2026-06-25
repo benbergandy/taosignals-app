@@ -1,45 +1,45 @@
 {
-  "generated_at": "2026-06-24 12:04 UTC",
-  "date": "2026-06-24",
-  "regime": "NORMAL",
-  "composite_score": 0.575,
+  "generated_at": "2026-06-25 12:04 UTC",
+  "date": "2026-06-25",
+  "regime": "STRESS",
+  "composite_score": 0.615,
   "indicators": {
     "drawdown_velocity": {
       "severity": 1.0,
-      "cum_3d_pct": -125.89,
-      "cum_7d_pct": -133.33,
-      "avg_daily_pct": 61.0557
+      "cum_3d_pct": -82.54,
+      "cum_7d_pct": -135.46,
+      "avg_daily_pct": 59.734
     },
     "correlation_spike": {
-      "severity": 0.6,
-      "recent_corr": 0.2745,
-      "baseline_corr": 0.0339,
-      "spike": 0.2406
+      "severity": 0.8,
+      "recent_corr": 0.3484,
+      "baseline_corr": 0.0333,
+      "spike": 0.3152
     },
     "flow_direction": {
       "severity": 0.8,
-      "avg_net_flow": -0.3569,
+      "avg_net_flow": -0.3437,
       "pct_negative": 100.0
     },
     "pool_drain": {
       "severity": 0,
-      "avg_change_7d_pct": 1.08,
-      "pct_draining": 9.4,
-      "proj_7d_pct": 1.08
+      "avg_change_7d_pct": 2.03,
+      "pct_draining": 10.9,
+      "proj_7d_pct": 2.03
     },
     "breadth": {
       "severity": 0.3,
-      "pct_negative": 71.2,
-      "n_negative": 47,
-      "n_total": 66
+      "pct_negative": 75.0,
+      "n_negative": 48,
+      "n_total": 64
     }
   },
   "adjustments": {
-    "root_stake_increase": 0.0,
-    "max_volatility_multiplier": 1.0,
-    "max_drawdown_multiplier": 1.0,
-    "min_sortino_increase": 0.0,
-    "liquidity_tier_upgrade": 0,
-    "description": "Normal conditions \u2014 portfolio runs as designed"
+    "root_stake_increase": 0.25,
+    "max_volatility_multiplier": 0.5,
+    "max_drawdown_multiplier": 0.5,
+    "min_sortino_increase": 0.5,
+    "liquidity_tier_upgrade": 1,
+    "description": "Market stress \u2014 significant de-risking, quality only"
   }
 }
