@@ -625,5 +625,24 @@
     "benchmark_root": 1003.22,
     "alpha_vs_eq": 36.99,
     "alpha_vs_mcw": 40.99
+  },
+  {
+    "date": "2026-06-26",
+    "profile": "balanced_vsat_sleeved",
+    "model": "vsat_combined_score + core_v3_pca_var_weighted",
+    "portfolio_value": 1405.84,
+    "pnl_tao": 405.84,
+    "pnl_pct": 40.58,
+    "n_positions": 5,
+    "root_stake": 150.01,
+    "free_cash": 1015.1182,
+    "subnet_deployed": 240.7,
+    "n_trades_today": 0,
+    "n_score_drop_exits": 0,
+    "benchmark_eq_weight": 1047.64,
+    "benchmark_mcw": 999.1,
+    "benchmark_root": 1003.32,
+    "alpha_vs_eq": 35.82,
+    "alpha_vs_mcw": 40.67
   }
 ]
