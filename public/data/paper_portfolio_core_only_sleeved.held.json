@@ -3,7 +3,7 @@
   "profile": "core_only",
   "total_tao": 1000.0,
   "root_stake": 150.0153,
-  "accumulated_root_yield": 0.767581,
+  "accumulated_root_yield": 0.782905,
   "positions": {},
   "benchmark_eq_prices": {
     "5": 0.020862743179042985,
@@ -65,7 +65,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 48.281132,
+  "benchmark_eq_emissions": 48.783312,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -300,7 +300,7 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 14.503248,
-  "benchmark_root_value": 1005.1277,
+  "benchmark_mcw_emissions": 14.745286,
+  "benchmark_root_value": 1005.2303,
   "free_cash": 1495.1296
 }
