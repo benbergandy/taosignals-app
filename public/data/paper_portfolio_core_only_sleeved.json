@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-28T12:05:09.475845+00:00",
-  "date": "2026-06-28",
+  "generated_at": "2026-06-29T12:05:22.850837+00:00",
+  "date": "2026-06-29",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -16,8 +16,19 @@
     },
     "core": {
       "tao": 850.0,
-      "n_positions": 0,
-      "positions": []
+      "n_positions": 1,
+      "positions": [
+        {
+          "netuid": 9,
+          "name": "iota",
+          "tao": 850.0,
+          "score": -0.36630457459233245,
+          "rank": 1,
+          "moving_price": 0.03540453,
+          "tao_in": 61380.8868,
+          "source": "core"
+        }
+      ]
     },
     "satellite": {
       "tao": 0.0,
@@ -30,7 +41,18 @@
       "positions": []
     }
   },
-  "positions": {},
-  "n_positions_after_merge": 0,
+  "positions": {
+    "9": {
+      "netuid": 9,
+      "name": "iota",
+      "tao": 850.0,
+      "score": -0.36630457459233245,
+      "rank": 1,
+      "moving_price": 0.03540453,
+      "tao_in": 61380.8868,
+      "source": "core"
+    }
+  },
+  "n_positions_after_merge": 1,
   "consensus_picks": []
 }

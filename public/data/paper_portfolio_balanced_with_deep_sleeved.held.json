@@ -2,8 +2,8 @@
   "start_date": "2026-05-24",
   "profile": "balanced_with_deep",
   "total_tao": 1000.0,
-  "root_stake": 150.0153,
-  "accumulated_root_yield": 0.528543,
+  "root_stake": 150.0148,
+  "accumulated_root_yield": 0.543298,
   "positions": {
     "12": {
       "netuid": 12,
@@ -16,110 +16,122 @@
       "accumulated_emission_tao": 0.0,
       "source": "",
       "entry_score": null,
-      "tao": 47.4604
+      "tao": 47.4662
     },
     "4": {
       "netuid": 4,
       "name": "Targon",
-      "alpha_tokens": 1474.00291,
+      "alpha_tokens": 1474.087382,
       "entry_price": 0.0565114,
       "entry_date": "2026-05-24",
       "entry_tao": 85.7408,
-      "accumulated_emission_tokens": 0.509177,
-      "accumulated_emission_tao": 0.027195,
+      "accumulated_emission_tokens": 0.593649,
+      "accumulated_emission_tao": 0.031684,
       "source": "",
       "entry_score": null,
-      "tao": 78.0871
+      "tao": 78.3281
     },
     "120": {
       "netuid": 120,
       "name": "Affine",
-      "alpha_tokens": 513.266573,
+      "alpha_tokens": 513.340618,
       "entry_price": 0.06463088,
       "entry_date": "2026-05-24",
       "entry_tao": 37.8242,
-      "accumulated_emission_tokens": 0.567765,
-      "accumulated_emission_tao": 0.032335,
+      "accumulated_emission_tokens": 0.64181,
+      "accumulated_emission_tao": 0.036455,
       "source": "",
       "entry_score": null,
-      "tao": 28.9363
+      "tao": 28.5609
     },
     "64": {
       "netuid": 64,
       "name": "Chutes",
-      "alpha_tokens": 415.183226,
+      "alpha_tokens": 415.204914,
       "entry_price": 0.06862279,
       "entry_date": "2026-05-24",
       "entry_tao": 28.4202,
-      "accumulated_emission_tokens": 0.130939,
-      "accumulated_emission_tao": 0.009943,
+      "accumulated_emission_tokens": 0.152627,
+      "accumulated_emission_tao": 0.011577,
       "source": "",
       "entry_score": null,
-      "tao": 31.3228
+      "tao": 31.2765
     },
     "51": {
       "netuid": 51,
       "name": "lium.io",
-      "alpha_tokens": 575.938561,
+      "alpha_tokens": 575.97738,
       "entry_price": 0.05184102,
       "entry_date": "2026-05-24",
       "entry_tao": 29.8327,
-      "accumulated_emission_tokens": 0.232949,
-      "accumulated_emission_tao": 0.012566,
+      "accumulated_emission_tokens": 0.271768,
+      "accumulated_emission_tao": 0.014668,
       "source": "",
       "entry_score": null,
-      "tao": 31.1606
+      "tao": 31.1891
     },
     "8": {
       "netuid": 8,
       "name": "Vanta",
-      "alpha_tokens": 976.23555,
+      "alpha_tokens": 976.243337,
       "entry_price": 0.03232755,
       "entry_date": "2026-05-24",
       "entry_tao": 31.4794,
-      "accumulated_emission_tokens": 0.097726,
-      "accumulated_emission_tao": 0.003008,
+      "accumulated_emission_tokens": 0.105513,
+      "accumulated_emission_tao": 0.003246,
       "source": "",
       "entry_score": null,
-      "tao": 29.9467
+      "tao": 29.8456
     },
     "24": {
       "netuid": 24,
       "name": "Quasar",
-      "alpha_tokens": 5156.295164,
+      "alpha_tokens": 5156.855916,
       "entry_price": 0.00970212,
       "entry_date": "2026-06-09",
       "entry_tao": 50.0,
-      "accumulated_emission_tokens": 2.783577,
-      "accumulated_emission_tao": 0.027296,
+      "accumulated_emission_tokens": 3.344329,
+      "accumulated_emission_tao": 0.032877,
       "source": "",
       "entry_score": null,
-      "tao": 50.5665
+      "tao": 51.3201
     },
     "85": {
       "netuid": 85,
       "name": "Vidaio",
-      "alpha_tokens": 6223.323043,
+      "alpha_tokens": 6223.597657,
       "entry_price": 0.00803562,
       "entry_date": "2026-06-12",
       "entry_tao": 50.0,
-      "accumulated_emission_tokens": 1.031075,
-      "accumulated_emission_tao": 0.007518,
+      "accumulated_emission_tokens": 1.305689,
+      "accumulated_emission_tao": 0.009551,
       "source": "",
       "entry_score": null,
-      "tao": 48.2292
+      "tao": 46.0714
     },
     "33": {
-      "tao": 49.9718,
+      "tao": 50.2817,
       "name": "ReadyAI",
       "entry_date": "2026-06-23",
       "entry_price": 0.00589002,
       "entry_tao": 50.0,
-      "alpha_tokens": 8489.713153,
-      "accumulated_emission_tokens": 0.775651,
-      "accumulated_emission_tao": 0.004576,
+      "alpha_tokens": 8489.844421,
+      "accumulated_emission_tokens": 0.906919,
+      "accumulated_emission_tao": 0.005353,
       "source": "satellite",
       "entry_score": 0.40899263758086996
+    },
+    "9": {
+      "tao": 450.0,
+      "name": "iota",
+      "entry_date": "2026-06-29",
+      "entry_price": 0.03487689,
+      "entry_tao": 450.0,
+      "alpha_tokens": 12902.52496,
+      "accumulated_emission_tokens": 0.0,
+      "accumulated_emission_tao": 0.0,
+      "source": "core",
+      "entry_score": -0.36630457459233245
     }
   },
   "benchmark_eq_prices": {
@@ -181,7 +193,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 26.847781,
+  "benchmark_eq_emissions": 27.188226,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -412,7 +424,7 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 7.964571,
-  "benchmark_root_value": 1003.5283,
-  "free_cash": 753.3444
+  "benchmark_mcw_emissions": 8.076551,
+  "benchmark_root_value": 1003.627,
+  "free_cash": 303.3444
 }
