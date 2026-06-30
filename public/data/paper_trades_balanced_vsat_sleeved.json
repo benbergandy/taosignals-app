@@ -1010,5 +1010,98 @@
     "tao": 600.0,
     "alpha_tokens": 17203.366613,
     "entry_price": 0.03487689
+  },
+  {
+    "date": "2026-06-30",
+    "type": "EXIT",
+    "netuid": 4,
+    "name": "Targon",
+    "tao": 49.7799,
+    "alpha_tokens": 928.585327,
+    "exit_price": 0.05360832,
+    "entry_price": 0.0565114,
+    "entry_date": "2026-05-24",
+    "cost_basis_tao": 55.8337,
+    "realized_pnl_tao": -6.0538,
+    "realized_pnl_pct": -10.84,
+    "days_held": 37
+  },
+  {
+    "date": "2026-06-30",
+    "type": "EXIT",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 589.5195,
+    "alpha_tokens": 17204.01589,
+    "exit_price": 0.03426639,
+    "entry_price": 0.03487689,
+    "entry_date": "2026-06-29",
+    "cost_basis_tao": 600.0,
+    "realized_pnl_tao": -10.4805,
+    "realized_pnl_pct": -1.75,
+    "days_held": 1
+  },
+  {
+    "date": "2026-06-30",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 70.9159,
+    "alpha_added": 8992.145768,
+    "spot_price": 0.00788642
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 120.0,
+    "alpha_tokens": 18049.283518,
+    "entry_price": 0.00664846
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 120.0,
+    "alpha_tokens": 6530.420296,
+    "entry_price": 0.01837554
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 120.0,
+    "alpha_tokens": 15330.02304,
+    "entry_price": 0.00782778
+  },
+  {
+    "date": "2026-06-30",
+    "type": "INCREASE",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao_added": 117.0383,
+    "alpha_added": 18761.734751,
+    "spot_price": 0.00623814
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 50.0,
+    "alpha_tokens": 2358.514071,
+    "entry_price": 0.02119979
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 13,
+    "name": "Data Universe",
+    "tao": 50.0,
+    "alpha_tokens": 7230.213078,
+    "entry_price": 0.00691543
   }
 ]

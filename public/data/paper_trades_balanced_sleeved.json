@@ -1028,5 +1028,80 @@
     "tao": 400.0,
     "alpha_tokens": 11468.911075,
     "entry_price": 0.03487689
+  },
+  {
+    "date": "2026-06-30",
+    "type": "EXIT",
+    "netuid": 4,
+    "name": "Targon",
+    "tao": 88.9064,
+    "alpha_tokens": 1658.443672,
+    "exit_price": 0.05360832,
+    "entry_price": 0.0565114,
+    "entry_date": "2026-05-24",
+    "cost_basis_tao": 95.8404,
+    "realized_pnl_tao": -6.934,
+    "realized_pnl_pct": -7.23,
+    "days_held": 37
+  },
+  {
+    "date": "2026-06-30",
+    "type": "EXIT",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 393.013,
+    "alpha_tokens": 11469.345315,
+    "exit_price": 0.03426639,
+    "entry_price": 0.03487689,
+    "entry_date": "2026-06-29",
+    "cost_basis_tao": 400.0,
+    "realized_pnl_tao": -6.987,
+    "realized_pnl_pct": -1.75,
+    "days_held": 1
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 80.0,
+    "alpha_tokens": 12032.855679,
+    "entry_price": 0.00664846
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 80.0,
+    "alpha_tokens": 4353.613531,
+    "entry_price": 0.01837554
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 80.0,
+    "alpha_tokens": 10220.01536,
+    "entry_price": 0.00782778
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 90.0,
+    "alpha_tokens": 4245.325327,
+    "entry_price": 0.02119979
+  },
+  {
+    "date": "2026-06-30",
+    "type": "ENTRY",
+    "netuid": 13,
+    "name": "Data Universe",
+    "tao": 90.0,
+    "alpha_tokens": 13014.383541,
+    "entry_price": 0.00691543
   }
 ]

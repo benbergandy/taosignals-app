@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-29T12:05:22.850837+00:00",
-  "date": "2026-06-29",
+  "generated_at": "2026-06-30T12:05:32.161634+00:00",
+  "date": "2026-06-30",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -16,16 +16,56 @@
     },
     "core": {
       "tao": 850.0,
-      "n_positions": 1,
+      "n_positions": 5,
       "positions": [
         {
-          "netuid": 9,
-          "name": "iota",
-          "tao": 850.0,
-          "score": -0.36630457459233245,
+          "netuid": 85,
+          "name": "Vidaio",
+          "tao": 170.0,
+          "score": 0.23495391712955435,
           "rank": 1,
-          "moving_price": 0.03540453,
-          "tao_in": 61380.8868,
+          "moving_price": 0.00770894,
+          "tao_in": 15225.0537,
+          "source": "core"
+        },
+        {
+          "netuid": 39,
+          "name": "deprecated",
+          "tao": 170.0,
+          "score": 0.18409819282490883,
+          "rank": 2,
+          "moving_price": 0.00665202,
+          "tao_in": 17116.7474,
+          "source": "core"
+        },
+        {
+          "netuid": 75,
+          "name": "Hippius",
+          "tao": 170.0,
+          "score": 0.16346103946553525,
+          "rank": 3,
+          "moving_price": 0.01805996,
+          "tao_in": 33364.2264,
+          "source": "core"
+        },
+        {
+          "netuid": 81,
+          "name": "deprecated",
+          "tao": 170.0,
+          "score": -0.04578870126095821,
+          "rank": 4,
+          "moving_price": 0.00783915,
+          "tao_in": 19611.9389,
+          "source": "core"
+        },
+        {
+          "netuid": 33,
+          "name": "ReadyAI",
+          "tao": 170.0,
+          "score": -0.06274825539536959,
+          "rank": 5,
+          "moving_price": 0.00617494,
+          "tao_in": 16367.5374,
           "source": "core"
         }
       ]
@@ -42,17 +82,57 @@
     }
   },
   "positions": {
-    "9": {
-      "netuid": 9,
-      "name": "iota",
-      "tao": 850.0,
-      "score": -0.36630457459233245,
+    "85": {
+      "netuid": 85,
+      "name": "Vidaio",
+      "tao": 170.0,
+      "score": 0.23495391712955435,
       "rank": 1,
-      "moving_price": 0.03540453,
-      "tao_in": 61380.8868,
+      "moving_price": 0.00770894,
+      "tao_in": 15225.0537,
+      "source": "core"
+    },
+    "39": {
+      "netuid": 39,
+      "name": "deprecated",
+      "tao": 170.0,
+      "score": 0.18409819282490883,
+      "rank": 2,
+      "moving_price": 0.00665202,
+      "tao_in": 17116.7474,
+      "source": "core"
+    },
+    "75": {
+      "netuid": 75,
+      "name": "Hippius",
+      "tao": 170.0,
+      "score": 0.16346103946553525,
+      "rank": 3,
+      "moving_price": 0.01805996,
+      "tao_in": 33364.2264,
+      "source": "core"
+    },
+    "81": {
+      "netuid": 81,
+      "name": "deprecated",
+      "tao": 170.0,
+      "score": -0.04578870126095821,
+      "rank": 4,
+      "moving_price": 0.00783915,
+      "tao_in": 19611.9389,
+      "source": "core"
+    },
+    "33": {
+      "netuid": 33,
+      "name": "ReadyAI",
+      "tao": 170.0,
+      "score": -0.06274825539536959,
+      "rank": 5,
+      "moving_price": 0.00617494,
+      "tao_in": 16367.5374,
       "source": "core"
     }
   },
-  "n_positions_after_merge": 1,
+  "n_positions_after_merge": 5,
   "consensus_picks": []
 }
