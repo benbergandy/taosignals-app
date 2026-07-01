@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-30T12:05:32.161634+00:00",
-  "date": "2026-06-30",
+  "generated_at": "2026-07-01T12:06:01.207077+00:00",
+  "date": "2026-07-01",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
+          "netuid": 33,
+          "name": "ReadyAI",
+          "tao": 170.0,
+          "score": 0.5344318792335843,
+          "rank": 1,
+          "moving_price": 0.00621469,
+          "tao_in": 16349.6457,
+          "source": "core"
+        },
+        {
+          "netuid": 50,
+          "name": "Synth",
+          "tao": 170.0,
+          "score": 0.4745326097428584,
+          "rank": 2,
+          "moving_price": 0.00619291,
+          "tao_in": 12669.4333,
+          "source": "core"
+        },
+        {
           "netuid": 85,
           "name": "Vidaio",
           "tao": 170.0,
-          "score": 0.23495391712955435,
-          "rank": 1,
-          "moving_price": 0.00770894,
-          "tao_in": 15225.0537,
+          "score": 0.4637346508789443,
+          "rank": 3,
+          "moving_price": 0.00749727,
+          "tao_in": 14823.6832,
           "source": "core"
         },
         {
           "netuid": 39,
           "name": "deprecated",
           "tao": 170.0,
-          "score": 0.18409819282490883,
-          "rank": 2,
-          "moving_price": 0.00665202,
-          "tao_in": 17116.7474,
-          "source": "core"
-        },
-        {
-          "netuid": 75,
-          "name": "Hippius",
-          "tao": 170.0,
-          "score": 0.16346103946553525,
-          "rank": 3,
-          "moving_price": 0.01805996,
-          "tao_in": 33364.2264,
-          "source": "core"
-        },
-        {
-          "netuid": 81,
-          "name": "deprecated",
-          "tao": 170.0,
-          "score": -0.04578870126095821,
+          "score": 0.3998977981332775,
           "rank": 4,
-          "moving_price": 0.00783915,
-          "tao_in": 19611.9389,
+          "moving_price": 0.00655104,
+          "tao_in": 16940.275,
           "source": "core"
         },
         {
-          "netuid": 33,
-          "name": "ReadyAI",
+          "netuid": 24,
+          "name": "Quasar",
           "tao": 170.0,
-          "score": -0.06274825539536959,
+          "score": 0.32515820465417866,
           "rank": 5,
-          "moving_price": 0.00617494,
-          "tao_in": 16367.5374,
+          "moving_price": 0.00946343,
+          "tao_in": 13000.4445,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
+    "33": {
+      "netuid": 33,
+      "name": "ReadyAI",
+      "tao": 170.0,
+      "score": 0.5344318792335843,
+      "rank": 1,
+      "moving_price": 0.00621469,
+      "tao_in": 16349.6457,
+      "source": "core"
+    },
+    "50": {
+      "netuid": 50,
+      "name": "Synth",
+      "tao": 170.0,
+      "score": 0.4745326097428584,
+      "rank": 2,
+      "moving_price": 0.00619291,
+      "tao_in": 12669.4333,
+      "source": "core"
+    },
     "85": {
       "netuid": 85,
       "name": "Vidaio",
       "tao": 170.0,
-      "score": 0.23495391712955435,
-      "rank": 1,
-      "moving_price": 0.00770894,
-      "tao_in": 15225.0537,
+      "score": 0.4637346508789443,
+      "rank": 3,
+      "moving_price": 0.00749727,
+      "tao_in": 14823.6832,
       "source": "core"
     },
     "39": {
       "netuid": 39,
       "name": "deprecated",
       "tao": 170.0,
-      "score": 0.18409819282490883,
-      "rank": 2,
-      "moving_price": 0.00665202,
-      "tao_in": 17116.7474,
-      "source": "core"
-    },
-    "75": {
-      "netuid": 75,
-      "name": "Hippius",
-      "tao": 170.0,
-      "score": 0.16346103946553525,
-      "rank": 3,
-      "moving_price": 0.01805996,
-      "tao_in": 33364.2264,
-      "source": "core"
-    },
-    "81": {
-      "netuid": 81,
-      "name": "deprecated",
-      "tao": 170.0,
-      "score": -0.04578870126095821,
+      "score": 0.3998977981332775,
       "rank": 4,
-      "moving_price": 0.00783915,
-      "tao_in": 19611.9389,
+      "moving_price": 0.00655104,
+      "tao_in": 16940.275,
       "source": "core"
     },
-    "33": {
-      "netuid": 33,
-      "name": "ReadyAI",
+    "24": {
+      "netuid": 24,
+      "name": "Quasar",
       "tao": 170.0,
-      "score": -0.06274825539536959,
+      "score": 0.32515820465417866,
       "rank": 5,
-      "moving_price": 0.00617494,
-      "tao_in": 16367.5374,
+      "moving_price": 0.00946343,
+      "tao_in": 13000.4445,
       "source": "core"
     }
   },

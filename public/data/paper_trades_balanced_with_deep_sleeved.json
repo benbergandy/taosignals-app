@@ -1154,5 +1154,53 @@
     "tao_removed": 49.0279,
     "alpha_removed": 914.557507,
     "spot_price": 0.05360832
+  },
+  {
+    "date": "2026-07-01",
+    "type": "EXIT",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 89.4083,
+    "alpha_tokens": 11498.238136,
+    "exit_price": 0.00777582,
+    "entry_price": 0.00782778,
+    "entry_date": "2026-06-30",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -0.5917,
+    "realized_pnl_pct": -0.66,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-01",
+    "type": "EXIT",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 89.8907,
+    "alpha_tokens": 4897.853144,
+    "exit_price": 0.01835308,
+    "entry_price": 0.01837554,
+    "entry_date": "2026-06-30",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -0.1093,
+    "realized_pnl_pct": -0.12,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-01",
+    "type": "ENTRY",
+    "netuid": 50,
+    "name": "Synth",
+    "tao": 90.0,
+    "alpha_tokens": 13434.021495,
+    "entry_price": 0.00669941
+  },
+  {
+    "date": "2026-07-01",
+    "type": "INCREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_added": 91.0699,
+    "alpha_added": 9600.099018,
+    "spot_price": 0.00948635
   }
 ]
