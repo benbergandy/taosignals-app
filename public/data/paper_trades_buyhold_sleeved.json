@@ -1266,5 +1266,53 @@
     "tao": 160.0,
     "alpha_tokens": 16866.347181,
     "entry_price": 0.00948635
+  },
+  {
+    "date": "2026-07-02",
+    "type": "EXIT",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 152.6415,
+    "alpha_tokens": 20289.84976,
+    "exit_price": 0.00752305,
+    "entry_price": 0.00788642,
+    "entry_date": "2026-06-30",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -7.3585,
+    "realized_pnl_pct": -4.6,
+    "days_held": 2
+  },
+  {
+    "date": "2026-07-02",
+    "type": "EXIT",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 157.7055,
+    "alpha_tokens": 25651.748349,
+    "exit_price": 0.00614794,
+    "entry_price": 0.00623814,
+    "entry_date": "2026-06-30",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -2.2945,
+    "realized_pnl_pct": -1.43,
+    "days_held": 2
+  },
+  {
+    "date": "2026-07-02",
+    "type": "ENTRY",
+    "netuid": 18,
+    "name": "Zeus",
+    "tao": 160.0,
+    "alpha_tokens": 19350.805668,
+    "entry_price": 0.00826839
+  },
+  {
+    "date": "2026-07-02",
+    "type": "ENTRY",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 160.0,
+    "alpha_tokens": 20427.008292,
+    "entry_price": 0.00783277
   }
 ]
