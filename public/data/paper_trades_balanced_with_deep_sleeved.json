@@ -1244,5 +1244,71 @@
     "tao_removed": 87.9923,
     "alpha_removed": 14312.481129,
     "spot_price": 0.00614794
+  },
+  {
+    "date": "2026-07-03",
+    "type": "EXIT",
+    "netuid": 50,
+    "name": "Synth",
+    "tao": 90.6694,
+    "alpha_tokens": 13436.162595,
+    "exit_price": 0.00674817,
+    "entry_price": 0.00669941,
+    "entry_date": "2026-07-01",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 0.6694,
+    "realized_pnl_pct": 0.74,
+    "days_held": 2
+  },
+  {
+    "date": "2026-07-03",
+    "type": "EXIT",
+    "netuid": 18,
+    "name": "Zeus",
+    "tao": 88.9928,
+    "alpha_tokens": 10885.768706,
+    "exit_price": 0.00817515,
+    "entry_price": 0.00826839,
+    "entry_date": "2026-07-02",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -1.0072,
+    "realized_pnl_pct": -1.12,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-03",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 57.1479,
+    "alpha_removed": 5732.80936,
+    "spot_price": 0.00996856
+  },
+  {
+    "date": "2026-07-03",
+    "type": "ENTRY",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao": 90.0,
+    "alpha_tokens": 10360.835789,
+    "entry_price": 0.00868656
+  },
+  {
+    "date": "2026-07-03",
+    "type": "ENTRY",
+    "netuid": 1,
+    "name": "Apex",
+    "tao": 50.0,
+    "alpha_tokens": 5761.61645,
+    "entry_price": 0.00867812
+  },
+  {
+    "date": "2026-07-03",
+    "type": "ENTRY",
+    "netuid": 11,
+    "name": "TrajectoryRL",
+    "tao": 50.0,
+    "alpha_tokens": 6081.061294,
+    "entry_price": 0.00822225
   }
 ]

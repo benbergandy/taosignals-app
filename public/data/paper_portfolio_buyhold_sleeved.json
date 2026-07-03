@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T12:05:15.151661+00:00",
-  "date": "2026-07-02",
+  "generated_at": "2026-07-03T12:04:59.563285+00:00",
+  "date": "2026-07-03",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 50,
-          "name": "Synth",
-          "tao": 160.0,
-          "score": 0.9419190200108034,
-          "rank": 1,
-          "moving_price": 0.00709005,
-          "tao_in": 12957.206,
-          "source": "core"
-        },
-        {
           "netuid": 39,
           "name": "deprecated",
           "tao": 160.0,
-          "score": 0.36019324835685856,
-          "rank": 2,
-          "moving_price": 0.00664576,
-          "tao_in": 17173.8471,
-          "source": "core"
-        },
-        {
-          "netuid": 24,
-          "name": "Quasar",
-          "tao": 160.0,
-          "score": 0.3029387052678043,
-          "rank": 3,
-          "moving_price": 0.00926224,
-          "tao_in": 13052.9986,
-          "source": "core"
-        },
-        {
-          "netuid": 18,
-          "name": "Zeus",
-          "tao": 160.0,
-          "score": 0.299532590991779,
-          "rank": 4,
-          "moving_price": 0.00818442,
-          "tao_in": 14178.3596,
+          "score": 0.948239903981487,
+          "rank": 1,
+          "moving_price": 0.0068019,
+          "tao_in": 17456.8642,
           "source": "core"
         },
         {
           "netuid": 81,
           "name": "deprecated",
           "tao": 160.0,
-          "score": 0.1899900624936808,
+          "score": 0.8009232452985036,
+          "rank": 2,
+          "moving_price": 0.00815151,
+          "tao_in": 20220.2331,
+          "source": "core"
+        },
+        {
+          "netuid": 24,
+          "name": "Quasar",
+          "tao": 160.0,
+          "score": 0.5719829984875875,
+          "rank": 3,
+          "moving_price": 0.00965858,
+          "tao_in": 13348.1232,
+          "source": "core"
+        },
+        {
+          "netuid": 46,
+          "name": "Zipcode",
+          "tao": 160.0,
+          "score": 0.40524079907317917,
+          "rank": 4,
+          "moving_price": 0.00843436,
+          "tao_in": 13052.74,
+          "source": "core"
+        },
+        {
+          "netuid": 68,
+          "name": "NOVA",
+          "tao": 160.0,
+          "score": 0.17195263843417832,
           "rank": 5,
-          "moving_price": 0.00783916,
-          "tao_in": 19636.9556,
+          "moving_price": 0.0229401,
+          "tao_in": 44285.6915,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
-    "50": {
-      "netuid": 50,
-      "name": "Synth",
-      "tao": 160.0,
-      "score": 0.9419190200108034,
-      "rank": 1,
-      "moving_price": 0.00709005,
-      "tao_in": 12957.206,
-      "source": "core"
-    },
     "39": {
       "netuid": 39,
       "name": "deprecated",
       "tao": 160.0,
-      "score": 0.36019324835685856,
-      "rank": 2,
-      "moving_price": 0.00664576,
-      "tao_in": 17173.8471,
-      "source": "core"
-    },
-    "24": {
-      "netuid": 24,
-      "name": "Quasar",
-      "tao": 160.0,
-      "score": 0.3029387052678043,
-      "rank": 3,
-      "moving_price": 0.00926224,
-      "tao_in": 13052.9986,
-      "source": "core"
-    },
-    "18": {
-      "netuid": 18,
-      "name": "Zeus",
-      "tao": 160.0,
-      "score": 0.299532590991779,
-      "rank": 4,
-      "moving_price": 0.00818442,
-      "tao_in": 14178.3596,
+      "score": 0.948239903981487,
+      "rank": 1,
+      "moving_price": 0.0068019,
+      "tao_in": 17456.8642,
       "source": "core"
     },
     "81": {
       "netuid": 81,
       "name": "deprecated",
       "tao": 160.0,
-      "score": 0.1899900624936808,
+      "score": 0.8009232452985036,
+      "rank": 2,
+      "moving_price": 0.00815151,
+      "tao_in": 20220.2331,
+      "source": "core"
+    },
+    "24": {
+      "netuid": 24,
+      "name": "Quasar",
+      "tao": 160.0,
+      "score": 0.5719829984875875,
+      "rank": 3,
+      "moving_price": 0.00965858,
+      "tao_in": 13348.1232,
+      "source": "core"
+    },
+    "46": {
+      "netuid": 46,
+      "name": "Zipcode",
+      "tao": 160.0,
+      "score": 0.40524079907317917,
+      "rank": 4,
+      "moving_price": 0.00843436,
+      "tao_in": 13052.74,
+      "source": "core"
+    },
+    "68": {
+      "netuid": 68,
+      "name": "NOVA",
+      "tao": 160.0,
+      "score": 0.17195263843417832,
       "rank": 5,
-      "moving_price": 0.00783916,
-      "tao_in": 19636.9556,
+      "moving_price": 0.0229401,
+      "tao_in": 44285.6915,
       "source": "core"
     }
   },
