@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-03T12:04:59.563285+00:00",
-  "date": "2026-07-03",
+  "generated_at": "2026-07-04T12:05:17.604995+00:00",
+  "date": "2026-07-04",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 39,
-          "name": "deprecated",
+          "netuid": 50,
+          "name": "Synth",
           "tao": 160.0,
-          "score": 0.948239903981487,
+          "score": 0.9197106103376373,
           "rank": 1,
-          "moving_price": 0.0068019,
-          "tao_in": 17456.8642,
+          "moving_price": 0.00688607,
+          "tao_in": 12881.863,
           "source": "core"
         },
         {
-          "netuid": 81,
-          "name": "deprecated",
+          "netuid": 33,
+          "name": "ReadyAI",
           "tao": 160.0,
-          "score": 0.8009232452985036,
+          "score": 0.49811768929103106,
           "rank": 2,
-          "moving_price": 0.00815151,
-          "tao_in": 20220.2331,
+          "moving_price": 0.00615535,
+          "tao_in": 16346.7465,
+          "source": "core"
+        },
+        {
+          "netuid": 85,
+          "name": "Vidaio",
+          "tao": 160.0,
+          "score": 0.4614898436513621,
+          "rank": 3,
+          "moving_price": 0.00720408,
+          "tao_in": 14567.8478,
           "source": "core"
         },
         {
           "netuid": 24,
           "name": "Quasar",
           "tao": 160.0,
-          "score": 0.5719829984875875,
-          "rank": 3,
-          "moving_price": 0.00965858,
-          "tao_in": 13348.1232,
-          "source": "core"
-        },
-        {
-          "netuid": 46,
-          "name": "Zipcode",
-          "tao": 160.0,
-          "score": 0.40524079907317917,
+          "score": 0.3494461360077542,
           "rank": 4,
-          "moving_price": 0.00843436,
-          "tao_in": 13052.74,
+          "moving_price": 0.00968601,
+          "tao_in": 13068.3015,
           "source": "core"
         },
         {
-          "netuid": 68,
-          "name": "NOVA",
+          "netuid": 63,
+          "name": "Enigma",
           "tao": 160.0,
-          "score": 0.17195263843417832,
+          "score": 0.22964314199032,
           "rank": 5,
-          "moving_price": 0.0229401,
-          "tao_in": 44285.6915,
+          "moving_price": 0.00851684,
+          "tao_in": 15270.8248,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
-    "39": {
-      "netuid": 39,
-      "name": "deprecated",
+    "50": {
+      "netuid": 50,
+      "name": "Synth",
       "tao": 160.0,
-      "score": 0.948239903981487,
+      "score": 0.9197106103376373,
       "rank": 1,
-      "moving_price": 0.0068019,
-      "tao_in": 17456.8642,
+      "moving_price": 0.00688607,
+      "tao_in": 12881.863,
       "source": "core"
     },
-    "81": {
-      "netuid": 81,
-      "name": "deprecated",
+    "33": {
+      "netuid": 33,
+      "name": "ReadyAI",
       "tao": 160.0,
-      "score": 0.8009232452985036,
+      "score": 0.49811768929103106,
       "rank": 2,
-      "moving_price": 0.00815151,
-      "tao_in": 20220.2331,
+      "moving_price": 0.00615535,
+      "tao_in": 16346.7465,
+      "source": "core"
+    },
+    "85": {
+      "netuid": 85,
+      "name": "Vidaio",
+      "tao": 160.0,
+      "score": 0.4614898436513621,
+      "rank": 3,
+      "moving_price": 0.00720408,
+      "tao_in": 14567.8478,
       "source": "core"
     },
     "24": {
       "netuid": 24,
       "name": "Quasar",
       "tao": 160.0,
-      "score": 0.5719829984875875,
-      "rank": 3,
-      "moving_price": 0.00965858,
-      "tao_in": 13348.1232,
-      "source": "core"
-    },
-    "46": {
-      "netuid": 46,
-      "name": "Zipcode",
-      "tao": 160.0,
-      "score": 0.40524079907317917,
+      "score": 0.3494461360077542,
       "rank": 4,
-      "moving_price": 0.00843436,
-      "tao_in": 13052.74,
+      "moving_price": 0.00968601,
+      "tao_in": 13068.3015,
       "source": "core"
     },
-    "68": {
-      "netuid": 68,
-      "name": "NOVA",
+    "63": {
+      "netuid": 63,
+      "name": "Enigma",
       "tao": 160.0,
-      "score": 0.17195263843417832,
+      "score": 0.22964314199032,
       "rank": 5,
-      "moving_price": 0.0229401,
-      "tao_in": 44285.6915,
+      "moving_price": 0.00851684,
+      "tao_in": 15270.8248,
       "source": "core"
     }
   },

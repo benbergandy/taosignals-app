@@ -1286,5 +1286,92 @@
     "tao": 150.0,
     "alpha_tokens": 18243.183883,
     "entry_price": 0.00822225
+  },
+  {
+    "date": "2026-07-04",
+    "type": "EXIT",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 41.4207,
+    "alpha_tokens": 6017.757556,
+    "exit_price": 0.00688308,
+    "entry_price": 0.00664846,
+    "entry_date": "2026-06-30",
+    "cost_basis_tao": 40.0,
+    "realized_pnl_tao": 1.4207,
+    "realized_pnl_pct": 3.55,
+    "days_held": 4
+  },
+  {
+    "date": "2026-07-04",
+    "type": "EXIT",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 39.3215,
+    "alpha_tokens": 1704.108125,
+    "exit_price": 0.02307452,
+    "entry_price": 0.02119979,
+    "entry_date": "2026-06-30",
+    "cost_basis_tao": 23.8668,
+    "realized_pnl_tao": 15.4547,
+    "realized_pnl_pct": 64.75,
+    "days_held": 4
+  },
+  {
+    "date": "2026-07-04",
+    "type": "EXIT",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao": 38.5746,
+    "alpha_tokens": 4605.261455,
+    "exit_price": 0.0083762,
+    "entry_price": 0.00868656,
+    "entry_date": "2026-07-03",
+    "cost_basis_tao": 40.0,
+    "realized_pnl_tao": -1.4254,
+    "realized_pnl_pct": -3.56,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-04",
+    "type": "EXIT",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 42.1314,
+    "alpha_tokens": 5107.412834,
+    "exit_price": 0.00824907,
+    "entry_price": 0.00783277,
+    "entry_date": "2026-07-02",
+    "cost_basis_tao": 40.0,
+    "realized_pnl_tao": 2.1314,
+    "realized_pnl_pct": 5.33,
+    "days_held": 2
+  },
+  {
+    "date": "2026-07-04",
+    "type": "ENTRY",
+    "netuid": 50,
+    "name": "Synth",
+    "tao": 40.0,
+    "alpha_tokens": 5796.545669,
+    "entry_price": 0.00690066
+  },
+  {
+    "date": "2026-07-04",
+    "type": "ENTRY",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 40.0,
+    "alpha_tokens": 5555.088383,
+    "entry_price": 0.00720061
+  },
+  {
+    "date": "2026-07-04",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 40.0,
+    "alpha_tokens": 4627.528221,
+    "entry_price": 0.00864392
   }
 ]

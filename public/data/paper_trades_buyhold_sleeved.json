@@ -1362,5 +1362,101 @@
     "tao": 160.0,
     "alpha_tokens": 6815.900954,
     "entry_price": 0.02347452
+  },
+  {
+    "date": "2026-07-04",
+    "type": "EXIT",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 165.6826,
+    "alpha_tokens": 24070.993055,
+    "exit_price": 0.00688308,
+    "entry_price": 0.00664846,
+    "entry_date": "2026-06-30",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": 5.6826,
+    "realized_pnl_pct": 3.55,
+    "days_held": 4
+  },
+  {
+    "date": "2026-07-04",
+    "type": "EXIT",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 157.2859,
+    "alpha_tokens": 6816.431076,
+    "exit_price": 0.02307452,
+    "entry_price": 0.02347452,
+    "entry_date": "2026-07-03",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -2.7141,
+    "realized_pnl_pct": -1.7,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-04",
+    "type": "EXIT",
+    "netuid": 46,
+    "name": "Zipcode",
+    "tao": 154.2982,
+    "alpha_tokens": 18421.029934,
+    "exit_price": 0.0083762,
+    "entry_price": 0.00868656,
+    "entry_date": "2026-07-03",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -5.7018,
+    "realized_pnl_pct": -3.56,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-04",
+    "type": "EXIT",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 168.5255,
+    "alpha_tokens": 20429.634887,
+    "exit_price": 0.00824907,
+    "entry_price": 0.00783277,
+    "entry_date": "2026-07-02",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": 8.5255,
+    "realized_pnl_pct": 5.33,
+    "days_held": 2
+  },
+  {
+    "date": "2026-07-04",
+    "type": "ENTRY",
+    "netuid": 50,
+    "name": "Synth",
+    "tao": 160.0,
+    "alpha_tokens": 23186.182674,
+    "entry_price": 0.00690066
+  },
+  {
+    "date": "2026-07-04",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 160.0,
+    "alpha_tokens": 25802.340132,
+    "entry_price": 0.00620099
+  },
+  {
+    "date": "2026-07-04",
+    "type": "ENTRY",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 160.0,
+    "alpha_tokens": 22220.353532,
+    "entry_price": 0.00720061
+  },
+  {
+    "date": "2026-07-04",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 160.0,
+    "alpha_tokens": 18510.112885,
+    "entry_price": 0.00864392
   }
 ]
