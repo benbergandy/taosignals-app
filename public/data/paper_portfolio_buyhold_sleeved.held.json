@@ -2,68 +2,68 @@
   "start_date": "2026-05-12",
   "profile": "buyhold",
   "total_tao": 1000.0,
-  "root_stake": 200.0197,
-  "accumulated_root_yield": 1.161301,
+  "root_stake": 200.02,
+  "accumulated_root_yield": 1.181328,
   "positions": {
     "24": {
-      "tao": 160.9474,
+      "tao": 160.8058,
       "name": "Quasar",
       "entry_date": "2026-07-01",
       "entry_price": 0.00948635,
       "entry_tao": 160.0,
-      "alpha_tokens": 16871.69695,
-      "accumulated_emission_tokens": 5.349769,
-      "accumulated_emission_tao": 0.051824,
+      "alpha_tokens": 16873.459836,
+      "accumulated_emission_tokens": 7.112655,
+      "accumulated_emission_tao": 0.068624,
       "source": "core",
       "entry_score": 0.32515820465417866
     },
     "50": {
-      "tao": 160.0,
+      "tao": 160.2464,
       "name": "Synth",
       "entry_date": "2026-07-04",
       "entry_price": 0.00690066,
       "entry_tao": 160.0,
-      "alpha_tokens": 23186.182674,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
+      "alpha_tokens": 23188.019447,
+      "accumulated_emission_tokens": 1.836773,
+      "accumulated_emission_tao": 0.012693,
       "source": "core",
       "entry_score": 0.9197106103376373
     },
     "33": {
-      "tao": 160.0,
+      "tao": 159.4843,
       "name": "ReadyAI",
       "entry_date": "2026-07-04",
       "entry_price": 0.00620099,
       "entry_tao": 160.0,
-      "alpha_tokens": 25802.340132,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
+      "alpha_tokens": 25803.881318,
+      "accumulated_emission_tokens": 1.541186,
+      "accumulated_emission_tao": 0.009525,
       "source": "core",
       "entry_score": 0.49811768929103106
     },
-    "85": {
+    "39": {
       "tao": 160.0,
-      "name": "Vidaio",
-      "entry_date": "2026-07-04",
-      "entry_price": 0.00720061,
+      "name": "deprecated",
+      "entry_date": "2026-07-05",
+      "entry_price": 0.0068714,
       "entry_tao": 160.0,
-      "alpha_tokens": 22220.353532,
+      "alpha_tokens": 23284.909067,
       "accumulated_emission_tokens": 0.0,
       "accumulated_emission_tao": 0.0,
       "source": "core",
-      "entry_score": 0.4614898436513621
+      "entry_score": 0.2827859183994975
     },
-    "63": {
+    "75": {
       "tao": 160.0,
-      "name": "Enigma",
-      "entry_date": "2026-07-04",
-      "entry_price": 0.00864392,
+      "name": "Hippius",
+      "entry_date": "2026-07-05",
+      "entry_price": 0.01735106,
       "entry_tao": 160.0,
-      "alpha_tokens": 18510.112885,
+      "alpha_tokens": 9221.340322,
       "accumulated_emission_tokens": 0.0,
       "accumulated_emission_tao": 0.0,
       "source": "core",
-      "entry_score": 0.22964314199032
+      "entry_score": 0.26967331789506344
     }
   },
   "benchmark_eq_prices": {
@@ -126,7 +126,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 51.435155,
+  "benchmark_eq_emissions": 51.826225,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -361,7 +361,7 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 16.022904,
-  "benchmark_root_value": 1005.8204,
-  "free_cash": 587.5025
+  "benchmark_mcw_emissions": 16.219586,
+  "benchmark_root_value": 1005.9211,
+  "free_cash": 585.4206
 }

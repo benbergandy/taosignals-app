@@ -1458,5 +1458,53 @@
     "tao": 160.0,
     "alpha_tokens": 18510.112885,
     "entry_price": 0.00864392
+  },
+  {
+    "date": "2026-07-05",
+    "type": "EXIT",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 160.2859,
+    "alpha_tokens": 22221.300768,
+    "exit_price": 0.00721316,
+    "entry_price": 0.00720061,
+    "entry_date": "2026-07-04",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": 0.2859,
+    "realized_pnl_pct": 0.18,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-05",
+    "type": "EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 157.6322,
+    "alpha_tokens": 18511.607095,
+    "exit_price": 0.00851531,
+    "entry_price": 0.00864392,
+    "entry_date": "2026-07-04",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -2.3678,
+    "realized_pnl_pct": -1.48,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-05",
+    "type": "ENTRY",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 160.0,
+    "alpha_tokens": 23284.909067,
+    "entry_price": 0.0068714
+  },
+  {
+    "date": "2026-07-05",
+    "type": "ENTRY",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 160.0,
+    "alpha_tokens": 9221.340322,
+    "entry_price": 0.01735106
   }
 ]
