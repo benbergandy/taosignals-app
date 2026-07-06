@@ -1421,5 +1421,29 @@
     "tao": 40.0,
     "alpha_tokens": 2305.33508,
     "entry_price": 0.01735106
+  },
+  {
+    "date": "2026-07-06",
+    "type": "EXIT",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 40.2402,
+    "alpha_tokens": 5821.551985,
+    "exit_price": 0.00691228,
+    "entry_price": 0.0068714,
+    "entry_date": "2026-07-05",
+    "cost_basis_tao": 40.0,
+    "realized_pnl_tao": 0.2402,
+    "realized_pnl_pct": 0.6,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-06",
+    "type": "ENTRY",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 40.0,
+    "alpha_tokens": 1723.662837,
+    "entry_price": 0.02320639
   }
 ]
