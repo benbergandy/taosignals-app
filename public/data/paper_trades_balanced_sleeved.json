@@ -1391,5 +1391,62 @@
     "tao": 80.0,
     "alpha_tokens": 3447.325675,
     "entry_price": 0.02320639
+  },
+  {
+    "date": "2026-07-07",
+    "type": "EXIT",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 78.1907,
+    "alpha_tokens": 4610.763712,
+    "exit_price": 0.01695829,
+    "entry_price": 0.01735106,
+    "entry_date": "2026-07-05",
+    "cost_basis_tao": 80.0,
+    "realized_pnl_tao": -1.8093,
+    "realized_pnl_pct": -2.26,
+    "days_held": 2
+  },
+  {
+    "date": "2026-07-07",
+    "type": "EXIT",
+    "netuid": 50,
+    "name": "Synth",
+    "tao": 72.3587,
+    "alpha_tokens": 11595.811119,
+    "exit_price": 0.00624007,
+    "entry_price": 0.00690066,
+    "entry_date": "2026-07-04",
+    "cost_basis_tao": 80.0,
+    "realized_pnl_tao": -7.6413,
+    "realized_pnl_pct": -9.55,
+    "days_held": 3
+  },
+  {
+    "date": "2026-07-07",
+    "type": "ENTRY",
+    "netuid": 107,
+    "name": "Minos",
+    "tao": 80.0,
+    "alpha_tokens": 1534.504055,
+    "entry_price": 0.05213411
+  },
+  {
+    "date": "2026-07-07",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "gm",
+    "tao": 80.0,
+    "alpha_tokens": 5892.256428,
+    "entry_price": 0.01357714
+  },
+  {
+    "date": "2026-07-07",
+    "type": "ENTRY",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 80.0,
+    "alpha_tokens": 11499.007914,
+    "entry_price": 0.00695712
   }
 ]

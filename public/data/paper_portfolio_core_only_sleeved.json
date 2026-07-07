@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T12:05:20.291437+00:00",
-  "date": "2026-07-06",
+  "generated_at": "2026-07-07T12:05:02.870954+00:00",
+  "date": "2026-07-07",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 50,
-          "name": "Synth",
+          "netuid": 107,
+          "name": "Minos",
           "tao": 170.0,
-          "score": 0.6132032765116141,
+          "score": 1.1992300526341229,
           "rank": 1,
-          "moving_price": 0.00683533,
-          "tao_in": 12843.1166,
+          "moving_price": 0.05183434,
+          "tao_in": 12707.7107,
           "source": "core"
         },
         {
-          "netuid": 75,
-          "name": "Hippius",
+          "netuid": 28,
+          "name": "gm",
           "tao": 170.0,
-          "score": 0.18097883116137475,
+          "score": 0.26946268810612434,
           "rank": 2,
-          "moving_price": 0.01726843,
-          "tao_in": 32231.744,
+          "moving_price": 0.01331091,
+          "tao_in": 16891.3195,
           "source": "core"
         },
         {
           "netuid": 24,
           "name": "Quasar",
           "tao": 170.0,
-          "score": 0.1418320250296219,
+          "score": 0.17660655423227795,
           "rank": 3,
-          "moving_price": 0.00947498,
-          "tao_in": 12949.8747,
-          "source": "core"
-        },
-        {
-          "netuid": 33,
-          "name": "ReadyAI",
-          "tao": 170.0,
-          "score": 0.10736272487361907,
-          "rank": 4,
-          "moving_price": 0.00621508,
-          "tao_in": 16383.89,
+          "moving_price": 0.00943523,
+          "tao_in": 13093.4219,
           "source": "core"
         },
         {
           "netuid": 68,
           "name": "NOVA",
           "tao": 170.0,
-          "score": 0.07317679506760844,
+          "score": 0.17142730744046364,
+          "rank": 4,
+          "moving_price": 0.02325905,
+          "tao_in": 44178.0248,
+          "source": "core"
+        },
+        {
+          "netuid": 39,
+          "name": "deprecated",
+          "tao": 170.0,
+          "score": 0.10585443351226435,
           "rank": 5,
-          "moving_price": 0.02311332,
-          "tao_in": 44110.2307,
+          "moving_price": 0.0069531,
+          "tao_in": 17561.1739,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
-    "50": {
-      "netuid": 50,
-      "name": "Synth",
+    "107": {
+      "netuid": 107,
+      "name": "Minos",
       "tao": 170.0,
-      "score": 0.6132032765116141,
+      "score": 1.1992300526341229,
       "rank": 1,
-      "moving_price": 0.00683533,
-      "tao_in": 12843.1166,
+      "moving_price": 0.05183434,
+      "tao_in": 12707.7107,
       "source": "core"
     },
-    "75": {
-      "netuid": 75,
-      "name": "Hippius",
+    "28": {
+      "netuid": 28,
+      "name": "gm",
       "tao": 170.0,
-      "score": 0.18097883116137475,
+      "score": 0.26946268810612434,
       "rank": 2,
-      "moving_price": 0.01726843,
-      "tao_in": 32231.744,
+      "moving_price": 0.01331091,
+      "tao_in": 16891.3195,
       "source": "core"
     },
     "24": {
       "netuid": 24,
       "name": "Quasar",
       "tao": 170.0,
-      "score": 0.1418320250296219,
+      "score": 0.17660655423227795,
       "rank": 3,
-      "moving_price": 0.00947498,
-      "tao_in": 12949.8747,
-      "source": "core"
-    },
-    "33": {
-      "netuid": 33,
-      "name": "ReadyAI",
-      "tao": 170.0,
-      "score": 0.10736272487361907,
-      "rank": 4,
-      "moving_price": 0.00621508,
-      "tao_in": 16383.89,
+      "moving_price": 0.00943523,
+      "tao_in": 13093.4219,
       "source": "core"
     },
     "68": {
       "netuid": 68,
       "name": "NOVA",
       "tao": 170.0,
-      "score": 0.07317679506760844,
+      "score": 0.17142730744046364,
+      "rank": 4,
+      "moving_price": 0.02325905,
+      "tao_in": 44178.0248,
+      "source": "core"
+    },
+    "39": {
+      "netuid": 39,
+      "name": "deprecated",
+      "tao": 170.0,
+      "score": 0.10585443351226435,
       "rank": 5,
-      "moving_price": 0.02311332,
-      "tao_in": 44110.2307,
+      "moving_price": 0.0069531,
+      "tao_in": 17561.1739,
       "source": "core"
     }
   },
