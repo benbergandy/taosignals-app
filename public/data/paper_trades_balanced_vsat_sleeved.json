@@ -1493,5 +1493,86 @@
     "tao_removed": 120.3791,
     "alpha_removed": 19373.166976,
     "spot_price": 0.0062137
+  },
+  {
+    "date": "2026-07-08",
+    "type": "EXIT",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 49.8211,
+    "alpha_tokens": 8047.217558,
+    "exit_price": 0.0061911,
+    "entry_price": 0.00589002,
+    "entry_date": "2026-06-23",
+    "cost_basis_tao": 48.6596,
+    "realized_pnl_tao": 1.1615,
+    "realized_pnl_pct": 2.39,
+    "days_held": 15
+  },
+  {
+    "date": "2026-07-08",
+    "type": "EXIT",
+    "netuid": 12,
+    "name": "Compute Horde",
+    "tao": 47.3081,
+    "alpha_tokens": 8239.430517,
+    "exit_price": 0.00574167,
+    "entry_price": 0.0062804,
+    "entry_date": "2026-05-24",
+    "cost_basis_tao": 51.7071,
+    "realized_pnl_tao": -4.399,
+    "realized_pnl_pct": -8.51,
+    "days_held": 45
+  },
+  {
+    "date": "2026-07-08",
+    "type": "EXIT",
+    "netuid": 28,
+    "name": "gm",
+    "tao": 117.6001,
+    "alpha_tokens": 8838.47248,
+    "exit_price": 0.01330548,
+    "entry_price": 0.01357714,
+    "entry_date": "2026-07-07",
+    "cost_basis_tao": 120.0,
+    "realized_pnl_tao": -2.3999,
+    "realized_pnl_pct": -2.0,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-08",
+    "type": "DECREASE",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao_removed": 63.7719,
+    "alpha_removed": 6223.290155,
+    "spot_price": 0.0102473
+  },
+  {
+    "date": "2026-07-08",
+    "type": "INCREASE",
+    "netuid": 1,
+    "name": "Apex",
+    "tao_added": 120.4297,
+    "alpha_added": 13998.833274,
+    "spot_price": 0.00860284
+  },
+  {
+    "date": "2026-07-08",
+    "type": "ENTRY",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 50.0,
+    "alpha_tokens": 7216.344844,
+    "entry_price": 0.00692872
+  },
+  {
+    "date": "2026-07-08",
+    "type": "ENTRY",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 50.0,
+    "alpha_tokens": 1659.597863,
+    "entry_price": 0.03012778
   }
 ]

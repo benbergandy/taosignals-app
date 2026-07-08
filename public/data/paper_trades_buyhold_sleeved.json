@@ -1602,5 +1602,29 @@
     "tao": 160.0,
     "alpha_tokens": 22998.015828,
     "entry_price": 0.00695712
+  },
+  {
+    "date": "2026-07-08",
+    "type": "EXIT",
+    "netuid": 28,
+    "name": "gm",
+    "tao": 156.8002,
+    "alpha_tokens": 11784.6297,
+    "exit_price": 0.01330548,
+    "entry_price": 0.01357714,
+    "entry_date": "2026-07-07",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -3.1998,
+    "realized_pnl_pct": -2.0,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-08",
+    "type": "ENTRY",
+    "netuid": 1,
+    "name": "Apex",
+    "tao": 160.0,
+    "alpha_tokens": 18598.509237,
+    "entry_price": 0.00860284
   }
 ]
