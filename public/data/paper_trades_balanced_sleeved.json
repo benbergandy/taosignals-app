@@ -1511,5 +1511,62 @@
     "tao": 90.0,
     "alpha_tokens": 2987.276154,
     "entry_price": 0.03012778
+  },
+  {
+    "date": "2026-07-09",
+    "type": "EXIT",
+    "netuid": 11,
+    "name": "TrajectoryRL",
+    "tao": 93.333,
+    "alpha_tokens": 10949.725909,
+    "exit_price": 0.00852378,
+    "entry_price": 0.00822225,
+    "entry_date": "2026-07-03",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 3.333,
+    "realized_pnl_pct": 3.7,
+    "days_held": 6
+  },
+  {
+    "date": "2026-07-09",
+    "type": "EXIT",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 77.009,
+    "alpha_tokens": 3448.125487,
+    "exit_price": 0.02233359,
+    "entry_price": 0.02320639,
+    "entry_date": "2026-07-06",
+    "cost_basis_tao": 80.0,
+    "realized_pnl_tao": -2.991,
+    "realized_pnl_pct": -3.74,
+    "days_held": 3
+  },
+  {
+    "date": "2026-07-09",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 80.0,
+    "alpha_tokens": 9155.898693,
+    "entry_price": 0.00873754
+  },
+  {
+    "date": "2026-07-09",
+    "type": "ENTRY",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 80.0,
+    "alpha_tokens": 4729.643526,
+    "entry_price": 0.01691459
+  },
+  {
+    "date": "2026-07-09",
+    "type": "ENTRY",
+    "netuid": 34,
+    "name": "BitMind",
+    "tao": 90.0,
+    "alpha_tokens": 7322.29703,
+    "entry_price": 0.01229122
   }
 ]
