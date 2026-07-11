@@ -1706,5 +1706,29 @@
     "tao_added": 89.7922,
     "alpha_added": 10468.366306,
     "spot_price": 0.00857748
+  },
+  {
+    "date": "2026-07-11",
+    "type": "EXIT",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 91.2912,
+    "alpha_tokens": 10302.076752,
+    "exit_price": 0.00886144,
+    "entry_price": 0.00873754,
+    "entry_date": "2026-07-09",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 1.2912,
+    "realized_pnl_pct": 1.43,
+    "days_held": 2
+  },
+  {
+    "date": "2026-07-11",
+    "type": "ENTRY",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 90.0,
+    "alpha_tokens": 12961.682585,
+    "entry_price": 0.00694354
   }
 ]
