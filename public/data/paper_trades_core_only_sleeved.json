@@ -1722,5 +1722,29 @@
     "tao": 170.0,
     "alpha_tokens": 24483.178216,
     "entry_price": 0.00694354
+  },
+  {
+    "date": "2026-07-12",
+    "type": "EXIT",
+    "netuid": 39,
+    "name": "deprecated",
+    "tao": 169.9269,
+    "alpha_tokens": 24483.178216,
+    "exit_price": 0.00694056,
+    "entry_price": 0.00694354,
+    "entry_date": "2026-07-11",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -0.0731,
+    "realized_pnl_pct": -0.04,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-12",
+    "type": "ENTRY",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 170.0,
+    "alpha_tokens": 3145.346079,
+    "entry_price": 0.05404811
   }
 ]

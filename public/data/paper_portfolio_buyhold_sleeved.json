@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-11T12:05:19.119870+00:00",
-  "date": "2026-07-11",
+  "generated_at": "2026-07-12T12:05:31.179225+00:00",
+  "date": "2026-07-12",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -22,50 +22,50 @@
           "netuid": 107,
           "name": "Minos",
           "tao": 160.0,
-          "score": 1.2553084405495656,
+          "score": 1.3134457620328002,
           "rank": 1,
-          "moving_price": 0.04965093,
-          "tao_in": 12778.7881,
-          "source": "core"
-        },
-        {
-          "netuid": 1,
-          "name": "Apex",
-          "tao": 160.0,
-          "score": 0.09277318627465718,
-          "rank": 2,
-          "moving_price": 0.00856002,
-          "tao_in": 26046.6033,
-          "source": "core"
-        },
-        {
-          "netuid": 75,
-          "name": "Hippius",
-          "tao": 160.0,
-          "score": -0.020392298579414055,
-          "rank": 3,
-          "moving_price": 0.0166089,
-          "tao_in": 31701.0266,
-          "source": "core"
-        },
-        {
-          "netuid": 39,
-          "name": "deprecated",
-          "tao": 160.0,
-          "score": -0.05394620842090131,
-          "rank": 4,
-          "moving_price": 0.00694489,
-          "tao_in": 17573.7213,
+          "moving_price": 0.04861607,
+          "tao_in": 13024.9687,
           "source": "core"
         },
         {
           "netuid": 24,
           "name": "Quasar",
           "tao": 160.0,
-          "score": -0.10797763217695482,
+          "score": 0.10003897575319118,
+          "rank": 2,
+          "moving_price": 0.00891416,
+          "tao_in": 12774.2509,
+          "source": "core"
+        },
+        {
+          "netuid": 1,
+          "name": "Apex",
+          "tao": 160.0,
+          "score": 0.08785706635783835,
+          "rank": 3,
+          "moving_price": 0.00856284,
+          "tao_in": 26096.9129,
+          "source": "core"
+        },
+        {
+          "netuid": 75,
+          "name": "Hippius",
+          "tao": 160.0,
+          "score": 0.004015503061472164,
+          "rank": 4,
+          "moving_price": 0.01652842,
+          "tao_in": 31659.039,
+          "source": "core"
+        },
+        {
+          "netuid": 51,
+          "name": "lium.io",
+          "tao": 160.0,
+          "score": -0.0226775580014347,
           "rank": 5,
-          "moving_price": 0.00913651,
-          "tao_in": 12600.657,
+          "moving_price": 0.05394761,
+          "tao_in": 118985.9388,
           "source": "core"
         }
       ]
@@ -86,50 +86,50 @@
       "netuid": 107,
       "name": "Minos",
       "tao": 160.0,
-      "score": 1.2553084405495656,
+      "score": 1.3134457620328002,
       "rank": 1,
-      "moving_price": 0.04965093,
-      "tao_in": 12778.7881,
-      "source": "core"
-    },
-    "1": {
-      "netuid": 1,
-      "name": "Apex",
-      "tao": 160.0,
-      "score": 0.09277318627465718,
-      "rank": 2,
-      "moving_price": 0.00856002,
-      "tao_in": 26046.6033,
-      "source": "core"
-    },
-    "75": {
-      "netuid": 75,
-      "name": "Hippius",
-      "tao": 160.0,
-      "score": -0.020392298579414055,
-      "rank": 3,
-      "moving_price": 0.0166089,
-      "tao_in": 31701.0266,
-      "source": "core"
-    },
-    "39": {
-      "netuid": 39,
-      "name": "deprecated",
-      "tao": 160.0,
-      "score": -0.05394620842090131,
-      "rank": 4,
-      "moving_price": 0.00694489,
-      "tao_in": 17573.7213,
+      "moving_price": 0.04861607,
+      "tao_in": 13024.9687,
       "source": "core"
     },
     "24": {
       "netuid": 24,
       "name": "Quasar",
       "tao": 160.0,
-      "score": -0.10797763217695482,
+      "score": 0.10003897575319118,
+      "rank": 2,
+      "moving_price": 0.00891416,
+      "tao_in": 12774.2509,
+      "source": "core"
+    },
+    "1": {
+      "netuid": 1,
+      "name": "Apex",
+      "tao": 160.0,
+      "score": 0.08785706635783835,
+      "rank": 3,
+      "moving_price": 0.00856284,
+      "tao_in": 26096.9129,
+      "source": "core"
+    },
+    "75": {
+      "netuid": 75,
+      "name": "Hippius",
+      "tao": 160.0,
+      "score": 0.004015503061472164,
+      "rank": 4,
+      "moving_price": 0.01652842,
+      "tao_in": 31659.039,
+      "source": "core"
+    },
+    "51": {
+      "netuid": 51,
+      "name": "lium.io",
+      "tao": 160.0,
+      "score": -0.0226775580014347,
       "rank": 5,
-      "moving_price": 0.00913651,
-      "tao_in": 12600.657,
+      "moving_price": 0.05394761,
+      "tao_in": 118985.9388,
       "source": "core"
     }
   },
