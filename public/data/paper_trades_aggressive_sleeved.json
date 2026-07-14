@@ -1709,5 +1709,20 @@
     "tao": 150.0,
     "alpha_tokens": 8384.729804,
     "entry_price": 0.01788966
+  },
+  {
+    "date": "2026-07-14",
+    "type": "EXIT",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao": 33.9721,
+    "alpha_tokens": 4017.17861,
+    "exit_price": 0.0084567,
+    "entry_price": 0.00970212,
+    "entry_date": "2026-06-09",
+    "cost_basis_tao": 35.716,
+    "realized_pnl_tao": -1.7439,
+    "realized_pnl_pct": -4.88,
+    "days_held": 35
   }
 ]

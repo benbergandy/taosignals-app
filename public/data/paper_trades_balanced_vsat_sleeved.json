@@ -1736,5 +1736,29 @@
     "tao": 50.0,
     "alpha_tokens": 2794.909935,
     "entry_price": 0.01788966
+  },
+  {
+    "date": "2026-07-14",
+    "type": "EXIT",
+    "netuid": 24,
+    "name": "Quasar",
+    "tao": 99.0912,
+    "alpha_tokens": 11717.479533,
+    "exit_price": 0.0084567,
+    "entry_price": 0.00970212,
+    "entry_date": "2026-06-09",
+    "cost_basis_tao": 107.298,
+    "realized_pnl_tao": -8.2068,
+    "realized_pnl_pct": -7.65,
+    "days_held": 35
+  },
+  {
+    "date": "2026-07-14",
+    "type": "INCREASE",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao_added": 120.2583,
+    "alpha_added": 4013.112043,
+    "spot_price": 0.02996633
   }
 ]

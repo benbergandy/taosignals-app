@@ -2,68 +2,68 @@
   "start_date": "2026-05-12",
   "profile": "buyhold",
   "total_tao": 1000.0,
-  "root_stake": 200.0184,
-  "accumulated_root_yield": 1.685799,
+  "root_stake": 200.0176,
+  "accumulated_root_yield": 1.752645,
   "positions": {
-    "24": {
-      "tao": 148.5955,
-      "name": "Quasar",
-      "entry_date": "2026-07-01",
-      "entry_price": 0.00948635,
-      "entry_tao": 160.0,
-      "alpha_tokens": 16887.312556,
-      "accumulated_emission_tokens": 20.965375,
-      "accumulated_emission_tao": 0.197606,
-      "source": "core",
-      "entry_score": 0.32515820465417866
-    },
     "107": {
-      "tao": 158.0837,
+      "tao": 154.6961,
       "name": "Minos",
       "entry_date": "2026-07-07",
       "entry_price": 0.05213411,
       "entry_tao": 160.0,
-      "alpha_tokens": 3096.403015,
-      "accumulated_emission_tokens": 27.394905,
-      "accumulated_emission_tao": 1.388318,
+      "alpha_tokens": 3100.705098,
+      "accumulated_emission_tokens": 31.696988,
+      "accumulated_emission_tao": 1.602952,
       "source": "core",
       "entry_score": 1.1992300526341229
     },
     "75": {
-      "tao": 154.3187,
+      "tao": 153.9664,
       "name": "Hippius",
       "entry_date": "2026-07-09",
       "entry_price": 0.01691459,
       "entry_tao": 160.0,
-      "alpha_tokens": 9459.645286,
-      "accumulated_emission_tokens": 0.358233,
-      "accumulated_emission_tao": 0.005912,
+      "alpha_tokens": 9459.73814,
+      "accumulated_emission_tokens": 0.451087,
+      "accumulated_emission_tao": 0.007423,
       "source": "core",
       "entry_score": 0.004066461209366285
     },
     "1": {
-      "tao": 159.6289,
+      "tao": 158.7763,
       "name": "Apex",
       "entry_date": "2026-07-10",
       "entry_price": 0.00857748,
       "entry_tao": 160.0,
-      "alpha_tokens": 18654.274871,
-      "accumulated_emission_tokens": 0.781323,
-      "accumulated_emission_tao": 0.006693,
+      "alpha_tokens": 18654.535548,
+      "accumulated_emission_tokens": 1.042,
+      "accumulated_emission_tao": 0.008912,
       "source": "core",
       "entry_score": 0.07360037441754033
     },
     "51": {
-      "tao": 159.6989,
+      "tao": 160.3227,
       "name": "lium.io",
       "entry_date": "2026-07-12",
       "entry_price": 0.05404811,
       "entry_tao": 160.0,
-      "alpha_tokens": 2960.521143,
-      "accumulated_emission_tokens": 0.195422,
-      "accumulated_emission_tao": 0.010542,
+      "alpha_tokens": 2960.715388,
+      "accumulated_emission_tokens": 0.389667,
+      "accumulated_emission_tao": 0.02106,
       "source": "core",
       "entry_score": -0.0226775580014347
+    },
+    "8": {
+      "tao": 160.0,
+      "name": "Vanta",
+      "entry_date": "2026-07-14",
+      "entry_price": 0.02996633,
+      "entry_tao": 160.0,
+      "alpha_tokens": 5339.325176,
+      "accumulated_emission_tokens": 0.0,
+      "accumulated_emission_tao": 0.0,
+      "source": "core",
+      "entry_score": 0.3839179086018079
     }
   },
   "benchmark_eq_prices": {
@@ -126,7 +126,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 54.426355,
+  "benchmark_eq_emissions": 54.758628,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -361,7 +361,7 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 17.134832,
-  "benchmark_root_value": 1006.6459,
-  "free_cash": 559.4669
+  "benchmark_mcw_emissions": 17.244589,
+  "benchmark_root_value": 1006.7345,
+  "free_cash": 542.3591
 }
