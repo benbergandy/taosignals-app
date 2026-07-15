@@ -1802,5 +1802,47 @@
     "tao_added": 90.4132,
     "alpha_added": 3017.159661,
     "spot_price": 0.02996633
+  },
+  {
+    "date": "2026-07-15",
+    "type": "EXIT",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 86.2577,
+    "alpha_tokens": 5321.156962,
+    "exit_price": 0.01621032,
+    "entry_price": 0.01691459,
+    "entry_date": "2026-07-09",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -3.7423,
+    "realized_pnl_pct": -4.16,
+    "days_held": 6
+  },
+  {
+    "date": "2026-07-15",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "gm",
+    "tao": 90.0,
+    "alpha_tokens": 7237.75541,
+    "entry_price": 0.01243479
+  },
+  {
+    "date": "2026-07-15",
+    "type": "ENTRY",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 90.0,
+    "alpha_tokens": 10594.370107,
+    "entry_price": 0.00849508
+  },
+  {
+    "date": "2026-07-15",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 90.2656,
+    "alpha_removed": 1666.737645,
+    "spot_price": 0.05415707
   }
 ]

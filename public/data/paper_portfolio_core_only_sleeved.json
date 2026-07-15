@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T12:07:35.349881+00:00",
-  "date": "2026-07-14",
+  "generated_at": "2026-07-15T12:05:08.033209+00:00",
+  "date": "2026-07-15",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -22,50 +22,50 @@
           "netuid": 107,
           "name": "Minos",
           "tao": 170.0,
-          "score": 1.2231716409718998,
+          "score": 1.224675521335151,
           "rank": 1,
-          "moving_price": 0.04991139,
-          "tao_in": 13457.0971,
+          "moving_price": 0.04948012,
+          "tao_in": 13524.8169,
+          "source": "core"
+        },
+        {
+          "netuid": 28,
+          "name": "gm",
+          "tao": 170.0,
+          "score": 0.22061288119869193,
+          "rank": 2,
+          "moving_price": 0.01237795,
+          "tao_in": 16225.0298,
+          "source": "core"
+        },
+        {
+          "netuid": 81,
+          "name": "deprecated",
+          "tao": 170.0,
+          "score": 0.156924513295384,
+          "rank": 3,
+          "moving_price": 0.00840988,
+          "tao_in": 20580.689,
           "source": "core"
         },
         {
           "netuid": 8,
           "name": "Vanta",
           "tao": 170.0,
-          "score": 0.3839179086018079,
-          "rank": 2,
-          "moving_price": 0.02997081,
-          "tao_in": 80777.2608,
-          "source": "core"
-        },
-        {
-          "netuid": 75,
-          "name": "Hippius",
-          "tao": 170.0,
-          "score": 0.20156972792338881,
-          "rank": 3,
-          "moving_price": 0.01611396,
-          "tao_in": 31430.1723,
-          "source": "core"
-        },
-        {
-          "netuid": 51,
-          "name": "lium.io",
-          "tao": 170.0,
-          "score": 0.1951833408755452,
+          "score": 0.10015206775738143,
           "rank": 4,
-          "moving_price": 0.05406351,
-          "tao_in": 119217.1348,
+          "moving_price": 0.02994708,
+          "tao_in": 80762.8237,
           "source": "core"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 170.0,
-          "score": 0.12662751274675174,
+          "score": 0.08927014520819858,
           "rank": 5,
-          "moving_price": 0.0085268,
-          "tao_in": 25987.6977,
+          "moving_price": 0.0085015,
+          "tao_in": 25963.8188,
           "source": "core"
         }
       ]
@@ -86,50 +86,50 @@
       "netuid": 107,
       "name": "Minos",
       "tao": 170.0,
-      "score": 1.2231716409718998,
+      "score": 1.224675521335151,
       "rank": 1,
-      "moving_price": 0.04991139,
-      "tao_in": 13457.0971,
+      "moving_price": 0.04948012,
+      "tao_in": 13524.8169,
+      "source": "core"
+    },
+    "28": {
+      "netuid": 28,
+      "name": "gm",
+      "tao": 170.0,
+      "score": 0.22061288119869193,
+      "rank": 2,
+      "moving_price": 0.01237795,
+      "tao_in": 16225.0298,
+      "source": "core"
+    },
+    "81": {
+      "netuid": 81,
+      "name": "deprecated",
+      "tao": 170.0,
+      "score": 0.156924513295384,
+      "rank": 3,
+      "moving_price": 0.00840988,
+      "tao_in": 20580.689,
       "source": "core"
     },
     "8": {
       "netuid": 8,
       "name": "Vanta",
       "tao": 170.0,
-      "score": 0.3839179086018079,
-      "rank": 2,
-      "moving_price": 0.02997081,
-      "tao_in": 80777.2608,
-      "source": "core"
-    },
-    "75": {
-      "netuid": 75,
-      "name": "Hippius",
-      "tao": 170.0,
-      "score": 0.20156972792338881,
-      "rank": 3,
-      "moving_price": 0.01611396,
-      "tao_in": 31430.1723,
-      "source": "core"
-    },
-    "51": {
-      "netuid": 51,
-      "name": "lium.io",
-      "tao": 170.0,
-      "score": 0.1951833408755452,
+      "score": 0.10015206775738143,
       "rank": 4,
-      "moving_price": 0.05406351,
-      "tao_in": 119217.1348,
+      "moving_price": 0.02994708,
+      "tao_in": 80762.8237,
       "source": "core"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 170.0,
-      "score": 0.12662751274675174,
+      "score": 0.08927014520819858,
       "rank": 5,
-      "moving_price": 0.0085268,
-      "tao_in": 25987.6977,
+      "moving_price": 0.0085015,
+      "tao_in": 25963.8188,
       "source": "core"
     }
   },
