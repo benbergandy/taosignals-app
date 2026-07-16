@@ -1844,5 +1844,71 @@
     "tao_removed": 90.2656,
     "alpha_removed": 1666.737645,
     "spot_price": 0.05415707
+  },
+  {
+    "date": "2026-07-16",
+    "type": "EXIT",
+    "netuid": 28,
+    "name": "gm",
+    "tao": 93.9851,
+    "alpha_tokens": 7238.501043,
+    "exit_price": 0.01298406,
+    "entry_price": 0.01243479,
+    "entry_date": "2026-07-15",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 3.9851,
+    "realized_pnl_pct": 4.43,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-16",
+    "type": "EXIT",
+    "netuid": 34,
+    "name": "BitMind",
+    "tao": 50.0367,
+    "alpha_tokens": 4069.462167,
+    "exit_price": 0.01229565,
+    "entry_price": 0.01229122,
+    "entry_date": "2026-07-09",
+    "cost_basis_tao": 50.0,
+    "realized_pnl_tao": 0.0367,
+    "realized_pnl_pct": 0.07,
+    "days_held": 7
+  },
+  {
+    "date": "2026-07-16",
+    "type": "INCREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_added": 89.8851,
+    "alpha_added": 1653.484096,
+    "spot_price": 0.05436101
+  },
+  {
+    "date": "2026-07-16",
+    "type": "INCREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_added": 90.895,
+    "alpha_added": 13365.915105,
+    "spot_price": 0.0068005
+  },
+  {
+    "date": "2026-07-16",
+    "type": "DECREASE",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao_removed": 89.4423,
+    "alpha_removed": 2994.711715,
+    "spot_price": 0.02986676
+  },
+  {
+    "date": "2026-07-16",
+    "type": "ENTRY",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 50.0,
+    "alpha_tokens": 4750.438485,
+    "entry_price": 0.01052534
   }
 ]

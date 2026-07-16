@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T12:05:08.028496+00:00",
-  "date": "2026-07-15",
+  "generated_at": "2026-07-16T12:05:20.680642+00:00",
+  "date": "2026-07-16",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "balanced",
@@ -22,50 +22,50 @@
           "netuid": 107,
           "name": "Minos",
           "tao": 80.0,
-          "score": 1.224675521335151,
+          "score": 1.041861995462291,
           "rank": 1,
-          "moving_price": 0.04948012,
-          "tao_in": 13524.8169,
-          "source": "core"
-        },
-        {
-          "netuid": 28,
-          "name": "gm",
-          "tao": 80.0,
-          "score": 0.22061288119869193,
-          "rank": 2,
-          "moving_price": 0.01237795,
-          "tao_in": 16225.0298,
-          "source": "core"
-        },
-        {
-          "netuid": 81,
-          "name": "deprecated",
-          "tao": 80.0,
-          "score": 0.156924513295384,
-          "rank": 3,
-          "moving_price": 0.00840988,
-          "tao_in": 20580.689,
-          "source": "core"
-        },
-        {
-          "netuid": 8,
-          "name": "Vanta",
-          "tao": 80.0,
-          "score": 0.10015206775738143,
-          "rank": 4,
-          "moving_price": 0.02994708,
-          "tao_in": 80762.8237,
+          "moving_price": 0.04959395,
+          "tao_in": 13780.418,
           "source": "core"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 80.0,
-          "score": 0.08927014520819858,
+          "score": 0.41594002960538823,
+          "rank": 2,
+          "moving_price": 0.00867878,
+          "tao_in": 26335.9146,
+          "source": "core"
+        },
+        {
+          "netuid": 51,
+          "name": "lium.io",
+          "tao": 80.0,
+          "score": 0.029283036690741587,
+          "rank": 3,
+          "moving_price": 0.05431221,
+          "tao_in": 119567.7977,
+          "source": "core"
+        },
+        {
+          "netuid": 85,
+          "name": "Vidaio",
+          "tao": 80.0,
+          "score": -0.01310243542401432,
+          "rank": 4,
+          "moving_price": 0.00678442,
+          "tao_in": 14247.5842,
+          "source": "core"
+        },
+        {
+          "netuid": 81,
+          "name": "deprecated",
+          "tao": 80.0,
+          "score": -0.014250876105485477,
           "rank": 5,
-          "moving_price": 0.0085015,
-          "tao_in": 25963.8188,
+          "moving_price": 0.00847925,
+          "tao_in": 20550.407,
           "source": "core"
         }
       ]
@@ -78,50 +78,50 @@
           "netuid": 85,
           "name": "Vidaio",
           "tao": 90.0,
-          "score": 0.8254825889461267,
+          "score": 0.8345095610741977,
           "rank": 1,
-          "moving_price": 0.00674758,
-          "tao_in": 14261.4249,
-          "source": "satellite"
-        },
-        {
-          "netuid": 1,
-          "name": "Apex",
-          "tao": 90.0,
-          "score": 0.7034128888296406,
-          "rank": 2,
-          "moving_price": 0.0085015,
-          "tao_in": 25963.8188,
+          "moving_price": 0.00678442,
+          "tao_in": 14247.5842,
           "source": "satellite"
         },
         {
           "netuid": 8,
           "name": "Vanta",
           "tao": 90.0,
-          "score": 0.6964619625524817,
-          "rank": 3,
-          "moving_price": 0.02994708,
-          "tao_in": 80762.8237,
+          "score": 0.6749556322487543,
+          "rank": 2,
+          "moving_price": 0.02988242,
+          "tao_in": 80665.3205,
           "source": "satellite"
         },
         {
           "netuid": 56,
           "name": "Gradients",
           "tao": 90.0,
-          "score": 0.6253906107352484,
-          "rank": 4,
-          "moving_price": 0.01766673,
-          "tao_in": 52762.6446,
+          "score": 0.6268480096408627,
+          "rank": 3,
+          "moving_price": 0.01757441,
+          "tao_in": 52744.7267,
           "source": "satellite"
         },
         {
-          "netuid": 34,
-          "name": "BitMind",
+          "netuid": 1,
+          "name": "Apex",
           "tao": 90.0,
-          "score": 0.6158614742363301,
+          "score": 0.6258671916975241,
+          "rank": 4,
+          "moving_price": 0.00867878,
+          "tao_in": 26335.9146,
+          "source": "satellite"
+        },
+        {
+          "netuid": 93,
+          "name": "Bitcast",
+          "tao": 90.0,
+          "score": 0.5903524523953851,
           "rank": 5,
-          "moving_price": 0.0121931,
-          "tao_in": 34516.7823,
+          "moving_price": 0.01049699,
+          "tao_in": 16940.7829,
           "source": "satellite"
         }
       ]
@@ -137,86 +137,86 @@
       "netuid": 107,
       "name": "Minos",
       "tao": 80.0,
-      "score": 1.224675521335151,
+      "score": 1.041861995462291,
       "rank": 1,
-      "moving_price": 0.04948012,
-      "tao_in": 13524.8169,
+      "moving_price": 0.04959395,
+      "tao_in": 13780.418,
       "source": "core"
-    },
-    "28": {
-      "netuid": 28,
-      "name": "gm",
-      "tao": 80.0,
-      "score": 0.22061288119869193,
-      "rank": 2,
-      "moving_price": 0.01237795,
-      "tao_in": 16225.0298,
-      "source": "core"
-    },
-    "81": {
-      "netuid": 81,
-      "name": "deprecated",
-      "tao": 80.0,
-      "score": 0.156924513295384,
-      "rank": 3,
-      "moving_price": 0.00840988,
-      "tao_in": 20580.689,
-      "source": "core"
-    },
-    "8": {
-      "netuid": 8,
-      "name": "Vanta",
-      "tao": 170.0,
-      "score": 0.10015206775738143,
-      "rank": 4,
-      "moving_price": 0.02994708,
-      "tao_in": 80762.8237,
-      "source": "core+satellite"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 170.0,
-      "score": 0.08927014520819858,
-      "rank": 5,
-      "moving_price": 0.0085015,
-      "tao_in": 25963.8188,
+      "score": 0.41594002960538823,
+      "rank": 2,
+      "moving_price": 0.00867878,
+      "tao_in": 26335.9146,
       "source": "core+satellite"
+    },
+    "51": {
+      "netuid": 51,
+      "name": "lium.io",
+      "tao": 80.0,
+      "score": 0.029283036690741587,
+      "rank": 3,
+      "moving_price": 0.05431221,
+      "tao_in": 119567.7977,
+      "source": "core"
     },
     "85": {
       "netuid": 85,
       "name": "Vidaio",
+      "tao": 170.0,
+      "score": -0.01310243542401432,
+      "rank": 4,
+      "moving_price": 0.00678442,
+      "tao_in": 14247.5842,
+      "source": "core+satellite"
+    },
+    "81": {
+      "netuid": 81,
+      "name": "deprecated",
+      "tao": 80.0,
+      "score": -0.014250876105485477,
+      "rank": 5,
+      "moving_price": 0.00847925,
+      "tao_in": 20550.407,
+      "source": "core"
+    },
+    "8": {
+      "netuid": 8,
+      "name": "Vanta",
       "tao": 90.0,
-      "score": 0.8254825889461267,
-      "rank": 1,
-      "moving_price": 0.00674758,
-      "tao_in": 14261.4249,
+      "score": 0.6749556322487543,
+      "rank": 2,
+      "moving_price": 0.02988242,
+      "tao_in": 80665.3205,
       "source": "satellite"
     },
     "56": {
       "netuid": 56,
       "name": "Gradients",
       "tao": 90.0,
-      "score": 0.6253906107352484,
-      "rank": 4,
-      "moving_price": 0.01766673,
-      "tao_in": 52762.6446,
+      "score": 0.6268480096408627,
+      "rank": 3,
+      "moving_price": 0.01757441,
+      "tao_in": 52744.7267,
       "source": "satellite"
     },
-    "34": {
-      "netuid": 34,
-      "name": "BitMind",
+    "93": {
+      "netuid": 93,
+      "name": "Bitcast",
       "tao": 90.0,
-      "score": 0.6158614742363301,
+      "score": 0.5903524523953851,
       "rank": 5,
-      "moving_price": 0.0121931,
-      "tao_in": 34516.7823,
+      "moving_price": 0.01049699,
+      "tao_in": 16940.7829,
       "source": "satellite"
     }
   },
   "n_positions_after_merge": 8,
   "consensus_picks": [
-    "8",
-    "1"
+    "1",
+    "85"
   ]
 }

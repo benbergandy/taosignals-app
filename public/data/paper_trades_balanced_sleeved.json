@@ -1718,5 +1718,53 @@
     "tao": 80.0,
     "alpha_tokens": 9417.217873,
     "entry_price": 0.00849508
+  },
+  {
+    "date": "2026-07-16",
+    "type": "EXIT",
+    "netuid": 28,
+    "name": "gm",
+    "tao": 83.5423,
+    "alpha_tokens": 6434.223565,
+    "exit_price": 0.01298406,
+    "entry_price": 0.01243479,
+    "entry_date": "2026-07-15",
+    "cost_basis_tao": 80.0,
+    "realized_pnl_tao": 3.5423,
+    "realized_pnl_pct": 4.43,
+    "days_held": 1
+  },
+  {
+    "date": "2026-07-16",
+    "type": "EXIT",
+    "netuid": 34,
+    "name": "BitMind",
+    "tao": 90.066,
+    "alpha_tokens": 7325.028756,
+    "exit_price": 0.01229565,
+    "entry_price": 0.01229122,
+    "entry_date": "2026-07-09",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 0.066,
+    "realized_pnl_pct": 0.07,
+    "days_held": 7
+  },
+  {
+    "date": "2026-07-16",
+    "type": "ENTRY",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 80.0,
+    "alpha_tokens": 1471.643054,
+    "entry_price": 0.05436101
+  },
+  {
+    "date": "2026-07-16",
+    "type": "ENTRY",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 90.0,
+    "alpha_tokens": 8550.789273,
+    "entry_price": 0.01052534
   }
 ]

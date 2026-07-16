@@ -7641,6 +7641,82 @@
       "total_value": 1.552224,
       "total_pnl_tao": 0.552224,
       "total_pnl_pct": 55.22
+    },
+    {
+      "date": "2026-07-16",
+      "balance": 0.366389,
+      "positions": {
+        "0": {
+          "name": "SN0",
+          "tokens": 0.269532,
+          "price": 0.0,
+          "tao_value": 0,
+          "cost_basis": 0,
+          "pnl_tao": 0,
+          "pnl_pct": 0,
+          "emission": "\u03c40.000000000",
+          "hotkey": "5E2LP6EnZ54m3wS8s1yP..."
+        },
+        "4": {
+          "name": "Targon",
+          "tokens": 4.883969,
+          "price": 0.05308083,
+          "tao_value": 0.259245,
+          "cost_basis": 0.1,
+          "pnl_tao": 0.159245,
+          "pnl_pct": 159.25,
+          "emission": "\u200e45.373943376\u03b4\u200e",
+          "hotkey": "5Hp18g9P8hLGKp9W3ZDr..."
+        },
+        "14": {
+          "name": "SN14",
+          "tokens": 22.861829,
+          "price": 0.01034702,
+          "tao_value": 0.236552,
+          "cost_basis": 0,
+          "pnl_tao": 0.236552,
+          "pnl_pct": 0,
+          "emission": "\u200e10.366308603\u03be\u200e",
+          "hotkey": "5GKYWndSE6tnrQD4J6pZ..."
+        },
+        "44": {
+          "name": "SN44",
+          "tokens": 6.868333,
+          "price": 0.03728652,
+          "tao_value": 0.256096,
+          "cost_basis": 0,
+          "pnl_tao": 0.256096,
+          "pnl_pct": 0,
+          "emission": "\u200e5.679720238\u05e3\u200e",
+          "hotkey": "5DFwFpurRFaT5VtjdsAT..."
+        },
+        "51": {
+          "name": "SN51",
+          "tokens": 3.708658,
+          "price": 0.05431259,
+          "tao_value": 0.201427,
+          "cost_basis": 0,
+          "pnl_tao": 0.201427,
+          "pnl_pct": 0,
+          "emission": "\u200e2.551960379\u05ea\u200e",
+          "hotkey": "5F7X5UpKSr26KU3jKfpL..."
+        },
+        "68": {
+          "name": "SN68",
+          "tokens": 10.703241,
+          "price": 0.02195953,
+          "tao_value": 0.235038,
+          "cost_basis": 0,
+          "pnl_tao": 0.235038,
+          "pnl_pct": 0,
+          "emission": "\u200e24.842898782\u0638\u200e",
+          "hotkey": "5HWG3xZnj6SW7AKiAaaP..."
+        }
+      },
+      "total_staked_value": 1.188358,
+      "total_value": 1.554748,
+      "total_pnl_tao": 0.554748,
+      "total_pnl_pct": 55.47
     }
   ],
   "initial_date": "2026-04-07"
