@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-16 12:04 UTC",
+  "generated_at": "2026-07-17 12:01 UTC",
   "date": "2026-07-16",
-  "regime": "CAUTION",
+  "regime": "NORMAL",
   "composite_score": 0.23,
   "indicators": {
     "drawdown_velocity": {
@@ -35,11 +35,11 @@
     }
   },
   "adjustments": {
-    "root_stake_increase": 0.1,
-    "max_volatility_multiplier": 0.75,
-    "max_drawdown_multiplier": 0.75,
-    "min_sortino_increase": 0.25,
+    "root_stake_increase": 0.0,
+    "max_volatility_multiplier": 1.0,
+    "max_drawdown_multiplier": 1.0,
+    "min_sortino_increase": 0.0,
     "liquidity_tier_upgrade": 0,
-    "description": "Elevated risk \u2014 tighten filters, increase root stake 10%"
+    "description": "Normal conditions \u2014 portfolio runs as designed"
   }
 }
