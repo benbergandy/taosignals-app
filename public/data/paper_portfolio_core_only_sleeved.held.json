@@ -3,65 +3,65 @@
   "profile": "core_only",
   "total_tao": 1000.0,
   "root_stake": 150.0133,
-  "accumulated_root_yield": 2.475583,
+  "accumulated_root_yield": 2.540296,
   "positions": {
     "107": {
-      "tao": 168.915,
+      "tao": 169.1428,
       "name": "Minos",
       "entry_date": "2026-07-07",
       "entry_price": 0.05213411,
       "entry_tao": 170.0,
-      "alpha_tokens": 3366.347633,
-      "accumulated_emission_tokens": 105.526516,
-      "accumulated_emission_tao": 5.304571,
+      "alpha_tokens": 3370.88861,
+      "accumulated_emission_tokens": 110.067493,
+      "accumulated_emission_tao": 5.532426,
       "source": "core",
       "entry_score": 1.1992300526341229
     },
     "1": {
-      "tao": 173.215,
+      "tao": 173.2175,
       "name": "Apex",
       "entry_date": "2026-07-10",
       "entry_price": 0.00857748,
       "entry_tao": 170.0,
-      "alpha_tokens": 19824.973945,
-      "accumulated_emission_tokens": 5.63705,
-      "accumulated_emission_tao": 0.048978,
+      "alpha_tokens": 19825.256677,
+      "accumulated_emission_tokens": 5.919782,
+      "accumulated_emission_tao": 0.051448,
       "source": "core",
       "entry_score": 0.07360037441754033
     },
     "81": {
-      "tao": 169.4966,
+      "tao": 169.5073,
       "name": "deprecated",
       "entry_date": "2026-07-15",
       "entry_price": 0.00849508,
       "entry_tao": 170.0,
-      "alpha_tokens": 20030.554088,
-      "accumulated_emission_tokens": 18.966108,
-      "accumulated_emission_tao": 0.16049,
+      "alpha_tokens": 20031.819129,
+      "accumulated_emission_tokens": 20.231149,
+      "accumulated_emission_tao": 0.171195,
       "source": "core",
       "entry_score": 0.156924513295384
     },
     "51": {
-      "tao": 170.1554,
+      "tao": 170.1665,
       "name": "lium.io",
       "entry_date": "2026-07-16",
       "entry_price": 0.05436101,
       "entry_tao": 170.0,
-      "alpha_tokens": 3130.099994,
-      "accumulated_emission_tokens": 2.858504,
-      "accumulated_emission_tao": 0.155391,
+      "alpha_tokens": 3130.304273,
+      "accumulated_emission_tokens": 3.062783,
+      "accumulated_emission_tao": 0.166496,
       "source": "core",
       "entry_score": 0.029283036690741587
     },
     "85": {
-      "tao": 170.1805,
+      "tao": 170.1934,
       "name": "Vidaio",
       "entry_date": "2026-07-16",
       "entry_price": 0.0068005,
       "entry_tao": 170.0,
-      "alpha_tokens": 25024.683484,
-      "accumulated_emission_tokens": 26.537154,
-      "accumulated_emission_tao": 0.180467,
+      "alpha_tokens": 25026.58006,
+      "accumulated_emission_tokens": 28.43373,
+      "accumulated_emission_tao": 0.193365,
       "source": "core",
       "entry_score": -0.01310243542401432
     }
@@ -126,7 +126,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 59.983776,
+  "benchmark_eq_emissions": 60.310581,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -361,7 +361,7 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 18.999128,
-  "benchmark_root_value": 1008.1668,
-  "free_cash": 577.5168
+  "benchmark_mcw_emissions": 19.108858,
+  "benchmark_root_value": 1008.2565,
+  "free_cash": 577.5815
 }
