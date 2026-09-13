@@ -2126,5 +2126,24 @@
     "benchmark_root": 1010.41,
     "alpha_vs_eq": 22.35,
     "alpha_vs_mcw": 33.29
+  },
+  {
+    "date": "2026-09-13",
+    "profile": "balanced_with_deep_sleeved",
+    "model": "core_v3_pca_var_weighted",
+    "portfolio_value": 1285.64,
+    "pnl_tao": 285.64,
+    "pnl_pct": 28.56,
+    "n_positions": 11,
+    "root_stake": 150.01,
+    "free_cash": 278.3841,
+    "subnet_deployed": 857.2,
+    "n_trades_today": 0,
+    "n_score_drop_exits": 0,
+    "benchmark_eq_weight": 1062.22,
+    "benchmark_mcw": 952.6,
+    "benchmark_root": 1010.5,
+    "alpha_vs_eq": 22.34,
+    "alpha_vs_mcw": 33.3
   }
 ]
