@@ -1820,5 +1820,107 @@
     "tao": 150.0,
     "alpha_tokens": 14251.315455,
     "entry_price": 0.01052534
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 69.3248,
+    "alpha_tokens": 739.443474,
+    "exit_price": 0.09375271,
+    "entry_price": 0.05436101,
+    "entry_date": "2026-07-16",
+    "cost_basis_tao": 40.0,
+    "realized_pnl_tao": 29.3248,
+    "realized_pnl_pct": 73.31,
+    "days_held": 82
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 147.5904,
+    "alpha_tokens": 4988.799823,
+    "exit_price": 0.02958434,
+    "entry_price": 0.03012778,
+    "entry_date": "2026-07-08",
+    "cost_basis_tao": 150.0,
+    "realized_pnl_tao": -2.4096,
+    "realized_pnl_pct": -1.61,
+    "days_held": 90
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao_removed": 86.3326,
+    "alpha_removed": 14887.788576,
+    "spot_price": 0.00579889
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao_removed": 257.9893,
+    "alpha_removed": 12366.824151,
+    "spot_price": 0.0208614
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 40.0,
+    "alpha_tokens": 9668.361036,
+    "entry_price": 0.00413721
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 40.0,
+    "alpha_tokens": 1836.071296,
+    "entry_price": 0.02178565
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 40.0,
+    "alpha_tokens": 1189.223944,
+    "entry_price": 0.03363538
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 150.0,
+    "alpha_tokens": 16646.3469,
+    "entry_price": 0.00901099
+  },
+  {
+    "date": "2026-10-06",
+    "type": "INCREASE",
+    "netuid": 107,
+    "name": "Minos",
+    "tao_added": 116.534,
+    "alpha_added": 2995.267193,
+    "spot_price": 0.03890605
+  },
+  {
+    "date": "2026-10-06",
+    "type": "INCREASE",
+    "netuid": 81,
+    "name": "Reliquary",
+    "tao_added": 121.2501,
+    "alpha_added": 19953.039953,
+    "spot_price": 0.00607677
   }
 ]

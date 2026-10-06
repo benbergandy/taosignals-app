@@ -1874,5 +1874,98 @@
     "tao": 50.0,
     "alpha_tokens": 4750.438485,
     "entry_price": 0.01052534
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 207.9738,
+    "alpha_tokens": 2218.323093,
+    "exit_price": 0.09375271,
+    "entry_price": 0.05436101,
+    "entry_date": "2026-07-16",
+    "cost_basis_tao": 120.0,
+    "realized_pnl_tao": 87.9738,
+    "realized_pnl_pct": 73.31,
+    "days_held": 82
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 49.6151,
+    "alpha_tokens": 1677.072476,
+    "exit_price": 0.02958434,
+    "entry_price": 0.03012778,
+    "entry_date": "2026-07-08",
+    "cost_basis_tao": 50.816,
+    "realized_pnl_tao": -1.2009,
+    "realized_pnl_pct": -2.36,
+    "days_held": 90
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 120.0,
+    "alpha_tokens": 29005.083108,
+    "entry_price": 0.00413721
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 120.0,
+    "alpha_tokens": 5508.213888,
+    "entry_price": 0.02178565
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 120.0,
+    "alpha_tokens": 3567.671831,
+    "entry_price": 0.03363538
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 1,
+    "name": "Apex",
+    "tao_removed": 81.2196,
+    "alpha_removed": 12281.374438,
+    "spot_price": 0.00661323
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 50.0,
+    "alpha_tokens": 5548.7823,
+    "entry_price": 0.00901099
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 107,
+    "name": "Minos",
+    "tao_removed": 50.3306,
+    "alpha_removed": 1293.644735,
+    "spot_price": 0.03890605
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 81,
+    "name": "Reliquary",
+    "tao_removed": 36.248,
+    "alpha_removed": 5965.013349,
+    "spot_price": 0.00607677
   }
 ]

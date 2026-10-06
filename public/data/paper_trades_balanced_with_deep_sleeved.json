@@ -1910,5 +1910,77 @@
     "tao": 50.0,
     "alpha_tokens": 4750.438485,
     "entry_price": 0.01052534
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 90.0,
+    "alpha_tokens": 21753.812331,
+    "entry_price": 0.00413721
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 90.0,
+    "alpha_tokens": 4131.160416,
+    "entry_price": 0.02178565
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 90.0,
+    "alpha_tokens": 2675.753873,
+    "entry_price": 0.03363538
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 1,
+    "name": "Apex",
+    "tao_removed": 58.0633,
+    "alpha_removed": 8779.871248,
+    "spot_price": 0.00661323
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 50.0,
+    "alpha_tokens": 5548.7823,
+    "entry_price": 0.00901099
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 107,
+    "name": "Minos",
+    "tao_removed": 25.2668,
+    "alpha_removed": 649.43182,
+    "spot_price": 0.03890605
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 177.9738,
+    "alpha_removed": 1898.332354,
+    "spot_price": 0.09375271
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao_removed": 49.3841,
+    "alpha_removed": 1669.264247,
+    "spot_price": 0.02958434
   }
 ]

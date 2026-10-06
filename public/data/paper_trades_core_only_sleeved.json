@@ -1866,5 +1866,102 @@
     "tao": 170.0,
     "alpha_tokens": 24998.14633,
     "entry_price": 0.0068005
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 107,
+    "name": "Minos",
+    "tao": 142.076,
+    "alpha_tokens": 3651.771483,
+    "exit_price": 0.03890605,
+    "entry_price": 0.05213411,
+    "entry_date": "2026-07-07",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -27.924,
+    "realized_pnl_pct": -16.43,
+    "days_held": 91,
+    "reason": "score_drop_1.63>1.0_(core)"
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 294.629,
+    "alpha_tokens": 3142.617904,
+    "exit_price": 0.09375271,
+    "entry_price": 0.05436101,
+    "entry_date": "2026-07-16",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": 124.629,
+    "realized_pnl_pct": 73.31,
+    "days_held": 82
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 1,
+    "name": "Apex",
+    "tao": 131.2196,
+    "alpha_tokens": 19841.973288,
+    "exit_price": 0.00661323,
+    "entry_price": 0.00857748,
+    "entry_date": "2026-07-10",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -38.7804,
+    "realized_pnl_pct": -22.81,
+    "days_held": 88
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 122.1833,
+    "alpha_tokens": 20106.608769,
+    "exit_price": 0.00607677,
+    "entry_price": 0.00849508,
+    "entry_date": "2026-07-15",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -47.8167,
+    "realized_pnl_pct": -28.13,
+    "days_held": 83
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 170.0,
+    "alpha_tokens": 8149.020709,
+    "entry_price": 0.0208614
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 170.0,
+    "alpha_tokens": 41090.534403,
+    "entry_price": 0.00413721
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 170.0,
+    "alpha_tokens": 7803.303008,
+    "entry_price": 0.02178565
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 170.0,
+    "alpha_tokens": 5054.201761,
+    "entry_price": 0.03363538
   }
 ]

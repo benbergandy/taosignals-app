@@ -1766,5 +1766,80 @@
     "tao": 90.0,
     "alpha_tokens": 8550.789273,
     "entry_price": 0.01052534
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 138.6494,
+    "alpha_tokens": 1478.884505,
+    "exit_price": 0.09375271,
+    "entry_price": 0.05436101,
+    "entry_date": "2026-07-16",
+    "cost_basis_tao": 80.0,
+    "realized_pnl_tao": 58.6494,
+    "realized_pnl_pct": 73.31,
+    "days_held": 82
+  },
+  {
+    "date": "2026-10-06",
+    "type": "EXIT",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 88.5543,
+    "alpha_tokens": 2993.284324,
+    "exit_price": 0.02958434,
+    "entry_price": 0.03012778,
+    "entry_date": "2026-07-08",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -1.4457,
+    "realized_pnl_pct": -1.61,
+    "days_held": 90
+  },
+  {
+    "date": "2026-10-06",
+    "type": "DECREASE",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao_removed": 98.7951,
+    "alpha_removed": 4735.782154,
+    "spot_price": 0.0208614
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 80.0,
+    "alpha_tokens": 19336.722072,
+    "entry_price": 0.00413721
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 80.0,
+    "alpha_tokens": 3672.142592,
+    "entry_price": 0.02178565
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 80.0,
+    "alpha_tokens": 2378.447887,
+    "entry_price": 0.03363538
+  },
+  {
+    "date": "2026-10-06",
+    "type": "ENTRY",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 90.0,
+    "alpha_tokens": 9987.80814,
+    "entry_price": 0.00901099
   }
 ]
