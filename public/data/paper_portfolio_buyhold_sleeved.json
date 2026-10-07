@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-06T12:02:45.517829+00:00",
-  "date": "2026-10-06",
+  "generated_at": "2026-10-07T12:08:13.560285+00:00",
+  "date": "2026-10-07",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 85,
-          "name": "Vidaio",
-          "tao": 160.0,
-          "score": 0.7895507385607239,
-          "rank": 1,
-          "moving_price": 0.00575315,
-          "tao_in": 13515.4597,
-          "source": "core"
-        },
-        {
           "netuid": 61,
           "name": "RedTeam",
           "tao": 160.0,
-          "score": 0.44823897623513004,
-          "rank": 2,
-          "moving_price": 0.01091527,
-          "tao_in": 13953.2712,
+          "score": 1.6481649458092518,
+          "rank": 1,
+          "moving_price": 0.01200461,
+          "tao_in": 14924.3207,
           "source": "core"
         },
         {
-          "netuid": 93,
-          "name": "Bitcast",
+          "netuid": 85,
+          "name": "Vidaio",
           "tao": 160.0,
-          "score": 0.35889231080354767,
-          "rank": 3,
-          "moving_price": 0.02079114,
-          "tao_in": 24967.5706,
+          "score": 1.0552913863285909,
+          "rank": 2,
+          "moving_price": 0.0057272,
+          "tao_in": 13767.0813,
           "source": "core"
         },
         {
           "netuid": 28,
           "name": "SayGM",
           "tao": 160.0,
-          "score": 0.35523585395043067,
-          "rank": 4,
-          "moving_price": 0.02162833,
-          "tao_in": 23298.5051,
+          "score": 0.8262394213223552,
+          "rank": 3,
+          "moving_price": 0.02264165,
+          "tao_in": 23902.2835,
           "source": "core"
         },
         {
-          "netuid": 33,
-          "name": "ReadyAI",
+          "netuid": 53,
+          "name": "engy",
           "tao": 160.0,
-          "score": 0.3030598944726824,
+          "score": 0.30467811453034993,
+          "rank": 4,
+          "moving_price": 0.03579182,
+          "tao_in": 39384.1953,
+          "source": "core"
+        },
+        {
+          "netuid": 8,
+          "name": "Vanta",
+          "tao": 160.0,
+          "score": 0.07648981007279959,
           "rank": 5,
-          "moving_price": 0.0041508,
-          "tao_in": 13830.5366,
+          "moving_price": 0.02951574,
+          "tao_in": 82285.9428,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
-    "85": {
-      "netuid": 85,
-      "name": "Vidaio",
-      "tao": 160.0,
-      "score": 0.7895507385607239,
-      "rank": 1,
-      "moving_price": 0.00575315,
-      "tao_in": 13515.4597,
-      "source": "core"
-    },
     "61": {
       "netuid": 61,
       "name": "RedTeam",
       "tao": 160.0,
-      "score": 0.44823897623513004,
-      "rank": 2,
-      "moving_price": 0.01091527,
-      "tao_in": 13953.2712,
+      "score": 1.6481649458092518,
+      "rank": 1,
+      "moving_price": 0.01200461,
+      "tao_in": 14924.3207,
       "source": "core"
     },
-    "93": {
-      "netuid": 93,
-      "name": "Bitcast",
+    "85": {
+      "netuid": 85,
+      "name": "Vidaio",
       "tao": 160.0,
-      "score": 0.35889231080354767,
-      "rank": 3,
-      "moving_price": 0.02079114,
-      "tao_in": 24967.5706,
+      "score": 1.0552913863285909,
+      "rank": 2,
+      "moving_price": 0.0057272,
+      "tao_in": 13767.0813,
       "source": "core"
     },
     "28": {
       "netuid": 28,
       "name": "SayGM",
       "tao": 160.0,
-      "score": 0.35523585395043067,
-      "rank": 4,
-      "moving_price": 0.02162833,
-      "tao_in": 23298.5051,
+      "score": 0.8262394213223552,
+      "rank": 3,
+      "moving_price": 0.02264165,
+      "tao_in": 23902.2835,
       "source": "core"
     },
-    "33": {
-      "netuid": 33,
-      "name": "ReadyAI",
+    "53": {
+      "netuid": 53,
+      "name": "engy",
       "tao": 160.0,
-      "score": 0.3030598944726824,
+      "score": 0.30467811453034993,
+      "rank": 4,
+      "moving_price": 0.03579182,
+      "tao_in": 39384.1953,
+      "source": "core"
+    },
+    "8": {
+      "netuid": 8,
+      "name": "Vanta",
+      "tao": 160.0,
+      "score": 0.07648981007279959,
       "rank": 5,
-      "moving_price": 0.0041508,
-      "tao_in": 13830.5366,
+      "moving_price": 0.02951574,
+      "tao_in": 82285.9428,
       "source": "core"
     }
   },

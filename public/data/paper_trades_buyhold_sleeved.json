@@ -1963,5 +1963,54 @@
     "tao": 160.0,
     "alpha_tokens": 4756.895775,
     "entry_price": 0.03363538
+  },
+  {
+    "date": "2026-10-07",
+    "type": "EXIT",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 145.6886,
+    "alpha_tokens": 38674.158282,
+    "exit_price": 0.00376708,
+    "entry_price": 0.00413721,
+    "entry_date": "2026-10-06",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -14.3114,
+    "realized_pnl_pct": -8.94,
+    "days_held": 1,
+    "reason": "score_drop_1.16>1.0_(core)"
+  },
+  {
+    "date": "2026-10-07",
+    "type": "EXIT",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 144.7417,
+    "alpha_tokens": 7670.558282,
+    "exit_price": 0.01886977,
+    "entry_price": 0.0208614,
+    "entry_date": "2026-10-06",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -15.2583,
+    "realized_pnl_pct": -9.54,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-07",
+    "type": "ENTRY",
+    "netuid": 61,
+    "name": "RedTeam",
+    "tao": 160.0,
+    "alpha_tokens": 12620.906275,
+    "entry_price": 0.01267738
+  },
+  {
+    "date": "2026-10-07",
+    "type": "ENTRY",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 160.0,
+    "alpha_tokens": 5415.96186,
+    "entry_price": 0.02954231
   }
 ]

@@ -3,67 +3,67 @@
   "profile": "core_only",
   "total_tao": 1000.0,
   "root_stake": 150.0113,
-  "accumulated_root_yield": 6.423561,
+  "accumulated_root_yield": 6.479267,
   "positions": {
     "85": {
-      "tao": 145.7857,
+      "tao": 149.4822,
       "name": "Vidaio",
       "entry_date": "2026-07-16",
       "entry_price": 0.0068005,
       "entry_tao": 170.0,
-      "alpha_tokens": 25140.29279,
-      "accumulated_emission_tokens": 142.14646,
-      "accumulated_emission_tao": 0.965103,
+      "alpha_tokens": 25141.869088,
+      "accumulated_emission_tokens": 143.722758,
+      "accumulated_emission_tao": 0.974475,
       "source": "core",
       "entry_score": -0.01310243542401432
     },
-    "93": {
-      "tao": 170.0,
-      "name": "Bitcast",
-      "entry_date": "2026-10-06",
-      "entry_price": 0.0208614,
-      "entry_tao": 170.0,
-      "alpha_tokens": 8149.020709,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
-      "source": "core",
-      "entry_score": 0.546993501714515
-    },
-    "33": {
-      "tao": 170.0,
-      "name": "ReadyAI",
-      "entry_date": "2026-10-06",
-      "entry_price": 0.00413721,
-      "entry_tao": 170.0,
-      "alpha_tokens": 41090.534403,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
-      "source": "core",
-      "entry_score": 0.24472734996599083
-    },
     "28": {
-      "tao": 170.0,
+      "tao": 182.2243,
       "name": "SayGM",
       "entry_date": "2026-10-06",
       "entry_price": 0.02178565,
       "entry_tao": 170.0,
-      "alpha_tokens": 7803.303008,
-      "accumulated_emission_tokens": 0.0,
-      "accumulated_emission_tao": 0.0,
+      "alpha_tokens": 7804.278381,
+      "accumulated_emission_tokens": 0.975373,
+      "accumulated_emission_tao": 0.022774,
       "source": "core",
       "entry_score": 0.22519766991682563
     },
     "53": {
-      "tao": 170.0,
+      "tao": 184.0297,
       "name": "engy",
       "entry_date": "2026-10-06",
       "entry_price": 0.03363538,
       "entry_tao": 170.0,
-      "alpha_tokens": 5054.201761,
+      "alpha_tokens": 5054.809457,
+      "accumulated_emission_tokens": 0.607696,
+      "accumulated_emission_tao": 0.022124,
+      "source": "core",
+      "entry_score": 0.16006137486770972
+    },
+    "61": {
+      "tao": 170.0,
+      "name": "RedTeam",
+      "entry_date": "2026-10-07",
+      "entry_price": 0.01267738,
+      "entry_tao": 170.0,
+      "alpha_tokens": 13409.712917,
       "accumulated_emission_tokens": 0.0,
       "accumulated_emission_tao": 0.0,
       "source": "core",
-      "entry_score": 0.16006137486770972
+      "entry_score": 1.6481649458092518
+    },
+    "8": {
+      "tao": 170.0,
+      "name": "Vanta",
+      "entry_date": "2026-10-07",
+      "entry_price": 0.02954231,
+      "entry_tao": 170.0,
+      "alpha_tokens": 5754.459477,
+      "accumulated_emission_tokens": 0.0,
+      "accumulated_emission_tao": 0.0,
+      "source": "core",
+      "entry_score": 0.07648981007279959
     }
   },
   "benchmark_eq_prices": {
@@ -126,7 +126,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 79.741943,
+  "benchmark_eq_emissions": 79.892944,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -361,7 +361,7 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 25.666588,
-  "benchmark_root_value": 1013.637,
-  "free_cash": 591.5722
+  "benchmark_mcw_emissions": 25.750573,
+  "benchmark_root_value": 1013.7131,
+  "free_cash": 560.2101
 }
