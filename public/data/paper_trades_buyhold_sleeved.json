@@ -2012,5 +2012,29 @@
     "tao": 160.0,
     "alpha_tokens": 5415.96186,
     "entry_price": 0.02954231
+  },
+  {
+    "date": "2026-10-08",
+    "type": "EXIT",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 173.9718,
+    "alpha_tokens": 4758.039715,
+    "exit_price": 0.03656376,
+    "entry_price": 0.03363538,
+    "entry_date": "2026-10-06",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": 13.9718,
+    "realized_pnl_pct": 8.73,
+    "days_held": 2
+  },
+  {
+    "date": "2026-10-08",
+    "type": "ENTRY",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 160.0,
+    "alpha_tokens": 20615.328118,
+    "entry_price": 0.00776122
   }
 ]
