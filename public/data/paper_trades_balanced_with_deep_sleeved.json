@@ -2079,5 +2079,95 @@
     "tao": 90.0,
     "alpha_tokens": 11596.122066,
     "entry_price": 0.00776122
+  },
+  {
+    "date": "2026-10-09",
+    "type": "EXIT",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 62.199,
+    "alpha_tokens": 10644.906892,
+    "exit_price": 0.00584307,
+    "entry_price": 0.00849508,
+    "entry_date": "2026-07-15",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -27.801,
+    "realized_pnl_pct": -30.89,
+    "days_held": 86
+  },
+  {
+    "date": "2026-10-09",
+    "type": "EXIT",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 120.1406,
+    "alpha_tokens": 20707.927972,
+    "exit_price": 0.00580167,
+    "entry_price": 0.00692872,
+    "entry_date": "2026-07-08",
+    "cost_basis_tao": 140.895,
+    "realized_pnl_tao": -20.7544,
+    "realized_pnl_pct": -14.73,
+    "days_held": 93
+  },
+  {
+    "date": "2026-10-09",
+    "type": "EXIT",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 87.5496,
+    "alpha_tokens": 11596.878154,
+    "exit_price": 0.00754941,
+    "entry_price": 0.00776122,
+    "entry_date": "2026-10-08",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -2.4504,
+    "realized_pnl_pct": -2.72,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-09",
+    "type": "ENTRY",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 90.0,
+    "alpha_tokens": 9384.011811,
+    "entry_price": 0.00959078
+  },
+  {
+    "date": "2026-10-09",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 90.0,
+    "alpha_tokens": 2580.044201,
+    "entry_price": 0.03488312
+  },
+  {
+    "date": "2026-10-09",
+    "type": "ENTRY",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 90.0,
+    "alpha_tokens": 3670.569533,
+    "entry_price": 0.02451936
+  },
+  {
+    "date": "2026-10-09",
+    "type": "ENTRY",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao": 50.0,
+    "alpha_tokens": 6051.425515,
+    "entry_price": 0.00826252
+  },
+  {
+    "date": "2026-10-09",
+    "type": "DECREASE",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao_removed": 90.662,
+    "alpha_removed": 3052.333861,
+    "spot_price": 0.02970253
   }
 ]

@@ -2019,5 +2019,101 @@
     "tao": 40.0,
     "alpha_tokens": 5153.832029,
     "entry_price": 0.00776122
+  },
+  {
+    "date": "2026-10-09",
+    "type": "EXIT",
+    "netuid": 81,
+    "name": "deprecated",
+    "tao": 144.2318,
+    "alpha_tokens": 24684.232313,
+    "exit_price": 0.00584307,
+    "entry_price": 0.00849508,
+    "entry_date": "2026-07-15",
+    "cost_basis_tao": 161.2501,
+    "realized_pnl_tao": -17.0183,
+    "realized_pnl_pct": -10.55,
+    "days_held": 86
+  },
+  {
+    "date": "2026-10-09",
+    "type": "EXIT",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 40.2207,
+    "alpha_tokens": 1354.116396,
+    "exit_price": 0.02970253,
+    "entry_price": 0.02954231,
+    "entry_date": "2026-10-07",
+    "cost_basis_tao": 40.0,
+    "realized_pnl_tao": 0.2207,
+    "realized_pnl_pct": 0.55,
+    "days_held": 2
+  },
+  {
+    "date": "2026-10-09",
+    "type": "EXIT",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 40.0268,
+    "alpha_tokens": 6899.185696,
+    "exit_price": 0.00580167,
+    "entry_price": 0.00692872,
+    "entry_date": "2026-07-08",
+    "cost_basis_tao": 63.6674,
+    "realized_pnl_tao": -23.6406,
+    "realized_pnl_pct": -37.13,
+    "days_held": 93
+  },
+  {
+    "date": "2026-10-09",
+    "type": "EXIT",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 38.9109,
+    "alpha_tokens": 5154.169116,
+    "exit_price": 0.00754941,
+    "entry_price": 0.00776122,
+    "entry_date": "2026-10-08",
+    "cost_basis_tao": 40.0,
+    "realized_pnl_tao": -1.0891,
+    "realized_pnl_pct": -2.72,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-09",
+    "type": "ENTRY",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 40.0,
+    "alpha_tokens": 4170.671916,
+    "entry_price": 0.00959078
+  },
+  {
+    "date": "2026-10-09",
+    "type": "ENTRY",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 40.0,
+    "alpha_tokens": 1146.686312,
+    "entry_price": 0.03488312
+  },
+  {
+    "date": "2026-10-09",
+    "type": "ENTRY",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 40.0,
+    "alpha_tokens": 1631.364237,
+    "entry_price": 0.02451936
+  },
+  {
+    "date": "2026-10-09",
+    "type": "ENTRY",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao": 150.0,
+    "alpha_tokens": 18154.276544,
+    "entry_price": 0.00826252
   }
 ]
