@@ -2132,5 +2132,29 @@
     "tao": 170.0,
     "alpha_tokens": 9679.006636,
     "entry_price": 0.01756379
+  },
+  {
+    "date": "2026-10-11",
+    "type": "EXIT",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 163.2294,
+    "alpha_tokens": 17729.576986,
+    "exit_price": 0.00920661,
+    "entry_price": 0.00959078,
+    "entry_date": "2026-10-09",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -6.7706,
+    "realized_pnl_pct": -3.98,
+    "days_held": 2
+  },
+  {
+    "date": "2026-10-11",
+    "type": "ENTRY",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 170.0,
+    "alpha_tokens": 1629.808575,
+    "entry_price": 0.10430673
   }
 ]

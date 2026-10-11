@@ -2058,5 +2058,54 @@
     "tao": 120.0,
     "alpha_tokens": 6832.239978,
     "entry_price": 0.01756379
+  },
+  {
+    "date": "2026-10-11",
+    "type": "EXIT",
+    "netuid": 107,
+    "name": "Minos",
+    "tao": 19.7021,
+    "alpha_tokens": 515.405704,
+    "exit_price": 0.03822632,
+    "entry_price": 0.05213411,
+    "entry_date": "2026-07-07",
+    "cost_basis_tao": 39.6694,
+    "realized_pnl_tao": -19.9673,
+    "realized_pnl_pct": -50.33,
+    "days_held": 96,
+    "reason": "score_drop_1.57>1.0_(core)"
+  },
+  {
+    "date": "2026-10-11",
+    "type": "EXIT",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 115.2208,
+    "alpha_tokens": 12515.007326,
+    "exit_price": 0.00920661,
+    "entry_price": 0.00959078,
+    "entry_date": "2026-10-09",
+    "cost_basis_tao": 120.0,
+    "realized_pnl_tao": -4.7792,
+    "realized_pnl_pct": -3.98,
+    "days_held": 2
+  },
+  {
+    "date": "2026-10-11",
+    "type": "ENTRY",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao": 120.0,
+    "alpha_tokens": 1150.453112,
+    "entry_price": 0.10430673
+  },
+  {
+    "date": "2026-10-11",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 20.0,
+    "alpha_tokens": 5621.355313,
+    "entry_price": 0.00355786
   }
 ]
