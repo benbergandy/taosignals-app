@@ -2156,5 +2156,29 @@
     "tao": 160.0,
     "alpha_tokens": 1533.937483,
     "entry_price": 0.10430673
+  },
+  {
+    "date": "2026-10-13",
+    "type": "EXIT",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 151.1458,
+    "alpha_tokens": 9111.578124,
+    "exit_price": 0.01658832,
+    "entry_price": 0.01756379,
+    "entry_date": "2026-10-10",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -8.8542,
+    "realized_pnl_pct": -5.53,
+    "days_held": 3
+  },
+  {
+    "date": "2026-10-13",
+    "type": "ENTRY",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 160.0,
+    "alpha_tokens": 8384.987184,
+    "entry_price": 0.01908172
   }
 ]
