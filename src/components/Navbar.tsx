@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { label: "Subnets", href: "/" },
   { label: "Signals", href: "/signals" },
   { label: "Performance", href: "/performance" },
+  { label: "Tracking", href: "/tracking" },
   { label: "Wallet", href: "/wallet" },
 ];
 

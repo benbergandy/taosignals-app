@@ -1,8 +1,16 @@
 "use client";
 
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useEffect, useState, useCallback, useMemo, useRef, Fragment } from "react";
 import Link from "next/link";
 import SubnetLogo from "@/components/SubnetLogo";
+import {
+  CompositeScoreRow,
+  CompositeScoresFile,
+  ingredientLabel,
+  scaleFor,
+  scoreBand,
+  safeFetch,
+} from "@/lib/composite";
 
 interface Subnet {
   netuid: number;
@@ -27,7 +35,7 @@ interface ChainData {
   generated_at?: string;
 }
 
-type SortField = "tao_in" | "alpha_price_tao" | "price_vs_ema" | "ema_tao_inflow" | "emission_share_pct" | "miners" | "netuid" | "subnet_volume" | "market_cap";
+type SortField = "tao_in" | "alpha_price_tao" | "price_vs_ema" | "ema_tao_inflow" | "emission_share_pct" | "miners" | "netuid" | "subnet_volume" | "market_cap" | "score" | "change24h";
 type FilterMode = "all" | "deep" | "inflow" | "active";
 type DisplayUnit = "tao" | "usd";
 
@@ -75,7 +83,9 @@ const COLUMNS: { label: string; field: SortField | null }[] = [
   { label: "#", field: null },
   { label: "SN", field: "netuid" },
   { label: "Name", field: null },
+  { label: "Score", field: "score" },
   { label: "Price", field: "alpha_price_tao" },
+  { label: "24h", field: "change24h" },
   { label: "Market Cap", field: "market_cap" },
   { label: "Price vs EMA", field: "price_vs_ema" },
   { label: "Emission %", field: "emission_share_pct" },
@@ -103,6 +113,12 @@ export default function SubnetsPage() {
   const [filter, setFilter] = useState<FilterMode>("all");
   const [displayUnit, setDisplayUnit] = useState<DisplayUnit>("usd");
   const [taoUsd, setTaoUsd] = useState<number | null>(null);
+  // Composite v1 scores — null until (and unless) /data/composite_scores_v1.json exists
+  const [compositeFile, setCompositeFile] = useState<CompositeScoresFile | null>(null);
+  const [compositeChecked, setCompositeChecked] = useState(false);
+  const [prevPrices, setPrevPrices] = useState<Record<number, number> | null>(null);
+  const [expanded, setExpanded] = useState<Set<number>>(new Set());
+  const userSorted = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -125,14 +141,52 @@ export default function SubnetsPage() {
         setChainData(data);
         setSubnets(data.subnets || []);
         setLoading(false);
+
+        // 24h price change: previous-day snapshot from /data/chain_history/.
+        // Walk back up to 3 days from the chain snapshot date (weekend gaps /
+        // missed runs); if nothing resolves, the 24h column shows "—".
+        const genDate = (data.generated_at || "").slice(0, 10);
+        if (/^\d{4}-\d{2}-\d{2}$/.test(genDate)) {
+          (async () => {
+            for (let back = 1; back <= 3; back++) {
+              const d = new Date(genDate + "T00:00:00Z");
+              d.setUTCDate(d.getUTCDate() - back);
+              const prev = await safeFetch<{ subnets?: { netuid: number; price?: number }[] }>(
+                "/data/chain_history/" + d.toISOString().slice(0, 10) + ".json"
+              );
+              if (prev?.subnets?.length) {
+                const map: Record<number, number> = {};
+                prev.subnets.forEach((s) => {
+                  if (s.price && s.price > 0) map[s.netuid] = s.price;
+                });
+                setPrevPrices(map);
+                return;
+              }
+            }
+          })();
+        }
       })
       .catch(() => setLoading(false));
+
+    // Composite v1 scores — 404s gracefully until the file ships.
+    safeFetch<CompositeScoresFile>("/data/composite_scores_v1.json").then((f) => {
+      const valid = f && Array.isArray(f.scores) && f.scores.length > 0 ? f : null;
+      setCompositeFile(valid);
+      setCompositeChecked(true);
+      // Once scores exist, they become the default sort (unless the user
+      // already picked a column).
+      if (valid && !userSorted.current) {
+        setSortField("score");
+        setSortDir(-1);
+      }
+    });
   }, []);
 
   useEffect(() => { loadData(); }, [loadData]);
 
   const handleSort = useCallback((field: SortField | null) => {
     if (!field) return;
+    userSorted.current = true;
     if (field === sortField) {
       setSortDir((d) => (d === -1 ? 1 : -1));
     } else {
@@ -140,6 +194,47 @@ export default function SubnetsPage() {
       setSortDir(-1);
     }
   }, [sortField]);
+
+  // ── Composite score lookup (normalised to 0-100) ──────────
+  const scoreMap = useMemo(() => {
+    const map = new Map<number, CompositeScoreRow & { score100: number }>();
+    const rows = compositeFile?.scores;
+    if (!rows) return map;
+    const cScale = scaleFor(rows.map((r) => r.composite_score ?? NaN));
+    rows.forEach((r) => {
+      if (typeof r.composite_score !== "number") return;
+      map.set(r.netuid, { ...r, score100: r.composite_score * cScale });
+    });
+    return map;
+  }, [compositeFile]);
+  const hasScores = scoreMap.size > 0;
+
+  // Ingredient percentiles share one scale across the whole file
+  const ingScale = useMemo(() => {
+    const vals: number[] = [];
+    compositeFile?.scores?.forEach((r) => {
+      Object.values(r.ingredients || {}).forEach((v) => {
+        if (typeof v === "number" && isFinite(v)) vals.push(v);
+      });
+    });
+    return scaleFor(vals);
+  }, [compositeFile]);
+
+  const change24h = useCallback((s: Subnet): number | null => {
+    const now = s.alpha_price_tao || 0;
+    const prev = prevPrices?.[s.netuid] || 0;
+    if (now <= 0 || prev <= 0) return null;
+    return (now / prev - 1) * 100;
+  }, [prevPrices]);
+
+  const toggleExpand = useCallback((netuid: number) => {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(netuid)) next.delete(netuid);
+      else next.add(netuid);
+      return next;
+    });
+  }, []);
 
   // Stats
   const activeCount = subnets.filter((s) => (s.emission_share_pct || 0) > 0).length;
@@ -167,10 +262,15 @@ export default function SubnetsPage() {
   const sorted = useMemo(() => {
     const getVal = (s: Subnet): number => {
       if (sortField === "market_cap") return marketCapTao(s);
+      if (sortField === "score") return scoreMap.get(s.netuid)?.score100 ?? -1;
+      if (sortField === "change24h") {
+        const c = change24h(s);
+        return c == null ? (sortDir === -1 ? -Infinity : Infinity) : c;
+      }
       return (s[sortField] as number) || 0;
     };
     return [...filtered].sort((a, b) => sortDir === -1 ? getVal(b) - getVal(a) : getVal(a) - getVal(b));
-  }, [filtered, sortField, sortDir]);
+  }, [filtered, sortField, sortDir, scoreMap, change24h]);
 
   const usdMode = displayUnit === "usd" && taoUsd != null && taoUsd > 0;
   const usdMult = usdMode ? (taoUsd as number) : 1;
@@ -238,6 +338,17 @@ export default function SubnetsPage() {
             Subnet Explorer
           </h1>
           <div className="flex-1 h-px bg-border" />
+          {compositeChecked && (
+            hasScores ? (
+              <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-0.5 border border-cyan text-cyan whitespace-nowrap">
+                Composite v1 · {compositeFile?.date || compositeFile?.generated_at || ""}
+              </span>
+            ) : (
+              <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-0.5 border border-border2 text-muted whitespace-nowrap">
+                Scores coming soon
+              </span>
+            )
+          )}
           <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-0.5 border border-green text-green whitespace-nowrap">
             On-chain data
           </span>
@@ -327,19 +438,58 @@ export default function SubnetsPage() {
                     const tier = liquidityTier(s.tao_in || 0);
                     const priceTao = s.alpha_price_tao || s.moving_price || 0;
                     const mcapTao = marketCapTao(s);
+                    const sc = scoreMap.get(s.netuid);
+                    const band = sc ? scoreBand(sc.score100) : null;
+                    const isOpen = expanded.has(s.netuid);
+                    const ch = change24h(s);
                     return (
-                      <tr key={s.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
+                      <Fragment key={s.netuid}>
+                      <tr
+                        onClick={() => sc && toggleExpand(s.netuid)}
+                        className={`border-b border-border/80 hover:bg-cyan/[0.03] transition-colors ${sc ? "cursor-pointer" : ""}`}
+                      >
                         <td className="font-mono text-[11px] text-muted px-3 py-2.5">{i + 1}</td>
                         <td className="font-mono text-[10px] text-muted px-3 py-2.5">{s.netuid}</td>
                         <td className="font-semibold text-[13px] px-3 py-2.5 min-w-[160px]">
-                          <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
+                          <Link
+                            href={`/subnet/${s.netuid}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-2 text-inherit no-underline"
+                          >
                             <SubnetLogo netuid={s.netuid} size={18} />
                             <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
                           </Link>
+                          {sc?.in_portfolio && (
+                            <span className="text-yellow text-[11px] ml-1.5" title="In model portfolio">★</span>
+                          )}
+                        </td>
+                        <td className="px-3 py-2.5 whitespace-nowrap">
+                          {sc && band ? (
+                            <span className="inline-flex items-center gap-2">
+                              <span className={`font-mono text-[11px] font-semibold w-6 text-right ${band.text}`}>
+                                {Math.round(sc.score100)}
+                              </span>
+                              <span className="inline-block w-14 h-1.5 bg-surface2 border border-border2 overflow-hidden align-middle">
+                                <span
+                                  className={`block h-full ${band.bar}`}
+                                  style={{ width: Math.max(0, Math.min(100, sc.score100)) + "%" }}
+                                />
+                              </span>
+                              {sc.rank != null && (
+                                <span className="font-mono text-[9px] text-muted">#{sc.rank}</span>
+                              )}
+                              <span className="font-mono text-[9px] text-muted">{isOpen ? "▾" : "▸"}</span>
+                            </span>
+                          ) : (
+                            <span className="font-mono text-[11px] text-muted">—</span>
+                          )}
                         </td>
                         <td className="font-mono text-[11px] px-3 py-2.5">
                           {fmtPrice(priceTao)}
                           {!usdMode && <span className="text-muted text-[9px]"> {taoSym}</span>}
+                        </td>
+                        <td className={`font-mono text-[11px] px-3 py-2.5 ${ch == null ? "text-muted" : ch >= 0 ? "text-green" : "text-red"}`}>
+                          {ch == null ? "—" : (ch >= 0 ? "+" : "") + ch.toFixed(2) + "%"}
                         </td>
                         <td className="font-mono text-[11px] text-purple px-3 py-2.5">
                           {fmtTaoVal(mcapTao)}{!usdMode && mcapTao > 0 && <span className="text-muted text-[9px]"> {taoSym}</span>}
@@ -367,6 +517,57 @@ export default function SubnetsPage() {
                           </span>
                         </td>
                       </tr>
+                      {/* Score ingredient breakdown (click row to toggle) */}
+                      {isOpen && sc && band && (
+                        <tr className="bg-surface2 border-b border-border/80">
+                          <td colSpan={COLUMNS.length} className="px-5 py-4">
+                            <div className="flex items-center gap-3 mb-3 flex-wrap">
+                              <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted">
+                                Composite Score Breakdown — {s.name}
+                              </span>
+                              <span className={`font-mono text-[9px] tracking-[0.06em] uppercase px-1.5 py-0.5 border ${band.chip}`}>
+                                Score {Math.round(sc.score100)} / 100
+                              </span>
+                              {sc.rank != null && (
+                                <span className="font-mono text-[9px] tracking-[0.06em] uppercase text-muted">
+                                  Rank #{sc.rank} of {scoreMap.size}
+                                </span>
+                              )}
+                              {sc.in_portfolio && (
+                                <span className="font-mono text-[9px] tracking-[0.06em] uppercase px-1.5 py-0.5 border text-yellow border-yellow bg-yellow/10">
+                                  ★ In model portfolio
+                                </span>
+                              )}
+                            </div>
+                            {sc.ingredients && Object.keys(sc.ingredients).length > 0 ? (
+                              <div className="grid grid-cols-3 max-md:grid-cols-1 gap-x-8 gap-y-3">
+                                {Object.entries(sc.ingredients).map(([key, raw]) => {
+                                  if (typeof raw !== "number" || !isFinite(raw)) return null;
+                                  const v = Math.max(0, Math.min(100, raw * ingScale));
+                                  const ib = scoreBand(v);
+                                  return (
+                                    <div key={key}>
+                                      <div className="flex items-baseline justify-between gap-2 mb-1">
+                                        <span className="font-mono text-[10px] text-text">{ingredientLabel(key)}</span>
+                                        <span className={`font-mono text-[11px] font-semibold ${ib.text}`}>{Math.round(v)}</span>
+                                      </div>
+                                      <div className="h-1.5 bg-surface border border-border2 overflow-hidden">
+                                        <div className={`h-full ${ib.bar}`} style={{ width: v + "%" }} />
+                                      </div>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            ) : (
+                              <div className="font-mono text-[10px] text-muted">No ingredient detail available for this subnet</div>
+                            )}
+                            <div className="font-mono text-[9px] text-muted mt-3">
+                              Each ingredient is a 0–100 percentile vs all scored subnets; the composite is their equal-weight blend.
+                            </div>
+                          </td>
+                        </tr>
+                      )}
+                      </Fragment>
                     );
                   })
                 )}
