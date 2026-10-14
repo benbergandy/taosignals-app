@@ -2131,5 +2131,53 @@
     "tao": 80.0,
     "alpha_tokens": 4192.493592,
     "entry_price": 0.01908172
+  },
+  {
+    "date": "2026-10-14",
+    "type": "EXIT",
+    "netuid": 11,
+    "name": "TrajectoryRL",
+    "tao": 84.477,
+    "alpha_tokens": 11854.316878,
+    "exit_price": 0.00712626,
+    "entry_price": 0.00759478,
+    "entry_date": "2026-10-07",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -5.523,
+    "realized_pnl_pct": -6.14,
+    "days_held": 7
+  },
+  {
+    "date": "2026-10-14",
+    "type": "EXIT",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 80.3976,
+    "alpha_tokens": 4192.978117,
+    "exit_price": 0.01917435,
+    "entry_price": 0.01908172,
+    "entry_date": "2026-10-13",
+    "cost_basis_tao": 80.0,
+    "realized_pnl_tao": 0.3976,
+    "realized_pnl_pct": 0.5,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-14",
+    "type": "ENTRY",
+    "netuid": 120,
+    "name": "Affine",
+    "tao": 80.0,
+    "alpha_tokens": 1855.449361,
+    "entry_price": 0.04311624
+  },
+  {
+    "date": "2026-10-14",
+    "type": "ENTRY",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 90.0,
+    "alpha_tokens": 10113.681333,
+    "entry_price": 0.00889884
   }
 ]
