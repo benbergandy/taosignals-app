@@ -2314,5 +2314,50 @@
     "tao": 50.0,
     "alpha_tokens": 5618.711851,
     "entry_price": 0.00889884
+  },
+  {
+    "date": "2026-10-15",
+    "type": "DECREASE",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao_removed": 52.6275,
+    "alpha_removed": 1526.160776,
+    "spot_price": 0.0344836
+  },
+  {
+    "date": "2026-10-15",
+    "type": "ENTRY",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 90.0,
+    "alpha_tokens": 5203.5806,
+    "entry_price": 0.01729578
+  },
+  {
+    "date": "2026-10-15",
+    "type": "ENTRY",
+    "netuid": 25,
+    "name": "UR",
+    "tao": 90.0,
+    "alpha_tokens": 15734.991244,
+    "entry_price": 0.00571974
+  },
+  {
+    "date": "2026-10-15",
+    "type": "DECREASE",
+    "netuid": 51,
+    "name": "lium.io",
+    "tao_removed": 95.4658,
+    "alpha_removed": 875.648435,
+    "spot_price": 0.10902294
+  },
+  {
+    "date": "2026-10-15",
+    "type": "DECREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_removed": 89.7234,
+    "alpha_removed": 2085.977378,
+    "spot_price": 0.04301266
   }
 ]
