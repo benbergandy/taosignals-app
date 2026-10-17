@@ -2437,5 +2437,80 @@
     "tao": 140.0,
     "alpha_tokens": 5859.794073,
     "entry_price": 0.02389162
+  },
+  {
+    "date": "2026-10-17",
+    "type": "EXIT",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 140.6648,
+    "alpha_tokens": 5860.130458,
+    "exit_price": 0.0240037,
+    "entry_price": 0.02389162,
+    "entry_date": "2026-10-16",
+    "cost_basis_tao": 140.0,
+    "realized_pnl_tao": 0.6648,
+    "realized_pnl_pct": 0.47,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-17",
+    "type": "EXIT",
+    "netuid": 25,
+    "name": "UR",
+    "tao": 91.2117,
+    "alpha_tokens": 15736.924681,
+    "exit_price": 0.00579603,
+    "entry_price": 0.00571974,
+    "entry_date": "2026-10-15",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 1.2117,
+    "realized_pnl_pct": 1.35,
+    "days_held": 2
+  },
+  {
+    "date": "2026-10-17",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 90.0,
+    "alpha_tokens": 2666.929458,
+    "entry_price": 0.03374667
+  },
+  {
+    "date": "2026-10-17",
+    "type": "ENTRY",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 90.0,
+    "alpha_tokens": 4780.241659,
+    "entry_price": 0.0188275
+  },
+  {
+    "date": "2026-10-17",
+    "type": "ENTRY",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 90.0,
+    "alpha_tokens": 9564.047074,
+    "entry_price": 0.00941024
+  },
+  {
+    "date": "2026-10-17",
+    "type": "DECREASE",
+    "netuid": 120,
+    "name": "Affine",
+    "tao_removed": 92.6173,
+    "alpha_removed": 2155.637351,
+    "spot_price": 0.04296515
+  },
+  {
+    "date": "2026-10-17",
+    "type": "ENTRY",
+    "netuid": 5,
+    "name": "Hone",
+    "tao": 50.0,
+    "alpha_tokens": 3964.085739,
+    "entry_price": 0.01261325
   }
 ]

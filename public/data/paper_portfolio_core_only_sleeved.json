@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-16T12:08:56.767759+00:00",
-  "date": "2026-10-16",
+  "generated_at": "2026-10-17T12:08:07.094804+00:00",
+  "date": "2026-10-17",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 25,
-          "name": "UR",
+          "netuid": 28,
+          "name": "SayGM",
           "tao": 170.0,
-          "score": 0.3564779544551188,
+          "score": 1.192645063563137,
           "rank": 1,
-          "moving_price": 0.00552679,
-          "tao_in": 12775.4765,
-          "source": "core"
-        },
-        {
-          "netuid": 61,
-          "name": "RedTeam",
-          "tao": 170.0,
-          "score": 0.34441071914991656,
-          "rank": 2,
-          "moving_price": 0.01119777,
-          "tao_in": 14029.5683,
-          "source": "core"
-        },
-        {
-          "netuid": 120,
-          "name": "Affine",
-          "tao": 170.0,
-          "score": 0.2739969893375879,
-          "rank": 3,
-          "moving_price": 0.04244871,
-          "tao_in": 74324.3232,
+          "moving_price": 0.0334438,
+          "tao_in": 29031.471,
           "source": "core"
         },
         {
           "netuid": 53,
           "name": "engy",
           "tao": 170.0,
-          "score": 0.14541184853046346,
-          "rank": 4,
-          "moving_price": 0.04036336,
-          "tao_in": 41806.1428,
+          "score": 0.6654194827225346,
+          "rank": 2,
+          "moving_price": 0.03926406,
+          "tao_in": 41367.4681,
           "source": "core"
         },
         {
-          "netuid": 9,
-          "name": "iota",
+          "netuid": 75,
+          "name": "Hippius",
           "tao": 170.0,
-          "score": 0.008396698479769565,
+          "score": 0.5158463320170468,
+          "rank": 3,
+          "moving_price": 0.01829579,
+          "tao_in": 35217.6435,
+          "source": "core"
+        },
+        {
+          "netuid": 61,
+          "name": "RedTeam",
+          "tao": 170.0,
+          "score": 0.3508428374819705,
+          "rank": 4,
+          "moving_price": 0.01116975,
+          "tao_in": 14143.7923,
+          "source": "core"
+        },
+        {
+          "netuid": 19,
+          "name": "blockmachine",
+          "tao": 170.0,
+          "score": 0.10906095741263333,
           "rank": 5,
-          "moving_price": 0.02391028,
-          "tao_in": 52977.6613,
+          "moving_price": 0.00916614,
+          "tao_in": 31446.134,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
-    "25": {
-      "netuid": 25,
-      "name": "UR",
+    "28": {
+      "netuid": 28,
+      "name": "SayGM",
       "tao": 170.0,
-      "score": 0.3564779544551188,
+      "score": 1.192645063563137,
       "rank": 1,
-      "moving_price": 0.00552679,
-      "tao_in": 12775.4765,
-      "source": "core"
-    },
-    "61": {
-      "netuid": 61,
-      "name": "RedTeam",
-      "tao": 170.0,
-      "score": 0.34441071914991656,
-      "rank": 2,
-      "moving_price": 0.01119777,
-      "tao_in": 14029.5683,
-      "source": "core"
-    },
-    "120": {
-      "netuid": 120,
-      "name": "Affine",
-      "tao": 170.0,
-      "score": 0.2739969893375879,
-      "rank": 3,
-      "moving_price": 0.04244871,
-      "tao_in": 74324.3232,
+      "moving_price": 0.0334438,
+      "tao_in": 29031.471,
       "source": "core"
     },
     "53": {
       "netuid": 53,
       "name": "engy",
       "tao": 170.0,
-      "score": 0.14541184853046346,
-      "rank": 4,
-      "moving_price": 0.04036336,
-      "tao_in": 41806.1428,
+      "score": 0.6654194827225346,
+      "rank": 2,
+      "moving_price": 0.03926406,
+      "tao_in": 41367.4681,
       "source": "core"
     },
-    "9": {
-      "netuid": 9,
-      "name": "iota",
+    "75": {
+      "netuid": 75,
+      "name": "Hippius",
       "tao": 170.0,
-      "score": 0.008396698479769565,
+      "score": 0.5158463320170468,
+      "rank": 3,
+      "moving_price": 0.01829579,
+      "tao_in": 35217.6435,
+      "source": "core"
+    },
+    "61": {
+      "netuid": 61,
+      "name": "RedTeam",
+      "tao": 170.0,
+      "score": 0.3508428374819705,
+      "rank": 4,
+      "moving_price": 0.01116975,
+      "tao_in": 14143.7923,
+      "source": "core"
+    },
+    "19": {
+      "netuid": 19,
+      "name": "blockmachine",
+      "tao": 170.0,
+      "score": 0.10906095741263333,
       "rank": 5,
-      "moving_price": 0.02391028,
-      "tao_in": 52977.6613,
+      "moving_price": 0.00916614,
+      "tao_in": 31446.134,
       "source": "core"
     }
   },
