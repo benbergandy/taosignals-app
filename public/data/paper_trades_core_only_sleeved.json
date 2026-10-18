@@ -2381,5 +2381,53 @@
     "tao": 170.0,
     "alpha_tokens": 18065.422251,
     "entry_price": 0.00941024
+  },
+  {
+    "date": "2026-10-18",
+    "type": "EXIT",
+    "netuid": 19,
+    "name": "blockmachine",
+    "tao": 171.8028,
+    "alpha_tokens": 18066.118588,
+    "exit_price": 0.00950967,
+    "entry_price": 0.00941024,
+    "entry_date": "2026-10-17",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": 1.8028,
+    "realized_pnl_pct": 1.06,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-18",
+    "type": "EXIT",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 165.9484,
+    "alpha_tokens": 9029.993536,
+    "exit_price": 0.01837747,
+    "entry_price": 0.0188275,
+    "entry_date": "2026-10-17",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -4.0516,
+    "realized_pnl_pct": -2.38,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-18",
+    "type": "ENTRY",
+    "netuid": 120,
+    "name": "Affine",
+    "tao": 170.0,
+    "alpha_tokens": 3921.180727,
+    "entry_price": 0.04335429
+  },
+  {
+    "date": "2026-10-18",
+    "type": "ENTRY",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 170.0,
+    "alpha_tokens": 8024.981736,
+    "entry_price": 0.02118385
   }
 ]
