@@ -2560,5 +2560,77 @@
     "tao": 90.0,
     "alpha_tokens": 4248.519743,
     "entry_price": 0.02118385
+  },
+  {
+    "date": "2026-10-19",
+    "type": "EXIT",
+    "netuid": 53,
+    "name": "engy",
+    "tao": 96.5526,
+    "alpha_tokens": 2583.215977,
+    "exit_price": 0.0373769,
+    "entry_price": 0.03488312,
+    "entry_date": "2026-10-09",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 6.5526,
+    "realized_pnl_pct": 7.28,
+    "days_held": 10
+  },
+  {
+    "date": "2026-10-19",
+    "type": "EXIT",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 44.925,
+    "alpha_tokens": 14054.861509,
+    "exit_price": 0.0031964,
+    "entry_price": 0.00355786,
+    "entry_date": "2026-10-11",
+    "cost_basis_tao": 50.0,
+    "realized_pnl_tao": -5.075,
+    "realized_pnl_pct": -10.15,
+    "days_held": 8
+  },
+  {
+    "date": "2026-10-19",
+    "type": "EXIT",
+    "netuid": 93,
+    "name": "Bitcast",
+    "tao": 86.1188,
+    "alpha_tokens": 4249.018232,
+    "exit_price": 0.02026794,
+    "entry_price": 0.02118385,
+    "entry_date": "2026-10-18",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -3.8812,
+    "realized_pnl_pct": -4.31,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-19",
+    "type": "ENTRY",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 90.0,
+    "alpha_tokens": 4915.253091,
+    "entry_price": 0.01831035
+  },
+  {
+    "date": "2026-10-19",
+    "type": "ENTRY",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 90.0,
+    "alpha_tokens": 12790.14998,
+    "entry_price": 0.00703666
+  },
+  {
+    "date": "2026-10-19",
+    "type": "ENTRY",
+    "netuid": 11,
+    "name": "TrajectoryRL",
+    "tao": 50.0,
+    "alpha_tokens": 7431.86446,
+    "entry_price": 0.00672779
   }
 ]
