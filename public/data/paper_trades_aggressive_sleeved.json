@@ -2572,5 +2572,29 @@
     "tao": 150.0,
     "alpha_tokens": 22295.593381,
     "entry_price": 0.00672779
+  },
+  {
+    "date": "2026-10-20",
+    "type": "EXIT",
+    "netuid": 11,
+    "name": "TrajectoryRL",
+    "tao": 151.7757,
+    "alpha_tokens": 22296.615816,
+    "exit_price": 0.00680712,
+    "entry_price": 0.00672779,
+    "entry_date": "2026-10-19",
+    "cost_basis_tao": 150.0,
+    "realized_pnl_tao": 1.7757,
+    "realized_pnl_pct": 1.18,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-20",
+    "type": "ENTRY",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao": 150.0,
+    "alpha_tokens": 20130.199697,
+    "entry_price": 0.00745149
   }
 ]

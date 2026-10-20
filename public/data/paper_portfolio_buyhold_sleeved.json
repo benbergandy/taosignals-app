@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-19T12:08:25.833343+00:00",
-  "date": "2026-10-19",
+  "generated_at": "2026-10-20T12:08:39.405601+00:00",
+  "date": "2026-10-20",
   "total_tao": 1000.0,
   "root_stake": 200.0,
   "allocation_profile": "buyhold",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
+          "netuid": 41,
+          "name": "Almanac",
+          "tao": 160.0,
+          "score": 0.9639496243581961,
+          "rank": 1,
+          "moving_price": 0.00744515,
+          "tao_in": 16008.5479,
+          "source": "core"
+        },
+        {
           "netuid": 61,
           "name": "RedTeam",
           "tao": 160.0,
-          "score": 0.34527695624412325,
-          "rank": 1,
-          "moving_price": 0.0114358,
-          "tao_in": 14199.1953,
+          "score": 0.6704938387455102,
+          "rank": 2,
+          "moving_price": 0.01150347,
+          "tao_in": 14452.2887,
           "source": "core"
         },
         {
           "netuid": 28,
           "name": "SayGM",
           "tao": 160.0,
-          "score": 0.3326539817302711,
-          "rank": 2,
-          "moving_price": 0.03335447,
-          "tao_in": 28335.293,
-          "source": "core"
-        },
-        {
-          "netuid": 120,
-          "name": "Affine",
-          "tao": 160.0,
-          "score": 0.31522278212170185,
+          "score": 0.5868083453037468,
           "rank": 3,
-          "moving_price": 0.04317325,
-          "tao_in": 75101.9269,
+          "moving_price": 0.03397779,
+          "tao_in": 29785.4148,
           "source": "core"
         },
         {
           "netuid": 75,
           "name": "Hippius",
           "tao": 160.0,
-          "score": 0.1728016560254401,
+          "score": 0.28436533987538926,
           "rank": 4,
-          "moving_price": 0.01814897,
-          "tao_in": 34768.5421,
+          "moving_price": 0.01822639,
+          "tao_in": 34621.5297,
           "source": "core"
         },
         {
-          "netuid": 41,
-          "name": "Almanac",
+          "netuid": 120,
+          "name": "Affine",
           "tao": 160.0,
-          "score": 0.1558335594555762,
+          "score": 0.2086562380608797,
           "rank": 5,
-          "moving_price": 0.00676433,
-          "tao_in": 15086.7629,
+          "moving_price": 0.04258552,
+          "tao_in": 74699.896,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
+    "41": {
+      "netuid": 41,
+      "name": "Almanac",
+      "tao": 160.0,
+      "score": 0.9639496243581961,
+      "rank": 1,
+      "moving_price": 0.00744515,
+      "tao_in": 16008.5479,
+      "source": "core"
+    },
     "61": {
       "netuid": 61,
       "name": "RedTeam",
       "tao": 160.0,
-      "score": 0.34527695624412325,
-      "rank": 1,
-      "moving_price": 0.0114358,
-      "tao_in": 14199.1953,
+      "score": 0.6704938387455102,
+      "rank": 2,
+      "moving_price": 0.01150347,
+      "tao_in": 14452.2887,
       "source": "core"
     },
     "28": {
       "netuid": 28,
       "name": "SayGM",
       "tao": 160.0,
-      "score": 0.3326539817302711,
-      "rank": 2,
-      "moving_price": 0.03335447,
-      "tao_in": 28335.293,
-      "source": "core"
-    },
-    "120": {
-      "netuid": 120,
-      "name": "Affine",
-      "tao": 160.0,
-      "score": 0.31522278212170185,
+      "score": 0.5868083453037468,
       "rank": 3,
-      "moving_price": 0.04317325,
-      "tao_in": 75101.9269,
+      "moving_price": 0.03397779,
+      "tao_in": 29785.4148,
       "source": "core"
     },
     "75": {
       "netuid": 75,
       "name": "Hippius",
       "tao": 160.0,
-      "score": 0.1728016560254401,
+      "score": 0.28436533987538926,
       "rank": 4,
-      "moving_price": 0.01814897,
-      "tao_in": 34768.5421,
+      "moving_price": 0.01822639,
+      "tao_in": 34621.5297,
       "source": "core"
     },
-    "41": {
-      "netuid": 41,
-      "name": "Almanac",
+    "120": {
+      "netuid": 120,
+      "name": "Affine",
       "tao": 160.0,
-      "score": 0.1558335594555762,
+      "score": 0.2086562380608797,
       "rank": 5,
-      "moving_price": 0.00676433,
-      "tao_in": 15086.7629,
+      "moving_price": 0.04258552,
+      "tao_in": 74699.896,
       "source": "core"
     }
   },
