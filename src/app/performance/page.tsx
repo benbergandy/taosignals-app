@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
-import Script from "next/script";
+import { useEffect, useState, useRef, useCallback, useMemo } from "react";
 import Link from "next/link";
+import ChartJS from "chart.js/auto";
 
 // ── Types ────────────────────────────────────────────────────
 // All shapes match the V3+VSAT sleeved-portfolio paper trader output:
@@ -105,6 +105,7 @@ interface ChainSubnet {
   netuid: number;
   name: string;
   moving_price?: number;
+  alpha_price_tao?: number;
   symbol?: string;
   emission_share_pct?: number;
 }
@@ -126,6 +127,60 @@ interface BotMirrorEntry {
   benchmark_root_tao?: number;
   benchmark_eq_weight_tao?: number;
   benchmark_mcw_tao?: number;
+}
+
+// ── Composite v1 paper trader (current model) ────────────────
+// paper_portfolio_composite_v1_sleeved.held.json — REAL schema:
+//   { profile, start_date, rebalance_mode, total_tao, n_scored_dates,
+//     last_processed_date,
+//     portfolio: { cash_tao, total_costs_tao,
+//       positions: { "<netuid>": { name, last_spot, last_tao, entry_date,
+//                                  value_tao, tao } } },
+//     benchmark: { ...same shape... } }
+// NOTE: no token-count field — alpha tokens are derived as
+// value_tao / last_spot (validated against trades-implied tokens).
+interface CompPosition {
+  name?: string;
+  last_spot?: number;
+  last_tao?: number;
+  entry_date?: string;
+  value_tao?: number;
+  tao?: number;
+}
+
+interface CompHeld {
+  profile?: string;
+  start_date?: string;
+  total_tao?: number;
+  last_processed_date?: string;
+  portfolio?: {
+    cash_tao?: number;
+    total_costs_tao?: number;
+    positions?: Record<string, CompPosition>;
+  };
+}
+
+// paper_trades_composite_v1_sleeved.json rows: BUY (and future SELL)
+interface CompTrade {
+  date: string;
+  type: string;
+  netuid: number;
+  name?: string;
+  tao?: number;        // TAO spent (BUY) / received (SELL)
+  cost_tao?: number;   // slippage + fee cost
+  spot_price?: number; // execution spot
+}
+
+// paper_daily_log_composite_v1_sleeved.json — same family as the other
+// daily logs but only the eq-weight benchmark is emitted.
+interface CompLogEntry {
+  date: string;
+  portfolio_value: number;
+  pnl_tao?: number;
+  pnl_pct?: number;
+  n_positions?: number;
+  benchmark_eq_weight?: number;
+  alpha_vs_eq?: number;
 }
 
 interface HoldingRow {
@@ -209,12 +264,15 @@ function TradeBadge({ type }: { type: string }) {
   const t = (type || "").toUpperCase();
   const colorMap: Record<string, string> = {
     ENTRY: "text-green border-green bg-green/[0.08]",
+    BUY: "text-green border-green bg-green/[0.08]",
     EXIT: "text-red border-red bg-red/[0.08]",
+    SELL: "text-red border-red bg-red/[0.08]",
     INCREASE: "text-cyan border-cyan bg-cyan/[0.08]",
     DECREASE: "text-orange border-orange bg-orange/[0.08]",
   };
   const cls = colorMap[t] || "text-muted border-border2 bg-transparent";
-  const label = t === "ENTRY" ? "Entry" : t === "EXIT" ? "Exit" : t === "INCREASE" ? "Increase" : t === "DECREASE" ? "Decrease" : type;
+  const labelMap: Record<string, string> = { ENTRY: "Entry", BUY: "Buy", EXIT: "Exit", SELL: "Sell", INCREASE: "Increase", DECREASE: "Decrease" };
+  const label = labelMap[t] || type;
 
   return (
     <span className={`inline-flex items-center gap-1 font-mono text-[9px] tracking-[0.06em] uppercase px-1.5 py-0.5 border font-medium whitespace-nowrap ${cls}`}>
@@ -254,13 +312,6 @@ async function safeFetch<T>(url: string): Promise<T | null> {
   }
 }
 
-// ── Chart.js types (minimal) ─────────────────────────────────
-declare global {
-  interface Window {
-    Chart: any;
-  }
-}
-
 // ── Main Component ───────────────────────────────────────────
 export default function PerformancePage() {
   const [dailyLog, setDailyLog] = useState<DailyLogEntry[]>([]);
@@ -275,13 +326,20 @@ export default function PerformancePage() {
   const [holdSortDir, setHoldSortDir] = useState(-1);
   const [expandedTrades, setExpandedTrades] = useState<Set<number>>(new Set());
   const [expandedPositions, setExpandedPositions] = useState<Set<number>>(new Set());
-  const [chartReady, setChartReady] = useState(false);
 
   const chartRef = useRef<HTMLCanvasElement>(null);
   const chartInstance = useRef<any>(null);
   const botChartRef = useRef<HTMLCanvasElement>(null);
   const botChartInstance = useRef<any>(null);
   const [botLog, setBotLog] = useState<BotMirrorEntry[]>([]);
+
+  // ── Composite v1 (current model) state ─────────────────────
+  const [compLog, setCompLog] = useState<CompLogEntry[]>([]);
+  const [compHeld, setCompHeld] = useState<CompHeld | null>(null);
+  const [compTrades, setCompTrades] = useState<CompTrade[]>([]);
+  const [legacyOpen, setLegacyOpen] = useState(false);
+  const compChartRef = useRef<HTMLCanvasElement>(null);
+  const compChartInstance = useRef<any>(null);
 
   // ── Derived values ─────────────────────────────────────────
   const latest = dailyLog.length ? dailyLog[dailyLog.length - 1] : null;
@@ -422,13 +480,17 @@ export default function PerformancePage() {
     async function loadData() {
       // 2026-05-04: data sources flipped from legacy v2.1 paper portfolio to
       // the V3+VSAT sleeved profile (balanced_vsat = bot's mirror target).
-      const [portfolioData, dailyData, tradeData, regimeData, chainRes, botData] = await Promise.all([
+      const [portfolioData, dailyData, tradeData, regimeData, chainRes, botData, compLogData, compHeldData, compTradeData] = await Promise.all([
         safeFetch<Portfolio>("/data/paper_portfolio_balanced_vsat_sleeved.held.json"),
         safeFetch<DailyLogEntry[]>("/data/paper_daily_log_balanced_vsat_sleeved.json"),
         safeFetch<Trade[]>("/data/paper_trades_balanced_vsat_sleeved.json"),
         safeFetch<RegimeData>("/data/regime_state.json"),
         safeFetch<ChainData>("/data/chain_data.json"),
         safeFetch<BotMirrorEntry[]>("/data/bot_mirror_log.json"),
+        // Composite v1 — the CURRENT model (all three 404 gracefully pre-publication)
+        safeFetch<CompLogEntry[]>("/data/paper_daily_log_composite_v1_sleeved.json"),
+        safeFetch<CompHeld>("/data/paper_portfolio_composite_v1_sleeved.held.json"),
+        safeFetch<CompTrade[]>("/data/paper_trades_composite_v1_sleeved.json"),
       ]);
 
       setPortfolio(portfolioData);
@@ -437,6 +499,9 @@ export default function PerformancePage() {
       setRegime(regimeData);
       setChainData(chainRes);
       setBotLog(Array.isArray(botData) ? botData : []);
+      setCompLog(Array.isArray(compLogData) ? compLogData : []);
+      setCompHeld(compHeldData);
+      setCompTrades(Array.isArray(compTradeData) ? compTradeData : []);
       setLoading(false);
     }
     loadData();
@@ -444,9 +509,7 @@ export default function PerformancePage() {
 
   // ── Chart building ─────────────────────────────────────────
   const buildChart = useCallback(() => {
-    if (!chartReady || !chartRef.current || !dailyLog.length) return;
-    const Chart = window.Chart;
-    if (!Chart) return;
+    if (!legacyOpen || !chartRef.current || !dailyLog.length) return;
 
     let data = dailyLog;
     if (currentRange > 0) {
@@ -464,7 +527,7 @@ export default function PerformancePage() {
 
     if (chartInstance.current) chartInstance.current.destroy();
 
-    chartInstance.current = new Chart(chartRef.current.getContext("2d"), {
+    chartInstance.current = new ChartJS(chartRef.current.getContext("2d")!, {
       type: "line",
       data: {
         labels,
@@ -565,7 +628,7 @@ export default function PerformancePage() {
         },
       },
     });
-  }, [dailyLog, currentRange, showUSD, taoUsdPrice, chartReady]);
+  }, [dailyLog, currentRange, showUSD, taoUsdPrice, legacyOpen]);
 
   useEffect(() => {
     buildChart();
@@ -573,9 +636,7 @@ export default function PerformancePage() {
 
   // ── Bot mirror chart (real wallet vs benchmarks at the wallet's scale) ──
   const buildBotChart = useCallback(() => {
-    if (!chartReady || !botChartRef.current || botLog.length === 0) return;
-    const Chart = window.Chart;
-    if (!Chart) return;
+    if (!legacyOpen || !botChartRef.current || botLog.length === 0) return;
 
     // Bot capital is only "live" from the first execute run onward — dry-runs
     // before inception can include pre-funding deposits that aren't returns.
@@ -662,7 +723,7 @@ export default function PerformancePage() {
       spanGaps: true,
     });
 
-    botChartInstance.current = new Chart(botChartRef.current.getContext("2d"), {
+    botChartInstance.current = new ChartJS(botChartRef.current.getContext("2d")!, {
       type: "line",
       data: { labels, datasets },
       options: {
@@ -713,17 +774,97 @@ export default function PerformancePage() {
         },
       },
     });
-  }, [botLog, chartReady]);
+  }, [botLog, legacyOpen]);
 
   useEffect(() => {
     buildBotChart();
   }, [buildBotChart]);
+
+  // ── Composite v1 NAV chart (primary) ───────────────────────
+  const buildCompChart = useCallback(() => {
+    if (!compChartRef.current || !compLog.length) return;
+    const labels = compLog.map((d) => (d.date ? d.date.slice(5) : ""));
+    const ptRadius = compLog.length <= 14 ? 3 : compLog.length <= 60 ? 1.5 : 0;
+
+    if (compChartInstance.current) compChartInstance.current.destroy();
+    compChartInstance.current = new ChartJS(compChartRef.current.getContext("2d")!, {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          {
+            label: "Composite v1 Portfolio",
+            data: compLog.map((d) => d.portfolio_value || 0),
+            borderColor: "#ffd000",
+            borderWidth: 2.5,
+            pointRadius: ptRadius,
+            pointBackgroundColor: "#ffd000",
+            tension: 0.3,
+            fill: { target: "origin", above: "rgba(255,208,0,0.04)" },
+            spanGaps: true,
+          },
+          {
+            label: "Equal-Weight Benchmark",
+            data: compLog.map((d) => d.benchmark_eq_weight ?? null),
+            borderColor: "#00d4ff",
+            borderWidth: 1.5,
+            pointRadius: 0,
+            tension: 0.3,
+            fill: false,
+            spanGaps: true,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: {
+            display: true,
+            labels: { color: "#445566", font: { family: "IBM Plex Mono", size: 9 }, boxWidth: 12, padding: 12 },
+          },
+          tooltip: {
+            backgroundColor: "rgba(10,14,18,0.95)",
+            borderColor: "#243040",
+            borderWidth: 1,
+            titleColor: "#445566",
+            bodyColor: "#c8d8e8",
+            titleFont: { family: "IBM Plex Mono", size: 10 },
+            bodyFont: { family: "IBM Plex Mono", size: 11 },
+            padding: 10,
+            callbacks: {
+              label: (ctx: any) => ` ${ctx.dataset.label}: ${(ctx.parsed.y as number).toFixed(2)} TAO`,
+            },
+          },
+        },
+        scales: {
+          x: {
+            grid: { color: "rgba(26,34,48,0.5)", drawTicks: false },
+            ticks: { color: "#445566", font: { family: "IBM Plex Mono", size: 9 }, maxRotation: 0, maxTicksLimit: 8 },
+            border: { color: "#1a2230" },
+          },
+          y: {
+            grid: { color: "rgba(26,34,48,0.5)", drawTicks: false },
+            ticks: { color: "#445566", font: { family: "IBM Plex Mono", size: 9 } },
+            border: { color: "#1a2230" },
+            title: { display: true, text: "TAO", color: "#445566", font: { family: "IBM Plex Mono", size: 10 } },
+          },
+        },
+      },
+    });
+  }, [compLog]);
+
+  useEffect(() => {
+    buildCompChart();
+  }, [buildCompChart]);
 
   // Cleanup chart on unmount
   useEffect(() => {
     return () => {
       if (chartInstance.current) chartInstance.current.destroy();
       if (botChartInstance.current) botChartInstance.current.destroy();
+      if (compChartInstance.current) compChartInstance.current.destroy();
     };
   }, []);
 
@@ -784,6 +925,76 @@ export default function PerformancePage() {
   // ── Unit label helper ──────────────────────────────────────
   const unitLabel = showUSD ? "USD" : "TAO";
 
+  // ── Composite v1 derived values (primary section) ──────────
+  const compLatest = compLog.length ? compLog[compLog.length - 1] : null;
+  const compStart = compHeld?.start_date || (compLog.length ? compLog[0].date : "2026-10-15");
+  const compDays = daysBetween(compStart, today);
+  const compStartCap = compHeld?.total_tao ?? 1000;
+  const compNav = compLatest?.portfolio_value ?? null;
+  const compPnlTao = compLatest?.pnl_tao ?? (compNav != null ? compNav - compStartCap : null);
+  const compPnlPct = compLatest?.pnl_pct ?? (compNav != null && compStartCap > 0 ? ((compNav / compStartCap) - 1) * 100 : null);
+  const compAlphaEq = compLatest?.alpha_vs_eq ?? null;
+  const compPositions = compHeld?.portfolio?.positions || {};
+  const hasComposite = compLog.length > 0 || Object.keys(compPositions).length > 0;
+
+  interface CompRow {
+    netuid: number;
+    name: string;
+    tokens: number | null;
+    value: number;
+    weight: number;
+    ret: number | null;
+    entryDate: string;
+  }
+
+  const compRows: CompRow[] = useMemo(() => {
+    const positions = compHeld?.portfolio?.positions || {};
+    const cash = compHeld?.portfolio?.cash_tao || 0;
+
+    // Live spot from chain_data; falls back to the held file's own mark
+    const chainSpot = new Map<number, number>();
+    chainData?.subnets?.forEach((s) => {
+      const p = s.alpha_price_tao || s.moving_price || 0;
+      if (p > 0) chainSpot.set(s.netuid, p);
+    });
+
+    // Average entry spot per netuid, recovered from BUY trades:
+    // entry = Σ tao_spent / Σ (tao_spent / exec_spot)
+    const entrySpot = new Map<number, number>();
+    const buyAgg = new Map<number, { tao: number; tokens: number }>();
+    compTrades.forEach((t) => {
+      if ((t.type || "").toUpperCase() !== "BUY") return;
+      if (!t.tao || !t.spot_price || t.spot_price <= 0) return;
+      const agg = buyAgg.get(t.netuid) || { tao: 0, tokens: 0 };
+      agg.tao += t.tao;
+      agg.tokens += t.tao / t.spot_price;
+      buyAgg.set(t.netuid, agg);
+    });
+    buyAgg.forEach((agg, uid) => {
+      if (agg.tokens > 0) entrySpot.set(uid, agg.tao / agg.tokens);
+    });
+
+    const rows = Object.entries(positions).map(([uid, p]) => {
+      const netuid = parseInt(uid, 10);
+      // No token field in the held schema — derive from its own mark
+      const tokens = p.value_tao && p.last_spot && p.last_spot > 0 ? p.value_tao / p.last_spot : null;
+      const spot = chainSpot.get(netuid) ?? p.last_spot ?? 0;
+      const value = tokens != null && spot > 0 ? tokens * spot : (p.value_tao ?? p.tao ?? 0);
+      const entry = entrySpot.get(netuid) ?? null;
+      const ret = entry != null && entry > 0 && spot > 0 ? (spot / entry - 1) * 100 : null;
+      return { netuid, name: p.name || "SN" + uid, tokens, value, weight: 0, ret, entryDate: p.entry_date || "" };
+    });
+    const totalValue = rows.reduce((s, r) => s + r.value, 0) + cash;
+    rows.forEach((r) => { r.weight = totalValue > 0 ? (r.value / totalValue) * 100 : 0; });
+    rows.sort((a, b) => b.value - a.value);
+    return rows;
+  }, [compHeld, compTrades, chainData]);
+
+  const compRecentTrades = useMemo(
+    () => [...compTrades].sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, 10),
+    [compTrades]
+  );
+
   // ── Render ─────────────────────────────────────────────────
   if (loading) {
     return (
@@ -795,16 +1006,228 @@ export default function PerformancePage() {
 
   return (
     <>
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
-        strategy="afterInteractive"
-        onLoad={() => setChartReady(true)}
-      />
-
-      {/* ── HERO ─────────────────────────────────────────── */}
+      {/* ── COMPOSITE V1 — CURRENT MODEL (primary) ───────── */}
       <div className="px-6 pt-8 border-b border-border">
+        <div className="flex items-center gap-3 mb-2.5 flex-wrap">
+          <div className="font-mono text-[9px] tracking-[0.2em] uppercase text-muted">
+            Composite v1 &mdash; paper trading (no real funds) {"·"} incepted 2026-10-15 {"·"} out-of-sample
+          </div>
+          <span className="font-mono text-[9px] tracking-[0.06em] uppercase px-1.5 py-0.5 border text-cyan border-cyan bg-cyan/10 whitespace-nowrap">
+            Current model
+          </span>
+        </div>
+        <div className="flex items-baseline gap-4 mb-2 flex-wrap">
+          <div className="font-mono text-[42px] font-bold tracking-tight leading-none text-yellow">
+            {compNav != null ? compNav.toFixed(2) : "—"}
+          </div>
+          <div className="font-mono text-lg text-muted">TAO</div>
+          <div className={`font-mono text-lg font-semibold ${compPnlPct != null && compPnlPct >= 0 ? "text-green" : "text-red"}`}>
+            {compPnlPct != null ? fmtPct(compPnlPct) : "—"}
+          </div>
+        </div>
+        <p className="font-mono text-[10px] text-muted leading-relaxed mb-4 m-0 max-w-[820px]">
+          Live out-of-sample test of the Composite v1 model (the scores on{" "}
+          <Link href="/signals" className="text-cyan no-underline hover:underline">/signals</Link>). The strategy is
+          under evaluation until December &mdash; treat all results as experimental until then.
+        </p>
+
+        {/* Composite stats strip */}
+        <div className="grid grid-cols-6 border-t border-border bg-surface max-md:grid-cols-3 max-sm:grid-cols-2">
+          <div className="px-5 py-3.5 border-r border-border">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Starting Capital</div>
+            <div className="font-mono text-xl font-semibold leading-none text-cyan">{compStartCap.toFixed(0)}</div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">TAO</div>
+          </div>
+          <div className="px-5 py-3.5 border-r border-border">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">P&L</div>
+            <div className={`font-mono text-xl font-semibold leading-none ${compPnlTao != null && compPnlTao >= 0 ? "text-green" : "text-red"}`}>
+              {compPnlTao != null ? (compPnlTao >= 0 ? "+" : "") + compPnlTao.toFixed(2) : "—"}
+            </div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">
+              TAO {compPnlPct != null ? `(${compPnlPct >= 0 ? "+" : ""}${compPnlPct.toFixed(2)}%)` : ""}
+            </div>
+          </div>
+          <div className="px-5 py-3.5 border-r border-border">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Alpha vs Eq-Wt</div>
+            <div className={`font-mono text-xl font-semibold leading-none ${compAlphaEq == null ? "text-muted" : compAlphaEq >= 0 ? "text-green" : "text-red"}`}>
+              {compAlphaEq == null ? "—" : fmtPct(compAlphaEq)}
+            </div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">vs equal-weight basket</div>
+          </div>
+          <div className="px-5 py-3.5 border-r border-border">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Days Live</div>
+            <div className="font-mono text-xl font-semibold leading-none text-yellow">{hasComposite ? compDays : "—"}</div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">since 2026-10-15</div>
+          </div>
+          <div className="px-5 py-3.5 border-r border-border">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Positions</div>
+            <div className="font-mono text-xl font-semibold leading-none text-purple">
+              {hasComposite ? (compRows.length || compLatest?.n_positions || 0) : "—"}
+            </div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">active holdings</div>
+          </div>
+          <div className="px-5 py-3.5">
+            <div className="font-mono text-[8px] tracking-[0.15em] uppercase text-muted mb-1">Trades</div>
+            <div className="font-mono text-xl font-semibold leading-none text-cyan">{hasComposite ? compTrades.length : "—"}</div>
+            <div className="font-mono text-[10px] text-muted mt-0.5">since inception</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Composite content: NAV chart + positions + recent trades */}
+      <div className="p-6 flex flex-col gap-6 max-w-[1400px] mx-auto">
+        {!hasComposite ? (
+          <div className="bg-surface border border-border">
+            <div className="font-mono text-[11px] text-muted text-center py-12">
+              Composite v1 performance publishes after the paper trader&apos;s first daily run &mdash; coming soon
+            </div>
+          </div>
+        ) : (
+          <>
+            {/* NAV chart */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-text font-medium whitespace-nowrap">
+                  Composite v1 NAV
+                </div>
+                <div className="flex-1 h-px bg-border" />
+                <span className="font-mono text-[9px] tracking-[0.1em] px-2 py-0.5 border border-border2 text-muted uppercase whitespace-nowrap">
+                  {compLog.length} days
+                </span>
+              </div>
+              <div className="bg-surface border border-border p-5">
+                <div className="font-mono text-[10px] tracking-[0.12em] uppercase text-yellow mb-4">
+                  NAV vs equal-weight benchmark (TAO)
+                </div>
+                <div className="h-[300px] relative">
+                  {compLog.length > 0 ? (
+                    <canvas ref={compChartRef} />
+                  ) : (
+                    <div className="font-mono text-[11px] text-muted text-center py-12">
+                      No daily NAV yet &mdash; chart appears after the first daily log entry
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Current positions */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-text font-medium whitespace-nowrap">
+                  Current Positions
+                </div>
+                <div className="flex-1 h-px bg-border" />
+                <span className="font-mono text-[9px] tracking-[0.1em] px-2 py-0.5 border border-border2 text-muted uppercase whitespace-nowrap">
+                  {compRows.length} positions {compHeld?.last_processed_date ? `· as of ${compHeld.last_processed_date}` : ""}
+                </span>
+              </div>
+              <div className="bg-surface border border-border overflow-x-auto">
+                {compRows.length === 0 ? (
+                  <div className="font-mono text-xs text-muted text-center py-12">No open positions</div>
+                ) : (
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-surface2 border-b border-border2">
+                        {["SN", "Name", "Entry Date", "Alpha Tokens", "Entry → Now", "Value (TAO)", "Weight"].map((h, i) => (
+                          <th
+                            key={h}
+                            className={`font-mono text-[9px] tracking-[0.12em] uppercase px-3 py-2.5 font-normal whitespace-nowrap text-muted ${i >= 3 ? "text-right" : "text-left"}`}
+                          >
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {compRows.map((r) => (
+                        <tr key={r.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
+                          <td className="font-mono text-[10px] text-muted px-3 py-2.5">{r.netuid}</td>
+                          <td className="font-semibold text-[13px] px-3 py-2.5 whitespace-nowrap">
+                            <Link href={`/subnet/${r.netuid}`} className="text-inherit no-underline border-b border-border2 hover:border-cyan">
+                              {r.name}
+                            </Link>
+                          </td>
+                          <td className="font-mono text-[11px] text-muted px-3 py-2.5">{fmtDateFull(r.entryDate)}</td>
+                          <td className="font-mono text-[11px] text-text px-3 py-2.5 text-right">
+                            {r.tokens != null ? r.tokens.toLocaleString(undefined, { maximumFractionDigits: 1 }) + " α" : "—"}
+                          </td>
+                          <td className={`font-mono text-[11px] px-3 py-2.5 text-right ${r.ret == null ? "text-muted" : r.ret >= 0 ? "text-green" : "text-red"}`}>
+                            {r.ret == null ? "—" : (r.ret >= 0 ? "+" : "") + r.ret.toFixed(2) + "%"}
+                          </td>
+                          <td className="font-mono text-[11px] text-cyan px-3 py-2.5 text-right">
+                            {r.value.toFixed(2)}
+                          </td>
+                          <td className="font-mono text-[11px] text-text px-3 py-2.5 text-right">{r.weight.toFixed(1)}%</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+              </div>
+              <div className="font-mono text-[9px] text-muted mt-2">
+                Values marked to current spot from chain data; entry price recovered from the trade log.
+              </div>
+            </div>
+
+            {/* Recent trades */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-text font-medium whitespace-nowrap">
+                  Recent Trades
+                </div>
+                <div className="flex-1 h-px bg-border" />
+                <span className="font-mono text-[9px] tracking-[0.1em] px-2 py-0.5 border border-border2 text-muted uppercase whitespace-nowrap">
+                  last {compRecentTrades.length} of {compTrades.length}
+                </span>
+              </div>
+              <div className="bg-surface border border-border">
+                {compRecentTrades.length === 0 ? (
+                  <div className="font-mono text-xs text-muted text-center py-12">No trades recorded yet</div>
+                ) : (
+                  compRecentTrades.map((t, i) => (
+                    <div key={i} className="flex items-center gap-3 px-4 py-2.5 border-b border-border/50 last:border-b-0 flex-wrap">
+                      <div className="font-mono text-[10px] text-muted min-w-[80px]">{fmtDate(t.date)}</div>
+                      <TradeBadge type={t.type} />
+                      <div className="text-xs font-semibold flex-1">
+                        SN{t.netuid} {t.name || ""}
+                      </div>
+                      <div className="font-mono text-[11px] text-text text-right">
+                        {(t.tao ?? 0).toFixed(2)} {"τ"}
+                      </div>
+                      {t.spot_price != null && (
+                        <div className="font-mono text-[10px] text-muted">@ {t.spot_price.toFixed(8)}</div>
+                      )}
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* ── Legacy profiles toggle ─────────────────────── */}
+        <button
+          onClick={() => setLegacyOpen((o) => !o)}
+          className="w-full flex items-center gap-3 bg-transparent border border-border2 px-4 py-3 cursor-pointer text-left hover:border-cyan/60 transition-all"
+        >
+          <span className="font-mono text-[10px] text-muted">{legacyOpen ? "▾" : "▸"}</span>
+          <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-muted">
+            Legacy profiles (control group &mdash; deprecated models)
+          </span>
+          <span className="flex-1" />
+          <span className="font-mono text-[9px] tracking-[0.06em] uppercase px-1.5 py-0.5 border text-muted border-border2 whitespace-nowrap">
+            Balanced VSAT {"·"} bot mirror {"·"} regime
+          </span>
+        </button>
+      </div>
+
+      {legacyOpen && (
+      <>
+      {/* ── LEGACY HERO ──────────────────────────────────── */}
+      <div className="px-6 pt-8 border-b border-t border-border">
         <div className="font-mono text-[9px] tracking-[0.2em] uppercase text-muted mb-2.5">
-          Five-Factor Model &mdash; Paper Trading
+          Legacy &mdash; Balanced VSAT profile (control group, deprecated Oct 2026) &mdash; Paper Trading
         </div>
         <div className="flex items-baseline gap-4 mb-3 flex-wrap">
           <div className="font-mono text-[42px] font-bold tracking-tight leading-none text-yellow">
@@ -1509,6 +1932,8 @@ export default function PerformancePage() {
           </div>
         </div>
       </div>
+      </>
+      )}
 
       {/* ── DISCLAIMER ───────────────────────────────────── */}
       <div className="border-t border-border px-6 py-5 bg-surface font-mono text-[10px] text-muted leading-relaxed">
