@@ -1,126 +1,63 @@
 "use client";
 
+// ── Signals — Composite v1 leaderboard ────────────────────────────────
+// Primary surface for the CURRENT model: /data/composite_scores_v1.json
+// (published daily at 12:00 UTC by the model pipeline). Until the first
+// publication the page shows a "pending" state — it must NEVER present
+// the legacy VSAT/core scores (combined_scores.json) as current: those
+// were validated ANTI-predictive in the current protocol regime
+// (Oct 2026) and are retained only in a collapsed reference section.
+
 import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import SubnetLogo from "@/components/SubnetLogo";
+import {
+  CompositeScoreRow,
+  CompositeScoresFile,
+  ingredientLabel,
+  scaleFor,
+  scoreBand,
+  safeFetch,
+} from "@/lib/composite";
 
-/* ── Types (v2.1 model) ────────────────────────────────────── */
-interface SubnetScore {
+/* ── Types ─────────────────────────────────────────────────── */
+interface ChainSubnet {
+  netuid: number;
+  name?: string;
+  tao_in?: number;
+  alpha_price_tao?: number;
+  emission_share_pct?: number;
+}
+
+interface ChainData {
+  subnets?: ChainSubnet[];
+  total_emission_tao?: number;
+  block?: number;
+}
+
+// Legacy v2.1/VSAT scores — deprecated, reference section only
+interface LegacyScore {
   netuid: number;
   name: string;
   combined_score: number;
   stability_score: number;
   yield_score: number;
   consensus_score: number;
-  capital_flow_score: number;     // v2.1: replaces flow_score
+  capital_flow_score: number;
   conviction_score: number;
-  emission_vs_network: number;
-  rank_consistency: number;
-  avg_dividends: number;
-  weight_concentration_trend: number;
-  // v2.1 Capital Flow Momentum signals (replace emission_velocity)
-  validator_total_stake_velocity_7d: number;
-  alpha_out_velocity_7d: number;
-  alpha_out_in_ratio: number;
-  volume_velocity_7d: number;
-  inflow_momentum: number;
-  avg_validator_trust: number;
-  n_active_delta: number;
   emission_share_pct: number;
   ema_tao_inflow: number;
   tao_in: number;
   price_vs_ema: number;
-  alpha_ratio: number;
-  price_vs_ema_signal?: string;
-  flow_signal?: string;
-  vs_network_signal?: string;
-  // True if subnet is in top 30% by tao_in. Core tab's eligibility flag —
-  // satellite ignores it (pipeline sizes against pool depth downstream).
-  in_liquid_universe?: boolean;
   [key: string]: unknown;
 }
 
-interface ChainData {
-  subnets?: Array<{
-    netuid: number;
-    alpha_ratio?: number;
-    ema_tao_inflow?: number;
-    tao_in?: number;
-  }>;
-  total_emission_tao?: number;
-  block?: number;
-}
-
-interface CombinedData {
-  scores?: SubnetScore[];
+interface LegacyData {
+  scores?: LegacyScore[];
   generated_at?: string;
-}
-
-/* ── Types (Core sleeve model) ─────────────────────────────── */
-interface CoreSleevePick {
-  netuid: number;
-  name: string;
-  score: number;            // weighted-sum z-scored core combined score
-  rank: number;             // 1-indexed within scored universe
-  tao_in?: number | null;
-  moving_price?: number | null;
-  emission_share_pct?: number | null;
-}
-
-interface SleeveOutputsData {
-  date?: string;
-  generated_at?: string;
-  filter_universe_size?: number;
-  sleeves?: {
-    core?: {
-      model?: string;
-      universe_filter?: string;
-      scored_universe_size?: number;
-      n_picks_held?: number;
-      exit_rules?: Record<string, unknown>;
-      picks?: CoreSleevePick[];
-      full_score_table?: CoreSleevePick[];
-    };
-    satellite?: {
-      picks?: CoreSleevePick[];
-      full_score_table?: CoreSleevePick[];
-    };
-    root?: Record<string, unknown>;
-  };
-}
-
-type AlphaModel = "satellite" | "core";
-// Two strategic toggles — mirror the sleeve architecture:
-//   satellite = VSAT short-horizon active rotation (composite of Momentum/Flow/Yield/Recovery)
-//   core      = V3 long-horizon hold (single composite)
-// The table itself surfaces every factor as a sortable column; the toggle
-// only changes the default ranking (which sleeve's score sorts the rows).
-type ViewMode = "satellite" | "core";
-type FilterMode = "all" | "strong" | "stability" | "yield" | "consensus" | "oversold";
-
-interface SortState {
-  field: string;
-  dir: -1 | 1;
 }
 
 /* ── Helpers ───────────────────────────────────────────────── */
-function scoreColor(s: number): string {
-  return s >= 65 ? "var(--color-green)" : s >= 45 ? "var(--color-yellow)" : "var(--color-red)";
-}
-function scoreColorClass(s: number): string {
-  return s >= 65 ? "text-green" : s >= 45 ? "text-yellow" : "text-red";
-}
-function barColorClass(s: number): string {
-  return s >= 65 ? "bg-green" : s >= 45 ? "bg-yellow" : "bg-red";
-}
-
-function fmtSignal(val: number | null | undefined): string {
-  if (val === null || val === undefined) return "\u2014";
-  return (val * 100).toFixed(0);
-}
-
-/* Liquidity tier — must match the Subnets page (page.tsx) exactly so the
-   badge looks identical across surfaces. */
 function liquidityTier(taoIn: number): { label: string; color: string } {
   if (taoIn >= 50000) return { label: "DEEP", color: "text-green border-green bg-green/10" };
   if (taoIn >= 10000) return { label: "ADEQUATE", color: "text-cyan border-cyan bg-cyan/10" };
@@ -139,117 +76,20 @@ function LiquidityBadge({ taoIn }: { taoIn: number }) {
   );
 }
 
-function fmtInflow(val: number | null | undefined): string {
-  if (val === null || val === undefined) return "\u2014";
-  const sign = val >= 0 ? "+" : "";
-  if (Math.abs(val) >= 1) return `${sign}${val.toFixed(2)}`;
-  if (Math.abs(val) >= 0.001) return `${sign}${val.toFixed(4)}`;
-  return `${sign}${val.toFixed(6)}`;
-}
-
-function badgeColorClasses(signal: string | undefined): string {
-  if (!signal) return "text-muted border-border2 bg-transparent";
-  const s = signal.toLowerCase();
-  if (
-    ["strong", "dominant", "collapsing", "active", "very_stable", "highly_persistent",
-      "well_below", "below", "deeply_oversold", "accelerating", "accumulating",
-      "turning", "very_consistent"].some((v) => s.includes(v))
-  ) return "text-green border-green bg-green/[0.08]";
-  if (
-    ["moderate", "declining", "inflow", "falling", "growing", "recovering",
-      "increasing", "persistent", "consistent", "stable"].some((v) => s.includes(v))
-  ) return "text-cyan border-cyan bg-cyan/[0.08]";
-  if (
-    ["slowing", "low", "above", "rising", "holding", "sporadic",
-      "young", "quiet"].some((v) => s.includes(v))
-  ) return "text-yellow border-yellow bg-yellow/[0.08]";
-  if (
-    ["weak", "zero", "none", "heavy_outflow", "well_above", "far_above",
-      "worsening", "exiting", "deteriorating", "absent", "inconsistent",
-      "decelerating"].some((v) => s.includes(v))
-  ) return "text-red border-red bg-red/[0.08]";
-  if (
-    ["bleeding", "minimal_emission", "zero_emission", "volatile"].some((v) => s.includes(v))
-  ) return "text-orange border-orange bg-orange/[0.08]";
-  if (
-    ["surging"].some((v) => s.includes(v))
-  ) return "text-purple border-purple bg-purple/[0.08]";
-  return "text-muted border-border2 bg-transparent";
-}
-
-/* ── Score Display Component ───────────────────────────────── */
-function ScoreDisplay({ score, isMomentum = false }: { score: number; isMomentum?: boolean }) {
-  // compute_factors_vsat emits 0.0 as a sentinel for "no data" (legitimate
-  // scores in the new distribution floor at ~5.7, not 0). Show a dash so the
-  // UI doesn't read as "this subnet scored 0" when V3 just doesn't have
-  // enough history yet for that subnet.
-  if (!score || score < 1) {
-    return (
-      <div className="flex items-center gap-[7px]">
-        <div className="w-10 h-[3px] relative overflow-hidden shrink-0" style={{ background: "var(--color-dim)" }} />
-        <span className="font-mono text-xs text-muted min-w-[32px]">—</span>
-      </div>
-    );
+// Thin percentile bar + value, colored by the shared 0-100 score bands
+function PctBar({ value }: { value: number | null }) {
+  if (value == null || !isFinite(value)) {
+    return <span className="font-mono text-[11px] text-muted">—</span>;
   }
-  const pct = Math.min((score / 100) * 100, 100);
-  const color = isMomentum ? "var(--color-purple)" : scoreColor(score);
+  const v = Math.max(0, Math.min(100, value));
+  const band = scoreBand(v);
   return (
-    <div className="flex items-center gap-[7px]">
-      <div className="w-10 h-[3px] relative overflow-hidden shrink-0" style={{ background: "var(--color-dim)" }}>
-        <div className="absolute left-0 top-0 bottom-0" style={{ width: `${pct}%`, background: color }} />
-      </div>
-      <span className="font-mono text-xs font-semibold min-w-[32px]" style={{ color }}>
-        {score.toFixed(1)}
+    <span className="inline-flex items-center gap-2">
+      <span className={`font-mono text-[11px] font-semibold w-6 text-right ${band.text}`}>{Math.round(v)}</span>
+      <span className="inline-block w-12 h-1.5 bg-surface2 border border-border2 overflow-hidden align-middle">
+        <span className={`block h-full ${band.bar}`} style={{ width: v + "%" }} />
       </span>
-    </div>
-  );
-}
-
-/* ── Badge Component ───────────────────────────────────────── */
-function Badge({ signal }: { signal: string | undefined }) {
-  if (!signal || signal === "UNKNOWN") {
-    return (
-      <span className="inline-flex items-center gap-1 font-mono text-[9px] tracking-[0.06em] uppercase px-[7px] py-[3px] border font-medium whitespace-nowrap text-muted border-border2 bg-transparent">
-        {"\u2014"}
-      </span>
-    );
-  }
-  const cls = badgeColorClasses(signal);
-  return (
-    <span className={`inline-flex items-center gap-1 font-mono text-[9px] tracking-[0.06em] uppercase px-[7px] py-[3px] border font-medium whitespace-nowrap ${cls}`}>
-      <span className="w-1 h-1 rounded-full bg-current shrink-0" />
-      {signal}
     </span>
-  );
-}
-
-/* ── Sortable TH Component ─────────────────────────────────── */
-function SortTh({
-  label, field, sortState, onSort, variant,
-}: {
-  label: string;
-  field: string;
-  sortState: SortState;
-  onSort: (field: string) => void;
-  variant?: "chain" | "momentum";
-}) {
-  const sorted = sortState.field === field;
-  const arrow = sorted ? (sortState.dir === -1 ? " \u2193" : " \u2191") : "";
-  let colorCls = "text-muted hover:text-text";
-  if (variant === "chain") colorCls = "text-green/60 hover:text-green";
-  if (variant === "momentum") colorCls = "text-purple/70 hover:text-purple";
-  if (sorted) {
-    if (variant === "chain") colorCls = "text-green";
-    else if (variant === "momentum") colorCls = "text-purple";
-    else colorCls = "text-cyan";
-  }
-  return (
-    <th
-      className={`font-mono text-[9px] tracking-[0.12em] uppercase px-3 py-2.5 text-left font-normal whitespace-nowrap cursor-pointer select-none transition-colors ${colorCls}`}
-      onClick={() => onSort(field)}
-    >
-      {label}{arrow}
-    </th>
   );
 }
 
@@ -257,342 +97,312 @@ const thBase = "font-mono text-[9px] tracking-[0.12em] uppercase text-muted px-3
 
 /* ── Main Page Component ───────────────────────────────────── */
 export default function SignalsPage() {
-  const [allScores, setAllScores] = useState<SubnetScore[]>([]);
+  const [compositeFile, setCompositeFile] = useState<CompositeScoresFile | null>(null);
+  const [chainData, setChainData] = useState<ChainData | null>(null);
+  const [legacy, setLegacy] = useState<LegacyData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [updatedAt, setUpdatedAt] = useState<string>("\u2014");
-  const [chainBlock, setChainBlock] = useState<string>("\u2014");
-  const [chainEmission, setChainEmission] = useState<string>("\u2014");
-
-  const [currentModel, setCurrentModel] = useState<AlphaModel>("satellite");
-  const [currentView, setCurrentView] = useState<ViewMode>("satellite");
-  const [currentFilter, setCurrentFilter] = useState<FilterMode>("all");
-  const [sortStates, setSortStates] = useState<Record<ViewMode, SortState>>({
-    satellite: { field: "combined_score", dir: -1 },
-    core:      { field: "consensus_score", dir: -1 },
-  });
-  // Core sleeve state — separate from v2.1 satellite scores
-  const [corePicks, setCorePicks] = useState<CoreSleevePick[]>([]);
-  const [coreSortDir, setCoreSortDir] = useState<-1 | 1>(-1);
-  const [coreModelMeta, setCoreModelMeta] = useState<{ scoredUniverse: number; date?: string }>({ scoredUniverse: 0 });
+  const [sortField, setSortField] = useState<string>("score");
+  const [sortDir, setSortDir] = useState<-1 | 1>(-1);
+  const [legacyOpen, setLegacyOpen] = useState(false);
+  const [legacySort, setLegacySort] = useState<{ field: string; dir: -1 | 1 }>({ field: "combined_score", dir: -1 });
 
   /* ── Data Load ─────────────────────────────────────────── */
+  // Note: no synchronous setLoading(true) here — `loading` starts true and
+  // Refresh swaps data in place without flashing the loading state.
   const loadData = useCallback(async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const [combinedRes, chainRes, sleeveRes] = await Promise.all([
-        fetch(`/data/combined_scores.json?t=${Date.now()}`),
-        fetch(`/data/chain_data.json?t=${Date.now()}`),
-        fetch(`/data/sleeve_outputs.json?t=${Date.now()}`),
-      ]);
-      if (!combinedRes.ok) throw new Error("Could not load data");
-
-      const combined: CombinedData = await combinedRes.json();
-      const chain: ChainData | null = chainRes.ok ? await chainRes.json() : null;
-      const sleeve: SleeveOutputsData | null = sleeveRes.ok ? await sleeveRes.json() : null;
-
-      // Load core sleeve picks (full ranked table — not just top 10) so users
-      // can browse the full universe scored by the core model
-      if (sleeve?.sleeves?.core?.full_score_table) {
-        setCorePicks(sleeve.sleeves.core.full_score_table);
-        setCoreModelMeta({
-          scoredUniverse: sleeve.sleeves.core.scored_universe_size || 0,
-          date: sleeve.date,
-        });
-      } else {
-        setCorePicks([]);
-      }
-
-      const chainMap: Record<number, ChainData["subnets"] extends (infer U)[] | undefined ? U : never> = {};
-      if (chain?.subnets) {
-        chain.subnets.forEach((s) => { chainMap[s.netuid] = s; });
-      }
-
-      const scores: SubnetScore[] = (combined.scores || []).map((s) => ({
-        ...s,
-        alpha_ratio: s.alpha_ratio ?? chainMap[s.netuid]?.alpha_ratio ?? 0,
-        ema_tao_inflow: s.ema_tao_inflow ?? chainMap[s.netuid]?.ema_tao_inflow ?? 0,
-        tao_in: s.tao_in ?? chainMap[s.netuid]?.tao_in ?? 0,
-      }));
-
-      scores.sort((a, b) => b.combined_score - a.combined_score);
-      setAllScores(scores);
-      setUpdatedAt(combined.generated_at || "\u2014");
-
-      if (chain) {
-        setChainEmission(chain.total_emission_tao?.toFixed(4) || "\u2014");
-        setChainBlock(chain.block?.toLocaleString() || "\u2014");
-      }
-    } catch (e) {
-      setError((e as Error).message);
-    } finally {
-      setLoading(false);
-    }
+    const [comp, chain, leg] = await Promise.all([
+      safeFetch<CompositeScoresFile>("/data/composite_scores_v1.json"),
+      safeFetch<ChainData>("/data/chain_data.json"),
+      safeFetch<LegacyData>("/data/combined_scores.json"),
+    ]);
+    setCompositeFile(comp && Array.isArray(comp.scores) && comp.scores.length > 0 ? comp : null);
+    setChainData(chain);
+    setLegacy(leg && Array.isArray(leg.scores) ? leg : null);
+    setLoading(false);
   }, []);
 
   useEffect(() => { loadData(); }, [loadData]);
 
+  /* ── Composite rows (normalised to 0-100, joined with chain) ── */
+  const chainMap = useMemo(() => {
+    const m = new Map<number, ChainSubnet>();
+    chainData?.subnets?.forEach((s) => m.set(s.netuid, s));
+    return m;
+  }, [chainData]);
+
+  const cScale = useMemo(
+    () => scaleFor((compositeFile?.scores || []).map((r) => r.composite_score ?? NaN)),
+    [compositeFile]
+  );
+  const ingScale = useMemo(() => {
+    const vals: number[] = [];
+    compositeFile?.scores?.forEach((r) => {
+      Object.values(r.ingredients || {}).forEach((v) => {
+        if (typeof v === "number" && isFinite(v)) vals.push(v);
+      });
+    });
+    return scaleFor(vals);
+  }, [compositeFile]);
+
+  // Ingredient columns, in first-seen order across the file
+  const ingredientKeys = useMemo(() => {
+    const keys: string[] = [];
+    compositeFile?.scores?.forEach((r) => {
+      Object.keys(r.ingredients || {}).forEach((k) => {
+        if (!keys.includes(k)) keys.push(k);
+      });
+    });
+    return keys;
+  }, [compositeFile]);
+
+  interface Row extends CompositeScoreRow {
+    score100: number;
+    tao_in: number;
+    displayName: string;
+  }
+
+  const rows: Row[] = useMemo(() => {
+    return (compositeFile?.scores || [])
+      .filter((r) => typeof r.composite_score === "number")
+      .map((r) => ({
+        ...r,
+        score100: (r.composite_score as number) * cScale,
+        tao_in: chainMap.get(r.netuid)?.tao_in ?? 0,
+        displayName: r.name || chainMap.get(r.netuid)?.name || "SN" + r.netuid,
+      }));
+  }, [compositeFile, cScale, chainMap]);
+
+  const sortedRows = useMemo(() => {
+    const getVal = (r: Row): number => {
+      if (sortField === "score") return r.score100;
+      if (sortField === "tao_in") return r.tao_in;
+      if (sortField === "netuid") return r.netuid;
+      const v = r.ingredients?.[sortField];
+      return typeof v === "number" && isFinite(v) ? v * ingScale : -1;
+    };
+    return [...rows].sort((a, b) => (sortDir === -1 ? getVal(b) - getVal(a) : getVal(a) - getVal(b)));
+  }, [rows, sortField, sortDir, ingScale]);
+
+  const handleSort = useCallback((field: string) => {
+    setSortDir((d) => (field === sortField ? ((d * -1) as -1 | 1) : -1));
+    setSortField(field);
+  }, [sortField]);
+
   /* ── Stats ─────────────────────────────────────────────── */
-  const stats = useMemo(() => {
-    if (!allScores.length) return null;
-    const positiveInflow = allScores.filter((s) => (s.ema_tao_inflow || 0) > 0).length;
-    const topC = allScores[0];
-    const topS = [...allScores].sort((a, b) => b.stability_score - a.stability_score)[0];
-    const topY = [...allScores].sort((a, b) => b.yield_score - a.yield_score)[0];
-    const topCon = [...allScores].sort((a, b) => b.consensus_score - a.consensus_score)[0];
-    return { total: allScores.length, positiveInflow, topC, topS, topY, topCon };
-  }, [allScores]);
+  const hasScores = rows.length > 0;
+  const topRow = hasScores ? [...rows].sort((a, b) => b.score100 - a.score100)[0] : null;
+  const inPortfolioCount = rows.filter((r) => r.in_portfolio).length;
+  const medianScore = (() => {
+    if (!hasScores) return null;
+    const s = rows.map((r) => r.score100).sort((a, b) => a - b);
+    return s[Math.floor(s.length / 2)];
+  })();
+  const scoreDate = compositeFile?.date || compositeFile?.generated_at || null;
 
-  /* ── Filter + Sort ─────────────────────────────────────── */
-  const filteredSorted = useMemo(() => {
-    let scores = [...allScores];
-
-    // View filter — each toggle = one model's universe.
-    //   Satellite: every subnet VSAT scored (no liquidity gate — the
-    //     pipeline sizes trades against pool depth downstream, so thin
-    //     pools are fine to surface as candidates).
-    //   Core: every subnet in the liquid universe (top 30% by tao_in),
-    //     regardless of whether V3 produced a score. V3-scored ones rank
-    //     up by their consensus score; un-scored ones show 0 but stay
-    //     visible as eligible long-hold candidates.
-    if (currentView === "satellite") {
-      scores = scores.filter((s) => (s.combined_score || 0) > 0);
-    } else if (currentView === "core") {
-      scores = scores.filter((s) => s.in_liquid_universe === true);
-    }
-
-    // Additional user-selected filter
-    switch (currentFilter) {
-      case "strong": scores = scores.filter((s) => (s.ema_tao_inflow || 0) > 0); break;
-      case "stability": scores = scores.filter((s) => s.stability_score >= 65); break;
-      case "yield": scores = scores.filter((s) => s.yield_score >= 60); break;
-      case "consensus": scores = scores.filter((s) => s.consensus_score >= 65); break;
-      case "oversold": scores = scores.filter((s) => ["COLLAPSING", "FALLING", "DEEPLY_OVERSOLD"].includes(s.price_vs_ema_signal || "")); break;
-    }
-
-    // sort
-    const { field, dir } = sortStates[currentView];
+  /* ── Legacy sort ───────────────────────────────────────── */
+  const legacySorted = useMemo(() => {
+    const scores = [...(legacy?.scores || [])];
+    const { field, dir } = legacySort;
     scores.sort((a, b) => {
       const av = (a[field] as number) ?? 0;
       const bv = (b[field] as number) ?? 0;
       return dir === -1 ? bv - av : av - bv;
     });
-
     return scores;
-  }, [allScores, currentFilter, currentView, sortStates]);
+  }, [legacy, legacySort]);
 
-  /* ── Sort Handler ──────────────────────────────────────── */
-  const handleSort = useCallback((field: string) => {
-    setSortStates((prev) => {
-      const cur = prev[currentView];
-      return {
-        ...prev,
-        [currentView]: {
-          field,
-          dir: cur.field === field ? (cur.dir * -1 as -1 | 1) : -1,
-        },
-      };
-    });
-  }, [currentView]);
+  const handleLegacySort = useCallback((field: string) => {
+    setLegacySort((prev) => ({ field, dir: prev.field === field ? ((prev.dir * -1) as -1 | 1) : -1 }));
+  }, []);
 
-  const ss = sortStates[currentView];
+  const sortArrow = (active: boolean, dir: -1 | 1) => (active ? (dir === -1 ? " ↓" : " ↑") : "");
 
-  /* ── View toggle buttons (mirror the two sleeves) ────────── */
-  const viewButtons: { key: ViewMode; label: string; activeClass: string }[] = [
-    { key: "satellite", label: "Satellite (Active)",   activeClass: "text-cyan bg-cyan/[0.08]" },
-    { key: "core",      label: "Core (Long-Term Hold)", activeClass: "text-purple bg-purple/[0.08]" },
+  const LEGACY_COLS: { label: string; field: string }[] = [
+    { label: "Satellite", field: "combined_score" },
+    { label: "Core", field: "consensus_score" },
+    { label: "Momentum", field: "conviction_score" },
+    { label: "Flow", field: "capital_flow_score" },
+    { label: "Yield", field: "yield_score" },
+    { label: "Recovery", field: "stability_score" },
+    { label: "Em. Share", field: "emission_share_pct" },
+    { label: "TAO Staked", field: "tao_in" },
   ];
-
-  const filterButtons: { key: FilterMode; label: string }[] = [
-    { key: "all", label: "All" },
-    { key: "strong", label: "Positive Inflow" },
-    { key: "stability", label: "High Recovery (>65)" },
-    { key: "yield", label: "High Yield (>60)" },
-    { key: "consensus", label: "High Core (>65)" },
-    { key: "oversold", label: "Price Below EMA" },
-  ];
-
-  /* ── Table Renderers ───────────────────────────────────── */
-  // Single unified row renderer. Toggle changes which score the rows are
-  // ranked by; layout stays constant so users can sort any column.
-  // Order: # | SN | Name | Satellite | Core | Momentum | Flow | Yield |
-  //        Recovery | Price/EMA | EMA Inflow | Em.Share | Liquidity
-  const renderUnifiedRow = (s: SubnetScore, i: number) => (
-    <tr key={s.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
-      <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">{i + 1}</td>
-      <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{s.netuid}</td>
-      <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[140px]">
-        <Link href={`/subnet/${s.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
-          <SubnetLogo netuid={s.netuid} size={18} />
-          <span className="border-b border-border2 hover:border-cyan">{s.name}</span>
-        </Link>
-      </td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.combined_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.consensus_score} isMomentum /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.conviction_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.capital_flow_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.yield_score} /></td>
-      <td className="px-3 py-2.5"><ScoreDisplay score={s.stability_score} /></td>
-      <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.price_vs_ema || 1) >= 1 ? "text-green" : "text-red"}`}>
-        {(s.price_vs_ema || 0).toFixed(3)}
-      </td>
-      <td className={`font-mono text-[11px] px-3 py-2.5 ${(s.ema_tao_inflow || 0) >= 0 ? "text-green" : "text-red"}`}>
-        {fmtInflow(s.ema_tao_inflow)} {"\u03C4"}
-      </td>
-      <td className="font-mono text-[11px] text-cyan px-3 py-2.5">{(s.emission_share_pct || 0).toFixed(2)}%</td>
-      <td className="px-3 py-2.5"><LiquidityBadge taoIn={s.tao_in || 0} /></td>
-    </tr>
-  );
-
-
-  /* ── Table Headers per View ────────────────────────────── */
-  // Single unified header \u2014 column order matches renderUnifiedRow above.
-  // Sleeve composites (Satellite, Core) first because they're the things
-  // the strategy actually trades on; sub-factors next; chain stats last.
-  const renderHeaders = () => (
-    <tr className="bg-surface2 border-b border-border2">
-      <th key="ns-hash" className={thBase}>#</th>
-      <th key="ns-sn" className={thBase}>SN</th>
-      <th key="ns-name" className={thBase}>Name</th>
-      <SortTh label="Satellite" field="combined_score" sortState={ss} onSort={handleSort} />
-      <SortTh label="Core" field="consensus_score" sortState={ss} onSort={handleSort} variant="momentum" />
-      <SortTh label="Momentum" field="conviction_score" sortState={ss} onSort={handleSort} />
-      <SortTh label="Flow" field="capital_flow_score" sortState={ss} onSort={handleSort} />
-      <SortTh label="Yield" field="yield_score" sortState={ss} onSort={handleSort} />
-      <SortTh label="Recovery" field="stability_score" sortState={ss} onSort={handleSort} />
-      <SortTh label="Price/EMA" field="price_vs_ema" sortState={ss} onSort={handleSort} />
-      <SortTh label={"\u26D3 EMA Inflow"} field="ema_tao_inflow" sortState={ss} onSort={handleSort} variant="chain" />
-      <SortTh label={"\u26D3 Em. Share"} field="emission_share_pct" sortState={ss} onSort={handleSort} variant="chain" />
-      <SortTh label="Liquidity" field="tao_in" sortState={ss} onSort={handleSort} variant="chain" />
-    </tr>
-  );
-
-  const renderRow = renderUnifiedRow;
 
   /* ── Render ────────────────────────────────────────────── */
   return (
     <div>
       {/* ── Stats Row ──────────────────────────────────────── */}
-      <div className="grid grid-cols-8 border-b border-border bg-surface">
+      <div className="grid grid-cols-7 border-b border-border bg-surface max-md:grid-cols-4 max-sm:grid-cols-2">
+        <div className="px-4 py-3 border-r border-border">
+          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Model</div>
+          <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-cyan">Composite v1</div>
+          <div className="font-mono text-[10px] text-muted mt-[3px]">walk-forward validated</div>
+        </div>
         <div className="px-4 py-3 border-r border-border">
           <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Subnets Scored</div>
-          <div className="font-mono text-xl font-semibold tracking-tight leading-none text-cyan">{stats?.total ?? "\u2014"}</div>
+          <div className="font-mono text-xl font-semibold tracking-tight leading-none text-cyan">{hasScores ? rows.length : "—"}</div>
           <div className="font-mono text-[10px] text-muted mt-[3px]">128 total network</div>
         </div>
         <div className="px-4 py-3 border-r border-border">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Positive Inflow</div>
-          <div className="font-mono text-xl font-semibold tracking-tight leading-none text-green">{stats?.positiveInflow ?? "\u2014"}</div>
-          <div className="font-mono text-[10px] text-muted mt-[3px]">net capital inflow</div>
+          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">In Portfolio</div>
+          <div className="font-mono text-xl font-semibold tracking-tight leading-none text-yellow">{hasScores ? inPortfolioCount : "—"}</div>
+          <div className="font-mono text-[10px] text-muted mt-[3px]">model holdings ★</div>
         </div>
         <div className="px-4 py-3 border-r border-border">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Satellite</div>
-          <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-cyan">{stats?.topC?.combined_score?.toFixed(1) ?? "\u2014"}</div>
-          <div className="font-mono text-[10px] text-muted mt-[3px]">{stats?.topC ? `SN${stats.topC.netuid} ${stats.topC.name}` : "\u2014"}</div>
+          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Score</div>
+          <div className={`font-mono text-[16px] font-semibold tracking-tight leading-none ${topRow ? scoreBand(topRow.score100).text : "text-muted"}`}>
+            {topRow ? Math.round(topRow.score100) : "—"}
+          </div>
+          <div className="font-mono text-[10px] text-muted mt-[3px]">
+            {topRow ? `SN${topRow.netuid} ${topRow.displayName}` : "—"}
+          </div>
         </div>
         <div className="px-4 py-3 border-r border-border">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Recovery</div>
-          <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-green">{stats?.topS?.stability_score?.toFixed(1) ?? "\u2014"}</div>
-          <div className="font-mono text-[10px] text-muted mt-[3px]">{stats?.topS ? `SN${stats.topS.netuid} ${stats.topS.name}` : "\u2014"}</div>
-        </div>
-        <div className="px-4 py-3 border-r border-border">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Yield</div>
-          <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-yellow">{stats?.topY?.yield_score?.toFixed(1) ?? "\u2014"}</div>
-          <div className="font-mono text-[10px] text-muted mt-[3px]">{stats?.topY ? `SN${stats.topY.netuid} ${stats.topY.name}` : "\u2014"}</div>
-        </div>
-        <div className="px-4 py-3 border-r border-border">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Top Core</div>
-          <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-purple">{stats?.topCon?.consensus_score?.toFixed(1) ?? "\u2014"}</div>
-          <div className="font-mono text-[10px] text-muted mt-[3px]">{stats?.topCon ? `SN${stats.topCon.netuid} ${stats.topCon.name}` : "\u2014"}</div>
+          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Median Score</div>
+          <div className="font-mono text-xl font-semibold tracking-tight leading-none text-purple">
+            {medianScore != null ? Math.round(medianScore) : "—"}
+          </div>
+          <div className="font-mono text-[10px] text-muted mt-[3px]">across scored universe</div>
         </div>
         <div className="px-4 py-3 border-r border-border">
           <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Network Emission</div>
-          <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-yellow">{chainEmission}</div>
+          <div className="font-mono text-[16px] font-semibold tracking-tight leading-none text-yellow">
+            {chainData?.total_emission_tao?.toFixed(4) ?? "—"}
+          </div>
           <div className="font-mono text-[10px] text-muted mt-[3px]">TAO/block</div>
         </div>
         <div className="px-4 py-3">
-          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Current Block</div>
-          <div className="font-mono text-[14px] font-semibold tracking-tight leading-none text-purple">{chainBlock}</div>
-          <div className="font-mono text-[10px] text-muted mt-[3px]">direct from chain {"\u26D3"}</div>
+          <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted mb-[5px]">Score Date</div>
+          <div className="font-mono text-[14px] font-semibold tracking-tight leading-none text-green">
+            {scoreDate ?? "pending"}
+          </div>
+          <div className="font-mono text-[10px] text-muted mt-[3px]">publishes 12:00 UTC daily</div>
         </div>
       </div>
 
       {/* ── Main Content ───────────────────────────────────── */}
       <div className="p-5 flex flex-col gap-5">
 
-        {/* Section Header */}
+        {/* ── Composite v1 Leaderboard ─────────────────────── */}
         <div>
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-3 mb-2">
             <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-text font-medium whitespace-nowrap">
-              {"\u26A1"} Subnet Leaderboard
+              {"⚡"} Signal Leaderboard — Composite v1
             </div>
-            <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-cyan text-cyan whitespace-nowrap">
-              V3 Core + VSAT {"\u00B7"} PCA composite
-            </span>
+            {hasScores ? (
+              <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-cyan text-cyan whitespace-nowrap">
+                Composite v1 {"·"} {scoreDate}
+              </span>
+            ) : (
+              <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-border2 text-muted whitespace-nowrap">
+                First publication pending
+              </span>
+            )}
             <div className="flex-1 h-px bg-border" />
-            <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-green text-green whitespace-nowrap">
-              {"\u26D3"} Chain Native
-            </span>
-          </div>
-
-          {/* View Toggle (factor focus — Combined shows full breakdown) */}
-          <div className="mb-3">
-              <div className="flex items-center border border-border2 w-fit">
-                {viewButtons.map((vb, idx) => (
-                  <button
-                    key={vb.key}
-                    onClick={() => setCurrentView(vb.key)}
-                    style={{ borderTop: 'none', borderBottom: 'none', borderLeft: 'none', borderRight: idx < viewButtons.length - 1 ? '1px solid var(--color-border2)' : 'none' }}
-                    className={`font-mono text-[10px] tracking-[0.12em] uppercase bg-transparent px-[18px] py-[7px] cursor-pointer transition-all whitespace-nowrap ${
-                      currentView === vb.key
-                        ? vb.activeClass
-                        : "text-muted hover:text-text hover:bg-surface2"
-                    }`}
-                  >
-                    {vb.label}
-                  </button>
-                ))}
-              </div>
-          </div>
-
-          {/* Filters + Refresh */}
-          <div className="flex items-center justify-between mb-3 flex-wrap gap-2.5">
-            <div className="flex gap-1.5 flex-wrap items-center">
-              <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted">Filter:</span>
-              {filterButtons.map((fb) => (
-                <button
-                  key={fb.key}
-                  onClick={() => setCurrentFilter(fb.key)}
-                  className={`font-mono text-[9px] tracking-[0.08em] uppercase border px-[10px] py-1 cursor-pointer transition-all ${
-                    currentFilter === fb.key
-                      ? "border-cyan text-cyan"
-                      : "border-border2 text-muted hover:border-cyan hover:text-cyan"
-                  } bg-transparent`}
-                >
-                  {fb.label}
-                </button>
-              ))}
-            </div>
             <button
               onClick={loadData}
               className="font-mono text-[10px] tracking-[0.08em] uppercase bg-transparent border border-border2 text-muted px-3 py-[5px] cursor-pointer transition-all hover:border-cyan hover:text-cyan"
             >
-              {"\u21BB"} Refresh
+              {"↻"} Refresh
             </button>
           </div>
+          <p className="font-mono text-[10px] text-muted leading-relaxed mb-3 m-0">
+            Blend of accumulation, emission-strength, and old-model-inverse percentiles — equal weight.
+            Each column is a 0–100 percentile vs all scored subnets; ★ marks subnets held in the model portfolio.
+            Live track record on <Link href="/tracking" className="text-cyan no-underline hover:underline">/tracking</Link>.
+          </p>
 
-          {/* Unified Subnet Table — VSAT composite + V3 + 4 VSAT factors */}
           <div className="border border-border overflow-x-auto bg-surface">
             {loading ? (
               <div className="font-mono text-xs text-muted text-center py-12">Loading...</div>
-            ) : error ? (
-              <div className="font-mono text-xs text-red text-center py-12">{"\u26A0"} {error}</div>
-            ) : filteredSorted.length === 0 ? (
-              <div className="font-mono text-xs text-muted text-center py-12">No subnets match this filter</div>
+            ) : !hasScores ? (
+              <div className="text-center py-14 px-6">
+                <div className="font-mono text-[12px] text-text mb-2">New model scores publish daily at 12:00 UTC — first publication pending</div>
+                <div className="font-mono text-[10px] text-muted leading-relaxed max-w-[560px] mx-auto">
+                  The Composite v1 leaderboard will appear here automatically once
+                  <span className="text-text"> composite_scores_v1.json</span> ships with the next pipeline run.
+                  Until then, see live subnet chain data on the <Link href="/" className="text-cyan no-underline hover:underline">Subnets</Link> page.
+                </div>
+              </div>
             ) : (
               <table className="w-full border-collapse">
-                <thead>{renderHeaders()}</thead>
-                <tbody>{filteredSorted.map((s, i) => renderRow(s, i))}</tbody>
+                <thead>
+                  <tr className="bg-surface2 border-b border-border2">
+                    <th className={thBase}>#</th>
+                    <th
+                      className={`${thBase} cursor-pointer select-none transition-colors ${sortField === "netuid" ? "text-cyan" : "hover:text-text"}`}
+                      onClick={() => handleSort("netuid")}
+                    >
+                      SN{sortArrow(sortField === "netuid", sortDir)}
+                    </th>
+                    <th className={thBase}>Name</th>
+                    <th
+                      className={`${thBase} cursor-pointer select-none transition-colors ${sortField === "score" ? "text-cyan" : "hover:text-text"}`}
+                      onClick={() => handleSort("score")}
+                    >
+                      Composite Score{sortArrow(sortField === "score", sortDir)}
+                    </th>
+                    {ingredientKeys.map((k) => (
+                      <th
+                        key={k}
+                        className={`${thBase} cursor-pointer select-none transition-colors ${sortField === k ? "text-cyan" : "hover:text-text"}`}
+                        onClick={() => handleSort(k)}
+                      >
+                        {ingredientLabel(k)}{sortArrow(sortField === k, sortDir)}
+                      </th>
+                    ))}
+                    <th
+                      className={`${thBase} cursor-pointer select-none transition-colors ${sortField === "tao_in" ? "text-cyan" : "hover:text-text"}`}
+                      onClick={() => handleSort("tao_in")}
+                    >
+                      Liquidity{sortArrow(sortField === "tao_in", sortDir)}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sortedRows.map((r, i) => {
+                    const band = scoreBand(r.score100);
+                    return (
+                      <tr key={r.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors">
+                        <td className="font-mono text-[11px] text-muted px-3 py-2.5 w-8">
+                          {r.rank != null ? "#" + r.rank : i + 1}
+                        </td>
+                        <td className="font-mono text-[10px] text-muted px-3 py-2.5 w-10">{r.netuid}</td>
+                        <td className="font-semibold text-[13px] text-text px-3 py-2.5 min-w-[150px]">
+                          <Link href={`/subnet/${r.netuid}`} className="inline-flex items-center gap-2 text-inherit no-underline">
+                            <SubnetLogo netuid={r.netuid} size={18} />
+                            <span className="border-b border-border2 hover:border-cyan">{r.displayName}</span>
+                          </Link>
+                          {r.in_portfolio && (
+                            <span className="text-yellow text-[11px] ml-1.5" title="In model portfolio">★</span>
+                          )}
+                        </td>
+                        <td className="px-3 py-2.5 whitespace-nowrap">
+                          <span className="inline-flex items-center gap-2">
+                            <span className={`font-mono text-[12px] font-semibold w-6 text-right ${band.text}`}>
+                              {Math.round(r.score100)}
+                            </span>
+                            <span className="inline-block w-16 h-1.5 bg-surface2 border border-border2 overflow-hidden align-middle">
+                              <span
+                                className={`block h-full ${band.bar}`}
+                                style={{ width: Math.max(0, Math.min(100, r.score100)) + "%" }}
+                              />
+                            </span>
+                          </span>
+                        </td>
+                        {ingredientKeys.map((k) => {
+                          const v = r.ingredients?.[k];
+                          return (
+                            <td key={k} className="px-3 py-2.5 whitespace-nowrap">
+                              <PctBar value={typeof v === "number" && isFinite(v) ? v * ingScale : null} />
+                            </td>
+                          );
+                        })}
+                        <td className="px-3 py-2.5"><LiquidityBadge taoIn={r.tao_in} /></td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
               </table>
             )}
           </div>
@@ -602,72 +412,128 @@ export default function SignalsPage() {
         <div>
           <div className="flex items-center gap-3 mb-3">
             <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-text font-medium whitespace-nowrap">
-              {"\uD83D\uDCD0"} Signal Methodology
+              {"📐"} Methodology — Composite v1
             </div>
             <div className="flex-1 h-px bg-border" />
             <span className="font-mono text-[9px] tracking-[0.1em] uppercase px-2 py-[3px] border border-green text-green whitespace-nowrap">
-              Walk-forward validated {"\u00B7"} held-out test set
+              Walk-forward validated
             </span>
           </div>
-
-          <div className="border border-border bg-surface p-6 grid grid-cols-2 max-md:grid-cols-1 gap-8">
-            {/* Left column: V3 Core + VSAT */}
-            <div className="flex flex-col gap-5">
-              <div>
-                <div className="font-mono text-[9px] tracking-[0.15em] uppercase mb-2.5 pb-2 border-b border-border text-cyan">
-                  V3 Core + VSAT Satellite
-                </div>
-                <div className="text-xs text-muted leading-[1.7] mb-3">
-                  Two PCA-derived models trained on different signal universes for different
-                  horizons. Combined daily into a single per-subnet score.
-                </div>
-                <div className="text-[11px] leading-[1.7]">
-                  <div className="text-text font-medium mb-1">VSAT (14-day horizon)</div>
-                  <div className="text-muted mb-3">
-                    13 short-horizon signals → 4 factors: <span className="text-text">Momentum</span>,{" "}
-                    <span className="text-text">Flow</span>, <span className="text-text">Yield</span>,{" "}
-                    <span className="text-text">Recovery</span>. The composite is the headline score.
-                  </div>
-                  <div className="text-text font-medium mb-1">V3 (60-day horizon)</div>
-                  <div className="text-muted">
-                    20 long-horizon signals → 6 factors, variance-weighted. Captures structural
-                    health (validator stability, emission share, governance). Shown as the V3 column.
-                  </div>
-                </div>
-              </div>
+          <div className="border border-border bg-surface p-6">
+            <div className="text-xs text-muted leading-[1.7] mb-4 max-w-[820px]">
+              Each day, every subnet is ranked 0–100 on three independent ingredients; the composite
+              score is their equal-weight blend. A subnet needs at least two ingredients present to be scored.
             </div>
-
-            {/* Right column: factor cheat-sheet */}
-            <div className="flex flex-col gap-5">
-              <div>
-                <div className="font-mono text-[9px] tracking-[0.15em] uppercase mb-2.5 pb-2 border-b border-border text-cyan">
-                  Factor Cheat-Sheet
-                </div>
-                <div className="mt-1">
-                  {[
-                    { label: "Momentum", desc: "1d/3d price velocity, mean-reversion, vol", color: "text-orange" },
-                    { label: "Flow",     desc: "Volume / TAO inflow surges, alpha-ratio shifts", color: "text-cyan" },
-                    { label: "Yield",    desc: "Validator trust + dividends velocity", color: "text-yellow" },
-                    { label: "Recovery", desc: "Oversold + zero-emission price holds", color: "text-green" },
-                    { label: "V3",       desc: "Long-hold structural health (60d)", color: "text-purple" },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-start justify-between gap-3 py-1.5 border-b border-border/50 last:border-b-0">
-                      <div className="flex items-center gap-2 min-w-[80px]">
-                        <span className={`w-2.5 h-2.5 rounded-full ${item.color.replace("text-", "bg-")}`} />
-                        <span className={`text-xs font-medium ${item.color}`}>{item.label}</span>
-                      </div>
-                      <span className="text-[11px] text-muted text-right flex-1">{item.desc}</span>
-                    </div>
-                  ))}
-                  <div className="mt-3 pt-3 border-t border-border/50">
-                    <Link href="/performance" className="font-mono text-[11px] text-cyan no-underline hover:underline">
-                      {"\u2192"} Live track record on /performance
-                    </Link>
+            <div className="max-w-[820px]">
+              {[
+                { label: "Accumulation", desc: "Volume × price stability — sustained buying without price spikes", color: "text-cyan" },
+                { label: "Emission strength", desc: "30-day z-score of emission share — rising network rewards", color: "text-yellow" },
+                { label: "Old-model inverse", desc: "The legacy model's ranking, inverted — it proved anti-predictive, so its lowest picks score highest", color: "text-purple" },
+              ].map((item) => (
+                <div key={item.label} className="flex items-start justify-between gap-3 py-1.5 border-b border-border/50 last:border-b-0">
+                  <div className="flex items-center gap-2 min-w-[150px]">
+                    <span className={`w-2.5 h-2.5 rounded-full ${item.color.replace("text-", "bg-")}`} />
+                    <span className={`text-xs font-medium ${item.color}`}>{item.label}</span>
                   </div>
+                  <span className="text-[11px] text-muted text-right flex-1">{item.desc}</span>
                 </div>
+              ))}
+              <div className="mt-3 pt-3 border-t border-border/50 flex gap-5 flex-wrap">
+                <Link href="/tracking" className="font-mono text-[11px] text-cyan no-underline hover:underline">
+                  {"→"} Paper NAV + signal league on /tracking
+                </Link>
+                <Link href="/performance" className="font-mono text-[11px] text-cyan no-underline hover:underline">
+                  {"→"} Live portfolio on /performance
+                </Link>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* ── Legacy model (deprecated, collapsed) ─────────── */}
+        <div>
+          <button
+            onClick={() => setLegacyOpen((o) => !o)}
+            className="w-full flex items-center gap-3 bg-transparent border border-border2 px-4 py-3 cursor-pointer text-left hover:border-red/60 transition-all"
+          >
+            <span className="font-mono text-[10px] text-muted">{legacyOpen ? "▾" : "▸"}</span>
+            <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-muted">
+              Legacy model (deprecated Oct 2026 — validated anti-predictive in the current regime; retained for reference only)
+            </span>
+            <span className="flex-1" />
+            <span className="font-mono text-[9px] tracking-[0.06em] uppercase px-1.5 py-0.5 border text-red border-red bg-red/10 whitespace-nowrap">
+              Deprecated
+            </span>
+          </button>
+
+          {legacyOpen && (
+            <div className="border border-t-0 border-border2 bg-surface">
+              <div className="px-4 py-3 border-b border-border bg-red/[0.04]">
+                <p className="font-mono text-[10px] text-red leading-relaxed m-0">
+                  {"⚠"} These V3/VSAT scores are NOT recommendations. Out-of-sample validation (Oct 2026) found
+                  this model&apos;s rankings inverted — its top-ranked subnets underperformed — in the current protocol
+                  regime. The current model (Composite v1, above) uses the INVERSE of these rankings as one ingredient.
+                  This table is kept only so historical references remain auditable.
+                </p>
+              </div>
+              {!legacy?.scores?.length ? (
+                <div className="font-mono text-[11px] text-muted text-center py-10">Legacy score file not available</div>
+              ) : (
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-surface2 border-b border-border2">
+                        <th className={thBase}>#</th>
+                        <th className={thBase}>SN</th>
+                        <th className={thBase}>Name</th>
+                        {LEGACY_COLS.map((c) => (
+                          <th
+                            key={c.field}
+                            className={`${thBase} cursor-pointer select-none transition-colors ${legacySort.field === c.field ? "text-cyan" : "hover:text-text"}`}
+                            onClick={() => handleLegacySort(c.field)}
+                          >
+                            {c.label}{sortArrow(legacySort.field === c.field, legacySort.dir)}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {legacySorted.map((s, i) => (
+                        <tr key={s.netuid} className="border-b border-border/80 hover:bg-cyan/[0.03] transition-colors opacity-70">
+                          <td className="font-mono text-[11px] text-muted px-3 py-2">{i + 1}</td>
+                          <td className="font-mono text-[10px] text-muted px-3 py-2">{s.netuid}</td>
+                          <td className="text-[12px] text-text px-3 py-2 min-w-[140px] whitespace-nowrap">
+                            <Link href={`/subnet/${s.netuid}`} className="text-inherit no-underline border-b border-border2 hover:border-cyan">
+                              {s.name}
+                            </Link>
+                          </td>
+                          {LEGACY_COLS.map((c) => {
+                            const v = s[c.field] as number | undefined;
+                            return (
+                              <td key={c.field} className="font-mono text-[11px] text-muted px-3 py-2">
+                                {v == null || !isFinite(v) || v === 0
+                                  ? "—"
+                                  : c.field === "emission_share_pct"
+                                  ? v.toFixed(2) + "%"
+                                  : c.field === "tao_in"
+                                  ? Math.round(v).toLocaleString()
+                                  : v.toFixed(1)}
+                              </td>
+                            );
+                          })}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {legacy?.generated_at && (
+                <div className="font-mono text-[9px] text-muted px-4 py-2 border-t border-border">
+                  Legacy scores last generated {legacy.generated_at}
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* ── Disclaimer ───────────────────────────────────── */}
