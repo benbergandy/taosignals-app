@@ -31,7 +31,7 @@ cp ${PIPELINE}/data/regime_state.json  ${SITE}/
 [ -f ${PIPELINE}/data/signal_league.json ] && cp ${PIPELINE}/data/signal_league.json ${SITE}/
 [ -f ${PIPELINE}/data/event_studies.json ] && cp ${PIPELINE}/data/event_studies.json ${SITE}/
 [ -f ${PIPELINE}/data/composite_walkforward.json ] && cp ${PIPELINE}/data/composite_walkforward.json ${SITE}/
-for profile in conservative balanced aggressive buyhold core_only balanced_vsat balanced_with_deep; do
+for profile in conservative balanced aggressive buyhold core_only balanced_vsat balanced_with_deep composite_v1; do
   [ -f ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ] && \
     cp ${PIPELINE}/data/paper_portfolio_${profile}_sleeved.json ${SITE}/
   # .held.json — running held state with entry_score, source, entry_date per

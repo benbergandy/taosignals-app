@@ -1,0 +1,868 @@
+{
+  "profile": "composite_v1",
+  "start_date": "2026-10-15",
+  "rebalance_mode": "drift_band",
+  "total_tao": 1000.0,
+  "n_scored_dates": 5,
+  "last_processed_date": "2026-10-19",
+  "portfolio": {
+    "cash_tao": 0.0,
+    "positions": {
+      "10": {
+        "name": "Pareton",
+        "last_spot": 0.0051329008193397195,
+        "last_tao": 14767.6014,
+        "entry_date": "2026-10-15",
+        "value_tao": 177.68130400763872,
+        "tao": 177.6813
+      },
+      "28": {
+        "name": "SayGM",
+        "last_spot": 0.03200372876958798,
+        "last_tao": 28335.293,
+        "entry_date": "2026-10-15",
+        "value_tao": 185.39295098984857,
+        "tao": 185.393
+      },
+      "51": {
+        "name": "lium.io",
+        "last_spot": 0.11001451302262069,
+        "last_tao": 179447.6877,
+        "entry_date": "2026-10-15",
+        "value_tao": 201.57528516535007,
+        "tao": 201.5753
+      },
+      "53": {
+        "name": "engy",
+        "last_spot": 0.037376903079650886,
+        "last_tao": 40352.2734,
+        "entry_date": "2026-10-15",
+        "value_tao": 184.42089627096075,
+        "tao": 184.4209
+      },
+      "120": {
+        "name": "Affine",
+        "last_spot": 0.04301668129385036,
+        "last_tao": 75101.9269,
+        "entry_date": "2026-10-15",
+        "value_tao": 199.7771410654953,
+        "tao": 199.7771
+      }
+    },
+    "total_costs_tao": 1.2076963908323577
+  },
+  "benchmark": {
+    "cash_tao": 2.608670691725618e-12,
+    "positions": {
+      "1": {
+        "name": "Apex",
+        "last_spot": 0.006432608631033225,
+        "last_tao": 22803.3769,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.790466640306152,
+        "tao": 9.7905
+      },
+      "2": {
+        "name": "DaniLabs",
+        "last_spot": 0.003628989594759864,
+        "last_tao": 8419.7021,
+        "entry_date": "2026-10-15",
+        "value_tao": 12.102594287408364,
+        "tao": 12.1026
+      },
+      "3": {
+        "name": "Teutonic",
+        "last_spot": 0.02324873737461647,
+        "last_tao": 72680.0624,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.283880559231086,
+        "tao": 9.2839
+      },
+      "4": {
+        "name": "Targon",
+        "last_spot": 0.052983464898741735,
+        "last_tao": 135784.5585,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.105555159013983,
+        "tao": 10.1056
+      },
+      "5": {
+        "name": "Hone",
+        "last_spot": 0.012583674845497578,
+        "last_tao": 33597.4847,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.855827434296806,
+        "tao": 9.8558
+      },
+      "6": {
+        "name": "Numinous",
+        "last_spot": 0.002220872854849974,
+        "last_tao": 7328.7793,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.68160709707941,
+        "tao": 9.6816
+      },
+      "7": {
+        "name": "Allways",
+        "last_spot": 0.0022009568207161786,
+        "last_tao": 5286.5449,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.539257165476982,
+        "tao": 9.5393
+      },
+      "8": {
+        "name": "Vanta",
+        "last_spot": 0.029694697472762085,
+        "last_tao": 82843.8542,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.898844260899661,
+        "tao": 9.8988
+      },
+      "9": {
+        "name": "iota",
+        "last_spot": 0.02308371634685316,
+        "last_tao": 52141.9989,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.533956944484158,
+        "tao": 9.534
+      },
+      "10": {
+        "name": "Pareton",
+        "last_spot": 0.0051329008193397195,
+        "last_tao": 14767.6014,
+        "entry_date": "2026-10-15",
+        "value_tao": 8.774184032773357,
+        "tao": 8.7742
+      },
+      "11": {
+        "name": "TrajectoryRL",
+        "last_spot": 0.00672778685170045,
+        "last_tao": 19039.0436,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.58533902554443,
+        "tao": 9.5853
+      },
+      "12": {
+        "name": "Compute Horde",
+        "last_spot": 0.004782050282754192,
+        "last_tao": 12662.6349,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.786067767613092,
+        "tao": 9.7861
+      },
+      "13": {
+        "name": "Data Universe",
+        "last_spot": 0.004154214910693172,
+        "last_tao": 17222.1123,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.818547477717473,
+        "tao": 9.8185
+      },
+      "14": {
+        "name": "Cacheon",
+        "last_spot": 0.008753693728081182,
+        "last_tao": 24725.1241,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.799008200301687,
+        "tao": 9.799
+      },
+      "15": {
+        "name": "ORO",
+        "last_spot": 0.020790669244188407,
+        "last_tao": 13701.894,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.758271218994881,
+        "tao": 9.7583
+      },
+      "17": {
+        "name": "404\u2014GEN",
+        "last_spot": 0.007454276166822465,
+        "last_tao": 23588.76,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.119341007360486,
+        "tao": 9.1193
+      },
+      "18": {
+        "name": "Zeus",
+        "last_spot": 0.0037273307005039327,
+        "last_tao": 9824.1717,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.151424072714043,
+        "tao": 10.1514
+      },
+      "19": {
+        "name": "blockmachine",
+        "last_spot": 0.009466897126875082,
+        "last_tao": 31559.1455,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.418446539540133,
+        "tao": 10.4184
+      },
+      "20": {
+        "name": "Witness",
+        "last_spot": 0.002309231726636074,
+        "last_tao": 6435.725,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.939520247435489,
+        "tao": 9.9395
+      },
+      "21": {
+        "name": "AdTAO",
+        "last_spot": 0.004004699394524286,
+        "last_tao": 8182.6509,
+        "entry_date": "2026-10-15",
+        "value_tao": 8.179879512562694,
+        "tao": 8.1799
+      },
+      "22": {
+        "name": "Desearch",
+        "last_spot": 0.0029248426479143406,
+        "last_tao": 7422.5987,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.674352285076385,
+        "tao": 9.6744
+      },
+      "23": {
+        "name": "Trishool",
+        "last_spot": 0.004536598796071492,
+        "last_tao": 7699.8286,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.452641571081747,
+        "tao": 9.4526
+      },
+      "24": {
+        "name": "Quasar",
+        "last_spot": 0.008093847532627034,
+        "last_tao": 12321.8964,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.079046929091158,
+        "tao": 10.079
+      },
+      "25": {
+        "name": "UR",
+        "last_spot": 0.005762991964528025,
+        "last_tao": 12339.8703,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.93898875748503,
+        "tao": 9.939
+      },
+      "27": {
+        "name": "Orion",
+        "last_spot": 0.0022944031499706344,
+        "last_tao": 6177.0533,
+        "entry_date": "2026-10-15",
+        "value_tao": 7.673299377937862,
+        "tao": 7.6733
+      },
+      "28": {
+        "name": "SayGM",
+        "last_spot": 0.03200372876958798,
+        "last_tao": 28335.293,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.154997367049548,
+        "tao": 9.155
+      },
+      "29": {
+        "name": "ho\u03c4floa\u03c4",
+        "last_spot": 0.0025565048038188815,
+        "last_tao": 7976.7211,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.965841099211156,
+        "tao": 9.9658
+      },
+      "30": {
+        "name": "Endure Network",
+        "last_spot": 0.003297072314790233,
+        "last_tao": 8374.9809,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.814116677412887,
+        "tao": 9.8141
+      },
+      "32": {
+        "name": "ItsAI",
+        "last_spot": 0.002575246262233317,
+        "last_tao": 6694.7876,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.809998002301436,
+        "tao": 9.81
+      },
+      "33": {
+        "name": "ReadyAI",
+        "last_spot": 0.0031964009652306526,
+        "last_tao": 12136.4068,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.586045268697717,
+        "tao": 9.586
+      },
+      "34": {
+        "name": "BitMind",
+        "last_spot": 0.012056471061092224,
+        "last_tao": 35478.7372,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.821434901269669,
+        "tao": 9.8214
+      },
+      "37": {
+        "name": "Aurelius",
+        "last_spot": 0.0028268279983333458,
+        "last_tao": 7333.9159,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.83272940902355,
+        "tao": 9.8327
+      },
+      "38": {
+        "name": "ChronoLLM",
+        "last_spot": 0.020156762675489978,
+        "last_tao": 9226.4484,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.176836433203668,
+        "tao": 10.1768
+      },
+      "39": {
+        "name": "deprecated",
+        "last_spot": 0.00901790291615986,
+        "last_tao": 20046.1846,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.740166888191222,
+        "tao": 9.7402
+      },
+      "41": {
+        "name": "Almanac",
+        "last_spot": 0.007036664944372129,
+        "last_tao": 15086.7629,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.505511349533045,
+        "tao": 9.5055
+      },
+      "42": {
+        "name": "Unknown",
+        "last_spot": 0.0021600013550116368,
+        "last_tao": 6871.8761,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.925039153817846,
+        "tao": 9.925
+      },
+      "43": {
+        "name": "Graphite",
+        "last_spot": 0.003922409186564115,
+        "last_tao": 12238.2821,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.805479082644053,
+        "tao": 9.8055
+      },
+      "44": {
+        "name": "Score",
+        "last_spot": 0.03579273435015273,
+        "last_tao": 66727.5657,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.055954137982996,
+        "tao": 10.056
+      },
+      "45": {
+        "name": "AlphaRidge.ai",
+        "last_spot": 0.002327811348802217,
+        "last_tao": 6114.1393,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.733649445229942,
+        "tao": 9.7336
+      },
+      "46": {
+        "name": "Instant",
+        "last_spot": 0.0034849919319858876,
+        "last_tao": 8415.7596,
+        "entry_date": "2026-10-15",
+        "value_tao": 7.993399054676951,
+        "tao": 7.9934
+      },
+      "48": {
+        "name": "Quantum Compute",
+        "last_spot": 0.004917682245782261,
+        "last_tao": 11692.7785,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.807001963166075,
+        "tao": 9.807
+      },
+      "49": {
+        "name": "Nepher Robotics",
+        "last_spot": 0.007170816283466586,
+        "last_tao": 4424.2281,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.752981584018627,
+        "tao": 9.753
+      },
+      "50": {
+        "name": "Synth",
+        "last_spot": 0.003978609684130006,
+        "last_tao": 10220.354,
+        "entry_date": "2026-10-15",
+        "value_tao": 8.911890143212604,
+        "tao": 8.9119
+      },
+      "51": {
+        "name": "lium.io",
+        "last_spot": 0.11001451302262069,
+        "last_tao": 179447.6877,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.954106642663506,
+        "tao": 9.9541
+      },
+      "52": {
+        "name": "Dojo",
+        "last_spot": 0.0060059800382955015,
+        "last_tao": 17459.3501,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.858458767122821,
+        "tao": 9.8585
+      },
+      "53": {
+        "name": "engy",
+        "last_spot": 0.037376903079650886,
+        "last_tao": 40352.2734,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.106995766424864,
+        "tao": 9.107
+      },
+      "54": {
+        "name": "Yanez",
+        "last_spot": 0.005486384473663607,
+        "last_tao": 9412.052,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.579400730799163,
+        "tao": 9.5794
+      },
+      "55": {
+        "name": "NIOME",
+        "last_spot": 0.002142439677971092,
+        "last_tao": 5882.1987,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.156994897495284,
+        "tao": 9.157
+      },
+      "56": {
+        "name": "Gradients",
+        "last_spot": 0.014844180189051384,
+        "last_tao": 49592.0344,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.871950547656681,
+        "tao": 9.872
+      },
+      "60": {
+        "name": "Bitsec.ai",
+        "last_spot": 0.003787193458591598,
+        "last_tao": 6792.6004,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.619833772713818,
+        "tao": 9.6198
+      },
+      "61": {
+        "name": "RedTeam",
+        "last_spot": 0.011259133660705143,
+        "last_tao": 14199.1953,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.68784091564642,
+        "tao": 9.6878
+      },
+      "62": {
+        "name": "Ridges",
+        "last_spot": 0.008574023227353116,
+        "last_tao": 27096.2015,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.54467202694101,
+        "tao": 9.5447
+      },
+      "63": {
+        "name": "Enigma",
+        "last_spot": 0.0038329574626511393,
+        "last_tao": 10640.1482,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.810190730691092,
+        "tao": 9.8102
+      },
+      "64": {
+        "name": "Chutes",
+        "last_spot": 0.06685964314778604,
+        "last_tao": 198916.1977,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.71529134480245,
+        "tao": 9.7153
+      },
+      "65": {
+        "name": "True Performance Network",
+        "last_spot": 0.0022704696140174075,
+        "last_tao": 5774.3839,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.376026930151587,
+        "tao": 9.376
+      },
+      "66": {
+        "name": "conjectures",
+        "last_spot": 0.0025521551997087794,
+        "last_tao": 6221.7227,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.358795475048536,
+        "tao": 9.3588
+      },
+      "67": {
+        "name": "Harnyx",
+        "last_spot": 0.003169570317600595,
+        "last_tao": 2557.6121,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.523748665263735,
+        "tao": 9.5237
+      },
+      "68": {
+        "name": "NOVA",
+        "last_spot": 0.017709889536234365,
+        "last_tao": 40716.439,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.033591355743729,
+        "tao": 9.0336
+      },
+      "69": {
+        "name": "Herald",
+        "last_spot": 0.005335390400152063,
+        "last_tao": 3589.2657,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.513474960815069,
+        "tao": 9.5135
+      },
+      "71": {
+        "name": "Leadpoet",
+        "last_spot": 0.004922963504256065,
+        "last_tao": 5586.6544,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.448671599434277,
+        "tao": 9.4487
+      },
+      "72": {
+        "name": "StreetVision by NATIX",
+        "last_spot": 0.002127028974671269,
+        "last_tao": 6185.3064,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.945572306191371,
+        "tao": 9.9456
+      },
+      "73": {
+        "name": "Parked",
+        "last_spot": 0.003057810108958411,
+        "last_tao": 6796.7168,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.83809452192214,
+        "tao": 9.8381
+      },
+      "74": {
+        "name": "Gittensor",
+        "last_spot": 0.0028696344646120336,
+        "last_tao": 5619.9613,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.534878784245922,
+        "tao": 9.5349
+      },
+      "75": {
+        "name": "Hippius",
+        "last_spot": 0.018310349098562103,
+        "last_tao": 34768.5421,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.443031550084987,
+        "tao": 10.443
+      },
+      "77": {
+        "name": "Liquidity",
+        "last_spot": 0.004876560692610792,
+        "last_tao": 11524.3106,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.815274392101207,
+        "tao": 9.8153
+      },
+      "79": {
+        "name": "MVTRX",
+        "last_spot": 0.0029888228353574164,
+        "last_tao": 6880.7178,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.696374497715516,
+        "tao": 9.6964
+      },
+      "80": {
+        "name": "OpenRoboto",
+        "last_spot": 0.02502846832234953,
+        "last_tao": 6091.4943,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.754902972703391,
+        "tao": 9.7549
+      },
+      "81": {
+        "name": "Reliquary",
+        "last_spot": 0.005166882746578716,
+        "last_tao": 16493.2665,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.478787316929335,
+        "tao": 9.4788
+      },
+      "83": {
+        "name": "CliqueAI",
+        "last_spot": 0.007536319389541053,
+        "last_tao": 7997.7662,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.696690602542608,
+        "tao": 9.6967
+      },
+      "85": {
+        "name": "Vidaio",
+        "last_spot": 0.005367376423544066,
+        "last_tao": 13112.5077,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.376169795761719,
+        "tao": 9.3762
+      },
+      "88": {
+        "name": "Investing",
+        "last_spot": 0.0026519990924616884,
+        "last_tao": 5784.9432,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.511912465755277,
+        "tao": 9.5119
+      },
+      "89": {
+        "name": "InfiniteQuant",
+        "last_spot": 0.002952644398475219,
+        "last_tao": 6097.5932,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.6979866347743,
+        "tao": 9.698
+      },
+      "90": {
+        "name": "KubeTEE",
+        "last_spot": 0.02034567392999365,
+        "last_tao": 4892.6424,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.257653661131252,
+        "tao": 9.2577
+      },
+      "91": {
+        "name": "cascade",
+        "last_spot": 0.003883602496763059,
+        "last_tao": 2977.5968,
+        "entry_date": "2026-10-15",
+        "value_tao": 8.396004341443398,
+        "tao": 8.396
+      },
+      "92": {
+        "name": "REAX",
+        "last_spot": 0.039479299539286174,
+        "last_tao": 2768.1811,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.767812348725428,
+        "tao": 9.7678
+      },
+      "93": {
+        "name": "Bitcast",
+        "last_spot": 0.020267937861950358,
+        "last_tao": 25249.1092,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.061370856522352,
+        "tao": 10.0614
+      },
+      "95": {
+        "name": "Actual",
+        "last_spot": 0.037951086525160056,
+        "last_tao": 25881.1997,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.60989581836259,
+        "tao": 10.6099
+      },
+      "96": {
+        "name": "Verathos",
+        "last_spot": 0.003623844354306928,
+        "last_tao": 2379.9779,
+        "entry_date": "2026-10-15",
+        "value_tao": 8.010389421128908,
+        "tao": 8.0104
+      },
+      "97": {
+        "name": "Ingot",
+        "last_spot": 0.012741282047948676,
+        "last_tao": 10813.0939,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.94326735087934,
+        "tao": 9.9433
+      },
+      "98": {
+        "name": "NeverPlayAlone",
+        "last_spot": 0.002181837706813505,
+        "last_tao": 4599.5334,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.886177975501296,
+        "tao": 9.8862
+      },
+      "101": {
+        "name": "Tag101",
+        "last_spot": 0.0035942749317458152,
+        "last_tao": 3543.1359,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.765486163851998,
+        "tao": 9.7655
+      },
+      "102": {
+        "name": "ConnitoAI",
+        "last_spot": 0.005510391486999661,
+        "last_tao": 3411.5995,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.523828049961441,
+        "tao": 9.5238
+      },
+      "104": {
+        "name": "TAOstatus",
+        "last_spot": 0.004081361840041218,
+        "last_tao": 5865.9205,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.842946593076814,
+        "tao": 9.8429
+      },
+      "105": {
+        "name": "Beam",
+        "last_spot": 0.004784073813504388,
+        "last_tao": 4560.0801,
+        "entry_date": "2026-10-15",
+        "value_tao": 8.923379798798345,
+        "tao": 8.9234
+      },
+      "106": {
+        "name": "Nodexo",
+        "last_spot": 0.002263667425469303,
+        "last_tao": 5801.9291,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.081769910155035,
+        "tao": 10.0818
+      },
+      "107": {
+        "name": "Minos",
+        "last_spot": 0.03275583169814548,
+        "last_tao": 19991.901,
+        "entry_date": "2026-10-15",
+        "value_tao": 8.820447745696356,
+        "tao": 8.8204
+      },
+      "110": {
+        "name": "Green Compute",
+        "last_spot": 0.02562656218913278,
+        "last_tao": 11552.9794,
+        "entry_date": "2026-10-15",
+        "value_tao": 11.241875589130137,
+        "tao": 11.2419
+      },
+      "111": {
+        "name": "Claims",
+        "last_spot": 0.0040539731799388275,
+        "last_tao": 5441.7552,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.739748569587176,
+        "tao": 9.7397
+      },
+      "112": {
+        "name": "THOR",
+        "last_spot": 0.007571473538096967,
+        "last_tao": 6266.4088,
+        "entry_date": "2026-10-15",
+        "value_tao": 12.489538462652266,
+        "tao": 12.4895
+      },
+      "114": {
+        "name": "SOMA",
+        "last_spot": 0.022545989118622656,
+        "last_tao": 10058.0541,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.77051711495408,
+        "tao": 10.7705
+      },
+      "115": {
+        "name": "MoirAI",
+        "last_spot": 0.0024528112558228217,
+        "last_tao": 3443.5106,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.999178579994219,
+        "tao": 9.9992
+      },
+      "117": {
+        "name": "everyframe.studio",
+        "last_spot": 0.002201401789447156,
+        "last_tao": 2682.5437,
+        "entry_date": "2026-10-15",
+        "value_tao": 8.296227742038209,
+        "tao": 8.2962
+      },
+      "118": {
+        "name": "Ditto",
+        "last_spot": 0.004506404801944829,
+        "last_tao": 5035.1672,
+        "entry_date": "2026-10-15",
+        "value_tao": 7.879160270497822,
+        "tao": 7.8792
+      },
+      "119": {
+        "name": "CapabilityForge Next",
+        "last_spot": 0.0023144058254142463,
+        "last_tao": 3106.7048,
+        "entry_date": "2026-10-15",
+        "value_tao": 10.097374338534467,
+        "tao": 10.0974
+      },
+      "120": {
+        "name": "Affine",
+        "last_spot": 0.04301668129385036,
+        "last_tao": 75101.9269,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.865311440840285,
+        "tao": 9.8653
+      },
+      "121": {
+        "name": "sundae_bar",
+        "last_spot": 0.0036818529540649046,
+        "last_tao": 5641.5175,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.612558483972217,
+        "tao": 9.6126
+      },
+      "123": {
+        "name": "MANTIS",
+        "last_spot": 0.0022586662925010628,
+        "last_tao": 5582.9544,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.83652633119238,
+        "tao": 9.8365
+      },
+      "124": {
+        "name": "Swarm",
+        "last_spot": 0.009113583910606179,
+        "last_tao": 12085.2674,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.807733169381773,
+        "tao": 9.8077
+      },
+      "125": {
+        "name": "Refinery",
+        "last_spot": 0.0025786459057261465,
+        "last_tao": 5278.6416,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.735300500843561,
+        "tao": 9.7353
+      },
+      "127": {
+        "name": "Astrid",
+        "last_spot": 0.002067118746150108,
+        "last_tao": 2859.2555,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.327129795602755,
+        "tao": 9.3271
+      },
+      "128": {
+        "name": "ByteLeap",
+        "last_spot": 0.0027615062059398628,
+        "last_tao": 4017.0959,
+        "entry_date": "2026-10-15",
+        "value_tao": 9.847742132467163,
+        "tao": 9.8477
+      }
+    },
+    "total_costs_tao": 3.6967134338682284
+  }
+}
