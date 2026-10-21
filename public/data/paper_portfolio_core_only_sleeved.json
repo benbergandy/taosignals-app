@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-20T12:08:39.406300+00:00",
-  "date": "2026-10-20",
+  "generated_at": "2026-10-21T12:08:37.181531+00:00",
+  "date": "2026-10-21",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 41,
-          "name": "Almanac",
-          "tao": 170.0,
-          "score": 0.9639496243581961,
-          "rank": 1,
-          "moving_price": 0.00744515,
-          "tao_in": 16008.5479,
-          "source": "core"
-        },
-        {
           "netuid": 61,
           "name": "RedTeam",
           "tao": 170.0,
-          "score": 0.6704938387455102,
-          "rank": 2,
-          "moving_price": 0.01150347,
-          "tao_in": 14452.2887,
-          "source": "core"
-        },
-        {
-          "netuid": 28,
-          "name": "SayGM",
-          "tao": 170.0,
-          "score": 0.5868083453037468,
-          "rank": 3,
-          "moving_price": 0.03397779,
-          "tao_in": 29785.4148,
-          "source": "core"
-        },
-        {
-          "netuid": 75,
-          "name": "Hippius",
-          "tao": 170.0,
-          "score": 0.28436533987538926,
-          "rank": 4,
-          "moving_price": 0.01822639,
-          "tao_in": 34621.5297,
+          "score": 1.1262314038615775,
+          "rank": 1,
+          "moving_price": 0.01208375,
+          "tao_in": 14962.2858,
           "source": "core"
         },
         {
           "netuid": 120,
           "name": "Affine",
           "tao": 170.0,
-          "score": 0.2086562380608797,
+          "score": 0.5141016644421865,
+          "rank": 2,
+          "moving_price": 0.04321394,
+          "tao_in": 75397.4656,
+          "source": "core"
+        },
+        {
+          "netuid": 41,
+          "name": "Almanac",
+          "tao": 170.0,
+          "score": 0.49866685491456275,
+          "rank": 3,
+          "moving_price": 0.00790742,
+          "tao_in": 15996.5804,
+          "source": "core"
+        },
+        {
+          "netuid": 28,
+          "name": "SayGM",
+          "tao": 170.0,
+          "score": 0.3095171862556596,
+          "rank": 4,
+          "moving_price": 0.03480902,
+          "tao_in": 29675.9433,
+          "source": "core"
+        },
+        {
+          "netuid": 124,
+          "name": "Swarm",
+          "tao": 170.0,
+          "score": 0.13813895906962897,
           "rank": 5,
-          "moving_price": 0.04258552,
-          "tao_in": 74699.896,
+          "moving_price": 0.00950107,
+          "tao_in": 12391.2643,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
-    "41": {
-      "netuid": 41,
-      "name": "Almanac",
-      "tao": 170.0,
-      "score": 0.9639496243581961,
-      "rank": 1,
-      "moving_price": 0.00744515,
-      "tao_in": 16008.5479,
-      "source": "core"
-    },
     "61": {
       "netuid": 61,
       "name": "RedTeam",
       "tao": 170.0,
-      "score": 0.6704938387455102,
-      "rank": 2,
-      "moving_price": 0.01150347,
-      "tao_in": 14452.2887,
-      "source": "core"
-    },
-    "28": {
-      "netuid": 28,
-      "name": "SayGM",
-      "tao": 170.0,
-      "score": 0.5868083453037468,
-      "rank": 3,
-      "moving_price": 0.03397779,
-      "tao_in": 29785.4148,
-      "source": "core"
-    },
-    "75": {
-      "netuid": 75,
-      "name": "Hippius",
-      "tao": 170.0,
-      "score": 0.28436533987538926,
-      "rank": 4,
-      "moving_price": 0.01822639,
-      "tao_in": 34621.5297,
+      "score": 1.1262314038615775,
+      "rank": 1,
+      "moving_price": 0.01208375,
+      "tao_in": 14962.2858,
       "source": "core"
     },
     "120": {
       "netuid": 120,
       "name": "Affine",
       "tao": 170.0,
-      "score": 0.2086562380608797,
+      "score": 0.5141016644421865,
+      "rank": 2,
+      "moving_price": 0.04321394,
+      "tao_in": 75397.4656,
+      "source": "core"
+    },
+    "41": {
+      "netuid": 41,
+      "name": "Almanac",
+      "tao": 170.0,
+      "score": 0.49866685491456275,
+      "rank": 3,
+      "moving_price": 0.00790742,
+      "tao_in": 15996.5804,
+      "source": "core"
+    },
+    "28": {
+      "netuid": 28,
+      "name": "SayGM",
+      "tao": 170.0,
+      "score": 0.3095171862556596,
+      "rank": 4,
+      "moving_price": 0.03480902,
+      "tao_in": 29675.9433,
+      "source": "core"
+    },
+    "124": {
+      "netuid": 124,
+      "name": "Swarm",
+      "tao": 170.0,
+      "score": 0.13813895906962897,
       "rank": 5,
-      "moving_price": 0.04258552,
-      "tao_in": 74699.896,
+      "moving_price": 0.00950107,
+      "tao_in": 12391.2643,
       "source": "core"
     }
   },

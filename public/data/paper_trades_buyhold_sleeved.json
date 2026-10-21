@@ -2477,5 +2477,29 @@
     "tao": 160.0,
     "alpha_tokens": 22738.04441,
     "entry_price": 0.00703666
+  },
+  {
+    "date": "2026-10-21",
+    "type": "EXIT",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 152.9868,
+    "alpha_tokens": 8739.458964,
+    "exit_price": 0.0175053,
+    "entry_price": 0.01831035,
+    "entry_date": "2026-10-19",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -7.0132,
+    "realized_pnl_pct": -4.38,
+    "days_held": 2
+  },
+  {
+    "date": "2026-10-21",
+    "type": "ENTRY",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 160.0,
+    "alpha_tokens": 16759.771102,
+    "entry_price": 0.00954667
   }
 ]

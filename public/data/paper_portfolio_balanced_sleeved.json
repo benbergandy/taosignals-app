@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-20T12:08:39.377477+00:00",
-  "date": "2026-10-20",
+  "generated_at": "2026-10-21T12:08:37.174989+00:00",
+  "date": "2026-10-21",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "balanced",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 41,
-          "name": "Almanac",
-          "tao": 80.0,
-          "score": 0.9639496243581961,
-          "rank": 1,
-          "moving_price": 0.00744515,
-          "tao_in": 16008.5479,
-          "source": "core"
-        },
-        {
           "netuid": 61,
           "name": "RedTeam",
           "tao": 80.0,
-          "score": 0.6704938387455102,
-          "rank": 2,
-          "moving_price": 0.01150347,
-          "tao_in": 14452.2887,
-          "source": "core"
-        },
-        {
-          "netuid": 28,
-          "name": "SayGM",
-          "tao": 80.0,
-          "score": 0.5868083453037468,
-          "rank": 3,
-          "moving_price": 0.03397779,
-          "tao_in": 29785.4148,
-          "source": "core"
-        },
-        {
-          "netuid": 75,
-          "name": "Hippius",
-          "tao": 80.0,
-          "score": 0.28436533987538926,
-          "rank": 4,
-          "moving_price": 0.01822639,
-          "tao_in": 34621.5297,
+          "score": 1.1262314038615775,
+          "rank": 1,
+          "moving_price": 0.01208375,
+          "tao_in": 14962.2858,
           "source": "core"
         },
         {
           "netuid": 120,
           "name": "Affine",
           "tao": 80.0,
-          "score": 0.2086562380608797,
+          "score": 0.5141016644421865,
+          "rank": 2,
+          "moving_price": 0.04321394,
+          "tao_in": 75397.4656,
+          "source": "core"
+        },
+        {
+          "netuid": 41,
+          "name": "Almanac",
+          "tao": 80.0,
+          "score": 0.49866685491456275,
+          "rank": 3,
+          "moving_price": 0.00790742,
+          "tao_in": 15996.5804,
+          "source": "core"
+        },
+        {
+          "netuid": 28,
+          "name": "SayGM",
+          "tao": 80.0,
+          "score": 0.3095171862556596,
+          "rank": 4,
+          "moving_price": 0.03480902,
+          "tao_in": 29675.9433,
+          "source": "core"
+        },
+        {
+          "netuid": 124,
+          "name": "Swarm",
+          "tao": 80.0,
+          "score": 0.13813895906962897,
           "rank": 5,
-          "moving_price": 0.04258552,
-          "tao_in": 74699.896,
+          "moving_price": 0.00950107,
+          "tao_in": 12391.2643,
           "source": "core"
         }
       ]
@@ -78,50 +78,50 @@
           "netuid": 120,
           "name": "Affine",
           "tao": 90.0,
-          "score": 0.8630922957260226,
+          "score": 0.8245620205678384,
           "rank": 1,
-          "moving_price": 0.04258552,
-          "tao_in": 74699.896,
+          "moving_price": 0.04321394,
+          "tao_in": 75397.4656,
           "source": "satellite"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 90.0,
-          "score": 0.5172296430976059,
+          "score": 0.5145550396844528,
           "rank": 2,
-          "moving_price": 0.00643775,
-          "tao_in": 22854.2958,
+          "moving_price": 0.00643915,
+          "tao_in": 22813.6181,
           "source": "satellite"
         },
         {
-          "netuid": 5,
-          "name": "Hone",
+          "netuid": 11,
+          "name": "TrajectoryRL",
           "tao": 90.0,
-          "score": 0.47959149781166033,
+          "score": 0.4919398535446787,
           "rank": 3,
-          "moving_price": 0.01258975,
-          "tao_in": 33631.9493,
-          "source": "satellite"
-        },
-        {
-          "netuid": 56,
-          "name": "Gradients",
-          "tao": 90.0,
-          "score": 0.4533095095362754,
-          "rank": 4,
-          "moving_price": 0.01482671,
-          "tao_in": 49572.7482,
+          "moving_price": 0.0068029,
+          "tao_in": 19138.0183,
           "source": "satellite"
         },
         {
           "netuid": 17,
           "name": "404\u2014GEN",
           "tao": 90.0,
-          "score": 0.4504921616663293,
+          "score": 0.463416392786675,
+          "rank": 4,
+          "moving_price": 0.00745089,
+          "tao_in": 23591.4882,
+          "source": "satellite"
+        },
+        {
+          "netuid": 5,
+          "name": "Hone",
+          "tao": 90.0,
+          "score": 0.45382756981747885,
           "rank": 5,
-          "moving_price": 0.00745427,
-          "tao_in": 23591.6137,
+          "moving_price": 0.01253993,
+          "tao_in": 33547.0837,
           "source": "satellite"
         }
       ]
@@ -133,94 +133,94 @@
     }
   },
   "positions": {
-    "41": {
-      "netuid": 41,
-      "name": "Almanac",
-      "tao": 80.0,
-      "score": 0.9639496243581961,
-      "rank": 1,
-      "moving_price": 0.00744515,
-      "tao_in": 16008.5479,
-      "source": "core"
-    },
     "61": {
       "netuid": 61,
       "name": "RedTeam",
       "tao": 80.0,
-      "score": 0.6704938387455102,
-      "rank": 2,
-      "moving_price": 0.01150347,
-      "tao_in": 14452.2887,
-      "source": "core"
-    },
-    "28": {
-      "netuid": 28,
-      "name": "SayGM",
-      "tao": 80.0,
-      "score": 0.5868083453037468,
-      "rank": 3,
-      "moving_price": 0.03397779,
-      "tao_in": 29785.4148,
-      "source": "core"
-    },
-    "75": {
-      "netuid": 75,
-      "name": "Hippius",
-      "tao": 80.0,
-      "score": 0.28436533987538926,
-      "rank": 4,
-      "moving_price": 0.01822639,
-      "tao_in": 34621.5297,
+      "score": 1.1262314038615775,
+      "rank": 1,
+      "moving_price": 0.01208375,
+      "tao_in": 14962.2858,
       "source": "core"
     },
     "120": {
       "netuid": 120,
       "name": "Affine",
       "tao": 170.0,
-      "score": 0.2086562380608797,
-      "rank": 5,
-      "moving_price": 0.04258552,
-      "tao_in": 74699.896,
+      "score": 0.5141016644421865,
+      "rank": 2,
+      "moving_price": 0.04321394,
+      "tao_in": 75397.4656,
       "source": "core+satellite"
+    },
+    "41": {
+      "netuid": 41,
+      "name": "Almanac",
+      "tao": 80.0,
+      "score": 0.49866685491456275,
+      "rank": 3,
+      "moving_price": 0.00790742,
+      "tao_in": 15996.5804,
+      "source": "core"
+    },
+    "28": {
+      "netuid": 28,
+      "name": "SayGM",
+      "tao": 80.0,
+      "score": 0.3095171862556596,
+      "rank": 4,
+      "moving_price": 0.03480902,
+      "tao_in": 29675.9433,
+      "source": "core"
+    },
+    "124": {
+      "netuid": 124,
+      "name": "Swarm",
+      "tao": 80.0,
+      "score": 0.13813895906962897,
+      "rank": 5,
+      "moving_price": 0.00950107,
+      "tao_in": 12391.2643,
+      "source": "core"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 90.0,
-      "score": 0.5172296430976059,
+      "score": 0.5145550396844528,
       "rank": 2,
-      "moving_price": 0.00643775,
-      "tao_in": 22854.2958,
+      "moving_price": 0.00643915,
+      "tao_in": 22813.6181,
       "source": "satellite"
     },
-    "5": {
-      "netuid": 5,
-      "name": "Hone",
+    "11": {
+      "netuid": 11,
+      "name": "TrajectoryRL",
       "tao": 90.0,
-      "score": 0.47959149781166033,
+      "score": 0.4919398535446787,
       "rank": 3,
-      "moving_price": 0.01258975,
-      "tao_in": 33631.9493,
-      "source": "satellite"
-    },
-    "56": {
-      "netuid": 56,
-      "name": "Gradients",
-      "tao": 90.0,
-      "score": 0.4533095095362754,
-      "rank": 4,
-      "moving_price": 0.01482671,
-      "tao_in": 49572.7482,
+      "moving_price": 0.0068029,
+      "tao_in": 19138.0183,
       "source": "satellite"
     },
     "17": {
       "netuid": 17,
       "name": "404\u2014GEN",
       "tao": 90.0,
-      "score": 0.4504921616663293,
+      "score": 0.463416392786675,
+      "rank": 4,
+      "moving_price": 0.00745089,
+      "tao_in": 23591.4882,
+      "source": "satellite"
+    },
+    "5": {
+      "netuid": 5,
+      "name": "Hone",
+      "tao": 90.0,
+      "score": 0.45382756981747885,
       "rank": 5,
-      "moving_price": 0.00745427,
-      "tao_in": 23591.6137,
+      "moving_price": 0.01253993,
+      "tao_in": 33547.0837,
       "source": "satellite"
     }
   },

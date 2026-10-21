@@ -2659,5 +2659,53 @@
     "tao": 50.0,
     "alpha_tokens": 6710.066566,
     "entry_price": 0.00745149
+  },
+  {
+    "date": "2026-10-21",
+    "type": "EXIT",
+    "netuid": 75,
+    "name": "Hippius",
+    "tao": 114.7401,
+    "alpha_tokens": 6554.595267,
+    "exit_price": 0.0175053,
+    "entry_price": 0.01831035,
+    "entry_date": "2026-10-19",
+    "cost_basis_tao": 120.0,
+    "realized_pnl_tao": -5.2599,
+    "realized_pnl_pct": -4.38,
+    "days_held": 2
+  },
+  {
+    "date": "2026-10-21",
+    "type": "EXIT",
+    "netuid": 56,
+    "name": "Gradients",
+    "tao": 41.7031,
+    "alpha_tokens": 2806.010339,
+    "exit_price": 0.01486208,
+    "entry_price": 0.01788966,
+    "entry_date": "2026-07-12",
+    "cost_basis_tao": 50.0,
+    "realized_pnl_tao": -8.2969,
+    "realized_pnl_pct": -16.59,
+    "days_held": 101
+  },
+  {
+    "date": "2026-10-21",
+    "type": "ENTRY",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 120.0,
+    "alpha_tokens": 12569.828326,
+    "entry_price": 0.00954667
+  },
+  {
+    "date": "2026-10-21",
+    "type": "ENTRY",
+    "netuid": 11,
+    "name": "TrajectoryRL",
+    "tao": 50.0,
+    "alpha_tokens": 7365.443096,
+    "entry_price": 0.00678846
   }
 ]
