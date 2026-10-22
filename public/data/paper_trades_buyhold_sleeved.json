@@ -2501,5 +2501,30 @@
     "tao": 160.0,
     "alpha_tokens": 16759.771102,
     "entry_price": 0.00954667
+  },
+  {
+    "date": "2026-10-22",
+    "type": "EXIT",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 159.2626,
+    "alpha_tokens": 4744.684534,
+    "exit_price": 0.03356653,
+    "entry_price": 0.03374667,
+    "entry_date": "2026-10-17",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -0.7374,
+    "realized_pnl_pct": -0.46,
+    "days_held": 5,
+    "reason": "score_drop_1.33>1.0_(core)"
+  },
+  {
+    "date": "2026-10-22",
+    "type": "ENTRY",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 160.0,
+    "alpha_tokens": 5054.307375,
+    "entry_price": 0.03165617
   }
 ]

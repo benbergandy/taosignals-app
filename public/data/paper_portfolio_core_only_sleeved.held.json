@@ -2,68 +2,68 @@
   "start_date": "2026-05-12",
   "profile": "core_only",
   "total_tao": 1000.0,
-  "root_stake": 150.0122,
-  "accumulated_root_yield": 7.302078,
+  "root_stake": 150.012,
+  "accumulated_root_yield": 7.365276,
   "positions": {
     "61": {
-      "tao": 167.3676,
+      "tao": 163.104,
       "name": "RedTeam",
       "entry_date": "2026-10-07",
       "entry_price": 0.01267738,
       "entry_tao": 170.0,
-      "alpha_tokens": 13429.079498,
-      "accumulated_emission_tokens": 19.366581,
-      "accumulated_emission_tao": 0.228858,
+      "alpha_tokens": 13430.465765,
+      "accumulated_emission_tokens": 20.752848,
+      "accumulated_emission_tao": 0.245693,
       "source": "core",
       "entry_score": 1.6481649458092518
     },
-    "28": {
-      "tao": 176.1551,
-      "name": "SayGM",
-      "entry_date": "2026-10-17",
-      "entry_price": 0.03374667,
-      "entry_tao": 170.0,
-      "alpha_tokens": 5040.494118,
-      "accumulated_emission_tokens": 2.960697,
-      "accumulated_emission_tao": 0.101024,
-      "source": "core",
-      "entry_score": 1.192645063563137
-    },
     "120": {
-      "tao": 169.5852,
+      "tao": 163.4111,
       "name": "Affine",
       "entry_date": "2026-10-18",
       "entry_price": 0.04335429,
       "entry_tao": 170.0,
-      "alpha_tokens": 3922.318181,
-      "accumulated_emission_tokens": 1.137454,
-      "accumulated_emission_tao": 0.048816,
+      "alpha_tokens": 3922.6907,
+      "accumulated_emission_tokens": 1.509973,
+      "accumulated_emission_tao": 0.064334,
       "source": "core",
       "entry_score": 0.3464943221010999
     },
     "41": {
-      "tao": 190.7742,
+      "tao": 182.3879,
       "name": "Almanac",
       "entry_date": "2026-10-19",
       "entry_price": 0.00703666,
       "entry_tao": 170.0,
-      "alpha_tokens": 24162.319734,
-      "accumulated_emission_tokens": 3.147549,
-      "accumulated_emission_tao": 0.024882,
+      "alpha_tokens": 24163.852832,
+      "accumulated_emission_tokens": 4.680647,
+      "accumulated_emission_tao": 0.036454,
       "source": "core",
       "entry_score": 0.1558335594555762
     },
     "124": {
-      "tao": 170.0,
+      "tao": 173.9364,
       "name": "Swarm",
       "entry_date": "2026-10-21",
       "entry_price": 0.00954667,
       "entry_tao": 170.0,
-      "alpha_tokens": 17807.256795,
+      "alpha_tokens": 17809.374533,
+      "accumulated_emission_tokens": 2.117738,
+      "accumulated_emission_tao": 0.020683,
+      "source": "core",
+      "entry_score": 0.13813895906962897
+    },
+    "8": {
+      "tao": 170.0,
+      "name": "Vanta",
+      "entry_date": "2026-10-22",
+      "entry_price": 0.03165617,
+      "entry_tao": 170.0,
+      "alpha_tokens": 5370.201586,
       "accumulated_emission_tokens": 0.0,
       "accumulated_emission_tao": 0.0,
       "source": "core",
-      "entry_score": 0.13813895906962897
+      "entry_score": 0.0852237608938359
     }
   },
   "benchmark_eq_prices": {
@@ -126,7 +126,7 @@
     "126": 0.007754761818399913,
     "128": 0.004117945751588457
   },
-  "benchmark_eq_emissions": 82.704836,
+  "benchmark_eq_emissions": 82.93399,
   "benchmark_mcw_prices": {
     "5": {
       "price": 0.020862743179042985,
@@ -361,7 +361,7 @@
       "weight": 0.00882658669422807
     }
   },
-  "benchmark_mcw_emissions": 26.983519,
-  "benchmark_root_value": 1014.8377,
-  "free_cash": 642.4347
+  "benchmark_mcw_emissions": 27.080664,
+  "benchmark_root_value": 1014.9186,
+  "free_cash": 641.7146
 }

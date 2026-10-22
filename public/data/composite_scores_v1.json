@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-21T12:08:51+00:00",
-  "date": "2026-10-21",
+  "generated_at": "2026-10-22T12:09:03+00:00",
+  "date": "2026-10-22",
   "scores": [
     {
       "netuid": 51,
@@ -9,9 +9,9 @@
       "rank": 1,
       "in_portfolio": true,
       "ingredients": {
-        "PROD_emission_vs_network": 2.2,
-        "emission_share_zscore_30d": 87.4,
-        "volume_x_pricestable": 93.1
+        "PROD_emission_vs_network": 2.1,
+        "emission_share_zscore_30d": 89.7,
+        "volume_x_pricestable": 92.0
       }
     },
     {
@@ -21,8 +21,8 @@
       "rank": 2,
       "in_portfolio": true,
       "ingredients": {
-        "PROD_emission_vs_network": 30.4,
-        "emission_share_zscore_30d": 96.6,
+        "PROD_emission_vs_network": 27.7,
+        "emission_share_zscore_30d": 94.3,
         "volume_x_pricestable": 100.0
       }
     },
@@ -31,81 +31,80 @@
       "name": "Leadpoet",
       "composite_score": 97.7,
       "rank": 3,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 93.1,
-        "volume_x_pricestable": 78.2
-      }
-    },
-    {
-      "netuid": 120,
-      "name": "Affine",
-      "composite_score": 96.6,
-      "rank": 4,
       "in_portfolio": true,
       "ingredients": {
-        "PROD_emission_vs_network": 10.9,
-        "emission_share_zscore_30d": 79.3,
-        "volume_x_pricestable": 86.1
+        "emission_share_zscore_30d": 87.4,
+        "volume_x_pricestable": 82.0
       }
     },
     {
       "netuid": 46,
       "name": "Instant",
-      "composite_score": 95.4,
-      "rank": 5,
-      "in_portfolio": false,
+      "composite_score": 96.6,
+      "rank": 4,
+      "in_portfolio": true,
       "ingredients": {
-        "emission_share_zscore_30d": 85.1,
-        "volume_x_pricestable": 84.2
+        "emission_share_zscore_30d": 82.8,
+        "volume_x_pricestable": 84.0
       }
     },
     {
-      "netuid": 4,
-      "name": "Targon",
+      "netuid": 10,
+      "name": "Pareton",
+      "composite_score": 95.4,
+      "rank": 5,
+      "in_portfolio": true,
+      "ingredients": {
+        "emission_share_zscore_30d": 90.8,
+        "volume_x_pricestable": 74.0
+      }
+    },
+    {
+      "netuid": 120,
+      "name": "Affine",
       "composite_score": 94.3,
       "rank": 6,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 13.0,
-        "emission_share_zscore_30d": 47.1,
-        "volume_x_pricestable": 94.1
-      }
-    },
-    {
-      "netuid": 8,
-      "name": "Vanta",
-      "composite_score": 93.1,
-      "rank": 7,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 32.6,
-        "emission_share_zscore_30d": 77.0,
-        "volume_x_pricestable": 82.2
+        "PROD_emission_vs_network": 10.6,
+        "emission_share_zscore_30d": 69.0,
+        "volume_x_pricestable": 83.0
       }
     },
     {
       "netuid": 64,
       "name": "Chutes",
-      "composite_score": 92.0,
-      "rank": 8,
+      "composite_score": 93.1,
+      "rank": 7,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 8.7,
-        "emission_share_zscore_30d": 32.2,
+        "PROD_emission_vs_network": 8.5,
+        "emission_share_zscore_30d": 40.2,
         "volume_x_pricestable": 99.0
       }
     },
     {
-      "netuid": 53,
-      "name": "engy",
+      "netuid": 8,
+      "name": "Vanta",
+      "composite_score": 92.0,
+      "rank": 8,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 31.9,
+        "emission_share_zscore_30d": 79.3,
+        "volume_x_pricestable": 81.0
+      }
+    },
+    {
+      "netuid": 4,
+      "name": "Targon",
       "composite_score": 90.8,
       "rank": 9,
-      "in_portfolio": true,
+      "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 26.1,
-        "emission_share_zscore_30d": 50.6,
-        "volume_x_pricestable": 91.1
+        "PROD_emission_vs_network": 12.8,
+        "emission_share_zscore_30d": 44.8,
+        "volume_x_pricestable": 93.0
       }
     },
     {
@@ -115,9 +114,9 @@
       "rank": 10,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 23.9,
-        "emission_share_zscore_30d": 94.3,
-        "volume_x_pricestable": 42.6
+        "PROD_emission_vs_network": 23.4,
+        "emission_share_zscore_30d": 95.4,
+        "volume_x_pricestable": 41.0
       }
     },
     {
@@ -127,275 +126,276 @@
       "rank": 11,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 28.3,
-        "emission_share_zscore_30d": 44.8,
-        "volume_x_pricestable": 92.1
-      }
-    },
-    {
-      "netuid": 10,
-      "name": "Pareton",
-      "composite_score": 87.4,
-      "rank": 12,
-      "in_portfolio": true,
-      "ingredients": {
-        "emission_share_zscore_30d": 64.4,
-        "volume_x_pricestable": 74.3
-      }
-    },
-    {
-      "netuid": 81,
-      "name": "Reliquary",
-      "composite_score": 86.2,
-      "rank": 13,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 69.0,
-        "volume_x_pricestable": 69.3
+        "PROD_emission_vs_network": 25.5,
+        "emission_share_zscore_30d": 43.7,
+        "volume_x_pricestable": 94.0
       }
     },
     {
       "netuid": 1,
       "name": "Apex",
-      "composite_score": 85.1,
-      "rank": 14,
+      "composite_score": 87.4,
+      "rank": 12,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 73.6,
-        "volume_x_pricestable": 64.4
-      }
-    },
-    {
-      "netuid": 121,
-      "name": "sundae_bar",
-      "composite_score": 83.9,
-      "rank": 15,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 92.0,
-        "volume_x_pricestable": 44.6
+        "emission_share_zscore_30d": 78.2,
+        "volume_x_pricestable": 63.0
       }
     },
     {
       "netuid": 92,
       "name": "REAX",
-      "composite_score": 82.8,
-      "rank": 16,
+      "composite_score": 86.2,
+      "rank": 13,
       "in_portfolio": false,
       "ingredients": {
         "PROD_emission_vs_network": 0.0,
         "emission_share_zscore_30d": 100.0,
-        "volume_x_pricestable": 3.0
-      }
-    },
-    {
-      "netuid": 41,
-      "name": "Almanac",
-      "composite_score": 81.6,
-      "rank": 17,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 71.7,
-        "emission_share_zscore_30d": 80.5,
-        "volume_x_pricestable": 90.1
-      }
-    },
-    {
-      "netuid": 75,
-      "name": "Hippius",
-      "composite_score": 80.5,
-      "rank": 18,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 43.5,
-        "emission_share_zscore_30d": 56.3,
-        "volume_x_pricestable": 85.1
+        "volume_x_pricestable": 7.0
       }
     },
     {
       "netuid": 55,
       "name": "NIOME",
-      "composite_score": 79.3,
-      "rank": 19,
+      "composite_score": 85.1,
+      "rank": 14,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 83.9,
-        "volume_x_pricestable": 47.5
+        "emission_share_zscore_30d": 85.1,
+        "volume_x_pricestable": 48.0
+      }
+    },
+    {
+      "netuid": 75,
+      "name": "Hippius",
+      "composite_score": 83.9,
+      "rank": 15,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 40.4,
+        "emission_share_zscore_30d": 52.9,
+        "volume_x_pricestable": 87.0
+      }
+    },
+    {
+      "netuid": 45,
+      "name": "AlphaRidge.ai",
+      "composite_score": 82.8,
+      "rank": 16,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 70.1,
+        "volume_x_pricestable": 60.0
       }
     },
     {
       "netuid": 56,
       "name": "Gradients",
-      "composite_score": 78.2,
-      "rank": 20,
+      "composite_score": 81.6,
+      "rank": 17,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 47.8,
-        "emission_share_zscore_30d": 43.7,
+        "PROD_emission_vs_network": 44.7,
+        "emission_share_zscore_30d": 42.5,
         "volume_x_pricestable": 96.0
       }
     },
     {
       "netuid": 85,
       "name": "Vidaio",
-      "composite_score": 77.0,
-      "rank": 21,
+      "composite_score": 80.5,
+      "rank": 18,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 78.3,
-        "emission_share_zscore_30d": 86.2,
-        "volume_x_pricestable": 83.2
-      }
-    },
-    {
-      "netuid": 15,
-      "name": "ORO",
-      "composite_score": 75.9,
-      "rank": 22,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 19.6,
-        "emission_share_zscore_30d": 58.6,
-        "volume_x_pricestable": 50.5
-      }
-    },
-    {
-      "netuid": 45,
-      "name": "AlphaRidge.ai",
-      "composite_score": 74.7,
-      "rank": 23,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 65.5,
-        "volume_x_pricestable": 60.4
+        "PROD_emission_vs_network": 74.5,
+        "emission_share_zscore_30d": 81.6,
+        "volume_x_pricestable": 85.0
       }
     },
     {
       "netuid": 61,
       "name": "RedTeam",
-      "composite_score": 73.6,
-      "rank": 24,
+      "composite_score": 79.3,
+      "rank": 19,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 58.7,
-        "emission_share_zscore_30d": 82.8,
-        "volume_x_pricestable": 63.4
+        "PROD_emission_vs_network": 53.2,
+        "emission_share_zscore_30d": 75.9,
+        "volume_x_pricestable": 66.0
+      }
+    },
+    {
+      "netuid": 81,
+      "name": "Reliquary",
+      "composite_score": 78.2,
+      "rank": 20,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 54.0,
+        "volume_x_pricestable": 70.0
+      }
+    },
+    {
+      "netuid": 41,
+      "name": "Almanac",
+      "composite_score": 77.0,
+      "rank": 21,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 68.1,
+        "emission_share_zscore_30d": 67.8,
+        "volume_x_pricestable": 86.0
       }
     },
     {
       "netuid": 9,
       "name": "iota",
-      "composite_score": 72.4,
-      "rank": 25,
+      "composite_score": 75.9,
+      "rank": 22,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 37.0,
-        "emission_share_zscore_30d": 46.0,
-        "volume_x_pricestable": 77.2
-      }
-    },
-    {
-      "netuid": 114,
-      "name": "SOMA",
-      "composite_score": 71.3,
-      "rank": 26,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 17.4,
-        "emission_share_zscore_30d": 74.7,
-        "volume_x_pricestable": 28.7
-      }
-    },
-    {
-      "netuid": 118,
-      "name": "Ditto",
-      "composite_score": 70.1,
-      "rank": 27,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 59.8,
-        "volume_x_pricestable": 59.4
+        "PROD_emission_vs_network": 34.0,
+        "emission_share_zscore_30d": 41.4,
+        "volume_x_pricestable": 76.0
       }
     },
     {
       "netuid": 22,
       "name": "Desearch",
-      "composite_score": 69.0,
-      "rank": 28,
+      "composite_score": 74.7,
+      "rank": 23,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 95.4,
-        "volume_x_pricestable": 23.8
+        "emission_share_zscore_30d": 96.6,
+        "volume_x_pricestable": 25.0
       }
     },
     {
-      "netuid": 19,
-      "name": "blockmachine",
-      "composite_score": 67.8,
-      "rank": 29,
+      "netuid": 123,
+      "name": "MANTIS",
+      "composite_score": 73.6,
+      "rank": 24,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 65.2,
-        "emission_share_zscore_30d": 55.2,
-        "volume_x_pricestable": 88.1
+        "emission_share_zscore_30d": 74.7,
+        "volume_x_pricestable": 44.0
+      }
+    },
+    {
+      "netuid": 15,
+      "name": "ORO",
+      "composite_score": 72.4,
+      "rank": 25,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 19.1,
+        "emission_share_zscore_30d": 47.1,
+        "volume_x_pricestable": 50.0
       }
     },
     {
       "netuid": 3,
       "name": "Teutonic",
-      "composite_score": 66.7,
-      "rank": 30,
+      "composite_score": 71.3,
+      "rank": 26,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 39.1,
-        "emission_share_zscore_30d": 18.4,
+        "PROD_emission_vs_network": 36.2,
+        "emission_share_zscore_30d": 14.9,
         "volume_x_pricestable": 97.0
       }
     },
     {
       "netuid": 29,
       "name": "ho\u03c4floa\u03c4",
+      "composite_score": 70.1,
+      "rank": 27,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 97.7,
+        "volume_x_pricestable": 18.0
+      }
+    },
+    {
+      "netuid": 23,
+      "name": "Trishool",
+      "composite_score": 69.0,
+      "rank": 28,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 73.6,
+        "volume_x_pricestable": 42.0
+      }
+    },
+    {
+      "netuid": 114,
+      "name": "SOMA",
+      "composite_score": 67.8,
+      "rank": 29,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 17.0,
+        "emission_share_zscore_30d": 63.2,
+        "volume_x_pricestable": 27.0
+      }
+    },
+    {
+      "netuid": 106,
+      "name": "Nodexo",
+      "composite_score": 66.7,
+      "rank": 30,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 92.0,
+        "volume_x_pricestable": 23.0
+      }
+    },
+    {
+      "netuid": 93,
+      "name": "Bitcast",
       "composite_score": 65.5,
       "rank": 31,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 97.7,
-        "volume_x_pricestable": 16.8
-      }
-    },
-    {
-      "netuid": 38,
-      "name": "ChronoLLM",
-      "composite_score": 64.4,
-      "rank": 32,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 21.7,
-        "emission_share_zscore_30d": 66.7,
-        "volume_x_pricestable": 26.7
+        "PROD_emission_vs_network": 38.3,
+        "emission_share_zscore_30d": 31.0,
+        "volume_x_pricestable": 78.0
       }
     },
     {
       "netuid": 25,
       "name": "UR",
+      "composite_score": 64.4,
+      "rank": 32,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 78.7,
+        "emission_share_zscore_30d": 86.2,
+        "volume_x_pricestable": 62.0
+      }
+    },
+    {
+      "netuid": 38,
+      "name": "ChronoLLM",
       "composite_score": 63.2,
       "rank": 33,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 80.4,
-        "emission_share_zscore_30d": 89.7,
-        "volume_x_pricestable": 62.4
+        "PROD_emission_vs_network": 21.3,
+        "emission_share_zscore_30d": 65.5,
+        "volume_x_pricestable": 24.0
       }
     },
     {
-      "netuid": 30,
-      "name": "Endure Network",
+      "netuid": 53,
+      "name": "engy",
       "composite_score": 62.1,
       "rank": 34,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 72.4,
-        "volume_x_pricestable": 37.6
+        "PROD_emission_vs_network": 29.8,
+        "emission_share_zscore_30d": 4.6,
+        "volume_x_pricestable": 91.0
       }
     },
     {
@@ -405,31 +405,33 @@
       "rank": 35,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 82.6,
-        "emission_share_zscore_30d": 90.8,
-        "volume_x_pricestable": 55.4
+        "PROD_emission_vs_network": 80.9,
+        "emission_share_zscore_30d": 93.1,
+        "volume_x_pricestable": 53.0
       }
     },
     {
-      "netuid": 18,
-      "name": "Zeus",
+      "netuid": 112,
+      "name": "THOR",
       "composite_score": 59.8,
       "rank": 36,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 41.4,
-        "volume_x_pricestable": 66.3
+        "PROD_emission_vs_network": 46.8,
+        "emission_share_zscore_30d": 98.9,
+        "volume_x_pricestable": 12.0
       }
     },
     {
-      "netuid": 20,
-      "name": "Witness",
+      "netuid": 14,
+      "name": "Cacheon",
       "composite_score": 58.6,
       "rank": 37,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 81.6,
-        "volume_x_pricestable": 25.7
+        "PROD_emission_vs_network": 66.0,
+        "emission_share_zscore_30d": 34.5,
+        "volume_x_pricestable": 95.0
       }
     },
     {
@@ -440,421 +442,419 @@
       "in_portfolio": false,
       "ingredients": {
         "emission_share_zscore_30d": 36.8,
-        "volume_x_pricestable": 70.3
-      }
-    },
-    {
-      "netuid": 80,
-      "name": "OpenRoboto",
-      "composite_score": 56.3,
-      "rank": 39,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 15.2,
-        "emission_share_zscore_30d": 39.1,
-        "volume_x_pricestable": 36.6
-      }
-    },
-    {
-      "netuid": 14,
-      "name": "Cacheon",
-      "composite_score": 55.2,
-      "rank": 40,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 69.6,
-        "emission_share_zscore_30d": 34.5,
-        "volume_x_pricestable": 95.0
-      }
-    },
-    {
-      "netuid": 112,
-      "name": "THOR",
-      "composite_score": 54.0,
-      "rank": 41,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 56.5,
-        "emission_share_zscore_30d": 98.9,
-        "volume_x_pricestable": 14.9
-      }
-    },
-    {
-      "netuid": 62,
-      "name": "Ridges",
-      "composite_score": 52.9,
-      "rank": 42,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 67.4,
-        "emission_share_zscore_30d": 26.4,
-        "volume_x_pricestable": 98.0
+        "volume_x_pricestable": 71.0
       }
     },
     {
       "netuid": 5,
       "name": "Hone",
-      "composite_score": 51.7,
-      "rank": 43,
+      "composite_score": 56.3,
+      "rank": 39,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 50.0,
-        "emission_share_zscore_30d": 33.3,
-        "volume_x_pricestable": 71.3
+        "PROD_emission_vs_network": 48.9,
+        "emission_share_zscore_30d": 37.9,
+        "volume_x_pricestable": 72.0
       }
     },
     {
-      "netuid": 66,
-      "name": "conjectures",
-      "composite_score": 50.6,
-      "rank": 44,
+      "netuid": 62,
+      "name": "Ridges",
+      "composite_score": 55.2,
+      "rank": 40,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 20.7,
-        "volume_x_pricestable": 81.2
+        "PROD_emission_vs_network": 61.7,
+        "emission_share_zscore_30d": 24.1,
+        "volume_x_pricestable": 98.0
       }
     },
     {
-      "netuid": 37,
-      "name": "Aurelius",
-      "composite_score": 49.4,
-      "rank": 45,
+      "netuid": 20,
+      "name": "Witness",
+      "composite_score": 54.0,
+      "rank": 41,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 70.1,
-        "volume_x_pricestable": 31.7
+        "emission_share_zscore_30d": 80.5,
+        "volume_x_pricestable": 26.0
       }
     },
     {
-      "netuid": 93,
-      "name": "Bitcast",
-      "composite_score": 48.3,
-      "rank": 46,
+      "netuid": 118,
+      "name": "Ditto",
+      "composite_score": 52.9,
+      "rank": 42,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 41.3,
-        "emission_share_zscore_30d": 17.2,
-        "volume_x_pricestable": 76.2
-      }
-    },
-    {
-      "netuid": 65,
-      "name": "True Performance Network",
-      "composite_score": 47.1,
-      "rank": 47,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 75.9,
-        "volume_x_pricestable": 24.8
-      }
-    },
-    {
-      "netuid": 97,
-      "name": "Ingot",
-      "composite_score": 46.0,
-      "rank": 48,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 34.8,
-        "emission_share_zscore_30d": 40.2,
-        "volume_x_pricestable": 43.6
+        "emission_share_zscore_30d": 49.4,
+        "volume_x_pricestable": 57.0
       }
     },
     {
       "netuid": 68,
       "name": "NOVA",
-      "composite_score": 44.8,
-      "rank": 49,
+      "composite_score": 51.7,
+      "rank": 43,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 45.7,
-        "emission_share_zscore_30d": 4.6,
-        "volume_x_pricestable": 89.1
+        "PROD_emission_vs_network": 42.6,
+        "emission_share_zscore_30d": 9.2,
+        "volume_x_pricestable": 90.0
       }
     },
     {
-      "netuid": 107,
-      "name": "Minos",
-      "composite_score": 43.7,
-      "rank": 50,
+      "netuid": 19,
+      "name": "blockmachine",
+      "composite_score": 50.6,
+      "rank": 44,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 6.5,
-        "emission_share_zscore_30d": 5.7,
-        "volume_x_pricestable": 48.5
+        "PROD_emission_vs_network": 63.8,
+        "emission_share_zscore_30d": 32.2,
+        "volume_x_pricestable": 88.0
       }
     },
     {
-      "netuid": 33,
-      "name": "ReadyAI",
-      "composite_score": 42.5,
-      "rank": 51,
+      "netuid": 121,
+      "name": "sundae_bar",
+      "composite_score": 49.4,
+      "rank": 45,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 28.7,
-        "volume_x_pricestable": 67.3
-      }
-    },
-    {
-      "netuid": 123,
-      "name": "MANTIS",
-      "composite_score": 41.4,
-      "rank": 52,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 48.3,
-        "volume_x_pricestable": 46.5
+        "emission_share_zscore_30d": 56.3,
+        "volume_x_pricestable": 46.0
       }
     },
     {
       "netuid": 34,
       "name": "BitMind",
-      "composite_score": 40.2,
-      "rank": 53,
+      "composite_score": 48.3,
+      "rank": 46,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 54.3,
-        "emission_share_zscore_30d": 42.5,
-        "volume_x_pricestable": 52.5
-      }
-    },
-    {
-      "netuid": 49,
-      "name": "Nepher Robotics",
-      "composite_score": 39.1,
-      "rank": 54,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 52.2,
-        "emission_share_zscore_30d": 71.3,
-        "volume_x_pricestable": 19.8
-      }
-    },
-    {
-      "netuid": 23,
-      "name": "Trishool",
-      "composite_score": 37.9,
-      "rank": 55,
-      "in_portfolio": false,
-      "ingredients": {
+        "PROD_emission_vs_network": 51.1,
         "emission_share_zscore_30d": 51.7,
-        "volume_x_pricestable": 39.6
+        "volume_x_pricestable": 52.0
+      }
+    },
+    {
+      "netuid": 107,
+      "name": "Minos",
+      "composite_score": 47.1,
+      "rank": 47,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 6.4,
+        "emission_share_zscore_30d": 6.9,
+        "volume_x_pricestable": 51.0
+      }
+    },
+    {
+      "netuid": 30,
+      "name": "Endure Network",
+      "composite_score": 46.0,
+      "rank": 48,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 62.1,
+        "volume_x_pricestable": 37.0
       }
     },
     {
       "netuid": 21,
       "name": "AdTAO",
-      "composite_score": 36.8,
-      "rank": 56,
+      "composite_score": 44.8,
+      "rank": 49,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 89.1,
-        "emission_share_zscore_30d": 78.2,
-        "volume_x_pricestable": 45.5
-      }
-    },
-    {
-      "netuid": 106,
-      "name": "Nodexo",
-      "composite_score": 35.6,
-      "rank": 57,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 54.0,
-        "volume_x_pricestable": 33.7
-      }
-    },
-    {
-      "netuid": 90,
-      "name": "KubeTEE",
-      "composite_score": 34.5,
-      "rank": 58,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 4.3,
-        "emission_share_zscore_30d": 21.8,
-        "volume_x_pricestable": 7.9
-      }
-    },
-    {
-      "netuid": 11,
-      "name": "TrajectoryRL",
-      "composite_score": 33.3,
-      "rank": 59,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 76.1,
-        "emission_share_zscore_30d": 27.6,
-        "volume_x_pricestable": 73.3
-      }
-    },
-    {
-      "netuid": 74,
-      "name": "Gittensor",
-      "composite_score": 32.2,
-      "rank": 60,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 49.4,
-        "volume_x_pricestable": 32.7
-      }
-    },
-    {
-      "netuid": 124,
-      "name": "Swarm",
-      "composite_score": 31.0,
-      "rank": 61,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 60.9,
-        "emission_share_zscore_30d": 52.9,
-        "volume_x_pricestable": 29.7
-      }
-    },
-    {
-      "netuid": 50,
-      "name": "Synth",
-      "composite_score": 29.9,
-      "rank": 62,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 1.1,
-        "volume_x_pricestable": 79.2
-      }
-    },
-    {
-      "netuid": 60,
-      "name": "Bitsec.ai",
-      "composite_score": 28.7,
-      "rank": 63,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 8.0,
-        "volume_x_pricestable": 72.3
+        "PROD_emission_vs_network": 85.1,
+        "emission_share_zscore_30d": 83.9,
+        "volume_x_pricestable": 43.0
       }
     },
     {
       "netuid": 98,
       "name": "NeverPlayAlone",
-      "composite_score": 27.6,
-      "rank": 64,
+      "composite_score": 43.7,
+      "rank": 50,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 63.2,
-        "volume_x_pricestable": 15.8
+        "emission_share_zscore_30d": 77.0,
+        "volume_x_pricestable": 17.0
       }
     },
     {
-      "netuid": 54,
-      "name": "Yanez",
-      "composite_score": 26.4,
-      "rank": 65,
+      "netuid": 66,
+      "name": "conjectures",
+      "composite_score": 42.5,
+      "rank": 51,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 10.3,
-        "volume_x_pricestable": 68.3
+        "emission_share_zscore_30d": 13.8,
+        "volume_x_pricestable": 80.0
       }
     },
     {
-      "netuid": 88,
-      "name": "Investing",
-      "composite_score": 25.3,
-      "rank": 66,
+      "netuid": 65,
+      "name": "True Performance Network",
+      "composite_score": 41.4,
+      "rank": 52,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 16.1,
-        "volume_x_pricestable": 57.4
+        "emission_share_zscore_30d": 64.4,
+        "volume_x_pricestable": 28.0
       }
     },
     {
-      "netuid": 89,
-      "name": "InfiniteQuant",
-      "composite_score": 24.1,
-      "rank": 67,
+      "netuid": 33,
+      "name": "ReadyAI",
+      "composite_score": 40.2,
+      "rank": 53,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 57.5,
-        "volume_x_pricestable": 13.9
+        "emission_share_zscore_30d": 25.3,
+        "volume_x_pricestable": 67.0
       }
     },
     {
-      "netuid": 69,
-      "name": "Herald",
-      "composite_score": 23.0,
-      "rank": 68,
+      "netuid": 37,
+      "name": "Aurelius",
+      "composite_score": 39.1,
+      "rank": 54,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 62.1,
-        "volume_x_pricestable": 5.9
-      }
-    },
-    {
-      "netuid": 82,
-      "name": "Noah",
-      "composite_score": 21.8,
-      "rank": 69,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 67.8,
-        "volume_x_pricestable": 0.0
+        "emission_share_zscore_30d": 59.8,
+        "volume_x_pricestable": 32.0
       }
     },
     {
       "netuid": 6,
       "name": "Numinous",
-      "composite_score": 20.7,
-      "rank": 70,
+      "composite_score": 37.9,
+      "rank": 55,
       "in_portfolio": false,
       "ingredients": {
+        "emission_share_zscore_30d": 35.6,
+        "volume_x_pricestable": 55.0
+      }
+    },
+    {
+      "netuid": 80,
+      "name": "OpenRoboto",
+      "composite_score": 36.8,
+      "rank": 56,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 14.9,
         "emission_share_zscore_30d": 12.6,
-        "volume_x_pricestable": 54.5
+        "volume_x_pricestable": 35.0
       }
     },
     {
-      "netuid": 101,
-      "name": "Tag101",
-      "composite_score": 19.5,
-      "rank": 71,
+      "netuid": 124,
+      "name": "Swarm",
+      "composite_score": 35.6,
+      "rank": 57,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 100.0,
-        "emission_share_zscore_30d": 88.5,
-        "volume_x_pricestable": 11.9
-      }
-    },
-    {
-      "netuid": 17,
-      "name": "404\u2014GEN",
-      "composite_score": 18.4,
-      "rank": 72,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 73.9,
-        "emission_share_zscore_30d": 19.5,
-        "volume_x_pricestable": 53.5
+        "PROD_emission_vs_network": 57.4,
+        "emission_share_zscore_30d": 57.5,
+        "volume_x_pricestable": 30.0
       }
     },
     {
       "netuid": 79,
       "name": "MVTRX",
-      "composite_score": 17.2,
-      "rank": 73,
+      "composite_score": 34.5,
+      "rank": 58,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 24.1,
-        "volume_x_pricestable": 41.6
+        "emission_share_zscore_30d": 46.0,
+        "volume_x_pricestable": 40.0
+      }
+    },
+    {
+      "netuid": 89,
+      "name": "InfiniteQuant",
+      "composite_score": 33.3,
+      "rank": 59,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 71.3,
+        "volume_x_pricestable": 14.0
+      }
+    },
+    {
+      "netuid": 54,
+      "name": "Yanez",
+      "composite_score": 32.2,
+      "rank": 60,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 16.1,
+        "volume_x_pricestable": 69.0
+      }
+    },
+    {
+      "netuid": 43,
+      "name": "Graphite",
+      "composite_score": 31.0,
+      "rank": 61,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 72.4,
+        "volume_x_pricestable": 9.0
+      }
+    },
+    {
+      "netuid": 88,
+      "name": "Investing",
+      "composite_score": 29.9,
+      "rank": 62,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 23.0,
+        "volume_x_pricestable": 58.0
+      }
+    },
+    {
+      "netuid": 50,
+      "name": "Synth",
+      "composite_score": 28.7,
+      "rank": 63,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 3.4,
+        "volume_x_pricestable": 77.0
+      }
+    },
+    {
+      "netuid": 11,
+      "name": "TrajectoryRL",
+      "composite_score": 27.6,
+      "rank": 64,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 72.3,
+        "emission_share_zscore_30d": 17.2,
+        "volume_x_pricestable": 73.0
+      }
+    },
+    {
+      "netuid": 49,
+      "name": "Nepher Robotics",
+      "composite_score": 26.4,
+      "rank": 65,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 55.3,
+        "emission_share_zscore_30d": 55.2,
+        "volume_x_pricestable": 16.0
       }
     },
     {
       "netuid": 63,
       "name": "Enigma",
+      "composite_score": 25.3,
+      "rank": 66,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 93.6,
+        "emission_share_zscore_30d": 29.9,
+        "volume_x_pricestable": 79.0
+      }
+    },
+    {
+      "netuid": 60,
+      "name": "Bitsec.ai",
+      "composite_score": 24.1,
+      "rank": 67,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 8.0,
+        "volume_x_pricestable": 68.0
+      }
+    },
+    {
+      "netuid": 18,
+      "name": "Zeus",
+      "composite_score": 23.0,
+      "rank": 68,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 100.0,
+        "emission_share_zscore_30d": 48.3,
+        "volume_x_pricestable": 65.0
+      }
+    },
+    {
+      "netuid": 128,
+      "name": "ByteLeap",
+      "composite_score": 21.8,
+      "rank": 69,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 66.7,
+        "volume_x_pricestable": 5.0
+      }
+    },
+    {
+      "netuid": 17,
+      "name": "404\u2014GEN",
+      "composite_score": 20.7,
+      "rank": 70,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 70.2,
+        "emission_share_zscore_30d": 21.8,
+        "volume_x_pricestable": 54.0
+      }
+    },
+    {
+      "netuid": 90,
+      "name": "KubeTEE",
+      "composite_score": 19.5,
+      "rank": 71,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 4.3,
+        "emission_share_zscore_30d": 2.3,
+        "volume_x_pricestable": 6.0
+      }
+    },
+    {
+      "netuid": 32,
+      "name": "ItsAI",
+      "composite_score": 18.4,
+      "rank": 72,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 39.1,
+        "volume_x_pricestable": 29.0
+      }
+    },
+    {
+      "netuid": 101,
+      "name": "Tag101",
+      "composite_score": 17.2,
+      "rank": 73,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 97.9,
+        "emission_share_zscore_30d": 88.5,
+        "volume_x_pricestable": 11.0
+      }
+    },
+    {
+      "netuid": 74,
+      "name": "Gittensor",
       "composite_score": 16.1,
       "rank": 74,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 97.8,
-        "emission_share_zscore_30d": 14.9,
-        "volume_x_pricestable": 80.2
+        "emission_share_zscore_30d": 28.7,
+        "volume_x_pricestable": 33.0
       }
     },
     {
@@ -864,8 +864,8 @@
       "rank": 75,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 6.9,
-        "volume_x_pricestable": 51.5
+        "emission_share_zscore_30d": 11.5,
+        "volume_x_pricestable": 49.0
       }
     },
     {
@@ -875,9 +875,9 @@
       "rank": 76,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 91.3,
+        "PROD_emission_vs_network": 89.4,
         "emission_share_zscore_30d": 60.9,
-        "volume_x_pricestable": 17.8
+        "volume_x_pricestable": 19.0
       }
     },
     {
@@ -887,111 +887,111 @@
       "rank": 77,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 0.0,
-        "volume_x_pricestable": 56.4
+        "emission_share_zscore_30d": 1.1,
+        "volume_x_pricestable": 59.0
       }
     },
     {
-      "netuid": 83,
-      "name": "CliqueAI",
+      "netuid": 82,
+      "name": "Noah",
       "composite_score": 11.5,
       "rank": 78,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 63.0,
-        "emission_share_zscore_30d": 29.9,
-        "volume_x_pricestable": 9.9
-      }
-    },
-    {
-      "netuid": 43,
-      "name": "Graphite",
-      "composite_score": 10.3,
-      "rank": 79,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 35.6,
-        "volume_x_pricestable": 10.9
-      }
-    },
-    {
-      "netuid": 125,
-      "name": "Refinery",
-      "composite_score": 9.2,
-      "rank": 80,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 25.3,
-        "volume_x_pricestable": 20.8
-      }
-    },
-    {
-      "netuid": 105,
-      "name": "Beam",
-      "composite_score": 8.0,
-      "rank": 81,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 87.0,
-        "emission_share_zscore_30d": 13.8,
-        "volume_x_pricestable": 40.6
-      }
-    },
-    {
-      "netuid": 128,
-      "name": "ByteLeap",
-      "composite_score": 6.9,
-      "rank": 82,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 37.9,
-        "volume_x_pricestable": 6.9
-      }
-    },
-    {
-      "netuid": 32,
-      "name": "ItsAI",
-      "composite_score": 5.7,
-      "rank": 83,
-      "in_portfolio": false,
-      "ingredients": {
-        "emission_share_zscore_30d": 11.5,
-        "volume_x_pricestable": 27.7
-      }
-    },
-    {
-      "netuid": 102,
-      "name": "ConnitoAI",
-      "composite_score": 4.6,
-      "rank": 84,
-      "in_portfolio": false,
-      "ingredients": {
-        "PROD_emission_vs_network": 93.5,
-        "emission_share_zscore_30d": 31.0,
-        "volume_x_pricestable": 18.8
+        "emission_share_zscore_30d": 58.6,
+        "volume_x_pricestable": 0.0
       }
     },
     {
       "netuid": 77,
       "name": "Liquidity",
-      "composite_score": 3.4,
-      "rank": 85,
+      "composite_score": 10.3,
+      "rank": 79,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 84.8,
-        "emission_share_zscore_30d": 2.3,
-        "volume_x_pricestable": 35.6
+        "PROD_emission_vs_network": 83.0,
+        "emission_share_zscore_30d": 33.3,
+        "volume_x_pricestable": 36.0
+      }
+    },
+    {
+      "netuid": 69,
+      "name": "Herald",
+      "composite_score": 9.2,
+      "rank": 80,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 50.6,
+        "volume_x_pricestable": 4.0
+      }
+    },
+    {
+      "netuid": 83,
+      "name": "CliqueAI",
+      "composite_score": 8.0,
+      "rank": 81,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 59.6,
+        "emission_share_zscore_30d": 26.4,
+        "volume_x_pricestable": 8.0
+      }
+    },
+    {
+      "netuid": 105,
+      "name": "Beam",
+      "composite_score": 6.9,
+      "rank": 82,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 87.2,
+        "emission_share_zscore_30d": 19.5,
+        "volume_x_pricestable": 39.0
+      }
+    },
+    {
+      "netuid": 97,
+      "name": "Ingot",
+      "composite_score": 5.7,
+      "rank": 83,
+      "in_portfolio": false,
+      "ingredients": {
+        "PROD_emission_vs_network": 76.6,
+        "emission_share_zscore_30d": 0.0,
+        "volume_x_pricestable": 45.0
+      }
+    },
+    {
+      "netuid": 125,
+      "name": "Refinery",
+      "composite_score": 4.6,
+      "rank": 84,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 20.7,
+        "volume_x_pricestable": 21.0
       }
     },
     {
       "netuid": 7,
       "name": "Allways",
+      "composite_score": 3.4,
+      "rank": 85,
+      "in_portfolio": false,
+      "ingredients": {
+        "emission_share_zscore_30d": 5.7,
+        "volume_x_pricestable": 31.0
+      }
+    },
+    {
+      "netuid": 67,
+      "name": "Harnyx",
       "composite_score": 2.3,
       "rank": 86,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 3.4,
-        "volume_x_pricestable": 30.7
+        "emission_share_zscore_30d": 27.6,
+        "volume_x_pricestable": 1.0
       }
     },
     {
@@ -1001,20 +1001,21 @@
       "rank": 87,
       "in_portfolio": false,
       "ingredients": {
-        "PROD_emission_vs_network": 95.7,
-        "emission_share_zscore_30d": 23.0,
-        "volume_x_pricestable": 12.9
+        "PROD_emission_vs_network": 91.5,
+        "emission_share_zscore_30d": 18.4,
+        "volume_x_pricestable": 15.0
       }
     },
     {
-      "netuid": 67,
-      "name": "Harnyx",
+      "netuid": 102,
+      "name": "ConnitoAI",
       "composite_score": 0.0,
       "rank": 88,
       "in_portfolio": false,
       "ingredients": {
-        "emission_share_zscore_30d": 9.2,
-        "volume_x_pricestable": 2.0
+        "PROD_emission_vs_network": 95.7,
+        "emission_share_zscore_30d": 10.3,
+        "volume_x_pricestable": 13.0
       }
     }
   ]
