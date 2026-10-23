@@ -2630,5 +2630,53 @@
     "tao": 20.0,
     "alpha_tokens": 6384.25981,
     "entry_price": 0.0031327
+  },
+  {
+    "date": "2026-10-23",
+    "type": "EXIT",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 117.9999,
+    "alpha_tokens": 3790.907122,
+    "exit_price": 0.03112708,
+    "entry_price": 0.03165617,
+    "entry_date": "2026-10-22",
+    "cost_basis_tao": 120.0,
+    "realized_pnl_tao": -2.0001,
+    "realized_pnl_pct": -1.67,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-23",
+    "type": "EXIT",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 20.0996,
+    "alpha_tokens": 6384.32253,
+    "exit_price": 0.00314828,
+    "entry_price": 0.0031327,
+    "entry_date": "2026-10-22",
+    "cost_basis_tao": 20.0,
+    "realized_pnl_tao": 0.0996,
+    "realized_pnl_pct": 0.5,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-23",
+    "type": "ENTRY",
+    "netuid": 48,
+    "name": "Quantum Compute",
+    "tao": 120.0,
+    "alpha_tokens": 23046.376969,
+    "entry_price": 0.00520689
+  },
+  {
+    "date": "2026-10-23",
+    "type": "ENTRY",
+    "netuid": 107,
+    "name": "Minos",
+    "tao": 20.0,
+    "alpha_tokens": 624.997864,
+    "entry_price": 0.03200011
   }
 ]

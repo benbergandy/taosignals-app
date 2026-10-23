@@ -2526,5 +2526,29 @@
     "tao": 160.0,
     "alpha_tokens": 5054.307375,
     "entry_price": 0.03165617
+  },
+  {
+    "date": "2026-10-23",
+    "type": "EXIT",
+    "netuid": 8,
+    "name": "Vanta",
+    "tao": 157.3332,
+    "alpha_tokens": 5054.542721,
+    "exit_price": 0.03112708,
+    "entry_price": 0.03165617,
+    "entry_date": "2026-10-22",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -2.6668,
+    "realized_pnl_pct": -1.67,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-23",
+    "type": "ENTRY",
+    "netuid": 48,
+    "name": "Quantum Compute",
+    "tao": 160.0,
+    "alpha_tokens": 30728.502626,
+    "entry_price": 0.00520689
   }
 ]

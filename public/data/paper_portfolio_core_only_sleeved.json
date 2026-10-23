@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-22T12:08:45.166961+00:00",
-  "date": "2026-10-22",
+  "generated_at": "2026-10-23T12:08:23.155186+00:00",
+  "date": "2026-10-23",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "core_only",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
-          "netuid": 61,
-          "name": "RedTeam",
-          "tao": 170.0,
-          "score": 0.9686312346323716,
-          "rank": 1,
-          "moving_price": 0.01206447,
-          "tao_in": 14781.3735,
-          "source": "core"
-        },
-        {
           "netuid": 120,
           "name": "Affine",
           "tao": 170.0,
-          "score": 0.4352654216860339,
+          "score": 0.4830214783777558,
+          "rank": 1,
+          "moving_price": 0.04130593,
+          "tao_in": 73605.3872,
+          "source": "core"
+        },
+        {
+          "netuid": 48,
+          "name": "Quantum Compute",
+          "tao": 170.0,
+          "score": 0.4022602043852441,
           "rank": 2,
-          "moving_price": 0.04230344,
-          "tao_in": 74062.6695,
+          "moving_price": 0.00514163,
+          "tao_in": 12050.015,
+          "source": "core"
+        },
+        {
+          "netuid": 61,
+          "name": "RedTeam",
+          "tao": 170.0,
+          "score": 0.29536524168867406,
+          "rank": 3,
+          "moving_price": 0.01140245,
+          "tao_in": 14127.7645,
           "source": "core"
         },
         {
           "netuid": 124,
           "name": "Swarm",
           "tao": 170.0,
-          "score": 0.23453446656193228,
-          "rank": 3,
-          "moving_price": 0.00964561,
-          "tao_in": 12544.5313,
-          "source": "core"
-        },
-        {
-          "netuid": 8,
-          "name": "Vanta",
-          "tao": 170.0,
-          "score": 0.0852237608938359,
+          "score": 0.1395345354301149,
           "rank": 4,
-          "moving_price": 0.0311084,
-          "tao_in": 85626.1924,
+          "moving_price": 0.00938195,
+          "tao_in": 12335.9333,
           "source": "core"
         },
         {
           "netuid": 41,
           "name": "Almanac",
           "tao": 170.0,
-          "score": 0.0362789009328958,
+          "score": 0.1283111563700233,
           "rank": 5,
-          "moving_price": 0.00770386,
-          "tao_in": 15648.2326,
+          "moving_price": 0.00781556,
+          "tao_in": 15784.5785,
           "source": "core"
         }
       ]
@@ -82,54 +82,54 @@
     }
   },
   "positions": {
-    "61": {
-      "netuid": 61,
-      "name": "RedTeam",
-      "tao": 170.0,
-      "score": 0.9686312346323716,
-      "rank": 1,
-      "moving_price": 0.01206447,
-      "tao_in": 14781.3735,
-      "source": "core"
-    },
     "120": {
       "netuid": 120,
       "name": "Affine",
       "tao": 170.0,
-      "score": 0.4352654216860339,
+      "score": 0.4830214783777558,
+      "rank": 1,
+      "moving_price": 0.04130593,
+      "tao_in": 73605.3872,
+      "source": "core"
+    },
+    "48": {
+      "netuid": 48,
+      "name": "Quantum Compute",
+      "tao": 170.0,
+      "score": 0.4022602043852441,
       "rank": 2,
-      "moving_price": 0.04230344,
-      "tao_in": 74062.6695,
+      "moving_price": 0.00514163,
+      "tao_in": 12050.015,
+      "source": "core"
+    },
+    "61": {
+      "netuid": 61,
+      "name": "RedTeam",
+      "tao": 170.0,
+      "score": 0.29536524168867406,
+      "rank": 3,
+      "moving_price": 0.01140245,
+      "tao_in": 14127.7645,
       "source": "core"
     },
     "124": {
       "netuid": 124,
       "name": "Swarm",
       "tao": 170.0,
-      "score": 0.23453446656193228,
-      "rank": 3,
-      "moving_price": 0.00964561,
-      "tao_in": 12544.5313,
-      "source": "core"
-    },
-    "8": {
-      "netuid": 8,
-      "name": "Vanta",
-      "tao": 170.0,
-      "score": 0.0852237608938359,
+      "score": 0.1395345354301149,
       "rank": 4,
-      "moving_price": 0.0311084,
-      "tao_in": 85626.1924,
+      "moving_price": 0.00938195,
+      "tao_in": 12335.9333,
       "source": "core"
     },
     "41": {
       "netuid": 41,
       "name": "Almanac",
       "tao": 170.0,
-      "score": 0.0362789009328958,
+      "score": 0.1283111563700233,
       "rank": 5,
-      "moving_price": 0.00770386,
-      "tao_in": 15648.2326,
+      "moving_price": 0.00781556,
+      "tao_in": 15784.5785,
       "source": "core"
     }
   },
