@@ -2550,5 +2550,29 @@
     "tao": 160.0,
     "alpha_tokens": 30728.502626,
     "entry_price": 0.00520689
+  },
+  {
+    "date": "2026-10-24",
+    "type": "EXIT",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 156.9954,
+    "alpha_tokens": 16765.66934,
+    "exit_price": 0.0093641,
+    "entry_price": 0.00954667,
+    "entry_date": "2026-10-21",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": -3.0046,
+    "realized_pnl_pct": -1.88,
+    "days_held": 3
+  },
+  {
+    "date": "2026-10-24",
+    "type": "ENTRY",
+    "netuid": 34,
+    "name": "BitMind",
+    "tao": 160.0,
+    "alpha_tokens": 11649.130559,
+    "entry_price": 0.01373493
   }
 ]
