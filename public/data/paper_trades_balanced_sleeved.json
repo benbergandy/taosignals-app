@@ -2693,5 +2693,29 @@
     "tao": 80.0,
     "alpha_tokens": 5824.56528,
     "entry_price": 0.01373493
+  },
+  {
+    "date": "2026-10-25",
+    "type": "EXIT",
+    "netuid": 5,
+    "name": "Hone",
+    "tao": 88.327,
+    "alpha_tokens": 7138.176112,
+    "exit_price": 0.01237388,
+    "entry_price": 0.01261325,
+    "entry_date": "2026-10-17",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -1.673,
+    "realized_pnl_pct": -1.86,
+    "days_held": 8
+  },
+  {
+    "date": "2026-10-25",
+    "type": "ENTRY",
+    "netuid": 62,
+    "name": "Ridges",
+    "tao": 90.0,
+    "alpha_tokens": 10472.990306,
+    "entry_price": 0.00859353
   }
 ]
