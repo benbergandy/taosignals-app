@@ -2574,5 +2574,30 @@
     "tao": 170.0,
     "alpha_tokens": 12377.201219,
     "entry_price": 0.01373493
+  },
+  {
+    "date": "2026-10-26",
+    "type": "EXIT",
+    "netuid": 61,
+    "name": "RedTeam",
+    "tao": 132.8662,
+    "alpha_tokens": 13435.59986,
+    "exit_price": 0.00988911,
+    "entry_price": 0.01267738,
+    "entry_date": "2026-10-07",
+    "cost_basis_tao": 170.0,
+    "realized_pnl_tao": -37.1338,
+    "realized_pnl_pct": -21.84,
+    "days_held": 19,
+    "reason": "score_drop_1.46>1.0_(core)"
+  },
+  {
+    "date": "2026-10-26",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 170.0,
+    "alpha_tokens": 31530.421046,
+    "entry_price": 0.00539162
   }
 ]

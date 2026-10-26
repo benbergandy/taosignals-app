@@ -2789,5 +2789,54 @@
     "tao": 150.0,
     "alpha_tokens": 17454.983843,
     "entry_price": 0.00859353
+  },
+  {
+    "date": "2026-10-26",
+    "type": "EXIT",
+    "netuid": 61,
+    "name": "RedTeam",
+    "tao": 31.2631,
+    "alpha_tokens": 3161.367851,
+    "exit_price": 0.00988911,
+    "entry_price": 0.01267738,
+    "entry_date": "2026-10-07",
+    "cost_basis_tao": 40.0,
+    "realized_pnl_tao": -8.7369,
+    "realized_pnl_pct": -21.84,
+    "days_held": 19,
+    "reason": "score_drop_1.46>1.0_(core)"
+  },
+  {
+    "date": "2026-10-26",
+    "type": "EXIT",
+    "netuid": 62,
+    "name": "Ridges",
+    "tao": 148.0675,
+    "alpha_tokens": 17455.731687,
+    "exit_price": 0.00848246,
+    "entry_price": 0.00859353,
+    "entry_date": "2026-10-25",
+    "cost_basis_tao": 150.0,
+    "realized_pnl_tao": -1.9325,
+    "realized_pnl_pct": -1.29,
+    "days_held": 1
+  },
+  {
+    "date": "2026-10-26",
+    "type": "ENTRY",
+    "netuid": 63,
+    "name": "Enigma",
+    "tao": 40.0,
+    "alpha_tokens": 7418.922599,
+    "entry_price": 0.00539162
+  },
+  {
+    "date": "2026-10-26",
+    "type": "ENTRY",
+    "netuid": 3,
+    "name": "Teutonic",
+    "tao": 150.0,
+    "alpha_tokens": 6596.470721,
+    "entry_price": 0.02273943
   }
 ]

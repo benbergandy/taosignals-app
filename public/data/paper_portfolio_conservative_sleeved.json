@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-25T12:08:25.903450+00:00",
-  "date": "2026-10-25",
+  "generated_at": "2026-10-26T12:08:51.992722+00:00",
+  "date": "2026-10-26",
   "total_tao": 1000.0,
   "root_stake": 300.0,
   "allocation_profile": "conservative",
@@ -19,53 +19,53 @@
       "n_positions": 5,
       "positions": [
         {
+          "netuid": 63,
+          "name": "Enigma",
+          "tao": 120.0,
+          "score": 1.8556772762953362,
+          "rank": 1,
+          "moving_price": 0.00520591,
+          "tao_in": 12637.5014,
+          "source": "core"
+        },
+        {
           "netuid": 48,
           "name": "Quantum Compute",
           "tao": 120.0,
-          "score": 0.8996720655733836,
-          "rank": 1,
-          "moving_price": 0.00583077,
-          "tao_in": 12771.947,
-          "source": "core"
-        },
-        {
-          "netuid": 41,
-          "name": "Almanac",
-          "tao": 120.0,
-          "score": 0.6742471828474725,
+          "score": 1.3564623493196089,
           "rank": 2,
-          "moving_price": 0.00833904,
-          "tao_in": 16397.6788,
-          "source": "core"
-        },
-        {
-          "netuid": 120,
-          "name": "Affine",
-          "tao": 120.0,
-          "score": 0.4568578212951146,
-          "rank": 3,
-          "moving_price": 0.04195584,
-          "tao_in": 74205.0486,
+          "moving_price": 0.00632138,
+          "tao_in": 13521.4643,
           "source": "core"
         },
         {
           "netuid": 34,
           "name": "BitMind",
           "tao": 120.0,
-          "score": 0.3595784234169167,
-          "rank": 4,
-          "moving_price": 0.01362602,
-          "tao_in": 37630.6721,
+          "score": 0.5298662518952038,
+          "rank": 3,
+          "moving_price": 0.01347417,
+          "tao_in": 37478.1456,
           "source": "core"
         },
         {
-          "netuid": 61,
-          "name": "RedTeam",
+          "netuid": 120,
+          "name": "Affine",
           "tao": 120.0,
-          "score": 0.2122125132570926,
+          "score": 0.4975924290221341,
+          "rank": 4,
+          "moving_price": 0.04162236,
+          "tao_in": 74210.6305,
+          "source": "core"
+        },
+        {
+          "netuid": 41,
+          "name": "Almanac",
+          "tao": 120.0,
+          "score": 0.43775180010271086,
           "rank": 5,
-          "moving_price": 0.01028081,
-          "tao_in": 13719.0101,
+          "moving_price": 0.00824462,
+          "tao_in": 16364.8686,
           "source": "core"
         }
       ]
@@ -78,50 +78,50 @@
           "netuid": 120,
           "name": "Affine",
           "tao": 20.0,
-          "score": 0.8127402830294388,
+          "score": 0.7684812090633412,
           "rank": 1,
-          "moving_price": 0.04195584,
-          "tao_in": 74205.0486,
+          "moving_price": 0.04162236,
+          "tao_in": 74210.6305,
           "source": "satellite"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 20.0,
-          "score": 0.5303054203687223,
+          "score": 0.5450365726115104,
           "rank": 2,
-          "moving_price": 0.00630444,
-          "tao_in": 22523.656,
+          "moving_price": 0.00627658,
+          "tao_in": 22511.2106,
           "source": "satellite"
         },
         {
           "netuid": 107,
           "name": "Minos",
           "tao": 20.0,
-          "score": 0.4903712496972267,
+          "score": 0.4970098807178086,
           "rank": 3,
-          "moving_price": 0.03126454,
-          "tao_in": 19813.6263,
+          "moving_price": 0.03057306,
+          "tao_in": 19737.4169,
+          "source": "satellite"
+        },
+        {
+          "netuid": 3,
+          "name": "Teutonic",
+          "tao": 20.0,
+          "score": 0.4601195160999642,
+          "rank": 4,
+          "moving_price": 0.02272363,
+          "tao_in": 72033.0677,
           "source": "satellite"
         },
         {
           "netuid": 17,
           "name": "404\u2014GEN",
           "tao": 20.0,
-          "score": 0.4606842551275778,
-          "rank": 4,
-          "moving_price": 0.00743261,
-          "tao_in": 23589.2656,
-          "source": "satellite"
-        },
-        {
-          "netuid": 62,
-          "name": "Ridges",
-          "tao": 20.0,
-          "score": 0.4577793373770151,
+          "score": 0.45337831775603515,
           "rank": 5,
-          "moving_price": 0.00859308,
-          "tao_in": 27180.5746,
+          "moving_price": 0.0074219,
+          "tao_in": 23572.3134,
           "source": "satellite"
         }
       ]
@@ -133,94 +133,94 @@
     }
   },
   "positions": {
+    "63": {
+      "netuid": 63,
+      "name": "Enigma",
+      "tao": 120.0,
+      "score": 1.8556772762953362,
+      "rank": 1,
+      "moving_price": 0.00520591,
+      "tao_in": 12637.5014,
+      "source": "core"
+    },
     "48": {
       "netuid": 48,
       "name": "Quantum Compute",
       "tao": 120.0,
-      "score": 0.8996720655733836,
-      "rank": 1,
-      "moving_price": 0.00583077,
-      "tao_in": 12771.947,
+      "score": 1.3564623493196089,
+      "rank": 2,
+      "moving_price": 0.00632138,
+      "tao_in": 13521.4643,
       "source": "core"
     },
-    "41": {
-      "netuid": 41,
-      "name": "Almanac",
+    "34": {
+      "netuid": 34,
+      "name": "BitMind",
       "tao": 120.0,
-      "score": 0.6742471828474725,
-      "rank": 2,
-      "moving_price": 0.00833904,
-      "tao_in": 16397.6788,
+      "score": 0.5298662518952038,
+      "rank": 3,
+      "moving_price": 0.01347417,
+      "tao_in": 37478.1456,
       "source": "core"
     },
     "120": {
       "netuid": 120,
       "name": "Affine",
       "tao": 140.0,
-      "score": 0.4568578212951146,
-      "rank": 3,
-      "moving_price": 0.04195584,
-      "tao_in": 74205.0486,
+      "score": 0.4975924290221341,
+      "rank": 4,
+      "moving_price": 0.04162236,
+      "tao_in": 74210.6305,
       "source": "core+satellite"
     },
-    "34": {
-      "netuid": 34,
-      "name": "BitMind",
+    "41": {
+      "netuid": 41,
+      "name": "Almanac",
       "tao": 120.0,
-      "score": 0.3595784234169167,
-      "rank": 4,
-      "moving_price": 0.01362602,
-      "tao_in": 37630.6721,
-      "source": "core"
-    },
-    "61": {
-      "netuid": 61,
-      "name": "RedTeam",
-      "tao": 120.0,
-      "score": 0.2122125132570926,
+      "score": 0.43775180010271086,
       "rank": 5,
-      "moving_price": 0.01028081,
-      "tao_in": 13719.0101,
+      "moving_price": 0.00824462,
+      "tao_in": 16364.8686,
       "source": "core"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 20.0,
-      "score": 0.5303054203687223,
+      "score": 0.5450365726115104,
       "rank": 2,
-      "moving_price": 0.00630444,
-      "tao_in": 22523.656,
+      "moving_price": 0.00627658,
+      "tao_in": 22511.2106,
       "source": "satellite"
     },
     "107": {
       "netuid": 107,
       "name": "Minos",
       "tao": 20.0,
-      "score": 0.4903712496972267,
+      "score": 0.4970098807178086,
       "rank": 3,
-      "moving_price": 0.03126454,
-      "tao_in": 19813.6263,
+      "moving_price": 0.03057306,
+      "tao_in": 19737.4169,
+      "source": "satellite"
+    },
+    "3": {
+      "netuid": 3,
+      "name": "Teutonic",
+      "tao": 20.0,
+      "score": 0.4601195160999642,
+      "rank": 4,
+      "moving_price": 0.02272363,
+      "tao_in": 72033.0677,
       "source": "satellite"
     },
     "17": {
       "netuid": 17,
       "name": "404\u2014GEN",
       "tao": 20.0,
-      "score": 0.4606842551275778,
-      "rank": 4,
-      "moving_price": 0.00743261,
-      "tao_in": 23589.2656,
-      "source": "satellite"
-    },
-    "62": {
-      "netuid": 62,
-      "name": "Ridges",
-      "tao": 20.0,
-      "score": 0.4577793373770151,
+      "score": 0.45337831775603515,
       "rank": 5,
-      "moving_price": 0.00859308,
-      "tao_in": 27180.5746,
+      "moving_price": 0.0074219,
+      "tao_in": 23572.3134,
       "source": "satellite"
     }
   },
