@@ -2766,5 +2766,53 @@
     "tao": 90.0,
     "alpha_tokens": 3957.882432,
     "entry_price": 0.02273943
+  },
+  {
+    "date": "2026-10-27",
+    "type": "EXIT",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao": 86.0462,
+    "alpha_tokens": 12081.513439,
+    "exit_price": 0.00712214,
+    "entry_price": 0.00745149,
+    "entry_date": "2026-10-20",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -3.9538,
+    "realized_pnl_pct": -4.39,
+    "days_held": 7
+  },
+  {
+    "date": "2026-10-27",
+    "type": "EXIT",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 91.4558,
+    "alpha_tokens": 11374.983509,
+    "exit_price": 0.00804008,
+    "entry_price": 0.00703666,
+    "entry_date": "2026-10-19",
+    "cost_basis_tao": 80.0,
+    "realized_pnl_tao": 11.4558,
+    "realized_pnl_pct": 14.32,
+    "days_held": 8
+  },
+  {
+    "date": "2026-10-27",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 80.0,
+    "alpha_tokens": 2430.525769,
+    "entry_price": 0.03291469
+  },
+  {
+    "date": "2026-10-27",
+    "type": "ENTRY",
+    "netuid": 62,
+    "name": "Ridges",
+    "tao": 90.0,
+    "alpha_tokens": 10645.750974,
+    "entry_price": 0.00845408
   }
 ]

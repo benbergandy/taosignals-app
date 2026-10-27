@@ -2599,5 +2599,29 @@
     "tao": 160.0,
     "alpha_tokens": 29675.690396,
     "entry_price": 0.00539162
+  },
+  {
+    "date": "2026-10-27",
+    "type": "EXIT",
+    "netuid": 41,
+    "name": "Almanac",
+    "tao": 182.9111,
+    "alpha_tokens": 22749.900528,
+    "exit_price": 0.00804008,
+    "entry_price": 0.00703666,
+    "entry_date": "2026-10-19",
+    "cost_basis_tao": 160.0,
+    "realized_pnl_tao": 22.9111,
+    "realized_pnl_pct": 14.32,
+    "days_held": 8
+  },
+  {
+    "date": "2026-10-27",
+    "type": "ENTRY",
+    "netuid": 28,
+    "name": "SayGM",
+    "tao": 160.0,
+    "alpha_tokens": 4861.051538,
+    "entry_price": 0.03291469
   }
 ]
