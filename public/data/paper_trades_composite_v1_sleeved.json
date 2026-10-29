@@ -79,5 +79,59 @@
     "tao": 193.4668,
     "cost_tao": 0.16279,
     "spot_price": 0.04165791
+  },
+  {
+    "date": "2026-10-29",
+    "type": "BUY",
+    "netuid": 4,
+    "name": "Targon",
+    "tao": 154.0008,
+    "cost_tao": 0.104893,
+    "spot_price": 0.05681049
+  },
+  {
+    "date": "2026-10-29",
+    "type": "SELL",
+    "netuid": 10,
+    "name": "Pareton",
+    "tao": 155.7079,
+    "cost_tao": 0.359231,
+    "spot_price": 0.00450754
+  },
+  {
+    "date": "2026-10-29",
+    "type": "SELL",
+    "netuid": 46,
+    "name": "Instant",
+    "tao": 148.5485,
+    "cost_tao": 0.566021,
+    "spot_price": 0.00279079
+  },
+  {
+    "date": "2026-10-29",
+    "type": "BUY",
+    "netuid": 64,
+    "name": "Chutes",
+    "tao": 154.0008,
+    "cost_tao": 0.096838,
+    "spot_price": 0.06734549
+  },
+  {
+    "date": "2026-10-29",
+    "type": "SELL",
+    "netuid": 71,
+    "name": "Leadpoet",
+    "tao": 157.7462,
+    "cost_tao": 0.89082,
+    "spot_price": 0.00368827
+  },
+  {
+    "date": "2026-10-29",
+    "type": "BUY",
+    "netuid": 120,
+    "name": "Affine",
+    "tao": 154.0008,
+    "cost_tao": 0.129238,
+    "spot_price": 0.0417927
   }
 ]
