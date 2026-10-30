@@ -2,68 +2,68 @@
   "start_date": "2026-05-24",
   "profile": "balanced",
   "total_tao": 1000.0,
-  "root_stake": 150.0109,
-  "accumulated_root_yield": 5.674998,
+  "root_stake": 150.0129,
+  "accumulated_root_yield": 5.751066,
   "positions": {
     "1": {
-      "tao": 64.1436,
+      "tao": 64.139,
       "name": "Apex",
       "entry_date": "2026-07-03",
       "entry_price": 0.00867812,
       "entry_tao": 90.0,
-      "alpha_tokens": 10384.587529,
-      "accumulated_emission_tokens": 13.677919,
-      "accumulated_emission_tao": 0.11768,
+      "alpha_tokens": 10384.601631,
+      "accumulated_emission_tokens": 13.692021,
+      "accumulated_emission_tao": 0.117767,
       "source": "satellite",
       "entry_score": 0.6167229341559568
     },
     "120": {
-      "tao": 87.6444,
+      "tao": 87.2749,
       "name": "Affine",
       "entry_date": "2026-10-16",
       "entry_price": 0.04231782,
       "entry_tao": 87.3827,
-      "alpha_tokens": 2097.122321,
-      "accumulated_emission_tokens": 2.792442,
-      "accumulated_emission_tao": 0.118377,
+      "alpha_tokens": 2097.318426,
+      "accumulated_emission_tokens": 2.988547,
+      "accumulated_emission_tao": 0.126537,
       "source": "core+satellite",
       "entry_score": 0.2739969893375879
     },
-    "107": {
-      "tao": 74.4415,
-      "name": "Minos",
-      "entry_date": "2026-10-23",
-      "entry_price": 0.03200011,
-      "entry_tao": 90.0,
-      "alpha_tokens": 2819.535388,
-      "accumulated_emission_tokens": 7.045,
-      "accumulated_emission_tao": 0.211922,
-      "source": "satellite",
-      "entry_score": 0.4480113677847102
-    },
-    "3": {
-      "tao": 90.76,
-      "name": "Teutonic",
-      "entry_date": "2026-10-26",
-      "entry_price": 0.02273943,
-      "entry_tao": 90.0,
-      "alpha_tokens": 3958.360253,
-      "accumulated_emission_tokens": 0.477821,
-      "accumulated_emission_tao": 0.011018,
-      "source": "satellite",
-      "entry_score": 0.4601195160999642
-    },
     "62": {
-      "tao": 88.708,
+      "tao": 89.1254,
       "name": "Ridges",
       "entry_date": "2026-10-27",
       "entry_price": 0.00845408,
       "entry_tao": 90.0,
-      "alpha_tokens": 10646.653684,
-      "accumulated_emission_tokens": 0.90271,
-      "accumulated_emission_tao": 0.007519,
+      "alpha_tokens": 10647.105176,
+      "accumulated_emission_tokens": 1.354202,
+      "accumulated_emission_tao": 0.011298,
       "source": "satellite",
       "entry_score": 0.4535842178133861
+    },
+    "33": {
+      "tao": 90.0,
+      "name": "ReadyAI",
+      "entry_date": "2026-10-30",
+      "entry_price": 0.00302607,
+      "entry_tao": 90.0,
+      "alpha_tokens": 29741.549522,
+      "accumulated_emission_tokens": 0.0,
+      "accumulated_emission_tao": 0.0,
+      "source": "satellite",
+      "entry_score": 0.5031118155557914
+    },
+    "9": {
+      "tao": 90.0,
+      "name": "iota",
+      "entry_date": "2026-10-30",
+      "entry_price": 0.02304307,
+      "entry_tao": 90.0,
+      "alpha_tokens": 3905.72962,
+      "accumulated_emission_tokens": 0.0,
+      "accumulated_emission_tao": 0.0,
+      "source": "satellite",
+      "entry_score": 0.4617253563682045
     }
   },
   "benchmark_eq_prices": {
@@ -125,7 +125,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 60.509498,
+  "benchmark_eq_emissions": 60.794026,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -356,7 +356,7 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 19.674997,
-  "benchmark_root_value": 1013.7433,
-  "free_cash": 734.5303
+  "benchmark_mcw_emissions": 19.755746,
+  "benchmark_root_value": 1013.8305,
+  "free_cash": 716.583
 }
