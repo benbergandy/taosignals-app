@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-02T12:08:40.233333+00:00",
-  "date": "2026-11-02",
+  "generated_at": "2026-11-03T12:08:49.265800+00:00",
+  "date": "2026-11-03",
   "total_tao": 1000.0,
   "root_stake": 300.0,
   "allocation_profile": "conservative",
@@ -27,50 +27,50 @@
           "netuid": 120,
           "name": "Affine",
           "tao": 20.0,
-          "score": 0.8323251683333388,
+          "score": 0.8410179741183826,
           "rank": 1,
-          "moving_price": 0.04169528,
-          "tao_in": 74718.0674,
+          "moving_price": 0.04192206,
+          "tao_in": 74894.6601,
           "source": "satellite"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 20.0,
-          "score": 0.5504404157295483,
+          "score": 0.5535099546115317,
           "rank": 2,
-          "moving_price": 0.00613276,
-          "tao_in": 22258.2108,
-          "source": "satellite"
-        },
-        {
-          "netuid": 33,
-          "name": "ReadyAI",
-          "tao": 20.0,
-          "score": 0.5044390869903195,
-          "rank": 3,
-          "moving_price": 0.00298316,
-          "tao_in": 11694.7823,
-          "source": "satellite"
-        },
-        {
-          "netuid": 62,
-          "name": "Ridges",
-          "tao": 20.0,
-          "score": 0.47912789144648693,
-          "rank": 4,
-          "moving_price": 0.00839905,
-          "tao_in": 27009.3233,
+          "moving_price": 0.00611991,
+          "tao_in": 22244.1086,
           "source": "satellite"
         },
         {
           "netuid": 9,
           "name": "iota",
           "tao": 20.0,
-          "score": 0.47494155846573616,
+          "score": 0.4848026807548736,
+          "rank": 3,
+          "moving_price": 0.02284967,
+          "tao_in": 52236.4389,
+          "source": "satellite"
+        },
+        {
+          "netuid": 62,
+          "name": "Ridges",
+          "tao": 20.0,
+          "score": 0.476488132431324,
+          "rank": 4,
+          "moving_price": 0.00842236,
+          "tao_in": 26992.625,
+          "source": "satellite"
+        },
+        {
+          "netuid": 5,
+          "name": "Hone",
+          "tao": 20.0,
+          "score": 0.45530388155169266,
           "rank": 5,
-          "moving_price": 0.02280209,
-          "tao_in": 52131.5393,
+          "moving_price": 0.01213091,
+          "tao_in": 33170.7848,
           "source": "satellite"
         }
       ]
@@ -86,50 +86,50 @@
       "netuid": 120,
       "name": "Affine",
       "tao": 20.0,
-      "score": 0.8323251683333388,
+      "score": 0.8410179741183826,
       "rank": 1,
-      "moving_price": 0.04169528,
-      "tao_in": 74718.0674,
+      "moving_price": 0.04192206,
+      "tao_in": 74894.6601,
       "source": "satellite"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 20.0,
-      "score": 0.5504404157295483,
+      "score": 0.5535099546115317,
       "rank": 2,
-      "moving_price": 0.00613276,
-      "tao_in": 22258.2108,
-      "source": "satellite"
-    },
-    "33": {
-      "netuid": 33,
-      "name": "ReadyAI",
-      "tao": 20.0,
-      "score": 0.5044390869903195,
-      "rank": 3,
-      "moving_price": 0.00298316,
-      "tao_in": 11694.7823,
-      "source": "satellite"
-    },
-    "62": {
-      "netuid": 62,
-      "name": "Ridges",
-      "tao": 20.0,
-      "score": 0.47912789144648693,
-      "rank": 4,
-      "moving_price": 0.00839905,
-      "tao_in": 27009.3233,
+      "moving_price": 0.00611991,
+      "tao_in": 22244.1086,
       "source": "satellite"
     },
     "9": {
       "netuid": 9,
       "name": "iota",
       "tao": 20.0,
-      "score": 0.47494155846573616,
+      "score": 0.4848026807548736,
+      "rank": 3,
+      "moving_price": 0.02284967,
+      "tao_in": 52236.4389,
+      "source": "satellite"
+    },
+    "62": {
+      "netuid": 62,
+      "name": "Ridges",
+      "tao": 20.0,
+      "score": 0.476488132431324,
+      "rank": 4,
+      "moving_price": 0.00842236,
+      "tao_in": 26992.625,
+      "source": "satellite"
+    },
+    "5": {
+      "netuid": 5,
+      "name": "Hone",
+      "tao": 20.0,
+      "score": 0.45530388155169266,
       "rank": 5,
-      "moving_price": 0.02280209,
-      "tao_in": 52131.5393,
+      "moving_price": 0.01213091,
+      "tao_in": 33170.7848,
       "source": "satellite"
     }
   },

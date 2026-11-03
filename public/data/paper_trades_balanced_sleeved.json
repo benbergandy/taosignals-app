@@ -2970,5 +2970,29 @@
     "tao": 90.0,
     "alpha_tokens": 30363.526126,
     "entry_price": 0.00296408
+  },
+  {
+    "date": "2026-11-03",
+    "type": "EXIT",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 90.293,
+    "alpha_tokens": 30363.599075,
+    "exit_price": 0.00297373,
+    "entry_price": 0.00296408,
+    "entry_date": "2026-11-02",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 0.293,
+    "realized_pnl_pct": 0.33,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-03",
+    "type": "ENTRY",
+    "netuid": 5,
+    "name": "Hone",
+    "tao": 90.0,
+    "alpha_tokens": 7419.103431,
+    "entry_price": 0.01213085
   }
 ]
