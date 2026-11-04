@@ -2994,5 +2994,29 @@
     "tao": 90.0,
     "alpha_tokens": 7419.103431,
     "entry_price": 0.01213085
+  },
+  {
+    "date": "2026-11-04",
+    "type": "EXIT",
+    "netuid": 5,
+    "name": "Hone",
+    "tao": 90.03,
+    "alpha_tokens": 7419.458761,
+    "exit_price": 0.01213431,
+    "entry_price": 0.01213085,
+    "entry_date": "2026-11-03",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 0.03,
+    "realized_pnl_pct": 0.03,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-04",
+    "type": "ENTRY",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 90.0,
+    "alpha_tokens": 10260.564406,
+    "entry_price": 0.00877145
   }
 ]
