@@ -3018,5 +3018,77 @@
     "tao": 90.0,
     "alpha_tokens": 10260.564406,
     "entry_price": 0.00877145
+  },
+  {
+    "date": "2026-11-05",
+    "type": "EXIT",
+    "netuid": 62,
+    "name": "Ridges",
+    "tao": 86.8799,
+    "alpha_tokens": 10649.803334,
+    "exit_price": 0.00815789,
+    "entry_price": 0.00845408,
+    "entry_date": "2026-10-27",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -3.1201,
+    "realized_pnl_pct": -3.47,
+    "days_held": 9
+  },
+  {
+    "date": "2026-11-05",
+    "type": "EXIT",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 87.8308,
+    "alpha_tokens": 10261.682351,
+    "exit_price": 0.0085591,
+    "entry_price": 0.00877145,
+    "entry_date": "2026-11-04",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -2.1692,
+    "realized_pnl_pct": -2.41,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-05",
+    "type": "EXIT",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 91.599,
+    "alpha_tokens": 3907.019074,
+    "exit_price": 0.02344474,
+    "entry_price": 0.02304307,
+    "entry_date": "2026-10-30",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 1.599,
+    "realized_pnl_pct": 1.78,
+    "days_held": 6
+  },
+  {
+    "date": "2026-11-05",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 90.0,
+    "alpha_tokens": 28797.908363,
+    "entry_price": 0.00312523
+  },
+  {
+    "date": "2026-11-05",
+    "type": "ENTRY",
+    "netuid": 3,
+    "name": "Teutonic",
+    "tao": 90.0,
+    "alpha_tokens": 4026.735503,
+    "entry_price": 0.02235061
+  },
+  {
+    "date": "2026-11-05",
+    "type": "ENTRY",
+    "netuid": 15,
+    "name": "ORO",
+    "tao": 90.0,
+    "alpha_tokens": 4907.760486,
+    "entry_price": 0.0183383
   }
 ]
