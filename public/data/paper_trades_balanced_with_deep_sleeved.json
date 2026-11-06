@@ -3225,5 +3225,53 @@
     "tao": 50.0,
     "alpha_tokens": 2726.533603,
     "entry_price": 0.0183383
+  },
+  {
+    "date": "2026-11-06",
+    "type": "EXIT",
+    "netuid": 3,
+    "name": "Teutonic",
+    "tao": 49.4964,
+    "alpha_tokens": 2237.162652,
+    "exit_price": 0.02212465,
+    "entry_price": 0.02235061,
+    "entry_date": "2026-11-05",
+    "cost_basis_tao": 50.0,
+    "realized_pnl_tao": -0.5036,
+    "realized_pnl_pct": -1.01,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-06",
+    "type": "EXIT",
+    "netuid": 15,
+    "name": "ORO",
+    "tao": 50.0577,
+    "alpha_tokens": 2727.51691,
+    "exit_price": 0.01835286,
+    "entry_price": 0.0183383,
+    "entry_date": "2026-11-05",
+    "cost_basis_tao": 50.0,
+    "realized_pnl_tao": 0.0577,
+    "realized_pnl_pct": 0.12,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-06",
+    "type": "ENTRY",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 50.0,
+    "alpha_tokens": 5876.94935,
+    "entry_price": 0.00850782
+  },
+  {
+    "date": "2026-11-06",
+    "type": "ENTRY",
+    "netuid": 5,
+    "name": "Hone",
+    "tao": 50.0,
+    "alpha_tokens": 4114.034233,
+    "entry_price": 0.01215352
   }
 ]
