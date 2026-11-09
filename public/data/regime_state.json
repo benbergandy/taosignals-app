@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-08 12:07 UTC",
-  "date": "2026-11-08",
+  "generated_at": "2026-11-09 12:07 UTC",
+  "date": "2026-11-09",
   "regime": "CAUTION",
-  "composite_score": 0.35,
+  "composite_score": 0.245,
   "indicators": {
     "drawdown_velocity": {
       "severity": 0.1,
-      "cum_3d_pct": 319.16,
-      "cum_7d_pct": 1356.36,
-      "avg_daily_pct": 96.9904
+      "cum_3d_pct": 264.75,
+      "cum_7d_pct": 1376.79,
+      "avg_daily_pct": 97.2927
     },
     "correlation_spike": {
-      "severity": 0.6,
-      "recent_corr": 0.3869,
-      "baseline_corr": 0.1322,
-      "spike": 0.2547
+      "severity": 0.3,
+      "recent_corr": 0.2581,
+      "baseline_corr": 0.1177,
+      "spike": 0.1404
     },
     "flow_direction": {
       "severity": 0.8,
@@ -23,15 +23,15 @@
     },
     "pool_drain": {
       "severity": 0,
-      "avg_change_7d_pct": 0.28,
-      "pct_draining": 18.0,
-      "proj_7d_pct": 0.28
+      "avg_change_7d_pct": -0.27,
+      "pct_draining": 20.3,
+      "proj_7d_pct": -0.27
     },
     "breadth": {
-      "severity": 0.3,
-      "pct_negative": 69.1,
-      "n_negative": 67,
-      "n_total": 97
+      "severity": 0,
+      "pct_negative": 33.0,
+      "n_negative": 31,
+      "n_total": 94
     }
   },
   "adjustments": {

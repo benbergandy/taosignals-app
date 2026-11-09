@@ -3306,5 +3306,29 @@
     "tao": 50.0,
     "alpha_tokens": 7742.614039,
     "entry_price": 0.00645777
+  },
+  {
+    "date": "2026-11-09",
+    "type": "EXIT",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 47.98,
+    "alpha_tokens": 15999.001326,
+    "exit_price": 0.00299894,
+    "entry_price": 0.00312523,
+    "entry_date": "2026-11-05",
+    "cost_basis_tao": 50.0,
+    "realized_pnl_tao": -2.02,
+    "realized_pnl_pct": -4.04,
+    "days_held": 4
+  },
+  {
+    "date": "2026-11-09",
+    "type": "ENTRY",
+    "netuid": 3,
+    "name": "Teutonic",
+    "tao": 50.0,
+    "alpha_tokens": 2356.01112,
+    "entry_price": 0.02122231
   }
 ]

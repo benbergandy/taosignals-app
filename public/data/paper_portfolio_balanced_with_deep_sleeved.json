@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-08T12:08:27.191335+00:00",
-  "date": "2026-11-08",
+  "generated_at": "2026-11-09T12:08:36.108952+00:00",
+  "date": "2026-11-09",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "balanced_with_deep",
@@ -28,50 +28,50 @@
           "netuid": 120,
           "name": "Affine",
           "tao": 50.0,
-          "score": 0.8038160180109994,
+          "score": 0.8149580560419166,
           "rank": 1,
-          "moving_price": 0.04233512,
-          "tao_in": 75569.0142,
+          "moving_price": 0.04243418,
+          "tao_in": 75754.18,
           "source": "satellite"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 50.0,
-          "score": 0.5519911684776628,
+          "score": 0.5541008077881837,
           "rank": 2,
-          "moving_price": 0.0060449,
-          "tao_in": 22108.3078,
-          "source": "satellite"
-        },
-        {
-          "netuid": 33,
-          "name": "ReadyAI",
-          "tao": 50.0,
-          "score": 0.5062506416732699,
-          "rank": 3,
-          "moving_price": 0.00302691,
-          "tao_in": 11803.3656,
+          "moving_price": 0.00602244,
+          "tao_in": 22060.833,
           "source": "satellite"
         },
         {
           "netuid": 124,
           "name": "Swarm",
           "tao": 50.0,
-          "score": 0.4985759757543637,
-          "rank": 4,
-          "moving_price": 0.0084876,
-          "tao_in": 11840.7744,
+          "score": 0.49071263686306577,
+          "rank": 3,
+          "moving_price": 0.00843198,
+          "tao_in": 11832.6175,
           "source": "satellite"
         },
         {
           "netuid": 17,
           "name": "404\u2014GEN",
           "tao": 50.0,
-          "score": 0.4701724176287303,
+          "score": 0.48461028777380205,
+          "rank": 4,
+          "moving_price": 0.00644891,
+          "tao_in": 22071.8337,
+          "source": "satellite"
+        },
+        {
+          "netuid": 3,
+          "name": "Teutonic",
+          "tao": 50.0,
+          "score": 0.44827316815473817,
           "rank": 5,
-          "moving_price": 0.0064609,
-          "tao_in": 22085.9931,
+          "moving_price": 0.02125233,
+          "tao_in": 69879.7374,
           "source": "satellite"
         }
       ]
@@ -86,8 +86,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 1,
-          "moving_price": 0.06767334,
-          "tao_in": 201473.1493,
+          "moving_price": 0.0680152,
+          "tao_in": 202221.186,
           "source": "deep_liquidity"
         },
         {
@@ -96,8 +96,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 2,
-          "moving_price": 0.05816279,
-          "tao_in": 143453.9291,
+          "moving_price": 0.05900029,
+          "tao_in": 145034.3005,
           "source": "deep_liquidity"
         },
         {
@@ -106,8 +106,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 3,
-          "moving_price": 0.12462445,
-          "tao_in": 193406.1145,
+          "moving_price": 0.12391036,
+          "tao_in": 192456.6686,
           "source": "deep_liquidity"
         },
         {
@@ -116,8 +116,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 4,
-          "moving_price": 0.03365018,
-          "tao_in": 89023.9026,
+          "moving_price": 0.03429702,
+          "tao_in": 90000.8842,
           "source": "deep_liquidity"
         },
         {
@@ -126,8 +126,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 5,
-          "moving_price": 0.04233512,
-          "tao_in": 75569.0142,
+          "moving_price": 0.04243418,
+          "tao_in": 75754.18,
           "source": "deep_liquidity"
         }
       ]
@@ -138,50 +138,50 @@
       "netuid": 120,
       "name": "Affine",
       "tao": 80.0,
-      "score": 0.8038160180109994,
+      "score": 0.8149580560419166,
       "rank": 1,
-      "moving_price": 0.04233512,
-      "tao_in": 75569.0142,
+      "moving_price": 0.04243418,
+      "tao_in": 75754.18,
       "source": "satellite+deep_liquidity"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 50.0,
-      "score": 0.5519911684776628,
+      "score": 0.5541008077881837,
       "rank": 2,
-      "moving_price": 0.0060449,
-      "tao_in": 22108.3078,
-      "source": "satellite"
-    },
-    "33": {
-      "netuid": 33,
-      "name": "ReadyAI",
-      "tao": 50.0,
-      "score": 0.5062506416732699,
-      "rank": 3,
-      "moving_price": 0.00302691,
-      "tao_in": 11803.3656,
+      "moving_price": 0.00602244,
+      "tao_in": 22060.833,
       "source": "satellite"
     },
     "124": {
       "netuid": 124,
       "name": "Swarm",
       "tao": 50.0,
-      "score": 0.4985759757543637,
-      "rank": 4,
-      "moving_price": 0.0084876,
-      "tao_in": 11840.7744,
+      "score": 0.49071263686306577,
+      "rank": 3,
+      "moving_price": 0.00843198,
+      "tao_in": 11832.6175,
       "source": "satellite"
     },
     "17": {
       "netuid": 17,
       "name": "404\u2014GEN",
       "tao": 50.0,
-      "score": 0.4701724176287303,
+      "score": 0.48461028777380205,
+      "rank": 4,
+      "moving_price": 0.00644891,
+      "tao_in": 22071.8337,
+      "source": "satellite"
+    },
+    "3": {
+      "netuid": 3,
+      "name": "Teutonic",
+      "tao": 50.0,
+      "score": 0.44827316815473817,
       "rank": 5,
-      "moving_price": 0.0064609,
-      "tao_in": 22085.9931,
+      "moving_price": 0.02125233,
+      "tao_in": 69879.7374,
       "source": "satellite"
     },
     "64": {
@@ -190,8 +190,8 @@
       "tao": 30.0,
       "score": 0.0,
       "rank": 1,
-      "moving_price": 0.06767334,
-      "tao_in": 201473.1493,
+      "moving_price": 0.0680152,
+      "tao_in": 202221.186,
       "source": "deep_liquidity"
     },
     "4": {
@@ -200,8 +200,8 @@
       "tao": 30.0,
       "score": 0.0,
       "rank": 2,
-      "moving_price": 0.05816279,
-      "tao_in": 143453.9291,
+      "moving_price": 0.05900029,
+      "tao_in": 145034.3005,
       "source": "deep_liquidity"
     },
     "51": {
@@ -210,8 +210,8 @@
       "tao": 30.0,
       "score": 0.0,
       "rank": 3,
-      "moving_price": 0.12462445,
-      "tao_in": 193406.1145,
+      "moving_price": 0.12391036,
+      "tao_in": 192456.6686,
       "source": "deep_liquidity"
     },
     "8": {
@@ -220,8 +220,8 @@
       "tao": 30.0,
       "score": 0.0,
       "rank": 4,
-      "moving_price": 0.03365018,
-      "tao_in": 89023.9026,
+      "moving_price": 0.03429702,
+      "tao_in": 90000.8842,
       "source": "deep_liquidity"
     }
   },
