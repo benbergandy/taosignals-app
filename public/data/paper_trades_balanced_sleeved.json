@@ -3186,5 +3186,29 @@
     "tao": 90.0,
     "alpha_tokens": 4240.820016,
     "entry_price": 0.02122231
+  },
+  {
+    "date": "2026-11-11",
+    "type": "EXIT",
+    "netuid": 124,
+    "name": "Swarm",
+    "tao": 93.5626,
+    "alpha_tokens": 10584.22133,
+    "exit_price": 0.00883982,
+    "entry_price": 0.00850782,
+    "entry_date": "2026-11-06",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": 3.5626,
+    "realized_pnl_pct": 3.96,
+    "days_held": 5
+  },
+  {
+    "date": "2026-11-11",
+    "type": "ENTRY",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 90.0,
+    "alpha_tokens": 20915.382109,
+    "entry_price": 0.00430305
   }
 ]
