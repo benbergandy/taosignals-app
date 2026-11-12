@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-11T12:08:32.022644+00:00",
-  "date": "2026-11-11",
+  "generated_at": "2026-11-12T12:08:34.433336+00:00",
+  "date": "2026-11-12",
   "total_tao": 1000.0,
   "root_stake": 300.0,
   "allocation_profile": "conservative",
@@ -27,50 +27,50 @@
           "netuid": 120,
           "name": "Affine",
           "tao": 20.0,
-          "score": 0.8126722217624917,
+          "score": 0.7960978740009332,
           "rank": 1,
-          "moving_price": 0.04281296,
-          "tao_in": 75663.1246,
+          "moving_price": 0.04217055,
+          "tao_in": 75532.5098,
           "source": "satellite"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 20.0,
-          "score": 0.5537496024787133,
+          "score": 0.5529171263748465,
           "rank": 2,
-          "moving_price": 0.00600095,
-          "tao_in": 22028.8813,
-          "source": "satellite"
-        },
-        {
-          "netuid": 17,
-          "name": "404\u2014GEN",
-          "tao": 20.0,
-          "score": 0.4978285688088846,
-          "rank": 3,
-          "moving_price": 0.00639391,
-          "tao_in": 21970.3454,
-          "source": "satellite"
-        },
-        {
-          "netuid": 3,
-          "name": "Teutonic",
-          "tao": 20.0,
-          "score": 0.4954711930939771,
-          "rank": 4,
-          "moving_price": 0.02111218,
-          "tao_in": 69683.2169,
+          "moving_price": 0.00598896,
+          "tao_in": 21978.3252,
           "source": "satellite"
         },
         {
           "netuid": 85,
           "name": "Vidaio",
           "tao": 20.0,
-          "score": 0.4844717489050724,
+          "score": 0.5030076341019648,
+          "rank": 3,
+          "moving_price": 0.00431263,
+          "tao_in": 11821.7949,
+          "source": "satellite"
+        },
+        {
+          "netuid": 17,
+          "name": "404\u2014GEN",
+          "tao": 20.0,
+          "score": 0.5022550768835062,
+          "rank": 4,
+          "moving_price": 0.00637388,
+          "tao_in": 21958.8123,
+          "source": "satellite"
+        },
+        {
+          "netuid": 9,
+          "name": "iota",
+          "tao": 20.0,
+          "score": 0.4543707367752272,
           "rank": 5,
-          "moving_price": 0.00431984,
-          "tao_in": 11811.3448,
+          "moving_price": 0.02314417,
+          "tao_in": 52786.8078,
           "source": "satellite"
         }
       ]
@@ -86,50 +86,50 @@
       "netuid": 120,
       "name": "Affine",
       "tao": 20.0,
-      "score": 0.8126722217624917,
+      "score": 0.7960978740009332,
       "rank": 1,
-      "moving_price": 0.04281296,
-      "tao_in": 75663.1246,
+      "moving_price": 0.04217055,
+      "tao_in": 75532.5098,
       "source": "satellite"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 20.0,
-      "score": 0.5537496024787133,
+      "score": 0.5529171263748465,
       "rank": 2,
-      "moving_price": 0.00600095,
-      "tao_in": 22028.8813,
-      "source": "satellite"
-    },
-    "17": {
-      "netuid": 17,
-      "name": "404\u2014GEN",
-      "tao": 20.0,
-      "score": 0.4978285688088846,
-      "rank": 3,
-      "moving_price": 0.00639391,
-      "tao_in": 21970.3454,
-      "source": "satellite"
-    },
-    "3": {
-      "netuid": 3,
-      "name": "Teutonic",
-      "tao": 20.0,
-      "score": 0.4954711930939771,
-      "rank": 4,
-      "moving_price": 0.02111218,
-      "tao_in": 69683.2169,
+      "moving_price": 0.00598896,
+      "tao_in": 21978.3252,
       "source": "satellite"
     },
     "85": {
       "netuid": 85,
       "name": "Vidaio",
       "tao": 20.0,
-      "score": 0.4844717489050724,
+      "score": 0.5030076341019648,
+      "rank": 3,
+      "moving_price": 0.00431263,
+      "tao_in": 11821.7949,
+      "source": "satellite"
+    },
+    "17": {
+      "netuid": 17,
+      "name": "404\u2014GEN",
+      "tao": 20.0,
+      "score": 0.5022550768835062,
+      "rank": 4,
+      "moving_price": 0.00637388,
+      "tao_in": 21958.8123,
+      "source": "satellite"
+    },
+    "9": {
+      "netuid": 9,
+      "name": "iota",
+      "tao": 20.0,
+      "score": 0.4543707367752272,
       "rank": 5,
-      "moving_price": 0.00431984,
-      "tao_in": 11811.3448,
+      "moving_price": 0.02314417,
+      "tao_in": 52786.8078,
       "source": "satellite"
     }
   },

@@ -3228,5 +3228,29 @@
     "tao": 20.0,
     "alpha_tokens": 4647.862691,
     "entry_price": 0.00430305
+  },
+  {
+    "date": "2026-11-12",
+    "type": "EXIT",
+    "netuid": 3,
+    "name": "Teutonic",
+    "tao": 18.9278,
+    "alpha_tokens": 942.510897,
+    "exit_price": 0.02008231,
+    "entry_price": 0.02122231,
+    "entry_date": "2026-11-09",
+    "cost_basis_tao": 20.0,
+    "realized_pnl_tao": -1.0722,
+    "realized_pnl_pct": -5.36,
+    "days_held": 3
+  },
+  {
+    "date": "2026-11-12",
+    "type": "ENTRY",
+    "netuid": 9,
+    "name": "iota",
+    "tao": 20.0,
+    "alpha_tokens": 862.686321,
+    "entry_price": 0.0231834
   }
 ]
