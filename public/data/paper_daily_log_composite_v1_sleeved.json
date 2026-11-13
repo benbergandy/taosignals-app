@@ -375,5 +375,18 @@
     "n_trades_today": 2,
     "benchmark_eq_weight": 921.37,
     "alpha_vs_eq": -9.91
+  },
+  {
+    "date": "2026-11-13",
+    "profile": "composite_v1_sleeved",
+    "model": "composite_v1 (drift_band)",
+    "portfolio_value": 840.77,
+    "pnl_tao": -159.23,
+    "pnl_pct": -15.92,
+    "n_positions": 5,
+    "free_cash": 0.0,
+    "n_trades_today": 0,
+    "benchmark_eq_weight": 915.78,
+    "alpha_vs_eq": -7.5
   }
 ]
