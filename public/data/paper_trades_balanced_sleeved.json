@@ -3258,5 +3258,29 @@
     "tao": 90.0,
     "alpha_tokens": 5118.504722,
     "entry_price": 0.01758326
+  },
+  {
+    "date": "2026-11-15",
+    "type": "EXIT",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 88.0059,
+    "alpha_tokens": 20917.787242,
+    "exit_price": 0.00420723,
+    "entry_price": 0.00430305,
+    "entry_date": "2026-11-11",
+    "cost_basis_tao": 90.0,
+    "realized_pnl_tao": -1.9941,
+    "realized_pnl_pct": -2.22,
+    "days_held": 4
+  },
+  {
+    "date": "2026-11-15",
+    "type": "ENTRY",
+    "netuid": 107,
+    "name": "Minos",
+    "tao": 90.0,
+    "alpha_tokens": 3252.57662,
+    "entry_price": 0.02767037
   }
 ]
