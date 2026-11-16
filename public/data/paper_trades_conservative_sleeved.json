@@ -3300,5 +3300,29 @@
     "tao": 20.0,
     "alpha_tokens": 722.794805,
     "entry_price": 0.02767037
+  },
+  {
+    "date": "2026-11-16",
+    "type": "EXIT",
+    "netuid": 107,
+    "name": "Minos",
+    "tao": 20.0827,
+    "alpha_tokens": 723.056612,
+    "exit_price": 0.02777473,
+    "entry_price": 0.02767037,
+    "entry_date": "2026-11-15",
+    "cost_basis_tao": 20.0,
+    "realized_pnl_tao": 0.0827,
+    "realized_pnl_pct": 0.41,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-16",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 20.0,
+    "alpha_tokens": 6844.348376,
+    "entry_price": 0.00292212
   }
 ]
