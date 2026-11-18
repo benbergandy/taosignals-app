@@ -3426,5 +3426,53 @@
     "tao": 150.0,
     "alpha_tokens": 9172.86605,
     "entry_price": 0.01635258
+  },
+  {
+    "date": "2026-11-18",
+    "type": "EXIT",
+    "netuid": 85,
+    "name": "Vidaio",
+    "tao": 145.5597,
+    "alpha_tokens": 36020.822055,
+    "exit_price": 0.00404099,
+    "entry_price": 0.00416437,
+    "entry_date": "2026-11-17",
+    "cost_basis_tao": 150.0,
+    "realized_pnl_tao": -4.4403,
+    "realized_pnl_pct": -2.96,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-18",
+    "type": "EXIT",
+    "netuid": 68,
+    "name": "NOVA",
+    "tao": 146.8925,
+    "alpha_tokens": 9173.351825,
+    "exit_price": 0.01601296,
+    "entry_price": 0.01635258,
+    "entry_date": "2026-11-17",
+    "cost_basis_tao": 150.0,
+    "realized_pnl_tao": -3.1075,
+    "realized_pnl_pct": -2.07,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-18",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 150.0,
+    "alpha_tokens": 51879.950305,
+    "entry_price": 0.00289129
+  },
+  {
+    "date": "2026-11-18",
+    "type": "ENTRY",
+    "netuid": 107,
+    "name": "Minos",
+    "tao": 150.0,
+    "alpha_tokens": 5473.063771,
+    "entry_price": 0.02740695
   }
 ]
