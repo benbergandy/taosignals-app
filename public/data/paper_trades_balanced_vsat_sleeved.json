@@ -3546,5 +3546,29 @@
     "tao": 50.0,
     "alpha_tokens": 1824.35459,
     "entry_price": 0.02740695
+  },
+  {
+    "date": "2026-11-19",
+    "type": "EXIT",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao": 46.4648,
+    "alpha_tokens": 7745.711645,
+    "exit_price": 0.00599877,
+    "entry_price": 0.00645777,
+    "entry_date": "2026-11-08",
+    "cost_basis_tao": 50.0,
+    "realized_pnl_tao": -3.5352,
+    "realized_pnl_pct": -7.07,
+    "days_held": 11
+  },
+  {
+    "date": "2026-11-19",
+    "type": "ENTRY",
+    "netuid": 15,
+    "name": "ORO",
+    "tao": 50.0,
+    "alpha_tokens": 2993.670573,
+    "entry_price": 0.0167019
   }
 ]

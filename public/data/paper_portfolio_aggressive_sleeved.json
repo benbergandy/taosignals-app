@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-18T12:08:30.066631+00:00",
-  "date": "2026-11-18",
+  "generated_at": "2026-11-19T12:08:23.452268+00:00",
+  "date": "2026-11-19",
   "total_tao": 1000.0,
   "root_stake": 50.0,
   "allocation_profile": "aggressive",
@@ -27,50 +27,50 @@
           "netuid": 120,
           "name": "Affine",
           "tao": 150.0,
-          "score": 0.8562952254228782,
+          "score": 0.854634468203803,
           "rank": 1,
-          "moving_price": 0.03976266,
-          "tao_in": 73489.8844,
+          "moving_price": 0.03928919,
+          "tao_in": 73268.8417,
           "source": "satellite"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 150.0,
-          "score": 0.5275511735628801,
+          "score": 0.5249595766927824,
           "rank": 2,
-          "moving_price": 0.0058921,
-          "tao_in": 21826.912,
-          "source": "satellite"
-        },
-        {
-          "netuid": 33,
-          "name": "ReadyAI",
-          "tao": 150.0,
-          "score": 0.49190118527218435,
-          "rank": 3,
-          "moving_price": 0.00289772,
-          "tao_in": 11553.6368,
-          "source": "satellite"
-        },
-        {
-          "netuid": 17,
-          "name": "404\u2014GEN",
-          "tao": 150.0,
-          "score": 0.48912385038902817,
-          "rank": 4,
-          "moving_price": 0.00624475,
-          "tao_in": 21755.3045,
+          "moving_price": 0.00589166,
+          "tao_in": 21836.8622,
           "source": "satellite"
         },
         {
           "netuid": 107,
           "name": "Minos",
           "tao": 150.0,
-          "score": 0.4630155049826219,
+          "score": 0.4944081633617932,
+          "rank": 3,
+          "moving_price": 0.02682022,
+          "tao_in": 19687.0453,
+          "source": "satellite"
+        },
+        {
+          "netuid": 33,
+          "name": "ReadyAI",
+          "tao": 150.0,
+          "score": 0.48910018449552956,
+          "rank": 4,
+          "moving_price": 0.00291562,
+          "tao_in": 11620.2362,
+          "source": "satellite"
+        },
+        {
+          "netuid": 15,
+          "name": "ORO",
+          "tao": 150.0,
+          "score": 0.4741108190104102,
           "rank": 5,
-          "moving_price": 0.02783437,
-          "tao_in": 20003.8367,
+          "moving_price": 0.0166834,
+          "tao_in": 13398.875,
           "source": "satellite"
         }
       ]
@@ -86,50 +86,50 @@
       "netuid": 120,
       "name": "Affine",
       "tao": 150.0,
-      "score": 0.8562952254228782,
+      "score": 0.854634468203803,
       "rank": 1,
-      "moving_price": 0.03976266,
-      "tao_in": 73489.8844,
+      "moving_price": 0.03928919,
+      "tao_in": 73268.8417,
       "source": "satellite"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 150.0,
-      "score": 0.5275511735628801,
+      "score": 0.5249595766927824,
       "rank": 2,
-      "moving_price": 0.0058921,
-      "tao_in": 21826.912,
-      "source": "satellite"
-    },
-    "33": {
-      "netuid": 33,
-      "name": "ReadyAI",
-      "tao": 150.0,
-      "score": 0.49190118527218435,
-      "rank": 3,
-      "moving_price": 0.00289772,
-      "tao_in": 11553.6368,
-      "source": "satellite"
-    },
-    "17": {
-      "netuid": 17,
-      "name": "404\u2014GEN",
-      "tao": 150.0,
-      "score": 0.48912385038902817,
-      "rank": 4,
-      "moving_price": 0.00624475,
-      "tao_in": 21755.3045,
+      "moving_price": 0.00589166,
+      "tao_in": 21836.8622,
       "source": "satellite"
     },
     "107": {
       "netuid": 107,
       "name": "Minos",
       "tao": 150.0,
-      "score": 0.4630155049826219,
+      "score": 0.4944081633617932,
+      "rank": 3,
+      "moving_price": 0.02682022,
+      "tao_in": 19687.0453,
+      "source": "satellite"
+    },
+    "33": {
+      "netuid": 33,
+      "name": "ReadyAI",
+      "tao": 150.0,
+      "score": 0.48910018449552956,
+      "rank": 4,
+      "moving_price": 0.00291562,
+      "tao_in": 11620.2362,
+      "source": "satellite"
+    },
+    "15": {
+      "netuid": 15,
+      "name": "ORO",
+      "tao": 150.0,
+      "score": 0.4741108190104102,
       "rank": 5,
-      "moving_price": 0.02783437,
-      "tao_in": 20003.8367,
+      "moving_price": 0.0166834,
+      "tao_in": 13398.875,
       "source": "satellite"
     }
   },
