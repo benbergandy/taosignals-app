@@ -52,7 +52,10 @@ export function scoreBand(score: number): { text: string; bar: string; chip: str
 // Fetch that treats 404s / network errors / non-JSON as "not available yet".
 export async function safeFetch<T>(url: string): Promise<T | null> {
   try {
-    const res = await fetch(url + (url.includes("?") ? "&" : "?") + "t=" + Date.now());
+    // cache: "no-store" keeps the browser from serving a stale copy while
+    // still letting the Vercel CDN edge cache serve repeat visitors (unlike
+    // the old ?t=Date.now() buster, which defeated the CDN entirely).
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {

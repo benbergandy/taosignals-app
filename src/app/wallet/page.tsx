@@ -367,12 +367,12 @@ export default function WalletPage() {
   async function loadRecommendations() {
     setRecsLoading(true);
     try {
-      const res = await fetch("/data/combined_scores.json?t=" + Date.now());
+      const res = await fetch("/data/combined_scores.json", { cache: "no-store" });
       const scores: ScoresData = await res.json();
 
       let riskSubs: Record<string, RiskSubnet> = {};
       try {
-        const riskRes = await fetch("/data/risk_metrics.json?t=" + Date.now());
+        const riskRes = await fetch("/data/risk_metrics.json", { cache: "no-store" });
         const riskData = await riskRes.json();
         riskSubs = riskData?.subnets || {};
       } catch { /* no risk data */ }

@@ -384,8 +384,8 @@ export default function SubnetDetailPage() {
     async function loadData() {
       try {
         const [combinedRes, chainRes] = await Promise.all([
-          fetch(`/data/combined_scores.json?t=${Date.now()}`),
-          fetch(`/data/chain_data.json?t=${Date.now()}`),
+          fetch("/data/combined_scores.json", { cache: "no-store" }),
+          fetch("/data/chain_data.json", { cache: "no-store" }),
         ]);
         const combined = await combinedRes.json();
         const chain: ChainData = await chainRes.json();
@@ -413,7 +413,10 @@ export default function SubnetDetailPage() {
     async function loadChainHistory() {
       const today = new Date();
       const dates: string[] = [];
-      for (let i = 400; i >= 0; i--) {
+      // /data/chain_history/ retains only the last 7 daily snapshots (see the
+      // README in that dir) — probe a small buffer past that instead of the
+      // old 400-day sweep, which fired hundreds of guaranteed-404 fetches.
+      for (let i = 9; i >= 0; i--) {
         const d = new Date(today);
         d.setDate(d.getDate() - i);
         dates.push(d.toISOString().slice(0, 10));

@@ -135,7 +135,7 @@ export default function SubnetsPage() {
 
   const loadData = useCallback(() => {
     setLoading(true);
-    fetch("/data/chain_data.json?t=" + Date.now())
+    fetch("/data/chain_data.json", { cache: "no-store" })
       .then((r) => r.json())
       .then((data: ChainData) => {
         setChainData(data);
