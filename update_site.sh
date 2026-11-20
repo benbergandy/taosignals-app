@@ -44,11 +44,21 @@ for profile in conservative balanced aggressive buyhold core_only balanced_vsat 
     cp ${PIPELINE}/data/paper_trades_${profile}_sleeved.json ${SITE}/
 done
 
-# Chain history snapshots (last 30 days for subnet detail charts)
+# Chain history snapshots — retain ONLY the last 7 days in the site checkout
+# (2026-11-19 trim to cut Vercel deploy weight; was 30-day sync with no
+# cleanup, so 580+ files had accumulated in the repo). Full history stays in
+# ${PIPELINE}/data/chain_history/. See public/data/chain_history/README.md.
 mkdir -p ${SITE}/chain_history
-for i in $(seq 0 30); do
+for i in $(seq 0 6); do
   DATE=$(date -u -d "${TODAY} - ${i} days" +%Y-%m-%d 2>/dev/null || date -u -v-${i}d +%Y-%m-%d)
   [ -f ${PIPELINE}/data/chain_history/${DATE}.json ] && cp ${PIPELINE}/data/chain_history/${DATE}.json ${SITE}/chain_history/
+done
+# Delete snapshots older than the 7-day window so the repo doesn't regrow.
+# ISO dates compare correctly as strings.
+CUTOFF=$(date -u -d "${TODAY} - 6 days" +%Y-%m-%d 2>/dev/null || date -u -v-6d +%Y-%m-%d)
+for f in ${SITE}/chain_history/*.json; do
+  [ -e "$f" ] || continue
+  [[ "$(basename "$f" .json)" < "$CUTOFF" ]] && rm -f "$f"
 done
 
 # Purge already-deployed obsolete files. Listed explicitly so this remains
@@ -66,6 +76,9 @@ rm -f ${SITE}/composite_scores.json ${SITE}/momentum_scores.json
 rm -f ${SITE}/opportunity_scores.json ${SITE}/quality_scores.json
 rm -f ${SITE}/performance_log.json ${SITE}/backtest_results.json
 rm -f ${SITE}/chain_history_failed.txt
+# warehouse/ (287MB of pipeline research output) was never read by any page;
+# removed from the repo 2026-11-19. Defensive rm in case anything recreates it.
+rm -rf ${SITE}/warehouse
 
 # Push to GitHub (triggers Vercel auto-deploy)
 cd /root/taosignals-app
