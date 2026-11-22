@@ -3522,5 +3522,29 @@
     "tao": 150.0,
     "alpha_tokens": 25278.440759,
     "entry_price": 0.00593391
+  },
+  {
+    "date": "2026-11-22",
+    "type": "EXIT",
+    "netuid": 17,
+    "name": "404\u2014GEN",
+    "tao": 149.5319,
+    "alpha_tokens": 25279.322134,
+    "exit_price": 0.00591519,
+    "entry_price": 0.00593391,
+    "entry_date": "2026-11-21",
+    "cost_basis_tao": 150.0,
+    "realized_pnl_tao": -0.4681,
+    "realized_pnl_pct": -0.31,
+    "days_held": 1
+  },
+  {
+    "date": "2026-11-22",
+    "type": "ENTRY",
+    "netuid": 33,
+    "name": "ReadyAI",
+    "tao": 150.0,
+    "alpha_tokens": 42349.682389,
+    "entry_price": 0.00354194
   }
 ]
