@@ -2,66 +2,66 @@
   "start_date": "2026-05-24",
   "profile": "conservative",
   "total_tao": 1000.0,
-  "root_stake": 300.0244,
-  "accumulated_root_yield": 10.428591,
+  "root_stake": 300.0247,
+  "accumulated_root_yield": 10.538587,
   "positions": {
     "1": {
-      "tao": 16.2313,
+      "tao": 16.2768,
       "name": "Apex",
       "entry_date": "2026-07-03",
       "entry_price": 0.00867812,
       "entry_tao": 53.0117,
-      "alpha_tokens": 3024.570705,
-      "accumulated_emission_tokens": 19.449104,
-      "accumulated_emission_tao": 0.168742,
+      "alpha_tokens": 3024.57644,
+      "accumulated_emission_tokens": 19.454839,
+      "accumulated_emission_tao": 0.168773,
       "source": "satellite",
       "entry_score": 0.6167229341559568
     },
     "120": {
-      "tao": 18.1869,
+      "tao": 18.2039,
       "name": "Affine",
       "entry_date": "2026-10-16",
       "entry_price": 0.04231782,
       "entry_tao": 21.2422,
-      "alpha_tokens": 475.126573,
-      "accumulated_emission_tokens": 4.699377,
-      "accumulated_emission_tao": 0.197228,
+      "alpha_tokens": 475.167471,
+      "accumulated_emission_tokens": 4.740275,
+      "accumulated_emission_tao": 0.198795,
       "source": "core+satellite",
       "entry_score": 0.2739969893375879
     },
     "107": {
-      "tao": 15.5183,
+      "tao": 15.4515,
       "name": "Minos",
       "entry_date": "2026-11-18",
       "entry_price": 0.02740695,
       "entry_tao": 20.0,
-      "alpha_tokens": 731.66841,
-      "accumulated_emission_tokens": 1.926574,
-      "accumulated_emission_tao": 0.047244,
+      "alpha_tokens": 731.888332,
+      "accumulated_emission_tokens": 2.146496,
+      "accumulated_emission_tao": 0.051887,
       "source": "satellite",
       "entry_score": 0.4630155049826219
     },
     "15": {
-      "tao": 18.2048,
+      "tao": 18.1934,
       "name": "ORO",
       "entry_date": "2026-11-19",
       "entry_price": 0.0167019,
       "entry_tao": 20.0,
-      "alpha_tokens": 1200.09432,
-      "accumulated_emission_tokens": 2.626091,
-      "accumulated_emission_tao": 0.042057,
+      "alpha_tokens": 1200.453583,
+      "accumulated_emission_tokens": 2.985354,
+      "accumulated_emission_tao": 0.047502,
       "source": "satellite",
       "entry_score": 0.4741108190104102
     },
     "17": {
-      "tao": 19.6977,
+      "tao": 19.6976,
       "name": "404\u2014GEN",
       "entry_date": "2026-11-23",
       "entry_price": 0.00590459,
       "entry_tao": 20.0,
-      "alpha_tokens": 3387.551325,
-      "accumulated_emission_tokens": 0.35409,
-      "accumulated_emission_tao": 0.002076,
+      "alpha_tokens": 3387.668634,
+      "accumulated_emission_tokens": 0.471399,
+      "accumulated_emission_tao": 0.002758,
       "source": "satellite",
       "entry_score": 0.4853841234091757
     }
@@ -125,7 +125,7 @@
     "4": 0.0565113962686679,
     "44": 0.046182397083461724
   },
-  "benchmark_eq_emissions": 69.659363,
+  "benchmark_eq_emissions": 70.324398,
   "benchmark_mcw_prices": {
     "111": {
       "price": 0.003947753061847744,
@@ -356,7 +356,7 @@
       "weight": 0.11310667125859732
     }
   },
-  "benchmark_mcw_emissions": 22.429941,
-  "benchmark_root_value": 1015.7964,
-  "free_cash": 1034.1989
+  "benchmark_mcw_emissions": 22.606087,
+  "benchmark_root_value": 1015.8802,
+  "free_cash": 1034.3086
 }
