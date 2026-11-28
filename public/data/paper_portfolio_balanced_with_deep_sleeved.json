@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-27T12:08:48.951847+00:00",
-  "date": "2026-11-27",
+  "generated_at": "2026-11-28T12:08:45.467668+00:00",
+  "date": "2026-11-28",
   "total_tao": 1000.0,
   "root_stake": 150.0,
   "allocation_profile": "balanced_with_deep",
@@ -28,50 +28,50 @@
           "netuid": 120,
           "name": "Affine",
           "tao": 50.0,
-          "score": 0.7002480596707211,
+          "score": 0.7105872114565515,
           "rank": 1,
-          "moving_price": 0.03830871,
-          "tao_in": 72820.9031,
-          "source": "satellite"
-        },
-        {
-          "netuid": 107,
-          "name": "Minos",
-          "tao": 50.0,
-          "score": 0.5230911822896247,
-          "rank": 2,
-          "moving_price": 0.0211661,
-          "tao_in": 17955.8411,
+          "moving_price": 0.03823287,
+          "tao_in": 72796.8758,
           "source": "satellite"
         },
         {
           "netuid": 1,
           "name": "Apex",
           "tao": 50.0,
-          "score": 0.5038960855040978,
-          "rank": 3,
-          "moving_price": 0.00539075,
-          "tao_in": 20871.6747,
+          "score": 0.5140689427028016,
+          "rank": 2,
+          "moving_price": 0.00540296,
+          "tao_in": 20898.4417,
           "source": "satellite"
         },
         {
           "netuid": 17,
           "name": "404\u2014GEN",
           "tao": 50.0,
-          "score": 0.501768991438455,
+          "score": 0.5088720478507095,
+          "rank": 3,
+          "moving_price": 0.00580894,
+          "tao_in": 21046.0748,
+          "source": "satellite"
+        },
+        {
+          "netuid": 107,
+          "name": "Minos",
+          "tao": 50.0,
+          "score": 0.497005944063322,
           "rank": 4,
-          "moving_price": 0.00581804,
-          "tao_in": 21065.6361,
+          "moving_price": 0.02082311,
+          "tao_in": 17813.6673,
           "source": "satellite"
         },
         {
           "netuid": 15,
           "name": "ORO",
           "tao": 50.0,
-          "score": 0.467300955074027,
+          "score": 0.4862412291728256,
           "rank": 5,
-          "moving_price": 0.01517611,
-          "tao_in": 13008.0661,
+          "moving_price": 0.01514598,
+          "tao_in": 13022.8701,
           "source": "satellite"
         }
       ]
@@ -86,8 +86,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 1,
-          "moving_price": 0.05993805,
-          "tao_in": 190667.8648,
+          "moving_price": 0.05977051,
+          "tao_in": 190415.3399,
           "source": "deep_liquidity"
         },
         {
@@ -96,8 +96,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 2,
-          "moving_price": 0.05086815,
-          "tao_in": 134982.0147,
+          "moving_price": 0.05196851,
+          "tao_in": 137061.7759,
           "source": "deep_liquidity"
         },
         {
@@ -106,8 +106,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 3,
-          "moving_price": 0.11894346,
-          "tao_in": 191502.3869,
+          "moving_price": 0.11660576,
+          "tao_in": 187904.294,
           "source": "deep_liquidity"
         },
         {
@@ -116,8 +116,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 4,
-          "moving_price": 0.03844841,
-          "tao_in": 95625.1312,
+          "moving_price": 0.0384048,
+          "tao_in": 95714.9067,
           "source": "deep_liquidity"
         },
         {
@@ -126,8 +126,8 @@
           "tao": 30.0,
           "score": 0.0,
           "rank": 5,
-          "moving_price": 0.03830871,
-          "tao_in": 72820.9031,
+          "moving_price": 0.03823287,
+          "tao_in": 72796.8758,
           "source": "deep_liquidity"
         }
       ]
@@ -138,50 +138,50 @@
       "netuid": 120,
       "name": "Affine",
       "tao": 80.0,
-      "score": 0.7002480596707211,
+      "score": 0.7105872114565515,
       "rank": 1,
-      "moving_price": 0.03830871,
-      "tao_in": 72820.9031,
+      "moving_price": 0.03823287,
+      "tao_in": 72796.8758,
       "source": "satellite+deep_liquidity"
-    },
-    "107": {
-      "netuid": 107,
-      "name": "Minos",
-      "tao": 50.0,
-      "score": 0.5230911822896247,
-      "rank": 2,
-      "moving_price": 0.0211661,
-      "tao_in": 17955.8411,
-      "source": "satellite"
     },
     "1": {
       "netuid": 1,
       "name": "Apex",
       "tao": 50.0,
-      "score": 0.5038960855040978,
-      "rank": 3,
-      "moving_price": 0.00539075,
-      "tao_in": 20871.6747,
+      "score": 0.5140689427028016,
+      "rank": 2,
+      "moving_price": 0.00540296,
+      "tao_in": 20898.4417,
       "source": "satellite"
     },
     "17": {
       "netuid": 17,
       "name": "404\u2014GEN",
       "tao": 50.0,
-      "score": 0.501768991438455,
+      "score": 0.5088720478507095,
+      "rank": 3,
+      "moving_price": 0.00580894,
+      "tao_in": 21046.0748,
+      "source": "satellite"
+    },
+    "107": {
+      "netuid": 107,
+      "name": "Minos",
+      "tao": 50.0,
+      "score": 0.497005944063322,
       "rank": 4,
-      "moving_price": 0.00581804,
-      "tao_in": 21065.6361,
+      "moving_price": 0.02082311,
+      "tao_in": 17813.6673,
       "source": "satellite"
     },
     "15": {
       "netuid": 15,
       "name": "ORO",
       "tao": 50.0,
-      "score": 0.467300955074027,
+      "score": 0.4862412291728256,
       "rank": 5,
-      "moving_price": 0.01517611,
-      "tao_in": 13008.0661,
+      "moving_price": 0.01514598,
+      "tao_in": 13022.8701,
       "source": "satellite"
     },
     "64": {
@@ -190,8 +190,8 @@
       "tao": 30.0,
       "score": 0.0,
       "rank": 1,
-      "moving_price": 0.05993805,
-      "tao_in": 190667.8648,
+      "moving_price": 0.05977051,
+      "tao_in": 190415.3399,
       "source": "deep_liquidity"
     },
     "4": {
@@ -200,8 +200,8 @@
       "tao": 30.0,
       "score": 0.0,
       "rank": 2,
-      "moving_price": 0.05086815,
-      "tao_in": 134982.0147,
+      "moving_price": 0.05196851,
+      "tao_in": 137061.7759,
       "source": "deep_liquidity"
     },
     "51": {
@@ -210,8 +210,8 @@
       "tao": 30.0,
       "score": 0.0,
       "rank": 3,
-      "moving_price": 0.11894346,
-      "tao_in": 191502.3869,
+      "moving_price": 0.11660576,
+      "tao_in": 187904.294,
       "source": "deep_liquidity"
     },
     "8": {
@@ -220,8 +220,8 @@
       "tao": 30.0,
       "score": 0.0,
       "rank": 4,
-      "moving_price": 0.03844841,
-      "tao_in": 95625.1312,
+      "moving_price": 0.0384048,
+      "tao_in": 95714.9067,
       "source": "deep_liquidity"
     }
   },
